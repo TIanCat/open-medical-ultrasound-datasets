@@ -18,7 +18,8 @@ See [Scope](docs/scope.md).
 
 | ID | Dataset | Anatomy | Modality | Size | Annotation | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|---|
-US005,BUSI,Breast,2D 2D B-mode static images, 780 images, image-level 3-class labels & lesion segmentation masks, classification & segmentation, open,,,
+| US005 | BUSI | Breast | 2D B-mode | 780 images | Class labels + lesion masks | 3-class classification; lesion segmentation | 🟢 Open | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [Mendeley Data](https://data.mendeley.com/datasets/wmy84gzngw/1) |
+
 ## Contributing
 
 New datasets and corrections are welcome through Issues or Pull Requests.
