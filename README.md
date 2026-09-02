@@ -4,11 +4,11 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-- 104 verified primary dataset families
-- 89 open access
-- 13 application/registration
+- 103 verified primary dataset families
+- 86 open access
+- 15 application/registration
 - 2 controlled/restricted
-- Last updated: 2026-09-02
+- Last updated: 2026-09-03
 
 ## Scope
 
@@ -36,9 +36,53 @@ See [Scope](docs/scope.md).
 | [US050](datasets/US050.yaml) | Thyroid Ultrasound Cine-clip | Thyroid nodule | 2D B-mode cine clips | 192 nodules / 17,412 frames | segmentation; risk stratification | 🟡 Application | [Paper](https://doi.org/10.1148/radiol.211667) | [Project page](https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip) |
 | [US051](datasets/US051.yaml) | TN5000 | Thyroid nodule | 2D B-mode images | 5,000 images | detection; classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05757-4) | [Figshare](https://springernature.figshare.com/articles/dataset/TN5000_An_Ultrasound_Image_Dataset_for_Thyroid_Nodule_Detection_and_Classification/28455641) |
 
+### Liver and Gallbladder
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [US063](datasets/US063.yaml) | Dataset of B-mode fatty liver ultrasound images | Liver / hepatic steatosis | 2D B-mode image sequences | 550 images / 55 patients | classification; steatosis regression | 🟢 Open | [Paper](https://doi.org/10.1007/s11548-018-1843-2) | [Zenodo](https://zenodo.org/records/1009146) |
+| [US064](datasets/US064.yaml) | B-mode-and-CEUS-Liver | Liver / focal liver mass | 2D B-mode images + CEUS cine loops | 120 subjects / 1,859 DICOM instances | lesion classification; temporal analysis; response assessment | 🟢 Open | TCIA collection | [TCIA](https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/) |
+| [US065](datasets/US065.yaml) | Annotated Ultrasound Liver images | Liver / liver mass | 2D B-mode images | 735 images | classification; segmentation; detection | 🟢 Open | [Paper](https://doi.org/10.1093/bib/bbac569) | [Zenodo](https://zenodo.org/records/7272660) |
+| [US066](datasets/US066.yaml) | GBCU | Gallbladder / gallbladder pathology | 2D grayscale B-mode images | 1,255 images / 218 patients | classification; object detection | 🟡 Application | [Paper](https://doi.org/10.1109/CVPR52688.2022.02022) | [Project page](https://gbc-iitd.github.io/data/gbcu) |
+| [US067](datasets/US067.yaml) | GBUSV | Gallbladder / gallbladder pathology | 2D grayscale B-mode videos | 64 videos / 15,800 frames | representation learning; video classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-16440-8_41) | [Project page](https://gbc-iitd.github.io/data/gbusv) |
+| [US068](datasets/US068.yaml) | liver_ultrasound | Liver / adjacent abdominal structures | 2D grayscale images | 400 images | 14-class object detection | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/joe-klepich/liver_ultrasound) |
+| [US069](datasets/US069.yaml) | BEHSOF | Liver / NAFLD | 2D ultrasound + clinical data | 1,669 images / 113 individuals | classification; grading; regression | 🟢 Open | Figshare data resource | [Figshare](https://figshare.com/articles/dataset/BEHSOF/26389069) |
+| [US070](datasets/US070.yaml) | Saudi NAFLD Liver Ultrasound Dataset | Liver / NAFLD | 2D grayscale and color images | 10,352 images / 384 patients | steatosis grading; fibrosis staging; classification | 🟡 Application | [Paper](https://doi.org/10.1016/j.dib.2024.111266) | [OSF](https://doi.org/10.17605/OSF.IO/C2YG8) |
+| [US071](datasets/US071.yaml) | SMC-LUD | Liver / focal liver lesions | 2D B-mode images | 5,385 images / 1,021 patients | HCC vs hemangioma classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07023-7) | [Figshare](https://doi.org/10.6084/m9.figshare.31112716) |
+
+### Lung
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [US072](datasets/US072.yaml) | POCUS Dataset for COVID-19 Detection | Lung | 2D POCUS videos and images | Paper: 261 recordings / 216 patients; current metadata: 374 records | classification; severity scoring; feature segmentation | 🟢 Open | [Paper](https://doi.org/10.3390/app11020672) | [GitHub](https://github.com/jannisborn/covid19_ultrasound) |
+| [US073](datasets/US073.yaml) | COVIDx-US | Lung | 2D POCUS videos and extracted frames | Repository: 242 videos / 29,651 frames | classification; severity assessment | 🟢 Open | [Paper](https://doi.org/10.31083/j.fbl2707198) | [GitHub](https://github.com/nrc-cnrc/COVID-US) |
+| [US074](datasets/US074.yaml) | LUSS_phantom | Lung ultrasound phantom | 2D cine loops and extracted frames | 564 annotated frames | artefact segmentation; B-line quantification | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultras.2024.107251) | [Data](https://doi.org/10.5518/1485) |
+| [US075](datasets/US075.yaml) | Lung Ultrasound Images for Automated AI-based Lung Disease Classification | Lung | 2D B-mode images | 1,062 images / 149 patients | 3-class lung condition classification | 🟢 Open | [Paper](https://doi.org/10.1016/j.dib.2025.112034) | [Mendeley Data](https://data.mendeley.com/datasets/hb3p34ytvx/2) |
+| [US076](datasets/US076.yaml) | POCUS LUS Datasets | Lung | 2D POCUS images | 10 images / 8 upstream patient/source IDs | 3-class classification | 🟢 Open | No dedicated paper | [Figshare](https://doi.org/10.6084/m9.figshare.29364743.v1) |
+| [US077](datasets/US077.yaml) | PU2756 | Lung / peripheral pulmonary tumor | 2D B-mode images | 2,756 images / 2,756 patients | segmentation; binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07715-0) | [Figshare](https://doi.org/10.6084/m9.figshare.32672274) |
+
+### Kidney
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [US078](datasets/US078.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
+| [US079](datasets/US079.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
+
 ### Obstetrics
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
+| [US080](datasets/US080.yaml) | HC18 | Fetus / fetal head | 2D B-mode images | 1,334 images / 551 pregnant women | head delineation; circumference measurement | 🟢 Open | [Paper](https://doi.org/10.1371/journal.pone.0200412) | [Zenodo](https://doi.org/10.5281/zenodo.1322000) |
+| [US081](datasets/US081.yaml) | FETAL_PLANES_DB | Fetus / maternal cervix | 2D B-mode images | 12,400 images / 1,792 pregnant women | standard-plane classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-020-67076-5) | [Zenodo](https://doi.org/10.5281/zenodo.3904280) |
+| [US082](datasets/US082.yaml) | JNU-IFM | Maternal pubic symphysis / fetal head | 2D transperineal video frames | 6,224 frames / 78 videos / 51 women | segmentation; frame classification | 🟢 Open | [Paper](https://doi.org/10.1016/j.dib.2022.107904) | [Figshare](https://doi.org/10.6084/m9.figshare.14371652) |
+| [US083](datasets/US083.yaml) | African Fetal Standard Plane Dataset | Fetus / abdomen, brain, femur, thorax | 2D B-mode images | 450 images / 125 participant records | standard-plane classification; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-023-29490-3) | [Zenodo](https://doi.org/10.5281/zenodo.7540448) |
+| [US084](datasets/US084.yaml) | FPUS23 | 23-week fetal phantom | 2D B-mode images | 15,728 images | plane and orientation classification; object detection | 🟢 Open | [Paper](https://doi.org/10.1109/ACCESS.2023.3284315) | [GitHub](https://github.com/bharathprabakaran/FPUS23) |
+| [US085](datasets/US085.yaml) | Fetal Abdominal Structures Segmentation Dataset | Fetus / fetal abdomen | 2D B-mode images | 1,588 images / 169 pregnancies | multi-structure segmentation | 🟢 Open | Mendeley data resource | [Mendeley Data](https://doi.org/10.17632/4gcpm9dsc3.1) |
+| [US086](datasets/US086.yaml) | ACOUSLIC-AI | Fetus / fetal abdomen | 2D blind-sweep sequences | 300 public cases / 252,000 frames | frame localization; segmentation; circumference measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.media.2025.103640) | [Zenodo](https://doi.org/10.5281/zenodo.12697994) |
+| [US087](datasets/US087.yaml) | PSFHS | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal images | 1,358 images / 1,124 participants | segmentation; angle-of-progression measurement | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-024-03266-4) | [Zenodo](https://doi.org/10.5281/zenodo.10969427) |
+| [US088](datasets/US088.yaml) | FOCUS | Fetus / fetal heart / thorax | 2D four-chamber images | 300 images / 217 subjects | detection; segmentation; cardiothoracic ratio | 🟢 Open | Zenodo data resource | [Zenodo](https://doi.org/10.5281/zenodo.14597550) |
+| [US089](datasets/US089.yaml) | Maternal-Fetal Ultrasound Video Dataset | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal videos | 774 videos / 68,106 frames | plane classification; segmentation; landmark detection; biometry | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-06900-5) | [Zenodo](https://doi.org/10.5281/zenodo.17655183) |
+
+### Brain
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [US090](datasets/US090.yaml) | BITE | Brain / brain tumor / resection cavity | Contrast-enhanced T1 MRI + intraoperative 2D/3D B-mode US | 14 patients | MRI-US and longitudinal registration; TRE evaluation | 🟢 Open | [Paper](https://doi.org/10.1118/1.4709600) | [BITE](https://nist.mni.mcgill.ca/bite-brain-images-of-tumors-for-evaluation-database/) |
 
 ### Heart
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
@@ -62,6 +106,7 @@ See [Scope](docs/scope.md).
 | [US057](datasets/US057.yaml) | TUS-REC2024 | Forearm | tracked freehand US | 2,040 scans / 85 volunteers | 3D reconstruction; pose estimation | 🟡 Application | [Paper](https://doi.org/10.48550/arXiv.2506.21765) | [GitHub](https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/) |
 | [US058](datasets/US058.yaml) | Machine Learning-Driven Heckmatt Grading in FSHD | Muscle / FSHD | 2D B-mode images | 25,005 images / 290 participants | grading; segmentation | 🟢 Open | [Paper](https://doi.org/10.17632/yzg86vb895.1) | [Mendeley Data](https://data.mendeley.com/datasets/yzg86vb895/1) |
 | [US059](datasets/US059.yaml) | Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment | Muscle / NMD | 2D B-mode images | 3,917 images / 1,283 subjects | segmentation; quantitative assessment | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2021.104623) | [Mendeley Data](https://data.mendeley.com/datasets/3jykz7wz8d/1) |
+| [US062](datasets/US062.yaml) | Paired robotic and handheld lumbar spine ultrasound | Lumbar spine / vertebral bone surface | Paired CT + tracked 2D B-mode sweeps | 598 US scans / 63 volunteers; 6,091 annotated frames | segmentation; US-CT registration; 3D reconstruction | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-06047-9) | [Data](https://doi.org/10.48804/3XPCAE) |
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
