@@ -1,0 +1,47 @@
+id: US059
+name: "Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment"
+full_name: "Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment"
+release_year: 2021
+
+anatomy:
+  primary: "Muscle"
+  target: "biceps brachii, tibialis anterior, and medial gastrocnemius"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "3,917 images from 1,283 subjects"
+
+annotations:
+  summary: "expert cross-sectional-area muscle segmentations; healthy/abnormal status and grayscale-derived quantitative information"
+
+tasks:
+  - "muscle cross-sectional-area segmentation"
+  - "grayscale/echogenicity quantification"
+  - "healthy-versus-abnormal muscle assessment"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "Deep Learning Segmentation of Transverse Musculoskeletal Ultrasound Images for Neuromuscular Disease Assessment"
+  venue: "Computers in Biology and Medicine"
+  doi: "10.1016/j.compbiomed.2021.104623"
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/3jykz7wz8d/1"
+  data_doi: "10.17632/3jykz7wz8d.1"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Published 6 July 2021; CC BY 4.0."

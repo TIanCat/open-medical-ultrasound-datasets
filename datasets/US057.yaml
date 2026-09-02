@@ -1,0 +1,47 @@
+id: US057
+name: "TUS-REC2024"
+full_name: "TUS-REC2024"
+release_year: 2024
+
+anatomy:
+  primary: "Forearm"
+  target: "freehand scan geometry"
+
+modality:
+  type: "tracked B-mode ultrasound"
+  dimension: "2D to 3D"
+  temporal: "sequence"
+
+scale:
+  summary: "85 healthy volunteers; 2,040 scans (1,200 training, 72 validation, 768 held-out test)"
+
+annotations:
+  summary: "synchronized per-frame 4x4 spatial transformations/poses"
+
+tasks:
+  - "trackerless 3D freehand-ultrasound reconstruction"
+  - "relative-pose estimation"
+  - "spatial registration"
+
+access:
+  level: application
+  license: "Research use only; non-commercial"
+
+paper:
+  title: "TUS-REC2024: A Challenge to Reconstruct 3D Freehand Ultrasound Without External Tracker"
+  venue: "arXiv"
+  doi: "10.48550/arXiv.2506.21765"
+
+data:
+  repository: "TUS-REC / Zenodo"
+  url: "https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Training and validation data are public for research; the held-out test set is evaluated through the challenge."

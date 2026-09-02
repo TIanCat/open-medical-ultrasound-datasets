@@ -1,0 +1,48 @@
+id: US041
+name: "GIST514-DB"
+full_name: "GIST514-DB"
+release_year: 2022
+
+anatomy:
+  primary: "Gastrointestinal tract"
+  target: "gastrointestinal stromal tumor and leiomyoma"
+
+modality:
+  type: "endoscopic ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "514 cases/images: 263 gastrointestinal stromal tumors and 251 leiomyomas"
+
+annotations:
+  summary: "class labels, lesion bounding boxes, contour/instance-segmentation annotations, and anatomical locations"
+
+tasks:
+  - "GIST-versus-leiomyoma classification"
+  - "lesion detection"
+  - "instance segmentation"
+  - "anatomical-location-aware analysis"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "Query2: Query over Queries for Improving Gastrointestinal Stromal Tumour Detection in an Endoscopic Ultrasound"
+  venue: "Computers in Biology and Medicine"
+  doi: "10.1016/j.compbiomed.2022.106424"
+
+data:
+  repository: "GitHub"
+  url: "https://github.com/WuJunde/Query2"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Counts and annotation types verified from the original paper."

@@ -1,0 +1,46 @@
+id: US036
+name: "CardiacUDA / CardiacUDC"
+full_name: "CardiacUDA / CardiacUDC"
+release_year: 2023
+
+anatomy:
+  primary: "Heart"
+  target: "multi-view cardiac structures"
+
+modality:
+  type: "echocardiography"
+  dimension: "2D"
+  temporal: "video"
+
+scale:
+  summary: "paper dataset: 992 videos (516 site G, 476 site R) from about 100 patients; current Kaggle release exposes an A4C subset"
+
+annotations:
+  summary: "pixel-wise masks for view-specific structures: LV/RV, pulmonary artery, and four chambers; sparse training-frame labels and dense validation/test labels"
+
+tasks:
+  - "multi-view cardiac-structure segmentation"
+  - "unsupervised domain adaptation and cross-center generalization"
+
+access:
+  level: open
+  license: "Apache 2.0 (Kaggle listing)"
+
+paper:
+  title: "GraphEcho: Graph-Driven Unsupervised Domain Adaptation for Echocardiogram Video Segmentation"
+  venue: "ICCV 2023"
+  doi: "10.48550/arXiv.2309.11145"
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The paper describes 992 videos; the publicly visible Kaggle package currently contains only the A4C subset."

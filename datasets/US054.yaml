@@ -1,0 +1,46 @@
+id: US054
+name: "deepMTJ test set"
+full_name: "deepMTJ test set"
+release_year: 2021
+
+anatomy:
+  primary: "Muscle-tendon junction"
+  target: "lateral and medial gastrocnemius MTJ"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "1,344 test images acquired with 3 ultrasound systems"
+
+annotations:
+  summary: "MTJ locations from four specialists; mean specialist location used as ground truth"
+
+tasks:
+  - "muscle-tendon-junction localization and tracking"
+  - "cross-device benchmark evaluation"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "A Human-Centered Machine-Learning Approach for Muscle-Tendon Junction Tracking in Ultrasound Images"
+  venue: "IEEE Transactions on Biomedical Engineering"
+  doi: "10.1109/TBME.2021.313054"
+
+data:
+  repository: "Figshare"
+  url: "https://doi.org/10.6084/m9.figshare.16822978.v2"
+  data_doi: "10.6084/m9.figshare.16822978.v2"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Test set is downloadable and licensed CC BY 4.0."

@@ -1,0 +1,46 @@
+id: US038
+name: "CACTUS"
+full_name: "CACTUS"
+release_year: 2025
+
+anatomy:
+  primary: "Cardiac phantom"
+  target: "cardiac views and image quality"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "37,736 phantom images"
+
+annotations:
+  summary: "cardiac-view labels and image-quality grades; views include A4C, subcostal, parasternal long-axis, parasternal short-axis aortic/mitral, and random"
+
+tasks:
+  - "cardiac-view classification"
+  - "ultrasound image-quality grading"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "CACTUS: An Open Dataset and Framework for Automated Cardiac Assessment and Classification of Ultrasound Images Using Deep Transfer Learning"
+  venue: "Computers in Biology and Medicine"
+  doi: "10.1016/j.compbiomed.2025.110003"
+
+data:
+  repository: "FRDR"
+  url: "https://doi.org/10.20383/103.01484"
+  data_doi: "10.20383/103.01484"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "FRDR dataset DOI 10.20383/103.01484; CC BY 4.0."
