@@ -1,0 +1,46 @@
+id: US040
+name: "Clinical Ultrasound Image Repository"
+full_name: "Clinical Ultrasound Image Repository"
+release_year: null
+
+anatomy:
+  primary: "Multiple"
+  target: "abdominal, cardiac, and obstetric/gynecologic"
+
+modality:
+  type: "clinical ultrasound DICOM"
+  dimension: "2D"
+  temporal: "mixed"
+
+scale:
+  summary: "2,000 studies from 2,000 subjects, approximately one third per anatomy group"
+
+annotations:
+  summary: "DICOM images and metadata; no unified manual semantic labels"
+
+tasks:
+  - "general ultrasound representation learning and pretraining"
+  - "metadata-based anatomy or view studies"
+
+access:
+  level: open
+  license: "CC BY-NC 4.0"
+
+paper:
+  title: "Clinical Ultrasound Image Repository"
+  venue: "AWS Registry of Open Data"
+  doi: null
+
+data:
+  repository: "AWS Registry of Open Data"
+  url: "https://registry.opendata.aws/clinical-ultrasound-image-data/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Anonymous S3 access; CC BY-NC 4.0; managed by the MONAI Development Team."

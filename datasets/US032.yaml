@@ -1,0 +1,48 @@
+id: US032
+name: "EchoNet-Dynamic"
+full_name: "EchoNet-Dynamic"
+release_year: 2020
+
+anatomy:
+  primary: "Heart"
+  target: "left ventricle, apical four-chamber"
+
+modality:
+  type: "echocardiography"
+  dimension: "2D"
+  temporal: "video"
+
+scale:
+  summary: "10,030 videos from 10,030 individuals"
+
+annotations:
+  summary: "video-level ejection fraction, EDV, and ESV; expert left-ventricular endocardial tracings at end diastole and end systole with frame indices"
+
+tasks:
+  - "left-ventricular segmentation"
+  - "ejection-fraction regression"
+  - "ventricular-volume estimation"
+  - "cardiac-cycle analysis"
+
+access:
+  level: application
+  license: "Stanford Research Use Agreement"
+
+paper:
+  title: "Video-based AI for beat-to-beat assessment of cardiac function"
+  venue: "Nature"
+  doi: "10.1038/s41586-020-2145-8"
+
+data:
+  repository: "Stanford AIMI"
+  url: "https://echonet.github.io/dynamic/"
+  data_doi: "10.71718/qd7p-4h31"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Registration and acceptance of the Stanford Research Use Agreement are required."

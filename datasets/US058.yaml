@@ -1,0 +1,47 @@
+id: US058
+name: "Machine Learning-Driven Heckmatt Grading in FSHD"
+full_name: "Machine Learning-Driven Heckmatt Grading in FSHD"
+release_year: 2025
+
+anatomy:
+  primary: "Muscle"
+  target: "FSHD and healthy muscle"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "25,005 images from 290 participants (180 healthy; 110 with FSHD)"
+
+annotations:
+  summary: "subject metadata; Heckmatt grades; muscle segmentation masks supporting binary and multi-label strategies"
+
+tasks:
+  - "Heckmatt-grade classification"
+  - "muscle segmentation"
+  - "healthy-versus-FSHD analysis"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "Machine Learning-Driven Heckmatt Grading in Facioscapulohumeral Muscular Dystrophy: A Novel Pathway for Musculoskeletal Ultrasound Analysis"
+  venue: "Mendeley Data"
+  doi: "10.17632/yzg86vb895.1"
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/yzg86vb895/1"
+  data_doi: "10.17632/yzg86vb895.1"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Published 11 February 2025; CC BY 4.0."

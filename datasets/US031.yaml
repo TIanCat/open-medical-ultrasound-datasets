@@ -1,0 +1,46 @@
+id: US031
+name: "CAMUS"
+full_name: "CAMUS"
+release_year: 2019
+
+anatomy:
+  primary: "Heart"
+  target: "apical two- and four-chamber"
+
+modality:
+  type: "B-mode echocardiography"
+  dimension: "2D"
+  temporal: "sequence"
+
+scale:
+  summary: "500 patients"
+
+annotations:
+  summary: "expert contours at end diastole and end systole for the left-ventricular endocardium, left-ventricular myocardium/epicardium, and left atrium; image-quality labels; EDV, ESV, and EF"
+
+tasks:
+  - "multi-structure segmentation"
+  - "left-ventricular volume and ejection-fraction estimation"
+
+access:
+  level: open
+  license: "CC BY-NC-SA 4.0"
+
+paper:
+  title: "Deep Learning for Segmentation using an Open Large-Scale Dataset in 2D Echocardiography"
+  venue: "IEEE Transactions on Medical Imaging"
+  doi: "10.1109/TMI.2019.2900516"
+
+data:
+  repository: "CREATIS / Human Heart Project"
+  url: "https://www.creatis.insa-lyon.fr/Challenge/camus/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Verified from the official CAMUS project page and original paper."

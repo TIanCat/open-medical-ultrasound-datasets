@@ -1,0 +1,47 @@
+id: US034
+name: "Tufts Medical Echocardiogram Dataset (TMED-2)"
+full_name: "Tufts Medical Echocardiogram Dataset (TMED-2)"
+release_year: 2021
+
+anatomy:
+  primary: "Heart"
+  target: "aortic stenosis and cardiac views"
+
+modality:
+  type: "transthoracic echocardiography"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "fully labeled set: 599 studies from 577 patients, 17,270 labeled and 26,596 unlabeled images; additional view-only and unlabeled sets"
+
+annotations:
+  summary: "study-level aortic-stenosis severity labels; image-level view labels for PLAX, PSAX, A2C, A4C, and other"
+
+tasks:
+  - "aortic-stenosis severity classification (none/early/significant)"
+  - "five-class view classification"
+  - "semi-supervised learning"
+
+access:
+  level: application
+  license: "TMED non-commercial research license"
+
+paper:
+  title: "A New Semi-Supervised Learning Benchmark for Classifying View and Diagnosing Aortic Stenosis from Echocardiograms"
+  venue: "Machine Learning for Healthcare Conference (MLHC 2021), PMLR"
+  doi: null
+
+data:
+  repository: "TMED"
+  url: "https://tmed.cs.tufts.edu/tmed_v2.html"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Access is granted under an apply-for-access license for non-commercial research."

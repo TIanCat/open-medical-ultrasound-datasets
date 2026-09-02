@@ -1,0 +1,46 @@
+id: US044
+name: "DDTI"
+full_name: "DDTI"
+release_year: 2015
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid nodule"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "original database: 389 cases; widely used processed release: 637 images"
+
+annotations:
+  summary: "expert nodule contours, TI-RADS categories/descriptors, and diagnostic metadata"
+
+tasks:
+  - "thyroid-nodule segmentation"
+  - "TI-RADS classification and diagnosis analysis"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "An Open Access Thyroid Ultrasound Image Database"
+  venue: "Proceedings of SPIE / 10th International Symposium on Medical Information Processing and Analysis"
+  doi: "10.1117/12.2073532"
+
+data:
+  repository: "CIM@LAB"
+  url: "https://cimalab.unal.edu.co/projects/detail/20/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Source counts vary because papers distinguish original cases from processed/exported images."

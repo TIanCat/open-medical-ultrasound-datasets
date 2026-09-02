@@ -1,0 +1,48 @@
+id: US039
+name: "MIMIC-IV-Echo"
+full_name: "MIMIC-IV-Echo"
+release_year: 2026
+
+anatomy:
+  primary: "Heart"
+  target: "clinical echocardiography studies"
+
+modality:
+  type: "DICOM echocardiography and structured measurements"
+  dimension: "2D/3D/Doppler"
+  temporal: "mixed"
+
+scale:
+  summary: "v1.0.1: 206,488 studies from 91,372 patients; DICOM subset: 524,137 files from 7,228 TTE studies and 4,572 patients"
+
+annotations:
+  summary: "about 180-230 clinician-verified measurements per study covering chambers, systolic/diastolic function, valves, aorta/great vessels, and Doppler hemodynamics; linkage to MIMIC-IV"
+
+tasks:
+  - "echocardiography representation learning"
+  - "view analysis"
+  - "cardiac measurement prediction"
+  - "multimodal imaging and clinical-data research"
+
+access:
+  level: controlled
+  license: "PhysioNet credentialed data-use agreement"
+
+paper:
+  title: "MIMIC-IV-Echo: Echocardiogram Matched Subset"
+  venue: "PhysioNet"
+  doi: "10.13026/307c-mr50"
+
+data:
+  repository: "PhysioNet"
+  url: "https://physionet.org/content/mimic-iv-echo/1.0.1/"
+  data_doi: "10.13026/307c-mr50"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Credentialed PhysioNet access and a data-use agreement are required."

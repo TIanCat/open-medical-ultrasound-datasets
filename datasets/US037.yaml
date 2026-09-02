@@ -1,0 +1,47 @@
+id: US037
+name: "EchoNet-Pediatric"
+full_name: "EchoNet-Pediatric"
+release_year: 2023
+
+anatomy:
+  primary: "Heart"
+  target: "pediatric left ventricle"
+
+modality:
+  type: "echocardiography"
+  dimension: "2D"
+  temporal: "video"
+
+scale:
+  summary: "7,643 labeled videos"
+
+annotations:
+  summary: "ejection fraction, end-systolic and end-diastolic left-ventricular volumes, and expert left-ventricular tracings"
+
+tasks:
+  - "left-ventricular segmentation"
+  - "ejection-fraction and ventricular-volume regression"
+  - "pediatric cardiac-function assessment"
+
+access:
+  level: application
+  license: "Stanford Research Use Agreement"
+
+paper:
+  title: "Video-Based Deep Learning for Automated Assessment of Left Ventricular Ejection Fraction in Pediatric Patients"
+  venue: "Journal of the American Society of Echocardiography"
+  doi: "10.1016/j.echo.2023.01.015"
+
+data:
+  repository: "Stanford EchoNet"
+  url: "https://echonet.github.io/pediatric/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Registration and Stanford research-use terms apply."

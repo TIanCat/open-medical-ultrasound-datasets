@@ -1,0 +1,45 @@
+id: US048
+name: "TN3K"
+full_name: "TN3K"
+release_year: 2022
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid nodule"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "3,493 images from 2,421 patients (2,879 training; 614 test)"
+
+annotations:
+  summary: "pixel-wise binary thyroid-nodule masks"
+
+tasks:
+  - "thyroid-nodule segmentation"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "Thyroid Region Prior Guided Attention for Ultrasound Segmentation of Thyroid Nodules"
+  venue: "Computers in Biology and Medicine"
+  doi: "10.1016/j.compbiomed.2022.106389"
+
+data:
+  repository: "GitHub"
+  url: "https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Dataset and official split are distributed from the project repository."

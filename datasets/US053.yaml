@@ -1,0 +1,46 @@
+id: US053
+name: "LUMINOUS"
+full_name: "LUMINOUS"
+release_year: 2020
+
+anatomy:
+  primary: "Lumbar multifidus muscle"
+  target: "left and right muscle at L5"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "109 subjects/datasets; images cover left/right sides at L5 in prone and standing positions"
+
+annotations:
+  summary: "manual binary lumbar-multifidus masks paired with B-mode images"
+
+tasks:
+  - "lumbar-multifidus segmentation"
+  - "cross-sectional-area and echo-intensity quantification"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "LUMINOUS Database: Lumbar Multifidus Muscle Segmentation from Ultrasound Images"
+  venue: "BMC Musculoskeletal Disorders"
+  doi: "10.1186/s12891-020-03679-3"
+
+data:
+  repository: "Sonography.ai"
+  url: "http://data.sonography.ai/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The paper defines 109 subject datasets; image totals vary with laterality and body position."

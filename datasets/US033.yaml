@@ -1,0 +1,47 @@
+id: US033
+name: "EchoCP"
+full_name: "EchoCP"
+release_year: 2021
+
+anatomy:
+  primary: "Heart"
+  target: "patent foramen ovale"
+
+modality:
+  type: "contrast-enhanced transthoracic echocardiography"
+  dimension: "2D"
+  temporal: "video"
+
+scale:
+  summary: "60 apical four-chamber videos from 30 patients (2 videos per patient)"
+
+annotations:
+  summary: "PFO diagnosis and grade annotations; sparsely annotated cardiac-chamber segmentation masks by four experienced sonographers"
+
+tasks:
+  - "PFO diagnosis/grading"
+  - "cardiac-chamber segmentation"
+  - "contrast-bubble video analysis"
+
+access:
+  level: open
+  license: "Apache 2.0"
+
+paper:
+  title: "EchoCP: An Echocardiography Dataset in Contrast Transthoracic Echocardiography for Patent Foramen Ovale Diagnosis"
+  venue: "arXiv"
+  doi: "10.48550/arXiv.2105.08267"
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/datasets/xiaoweixumedicalai/echocp"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Public Kaggle release is licensed Apache 2.0."

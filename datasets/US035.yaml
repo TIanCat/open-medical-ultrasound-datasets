@@ -1,0 +1,46 @@
+id: US035
+name: "EchoNet-LVH"
+full_name: "EchoNet-LVH"
+release_year: 2022
+
+anatomy:
+  primary: "Heart"
+  target: "left-ventricular hypertrophy measurements"
+
+modality:
+  type: "echocardiography"
+  dimension: "2D"
+  temporal: "video"
+
+scale:
+  summary: "12,000 labeled videos"
+
+annotations:
+  summary: "expert measurements, tracings, and calculations for interventricular septal thickness, left-ventricular internal diameter, and posterior-wall thickness"
+
+tasks:
+  - "cardiac chamber-size and wall-thickness regression"
+  - "left-ventricular mass and hypertrophy phenotyping"
+
+access:
+  level: application
+  license: "Stanford research-use terms"
+
+paper:
+  title: "High-Throughput Precision Phenotyping of Left Ventricular Hypertrophy With Cardiovascular Deep Learning"
+  venue: "JAMA Cardiology"
+  doi: "10.1001/jamacardio.2021.6059"
+
+data:
+  repository: "Stanford AIMI"
+  url: "https://aimi.stanford.edu/datasets/echonet-lvh"
+  data_doi: "10.71718/wtrx-wj56"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Download is provided through the Stanford AIMI/Redivis portal under research-use terms."

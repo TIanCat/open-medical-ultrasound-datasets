@@ -1,0 +1,46 @@
+id: US043
+name: "C-TRUS"
+full_name: "C-TRUS"
+release_year: 2024
+
+anatomy:
+  primary: "Colon"
+  target: "colon wall in ulcerative colitis"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "827 images extracted from sequences of 13 patients"
+
+annotations:
+  summary: "pixel-wise colon-wall masks"
+
+tasks:
+  - "binary colon-wall segmentation"
+  - "bowel-wall localization and thickness/inflammation quantification"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "C-TRUS: A Novel Dataset and Initial Benchmark for Colon Wall Segmentation in Transabdominal Ultrasound"
+  venue: "International Workshop on Advances in Simplifying Medical Ultrasound (ASMUS)"
+  doi: "10.1007/978-3-031-73647-6_10"
+
+data:
+  repository: "GitHub"
+  url: "https://github.com/wwu-mmll/c-trus"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Official repository includes original images and labels."

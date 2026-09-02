@@ -1,0 +1,46 @@
+id: US051
+name: "TN5000"
+full_name: "TN5000"
+release_year: 2025
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid nodule"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "5,000 images: 1,428 benign and 3,572 malignant"
+
+annotations:
+  summary: "expert bounding boxes, biopsy-confirmed benign/malignant labels, and image metadata"
+
+tasks:
+  - "thyroid-nodule detection/localization"
+  - "benign-versus-malignant classification"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "TN5000: An Ultrasound Image Dataset for Thyroid Nodule Detection and Classification"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-025-05757-4"
+
+data:
+  repository: "Springer Nature Figshare"
+  url: "https://springernature.figshare.com/articles/dataset/TN5000_An_Ultrasound_Image_Dataset_for_Thyroid_Nodule_Detection_and_Classification/28455641"
+  data_doi: "10.6084/m9.figshare.28455641"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Open Figshare dataset DOI 10.6084/m9.figshare.28455641."

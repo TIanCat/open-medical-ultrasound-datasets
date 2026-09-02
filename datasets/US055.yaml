@@ -1,0 +1,47 @@
+id: US055
+name: "FALLMUD"
+full_name: "FALLMUD"
+release_year: 2021
+
+anatomy:
+  primary: "Lower-leg muscle"
+  target: "fascicles and aponeuroses"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "812 images"
+
+annotations:
+  summary: "one fascicle segmentation mask and one aponeurosis segmentation mask per image"
+
+tasks:
+  - "muscle-fascicle segmentation"
+  - "aponeurosis segmentation"
+  - "muscle-architecture quantification"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "AW-Net: Automatic Muscle Structure Analysis on B-Mode Ultrasound Images for Injury Prevention"
+  venue: "ACM BCB 2021"
+  doi: null
+
+data:
+  repository: "CEA Kalisteo"
+  url: "https://kalisteo.cea.fr/index.php/fallmud/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The release combines two earlier image sets with complementary masks."

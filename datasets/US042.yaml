@@ -1,0 +1,46 @@
+id: US042
+name: "LEPset"
+full_name: "LEPset"
+release_year: 2023
+
+anatomy:
+  primary: "Pancreas"
+  target: "pancreatic cancer"
+
+modality:
+  type: "endoscopic ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "11,500 images from 420 patients: 3,500 labeled (1,680 pancreatic cancer/280 patients; 1,820 non-pancreatic cancer/140 patients) plus 8,000 unlabeled"
+
+annotations:
+  summary: "image-level PC/NPC labels for 3,500 images; 8,000 images are unlabeled"
+
+tasks:
+  - "pancreatic-cancer binary classification"
+  - "self-supervised learning and pretraining"
+
+access:
+  level: open
+  license: "Scientific research only; non-commercial"
+
+paper:
+  title: "LEPset"
+  venue: "Zenodo"
+  doi: "10.5281/zenodo.8041285"
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/8041285"
+  data_doi: "10.5281/zenodo.8041285"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Direct download for scientific research only; commercial use is prohibited by the dataset notice."
