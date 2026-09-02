@@ -1,0 +1,58 @@
+id: US083
+name: African Fetal Standard Plane Dataset
+full_name: Maternal Fetal Ultrasound Planes from Low-Resource Imaging Settings in Five African Countries
+release_year: 2023
+
+anatomy:
+  primary: Fetus
+  target: Abdomen, brain, femur, and thorax standard planes
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 450
+  patients: 125
+
+annotations:
+  classification:
+    num_classes: 4
+    classes:
+      - Fetal abdomen
+      - Fetal brain
+      - Fetal femur
+      - Fetal thorax
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Standard-plane classification
+  - Cross-country generalization
+  - Domain adaptation
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Generalisability of fetal ultrasound deep learning models to low-resource imaging settings in five African countries
+  venue: Scientific Reports
+  doi: 10.1038/s41598-023-29490-3
+
+data:
+  repository: Zenodo
+  url: https://doi.org/10.5281/zenodo.7540448
+  data_doi: 10.5281/zenodo.7540448
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Contains 450 routinely acquired maternal-fetal ultrasound images from centres in Malawi, Egypt, Uganda, Ghana, and Algeria. The country-level table reports 25 participant records per country, totalling 125, although the paper narrative also describes the cohort as approximately 120 patients. Malawi, Egypt, and Algeria each provide 100 images; Uganda and Ghana each provide 75 and contain no thorax images. The archive includes plane labels, patient identifiers, country information, and the experimental splits. The complete 42,845,356-byte Zenodo archive was successfully transferred during verification and returned HTTP 200, but it was discarded rather than retained."

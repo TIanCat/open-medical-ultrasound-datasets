@@ -1,0 +1,55 @@
+id: US076
+name: POCUS LUS Datasets
+full_name: POCUS Lung Ultrasound Datasets
+release_year: 2025
+
+anatomy:
+  primary: Lung
+  target: Pulmonary conditions
+
+modality:
+  type: Point-of-care lung ultrasound
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 10
+  patients: 8
+
+annotations:
+  classification:
+    num_classes: 3
+    classes:
+      - COVID-19
+      - Bacterial pneumonia
+      - Normal
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+
+access:
+  level: open
+  license: CC BY 4.0 on Figshare; upstream source-specific rights vary
+
+paper:
+  title: null
+  venue: null
+  doi: null
+
+data:
+  repository: Figshare
+  url: https://doi.org/10.6084/m9.figshare.29364743.v1
+  data_doi: 10.6084/m9.figshare.29364743.v1
+
+family:
+  type: derivative
+  parent: US072
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains only 10 static images: six COVID-19, three bacterial-pneumonia, and one normal image. Upstream POCUS metadata associates them with eight distinct patient/source IDs. All 10 files were downloaded in memory during verification; their computed MD5 values matched the Figshare API checksums and the same-named files in US072 exactly. The Figshare record contains no provenance statement, label table, patient metadata, selection criteria, bounding boxes, or segmentation masks. Categories are recovered from the filenames and US072 metadata. Figshare applies CC BY 4.0, while the upstream records have differing source-specific licenses and one lacks a stated license."

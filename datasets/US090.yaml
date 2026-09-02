@@ -1,0 +1,64 @@
+id: US090
+name: BITE
+full_name: Brain Images of Tumors for Evaluation
+release_year: 2012
+
+anatomy:
+  primary: Brain
+  target: Brain tumor and resection cavity
+
+modality:
+  type: B-mode ultrasound and contrast-enhanced T1-weighted MRI
+  dimension: 2D/3D ultrasound and 3D MRI
+  temporal: static
+
+scale:
+  images: null
+  patients: 14
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - MRI-ultrasound registration
+  - Pre-/post-resection ultrasound registration
+  - Pre-/post-operative MRI registration
+  - Target registration error evaluation
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: Online database of clinical MR and ultrasound images of brain tumors
+  venue: Medical Physics
+  doi: 10.1118/1.4709600
+
+data:
+  repository: Montreal Neurological Institute
+  url: https://nist.mni.mcgill.ca/bite-brain-images-of-tumors-for-evaluation-database/
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: >-
+  BITE contains data from 14 brain-tumor patients organized into four
+  downloadable groups: pre-/post-resection ultrasound, preoperative MRI
+  with pre-resection ultrasound, pre-/post-operative MRI, and preoperative
+  MRI with post-resection ultrasound. Ultrasound data include original 2D
+  B-mode sweeps and reconstructed 3D volumes. Expert-selected homologous
+  landmarks are stored in .tag files for registration evaluation; tumor
+  segmentation masks are not provided. Images primarily use MINC format.
+  The official site does not state an explicit dataset license. The Group 2
+  file endpoint was verified using a partial-content request.

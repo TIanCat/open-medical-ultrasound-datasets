@@ -1,0 +1,55 @@
+id: US063
+name: Fatty Liver Ultrasound
+full_name: Dataset of B-mode fatty liver ultrasound images
+release_year: 2018
+
+anatomy:
+  primary: Liver
+  target: Hepatic steatosis
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: sequence
+
+scale:
+  images: 550
+  patients: 55
+
+annotations:
+  classification:
+    num_classes: 2
+    classes:
+      - Non-fatty liver
+      - Fatty liver
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+  - Regression
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Transfer learning with deep convolutional neural network for liver steatosis assessment in ultrasound images
+  venue: International Journal of Computer Assisted Radiology and Surgery
+  doi: 10.1007/s11548-018-1843-2
+
+data:
+  repository: Zenodo
+  url: https://zenodo.org/records/1009146
+  data_doi: 10.5281/zenodo.1009146
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains ten consecutive 434 × 636 B-mode frames from each of 55 severely obese patients. Wedge-biopsy steatosis percentage is provided as the reference standard; fatty liver is defined as more than 5% of hepatocytes with steatosis. The cohort contains 38 fatty-liver and 17 non-fatty-liver patients."
