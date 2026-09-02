@@ -1,0 +1,57 @@
+id: US001
+name: BUSI
+full_name: Dataset of Breast Ultrasound Images
+release_year: 2020
+
+anatomy:
+  primary: Breast
+  target: Breast lesion
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 780
+  patients: 600
+
+annotations:
+  classification:
+    num_classes: 3
+    classes:
+      - Normal
+      - Benign
+      - Malignant
+
+  segmentation:
+    available: true
+    targets:
+      - Breast lesion
+
+tasks:
+  - Classification
+  - Segmentation
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Dataset of breast ultrasound images
+  venue: Data in Brief
+  doi: 10.1016/j.dib.2019.104863
+
+data:
+  repository: Mendeley Data
+  url: https://...
+  data_doi: ...
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: ""
