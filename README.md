@@ -18,7 +18,7 @@ See [Scope](docs/scope.md).
 
 | ID | Dataset | Anatomy | Modality | Size | Annotation | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|---|
-| US005 | BUSI | Breast | 2D B-mode | 780 images | Class labels + lesion masks | 3-class classification; lesion segmentation | 🟢 Open | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [Mendeley Data](https://data.mendeley.com/datasets/wmy84gzngw/1) |
+| US005 | BUSI | Breast | 2D B-mode | 780 images | Class labels + lesion masks | classification; segmentation | 🟢 Open | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [Mendeley Data](https://data.mendeley.com/datasets/k8t3gnx9h6/1) |
 
 ## Contributing
 
