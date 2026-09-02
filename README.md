@@ -26,11 +26,19 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 
-### Fetus
+### Obstetrics
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 
 ### Heart
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+
+### Musculoskeletal
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+
+### Multi-Oragn
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 
