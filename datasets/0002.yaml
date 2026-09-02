@@ -1,0 +1,137 @@
+id: US002
+name: OASBUD
+full_name: Open Access Series of Breast Ultrasonic Data
+release_year: 2017
+
+anatomy:
+  primary: Breast
+  target: Breast focal lesion
+
+modality:
+  type: Post-beamformed radio-frequency ultrasound echo-line data
+  dimension: 2D
+  temporal: static
+  scan_planes_per_lesion: 2
+  scan_plane_relation: Orthogonal
+  b_mode:
+    included: false
+    representations_can_be_generated_from_rf: true
+
+scale:
+  patients: 78
+  patient_population: Women
+  lesions: 100
+  rf_scan_planes: 200
+  roi_masks: 200
+  class_distribution:
+    benign_lesions: 48
+    malignant_lesions: 52
+
+annotations:
+  classification:
+    unit: lesion
+    num_classes: 2
+    classes:
+      - Benign
+      - Malignant
+  birads:
+    unit: lesion
+    categories:
+      - "3"
+      - "4a"
+      - "4b"
+      - "4c"
+      - "5"
+    distribution:
+      "3": 31
+      "4a": 11
+      "4b": 16
+      "4c": 17
+      "5": 25
+    distribution_source: Parsed from the checksum-verified OASBUD.mat release
+  segmentation:
+    available: true
+    unit: scan plane
+    type: Binary ROI mask aligned with the RF matrix
+    targets:
+      - Breast lesion
+  diagnostic_reference:
+    malignant: Histologically assessed by core-needle biopsy
+    benign: Some histologically assessed; the remainder observed over a 2-year period
+
+tasks:
+  - Benign/malignant lesion classification
+  - Lesion segmentation using the supplied ROI masks
+  - Quantitative ultrasound / RF signal analysis
+  - B-mode representation generation and ultrasound image processing
+
+access:
+  level: open
+  license: CC BY-NC 4.0
+  license_source: https://zenodo.org/api/records/545928
+  registration_required: false
+
+paper:
+  title: Open access database of raw ultrasonic signals acquired from malignant and benign breast lesions
+  authors:
+    - Hanna Piotrzkowska-Wróblewska
+    - Katarzyna Dobruch-Sobczak
+    - Michał Byra
+    - Andrzej Nowicki
+  venue: Medical Physics
+  publication_year: 2017
+  volume: 44
+  issue: 11
+  pages: 6105-6109
+  doi: 10.1002/mp.12538
+  pmid: 28859252
+
+data:
+  repository: Zenodo
+  url: https://zenodo.org/records/545928
+  data_doi: 10.5281/zenodo.545928
+  concept_doi: 10.5281/zenodo.603138
+  version: v1
+  version_source: Zenodo record page
+  files:
+    - name: OASBUD.mat
+      format: MATLAB v5 MAT-file
+      size_bytes: 296800010
+      md5: e2b770a6ee2f06ebe480ed0962252100
+      checksum_verified: true
+  matlab_structure:
+    top_level_variable: data
+    records: 100
+    fields:
+      - id
+      - rf1
+      - rf2
+      - roi1
+      - roi2
+      - birads
+      - class
+
+acquisition:
+  period: November 2013 to October 2015
+  institution: Institute of Oncology, Warsaw, Poland
+  examiner: Radiologist with 18 years of breast-ultrasound experience
+  scanner: Ultrasonix SonixTouch Research
+  transducer: L14-5/38 linear array
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+  methods:
+    - Cross-checked the official publisher abstract, PubMed record, Zenodo record, and Zenodo API metadata
+    - Downloaded OASBUD.mat, verified its MD5, and parsed its MATLAB structure and label counts
+  sources:
+    - https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.12538
+    - https://pubmed.ncbi.nlm.nih.gov/28859252/
+    - https://zenodo.org/records/545928
+    - https://zenodo.org/api/records/545928
+    - https://pmc.ncbi.nlm.nih.gov/articles/PMC10830496/
+
+notes: OASBUD is the name commonly used in later literature; the original Zenodo record uses the data-paper title. Each lesion has two orthogonal RF scans with paired binary ROI masks. B-mode images are not stored; B-mode-style representations can be generated from the RF echoes. The paper reports no official train/test split. The two planes from one lesion must remain together when creating data splits, while the mapping from 100 lesion records to 78 women cannot be reliably reconstructed from the MAT file alone. The MAT file contains no histopathology images or separate clinical table.
