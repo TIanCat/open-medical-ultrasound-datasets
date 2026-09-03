@@ -98,6 +98,15 @@ See [Scope](docs/scope.md).
 | [0606](datasets/06_musculoskeletal/0606.yaml) | Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment | Muscle / NMD | 2D B-mode images | 3,917 images / 1,283 subjects | segmentation; quantitative assessment | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2021.104623) | [Mendeley Data](https://data.mendeley.com/datasets/3jykz7wz8d/1) |
 | [0607](datasets/06_musculoskeletal/0607.yaml) | Paired robotic and handheld lumbar spine ultrasound | Lumbar spine / vertebral bone surface | Paired CT + tracked 2D B-mode sweeps | 598 US scans / 63 volunteers; 6,091 annotated frames | segmentation; US-CT registration; 3D reconstruction | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-06047-9) | [Data](https://doi.org/10.48804/3XPCAE) |
 
+### Vessel
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [0701](datasets/07_vessel/0701.yaml) | OPULM PALA | Microvasculature / ultrasound contrast microbubbles | ultrafast contrast-enhanced ultrasound / ULM microbubble data | 6 benchmark datasets including simulated and in vivo acquisitions | microbubble localization; trajectory tracking; vascular reconstruction; ULM algorithm benchmarking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/4343435) |
+| [0702](datasets/07_vessel/0702.yaml) | CUBS | Carotid artery | 2D B-mode static carotid ultrasound images | 1,088 participants; 2,176 common carotid artery images | carotid LI/MA boundary segmentation; carotid intima-media thickness measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2021.03.003) | [Mendeley Data](https://data.mendeley.com/datasets/fpv535fss7/1) |
+| [0703](datasets/07_vessel/0703.yaml) | CCA | Carotid artery | 2D B-mode carotid ultrasound images | 2,307 images: 2,107 training images and 200 held-out validation images; additional external-device test sets are referenced | carotid artery segmentation; unseen-device / cross-domain generalization | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-43901-8_13) | [GitHub](https://github.com/yuan-12138/MI-SegNet) |
+| [0704](datasets/07_vessel/0704.yaml) | ULMShare | Mouse microvasculature / ultrasound localization microscopy | raw RF channel data and ULM-related acquisitions | 99 acquisitions from 61 mice; approximately 30 TB | ULM reconstruction; microbubble localization/tracking; vessel imaging; algorithm benchmarking | 🟢 Open | FRDR data resource | [FRDR](https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550) |
+| [0705](datasets/07_vessel/0705.yaml) | UK Biobank carotid ultrasound | Carotid artery | carotid 2D B-mode ultrasound imaging fields | large UK Biobank imaging resource; participant/image counts depend on the specific field and release | carotid phenotype analysis; intima-media thickness / vascular measurement; epidemiology and risk-association research | 🟡 Application | UK Biobank imaging resource | [UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) |
+
 
 ### Kidney
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
@@ -131,14 +140,7 @@ See [Scope](docs/scope.md).
 | [US097](datasets/US097.yaml) | Mouse Brain Tumor Ultrasound | Mouse brain / brain tumor | high-resolution B-mode ultrasound images/videos | 1,856 images: 1,448 tumor images and 408 no-tumor images | tumor segmentation; derived tumor/no-tumor binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05619-z) | [Figshare](https://doi.org/10.6084/m9.figshare.27237894) |
 | [US099](datasets/US099.yaml) | Open-3DULM / Transcranial mice brain | Mouse brain / transcranial microvasculature | ultrafast ultrasound localization microscopy cine / 4D data | 5 mice; 370 ultrafast cine videos | 3D ULM reconstruction; cerebral blood-flow / vascular analysis; 4D spatiotemporal representation | 🟢 Open | [Paper](https://doi.org/10.1038/s44172-025-00415-4) | [Zenodo](https://zenodo.org/records/14289690) |
 
-### Vessel
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US100](datasets/US100.yaml) | OPULM PALA | Microvasculature / ultrasound contrast microbubbles | ultrafast contrast-enhanced ultrasound / ULM microbubble data | 6 benchmark datasets including simulated and in vivo acquisitions | microbubble localization; trajectory tracking; vascular reconstruction; ULM algorithm benchmarking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/4343435) |
-| [US103](datasets/US103.yaml) | ULMShare | Mouse microvasculature / ultrasound localization microscopy | raw RF channel data and ULM-related acquisitions | 99 acquisitions from 61 mice; approximately 30 TB | ULM reconstruction; microbubble localization/tracking; vessel imaging; algorithm benchmarking | 🟢 Open | FRDR data resource | [FRDR](https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550) |
-| [US101](datasets/US101.yaml) | CUBS | Carotid artery | 2D B-mode static carotid ultrasound images | 1,088 participants; 2,176 common carotid artery images | carotid LI/MA boundary segmentation; carotid intima-media thickness measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2021.03.003) | [Mendeley Data](https://data.mendeley.com/datasets/fpv535fss7/1) |
-| [US102](datasets/US102.yaml) | CCA | Carotid artery | 2D B-mode carotid ultrasound images | 2,307 images: 2,107 training images and 200 held-out validation images; additional external-device test sets are referenced | carotid artery segmentation; unseen-device / cross-domain generalization | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-43901-8_13) | [GitHub](https://github.com/yuan-12138/MI-SegNet) |
-| [US104](datasets/US104.yaml) | UK Biobank carotid ultrasound | Carotid artery | carotid 2D B-mode ultrasound imaging fields | large UK Biobank imaging resource; participant/image counts depend on the specific field and release | carotid phenotype analysis; intima-media thickness / vascular measurement; epidemiology and risk-association research | 🟡 Application | UK Biobank imaging resource | [UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) |
+
 
 ### Other
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
