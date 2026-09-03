@@ -27,6 +27,7 @@ See [Scope](docs/scope.md).
 | [0005](datasets/0005.yaml) | BUSI | Breast | 2D B-mode PNG | 780 images / 600 women | 3-class classification; lesion segmentation; mask-derived localization | 🟢 Open; no stated dataset license | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [MathWorks mirror](https://ssd.mathworks.com/supportfiles/image/data/Dataset_BUSI.zip) |
 | [0006](datasets/0006.yaml) | BUSV / BreastVid | Breast | 2D B-mode video frames | 188 videos / 25,272 frames (paper; see correction) | frame-level lesion detection; video-level binary classification | 🟡 Non-commercial research/education | [Lin et al., 2022](https://doi.org/10.1007/978-3-031-16437-8_59) | [CVA-Net repository](https://github.com/jhl-Det/CVA-Net) |
 | [0007](datasets/0007.yaml) | Breast Ultrasound Image Database / QAMEBI | Breast | 2D B-mode BMP | 232 lesions/images (109 benign, 123 malignant) | binary classification; lesion segmentation | 🟢 Open download; no stated license | [Abbasian Ardakani et al., 2023](https://doi.org/10.1016/j.compbiomed.2022.106438) | [QAMEBI](https://qamebi.com/breast-ultrasound-images-database/) |
+| [0008](datasets/0008.yaml) | BUS-BRA | Breast | 2D B-mode PNG | 1,875 images / 1,064 women | segmentation; detection; pathology and BI-RADS classification | 🟢 Open; CC BY 4.0 | [Gómez-Flores et al., 2024](https://doi.org/10.1002/mp.16812) | [Zenodo](https://zenodo.org/records/8231412) |
 
 ### Thyroid
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
