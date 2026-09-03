@@ -20,7 +20,7 @@ See [Scope](docs/scope.md).
 ### Breast
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [0001](datasets/00_breast/0001.yaml) | UDIAT / Dataset B | Breast | 2D B-mode | 163 images / 163 women | detection; segmentation; binary classification | 🟡 Application | [Yap et al., 2018](https://doi.org/10.1109/JBHI.2017.2731873) | [MMU access page](https://helward.mmu.ac.uk/STAFF/m.yap/dataset.php) |
+| [0001](datasets/00_breast/0001.yaml) | UDIAT / Dataset B | Breast | 2D B-mode | 163 images / 163 women | classification; segmentation; detection; | 🟡 Application | [Yap et al., 2018](https://doi.org/10.1109/JBHI.2017.2731873) | [MMU access page](https://helward.mmu.ac.uk/STAFF/m.yap/dataset.php) |
 | [0002](datasets/00_breast/0002.yaml) | OASBUD | Breast | 2D post-beamformed RF echoes (no B-mode images) | 100 lesions / 78 women / 2 RF planes per lesion | RF/QUS analysis; B-mode visualization; segmentation; binary classification | 🟢 Open | [Piotrzkowska-Wróblewska et al., 2017](https://doi.org/10.1002/mp.12538) | [Zenodo](https://zenodo.org/records/545928) |
 | [0005](datasets/00_breast/0005.yaml) | BUSI | Breast | 2D B-mode | 780 images | classification; segmentation | 🟢 Open | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [Mendeley Data](https://data.mendeley.com/datasets/k8t3gnx9h6/1) |
 
