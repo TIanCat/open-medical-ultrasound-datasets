@@ -1,0 +1,48 @@
+id: US098
+name: "Spinal Cord Injury Ultrasound Dataset"
+full_name: "Open-source ultrasound dataset for spinal cord injury localization and anatomical segmentation"
+release_year: 2025
+
+anatomy:
+  primary: "Spinal cord"
+  target: "porcine spinal cord injury"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D sagittal images"
+  temporal: "pre-injury and post-injury"
+
+scale:
+  summary: "10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations"
+
+annotations:
+  summary: "pre-/post-injury labels, anatomical segmentation masks, and injury-location bounding boxes"
+
+tasks:
+  - "injury-status binary classification"
+  - "anatomical structure segmentation"
+  - "injury localization"
+  - "object detection"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "A novel open-source ultrasound dataset with deep learning benchmarks for spinal cord injury localization and anatomical segmentation"
+  venue: "Scientific Reports"
+  doi: "10.1038/s41598-025-16275-z"
+
+data:
+  repository: "Spinal Cord Injury Ultrasound Dataset"
+  url: "https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the Scientific Reports paper and GitHub data repository; a specific reusable data license was not confirmed."

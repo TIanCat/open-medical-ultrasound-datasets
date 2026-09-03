@@ -1,0 +1,47 @@
+id: US091
+name: "RESECT"
+full_name: "REtroSpective Evaluation of Cerebral Tumors (RESECT)"
+release_year: 2017
+
+anatomy:
+  primary: "Brain"
+  target: "low-grade glioma / neurosurgical resection"
+
+modality:
+  type: "preoperative MRI + intraoperative B-mode ultrasound"
+  dimension: "3D/2D tracked"
+  temporal: "intraoperative acquisition"
+
+scale:
+  summary: "23 low-grade glioma surgery cases"
+
+annotations:
+  summary: "corresponding anatomical landmarks for MRI-iUS registration; related extension resources add tumor and resection-cavity segmentation labels"
+
+tasks:
+  - "multimodal MRI-to-ultrasound registration"
+  - "registration landmark-error evaluation"
+  - "tumor and resection-cavity segmentation in extension resources"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "REtroSpective Evaluation of Cerebral Tumors (RESECT): A clinical database of pre-operative MRI and intra-operative ultrasound in low-grade glioma surgeries"
+  venue: "Medical Physics"
+  doi: "10.1002/mp.12268"
+
+data:
+  repository: "RESECT"
+  url: "https://archive.sigma2.no/dataset/5D6BFC33-F58D-4F56-88E8-C40AF269D6F2"
+  data_doi: "10.11582/2017.00004"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the original paper and the Sigma2/NIRD dataset landing page; no explicit reusable data license was confirmed on the accessible landing page."

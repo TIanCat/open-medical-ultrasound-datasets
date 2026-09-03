@@ -1,0 +1,47 @@
+id: US093
+name: "OpticNerveSheaths"
+full_name: "Optic nerve sheath transorbital ultrasound images"
+release_year: 2023
+
+anatomy:
+  primary: "Optic nerve sheath"
+  target: "optic nerve / optic nerve sheath"
+
+modality:
+  type: "transorbital B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static image"
+
+scale:
+  summary: "464 ultrasound images"
+
+annotations:
+  summary: "multi-annotator optic-nerve / optic-nerve-sheath region and diameter-related annotations"
+
+tasks:
+  - "optic nerve sheath segmentation"
+  - "optic nerve sheath localization"
+  - "optic nerve sheath diameter measurement"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "Development of a Deep Learning-Based System for Optic Nerve Characterization in Transorbital Ultrasound Images on a Multicenter Data Set"
+  venue: "Ultrasound in Medicine & Biology"
+  doi: "10.1016/j.ultrasmedbio.2023.05.011"
+
+data:
+  repository: "OpticNerveSheaths"
+  url: "https://data.mendeley.com/datasets/kw8gvp8m8x/2"
+  data_doi: "10.17632/kw8gvp8m8x.2"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Corrected release year from 2024 to 2023 and updated to the current Mendeley Data version."

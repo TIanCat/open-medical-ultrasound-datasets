@@ -1,0 +1,46 @@
+id: US101
+name: "CUBS"
+full_name: "Carotid Ultrasound Boundary Study (CUBS)"
+release_year: 2021
+
+anatomy:
+  primary: "Carotid artery"
+  target: "common carotid artery LI and MA boundaries"
+
+modality:
+  type: "B-mode carotid ultrasound"
+  dimension: "2D"
+  temporal: "static image"
+
+scale:
+  summary: "1,088 participants; 2,176 common carotid artery images"
+
+annotations:
+  summary: "expert manual lumen-intima and media-adventitia boundary delineations; includes multiple computerized segmentation outputs"
+
+tasks:
+  - "carotid boundary segmentation"
+  - "carotid intima-media thickness measurement"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "Carotid Ultrasound Boundary Study (CUBS): An Open Multicenter Analysis of Computerized Intima-Media Thickness Measurement Systems and Their Clinical Impact"
+  venue: "Ultrasound in Medicine & Biology"
+  doi: "10.1016/j.ultrasmedbio.2021.03.003"
+
+data:
+  repository: "CUBS"
+  url: "https://data.mendeley.com/datasets/fpv535fss7/1"
+  data_doi: "10.17632/fpv535fss7.1"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the Mendeley Data record and CUBS paper."

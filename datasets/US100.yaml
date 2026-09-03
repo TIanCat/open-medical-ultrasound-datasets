@@ -1,0 +1,48 @@
+id: US100
+name: "OPULM PALA"
+full_name: "Open Platform for Ultrasound Localization Microscopy - Performance Assessment of Localization Algorithms"
+release_year: 2020
+
+anatomy:
+  primary: "Microvasculature"
+  target: "microbubbles / vascular structures"
+
+modality:
+  type: "ultrafast contrast-enhanced ultrasound / ULM"
+  dimension: "2D sequences"
+  temporal: "high-frame-rate sequence"
+
+scale:
+  summary: "6 benchmark datasets including simulated and in vivo acquisitions"
+
+annotations:
+  summary: "ultrafast sequences with microbubble localization, trajectory or reconstruction reference information and processing scripts"
+
+tasks:
+  - "microbubble localization"
+  - "microbubble trajectory tracking"
+  - "vascular reconstruction"
+  - "ULM algorithm benchmarking"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "Performance benchmarking of microbubble-localization algorithms for ultrasound localization microscopy"
+  venue: "Nature Biomedical Engineering"
+  doi: "10.1038/s41551-021-00824-8"
+
+data:
+  repository: "OPULM PALA"
+  url: "https://zenodo.org/records/4343435"
+  data_doi: "10.5281/zenodo.4343435"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the Zenodo OPULM PALA record and linked Nature Biomedical Engineering paper."

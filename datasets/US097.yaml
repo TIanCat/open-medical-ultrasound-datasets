@@ -1,0 +1,46 @@
+id: US097
+name: "Mouse Brain Tumor Ultrasound"
+full_name: "High-Resolution Ultrasound Data for AI-Based Segmentation in Mouse Brain Tumor"
+release_year: 2025
+
+anatomy:
+  primary: "Mouse brain"
+  target: "brain tumor"
+
+modality:
+  type: "high-resolution B-mode ultrasound"
+  dimension: "2D images/videos"
+  temporal: "static images and videos"
+
+scale:
+  summary: "1,856 images: 1,448 tumor images and 408 no-tumor images"
+
+annotations:
+  summary: "pixel-wise tumor segmentation masks from multiple annotators with expert refinement; image-level tumor/no-tumor status is derivable"
+
+tasks:
+  - "tumor segmentation"
+  - "derived tumor/no-tumor binary classification"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "High-Resolution Ultrasound Data for AI-Based Segmentation in Mouse Brain Tumor"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-025-05619-z"
+
+data:
+  repository: "Mouse Brain Tumor Ultrasound"
+  url: "https://doi.org/10.6084/m9.figshare.27237894"
+  data_doi: "10.6084/m9.figshare.27237894"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the Scientific Data paper and linked Figshare data record."

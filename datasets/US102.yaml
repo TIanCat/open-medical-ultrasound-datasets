@@ -1,0 +1,46 @@
+id: US102
+name: "CCA"
+full_name: "CCA carotid artery ultrasound segmentation dataset used by MI-SegNet"
+release_year: 2023
+
+anatomy:
+  primary: "Carotid artery"
+  target: "carotid artery lumen/region"
+
+modality:
+  type: "B-mode carotid ultrasound"
+  dimension: "2D"
+  temporal: "static image"
+
+scale:
+  summary: "2,307 images: 2,107 training images and 200 held-out validation images; additional external-device test sets are referenced"
+
+annotations:
+  summary: "pixel-wise carotid artery region segmentation masks, including author-provided expert annotations for external public artery data"
+
+tasks:
+  - "carotid artery segmentation"
+  - "domain generalization across ultrasound devices"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "MI-SegNet: Mutual Information-Based US Segmentation for Unseen Domain Generalization"
+  venue: "MICCAI 2023"
+  doi: "10.1007/978-3-031-43901-8_13"
+
+data:
+  repository: "CCA"
+  url: "https://github.com/yuan-12138/MI-SegNet"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the MICCAI paper/preprint and the MI-SegNet GitHub repository; no standalone data DOI or explicit data license was confirmed."

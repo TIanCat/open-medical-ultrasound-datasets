@@ -1,0 +1,46 @@
+id: US095
+name: "BraTioUS"
+full_name: "BraTioUS - Brain Tumor Intraoperative Ultrasound Dataset"
+release_year: 2026
+
+anatomy:
+  primary: "Brain"
+  target: "glioma / tumor tissue"
+
+modality:
+  type: "intraoperative B-mode ultrasound"
+  dimension: "2D"
+  temporal: "intraoperative static images"
+
+scale:
+  summary: "1,669 B-mode iUS images from 142 glioma patients"
+
+annotations:
+  summary: "NIfTI-format ultrasound images and corresponding tumor segmentation masks; metadata spreadsheet"
+
+tasks:
+  - "brain tumor segmentation"
+  - "derived tumor/no-tumor image classification"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "No dedicated peer-reviewed dataset paper verified; Zenodo data resource"
+  venue: "Zenodo"
+  doi: null
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/20800464"
+  data_doi: "10.5281/zenodo.20800464"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Updated from older Zenodo record 16887363 to the latest verified record dated 2026-06-22; concept DOI is 10.5281/zenodo.16887362."
