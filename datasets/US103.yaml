@@ -35,7 +35,7 @@ paper:
 
 data:
   repository: "Federated Research Data Repository (FRDR)"
-  url: "https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550"
+  url: "https://www.frdr-dfdr.ca/repo/dataset/bc2125d8-65be-494b-95d2-b25fbb7adec1"
   data_doi: "10.20383/103.01550"
 
 family:
