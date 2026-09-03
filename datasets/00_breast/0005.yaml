@@ -1,57 +1,95 @@
-id: 0005
-name: BUSI
-full_name: Dataset of Breast Ultrasound Images
+id: "0005"
+name: "BUSI"
+full_name: "Dataset of Breast Ultrasound Images"
+aliases:
+  - "Breast Ultrasound Images Dataset"
+
 release_year: 2020
 
 anatomy:
-  primary: Breast
-  target: Breast lesion
+  primary: "Breast"
+  target:
+    - "Breast lesion"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 780
-  patients: 600
+  - unit: "patient"
+    count: 600
+  - unit: "image"
+    count: 780
 
 annotations:
   classification:
+    unit: "image"
     num_classes: 3
     classes:
-      - Normal
-      - Benign
-      - Malignant
+      - "Normal"
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Normal: 133
+      Benign: 437
+      Malignant: 210
 
   segmentation:
-    available: true
+    unit: "image"
+    type: "binary"
     targets:
-      - Breast lesion
+      - "Breast lesion"
+    format: "mask"
 
 tasks:
-  - Classification
-  - Segmentation
+  - "classification"
+  - "segmentation"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: null
+  requirements: []
 
 paper:
-  title: Dataset of breast ultrasound images
-  venue: Data in Brief
-  doi: 10.1016/j.dib.2019.104863
+  title: "Dataset of breast ultrasound images"
+  venue: "Data in Brief"
+  doi: "10.1016/j.dib.2019.104863"
 
 data:
-  repository: Mendeley Data
-  url: https://data.mendeley.com/datasets/k8t3gnx9h6/1
-  data_doi: ...
+  repository: "Cairo University"
+  url: "https://scholar.cu.edu.eg/?q=afahmy/pages/dataset"
+  doi: null
+
+acquisition:
+  countries:
+    - "Egypt"
+  institutions:
+    - "Baheya Hospital for Early Detection & Treatment of Women's Cancer, Cairo"
+  period: "2018"
+  scanners:
+    - "GE LOGIQ E9"
+    - "GE LOGIQ E9 Agile"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC6906728/"
+    - "https://scholar.cu.edu.eg/?q=afahmy/pages/dataset"
 
-notes: ""
+notes: >-
+  The dataset contains 780 images from 600 women. The widely used released-file
+  distribution is 133 normal, 437 benign, and 210 malignant images. The original
+  Data in Brief article contains an internal inconsistency in its class-count table,
+  so the released-file distribution is used here. The Mendeley record
+  10.17632/k8t3gnx9h6.1 is a later supplementary resource about BUSI data issues
+  and is not treated as the original BUSI dataset source.
