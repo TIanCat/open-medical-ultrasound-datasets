@@ -108,6 +108,19 @@ See [Scope](docs/scope.md).
 | [0705](datasets/07_vessel/0705.yaml) | UK Biobank carotid ultrasound | Carotid artery | carotid 2D B-mode ultrasound imaging fields | large UK Biobank imaging resource; participant/image counts depend on the specific field and release | carotid phenotype analysis; intima-media thickness / vascular measurement; epidemiology and risk-association research | 🟡 Application | UK Biobank imaging resource | [UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) |
 
 
+### Brain
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [0801](datasets/08_brain/0801.yaml) | BITE | Brain / brain tumor / resection cavity | Contrast-enhanced T1 MRI + intraoperative 2D/3D B-mode US | 14 patients | MRI-US and longitudinal registration; TRE evaluation | 🟢 Open | [Paper](https://doi.org/10.1118/1.4709600) | [BITE](https://nist.mni.mcgill.ca/bite-brain-images-of-tumors-for-evaluation-database/) |
+| [0802](datasets/08_brain/0802.yaml) | RESECT | Brain / low-grade glioma | preoperative MRI + intraoperative ultrasound (tracked 2D sweeps / reconstructed 3D iUS) | 23 low-grade glioma surgery cases | multimodal registration; landmark-error evaluation; tumor / resection-cavity segmentation in extension resources | 🟢 Open | [Paper](https://doi.org/10.1002/mp.12268) | [Sigma2 / NIRD](https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2017.00004) |
+| [0803](datasets/08_brain/0803.yaml) | In vivo rat brain for Ultrasound Localization Microscopy | Rat brain / cerebral microvasculature | raw RF ultrasound channel data + beamformed B-mode / ULM data | 23 Zenodo files; about 156.9 GB; approximately 200,000 frames/images | beamforming; image reconstruction; ULM; microbubble localization/tracking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/7883227) |
+| [0804](datasets/08_brain/0804.yaml) | ReMIND | Brain / brain tumor / neurosurgery | preoperative MRI + intraoperative MRI + intraoperative ultrasound | 114 neurosurgical cases | MRI-ultrasound registration; tumor/resection-cavity segmentation; residual lesion analysis | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-024-03295-z) | [TCIA](https://www.cancerimagingarchive.net/collection/remind/) |
+| [0805](datasets/08_brain/0805.yaml) | BraTioUS | Brain / glioma | intraoperative 2D B-mode ultrasound | 1,669 B-mode iUS images from 142 glioma patients | brain tumor binary segmentation; derived tumor/no-tumor classification | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/20800464) |
+| [0806](datasets/0806.yaml) | Dataset of 3D ultrasound neuroimages | Neonatal brain / transfontanelle ultrasound | 3D transfontanellar ultrasound volumes and derived 2D slices | small 3D neuroimage resource; current record has 9 files and supporting information | data augmentation; 2D slice synthesis; GAN training; image enhancement / representation research | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/19593033) |
+| [0807](datasets/08_brain/0807.yaml) | Mouse Brain Tumor Ultrasound | Mouse brain / brain tumor | high-resolution B-mode ultrasound images/videos | 1,856 images: 1,448 tumor images and 408 no-tumor images | tumor segmentation; derived tumor/no-tumor binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05619-z) | [Figshare](https://doi.org/10.6084/m9.figshare.27237894) |
+| [0808](datasets/08_brain/0808.yaml) | Open-3DULM / Transcranial mice brain | Mouse brain / transcranial microvasculature | ultrafast ultrasound localization microscopy cine / 4D data | 5 mice; 370 ultrafast cine videos | 3D ULM reconstruction; cerebral blood-flow / vascular analysis; 4D spatiotemporal representation | 🟢 Open | [Paper](https://doi.org/10.1038/s44172-025-00415-4) | [Zenodo](https://zenodo.org/records/14289690) |
+
+
 ### Kidney
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
@@ -115,30 +128,12 @@ See [Scope](docs/scope.md).
 | [US079](datasets/US079.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
 
 
-### Brain
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US090](datasets/US090.yaml) | BITE | Brain / brain tumor / resection cavity | Contrast-enhanced T1 MRI + intraoperative 2D/3D B-mode US | 14 patients | MRI-US and longitudinal registration; TRE evaluation | 🟢 Open | [Paper](https://doi.org/10.1118/1.4709600) | [BITE](https://nist.mni.mcgill.ca/bite-brain-images-of-tumors-for-evaluation-database/) |
-
-
-
-
-
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [US040](datasets/US040.yaml) | Clinical Ultrasound Image Repository | Abdominal; cardiac; OB/GYN | clinical DICOM | 2,000 studies | representation learning | 🟢 Open | AWS Registry of Open Data | [AWS](https://registry.opendata.aws/clinical-ultrasound-image-data/) |
 
-### Brain / Neuro
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US091](datasets/US091.yaml) | RESECT | Brain / low-grade glioma | preoperative MRI + intraoperative ultrasound (tracked 2D sweeps / reconstructed 3D iUS) | 23 low-grade glioma surgery cases | multimodal registration; landmark-error evaluation; tumor / resection-cavity segmentation in extension resources | 🟢 Open | [Paper](https://doi.org/10.1002/mp.12268) | [Sigma2 / NIRD](https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2017.00004) |
-| [US092](datasets/US092.yaml) | In vivo rat brain for Ultrasound Localization Microscopy | Rat brain / cerebral microvasculature | raw RF ultrasound channel data + beamformed B-mode / ULM data | 23 Zenodo files; about 156.9 GB; approximately 200,000 frames/images | beamforming; image reconstruction; ULM; microbubble localization/tracking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/7883227) |
-| [US094](datasets/US094.yaml) | ReMIND | Brain / brain tumor / neurosurgery | preoperative MRI + intraoperative MRI + intraoperative ultrasound | 114 neurosurgical cases | MRI-ultrasound registration; tumor/resection-cavity segmentation; residual lesion analysis | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-024-03295-z) | [TCIA](https://www.cancerimagingarchive.net/collection/remind/) |
-| [US095](datasets/US095.yaml) | BraTioUS | Brain / glioma | intraoperative 2D B-mode ultrasound | 1,669 B-mode iUS images from 142 glioma patients | brain tumor binary segmentation; derived tumor/no-tumor classification | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/20800464) |
-| [US096](datasets/US096.yaml) | Dataset of 3D ultrasound neuroimages | Neonatal brain / transfontanelle ultrasound | 3D transfontanellar ultrasound volumes and derived 2D slices | small 3D neuroimage resource; current record has 9 files and supporting information | data augmentation; 2D slice synthesis; GAN training; image enhancement / representation research | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/19593033) |
-| [US097](datasets/US097.yaml) | Mouse Brain Tumor Ultrasound | Mouse brain / brain tumor | high-resolution B-mode ultrasound images/videos | 1,856 images: 1,448 tumor images and 408 no-tumor images | tumor segmentation; derived tumor/no-tumor binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05619-z) | [Figshare](https://doi.org/10.6084/m9.figshare.27237894) |
-| [US099](datasets/US099.yaml) | Open-3DULM / Transcranial mice brain | Mouse brain / transcranial microvasculature | ultrafast ultrasound localization microscopy cine / 4D data | 5 mice; 370 ultrafast cine videos | 3D ULM reconstruction; cerebral blood-flow / vascular analysis; 4D spatiotemporal representation | 🟢 Open | [Paper](https://doi.org/10.1038/s44172-025-00415-4) | [Zenodo](https://zenodo.org/records/14289690) |
+
 
 
 
