@@ -1,0 +1,120 @@
+id: US004
+name: STU-Hospital
+name_source: GitHub repository name
+release_year: 2019
+release_year_basis: Official repository creation year
+
+anatomy:
+  primary: Breast
+  target: Breast lesion
+
+modality:
+  type: B-mode ultrasound
+  dimension: 2D
+  temporal: static
+  color: Grayscale
+  released_image_format: PNG
+  released_image_resolution: 128 x 128 pixels
+
+scale:
+  images: 42
+  masks: 42
+  image_mask_pairs: 42
+  subjects: Not reported
+  role_in_paper:
+    split: External test subset
+    total_test_images: 205
+    stu_hospital_images: 42
+    udiat_dataset_b_images: 163
+
+lesion_classes:
+  cohort_description: The paper states that the test images include benign and malignant breast lesions.
+  per_image_labels_available: false
+  class_distribution: Not reported for the 42-image STU-Hospital subset
+
+annotations:
+  segmentation:
+    available: true
+    unit: image
+    target: Breast lesion
+    type: 8-bit grayscale lesion mask
+    file_pairing: Test_Image_N.png pairs with mask_N.png for N = 1 to 42
+    annotators: Two clinical experts
+    aggregation: Average of the two expert markings, as described for the paper's gold standard
+    mask_resolution_distribution:
+      128_x_128: 6
+      400_x_400: 2
+      420_x_420: 22
+      480_x_480: 1
+      500_x_500: 3
+      512_x_512: 8
+    pixel_values:
+      strictly_0_and_255: 1
+      contains_intermediate_gray_values: 41
+    alignment_note: Most released masks do not match the 128 x 128 image dimensions. The repository provides no resizing, alignment, or binarization instructions, so users must define and document their preprocessing policy.
+
+tasks:
+  - Breast lesion segmentation
+  - External evaluation of segmentation models
+
+access:
+  level: open
+  registration_required: false
+  license: Not specified for the dataset repository
+  repository_readme: false
+  repository_license_file: false
+
+paper:
+  title: An RDAU-NET model for lesion segmentation in breast ultrasound images
+  authors:
+    - Zhemin Zhuang
+    - Nan Li
+    - Alex Noel Joseph Raj
+    - Vijayalakshmi G. V. Mahesh
+    - Shunmin Qiu
+  venue: PLOS ONE
+  publication_year: 2019
+  volume: 14
+  issue: 8
+  article_number: e0221535
+  doi: 10.1371/journal.pone.0221535
+  license: CC BY 4.0
+
+data:
+  repository: GitHub
+  url: https://github.com/xbhlk/STU-Hospital
+  default_branch: master
+  verified_commit: ba4a898d6c42fdfb5aa2b122742fd4cf6195349b
+  directory: Hospital
+  files:
+    image_pattern: Test_Image_N.png
+    mask_pattern: mask_N.png
+    image_count: 42
+    mask_count: 42
+    additional_metadata_files: 0
+
+acquisition:
+  institution: Imaging Department, First Affiliated Hospital of Shantou University, Guangdong, China
+  scanner: GE Voluson E10 Ultrasound Diagnostic System
+  transducer: L11-5 50 mm broadband linear-array transducer
+  frequency: 7.5 MHz
+  acquisition_period: Not reported
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+  methods:
+    - Read the official PLOS ONE article and cross-checked its metadata with Crossref
+    - Cloned the complete official GitHub repository and inspected all five commits
+    - Counted and paired all released images and masks and decoded every PNG header and grayscale mask
+    - Visually inspected representative image/mask pairs at different source resolutions
+  sources:
+    - https://doi.org/10.1371/journal.pone.0221535
+    - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0221535
+    - https://github.com/xbhlk/STU-Hospital
+    - https://api.github.com/repos/xbhlk/STU-Hospital
+
+notes: STU-Hospital is the public repository name, not a formal dataset name defined in the paper. The 42 images were used only as one external subset of the paper's 205-image test set. The repository contains no patient identifiers, demographic or pathology metadata, per-image lesion classes, original-resolution ultrasound images, formal dataset license, or official preprocessing instructions.
