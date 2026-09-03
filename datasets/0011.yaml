@@ -1,0 +1,111 @@
+id: US011
+name: BUS_UC
+full_name: BUS_UC breast ultrasound dataset
+release_year: 2023
+release_year_basis: Mendeley Data version 1 was published on 2023-10-20
+
+anatomy:
+  primary: Breast
+  target: Breast tumor
+
+modality:
+  type: Ultrasound
+  dimension: 2D
+  temporal: static
+  official_mode_wording: The data page says ultrasound images but does not explicitly state B-mode
+  released_format: 8-bit RGB PNG
+  stated_resolution_pixels: 256 x 256
+
+scale:
+  images: 811
+  masks: 811
+  class_distribution:
+    benign: 358
+    malignant: 453
+  patients: Not reported
+
+annotations:
+  classification:
+    available: true
+    classes:
+      - Benign
+      - Malignant
+    reference_standard: Not reported
+  segmentation:
+    available: true
+    target: Breast tumor region
+    type: Paired pixel-wise mask
+    annotator: An experienced radiologist
+    detailed_annotation_protocol: Not reported
+
+tasks:
+  - Benign versus malignant classification
+  - Breast tumor segmentation
+  - Tumor localization derived from masks
+
+splits:
+  official_train_validation_test_split: Not provided
+  patient_disjointness: Not assessable because patient identifiers are not provided
+
+access:
+  level: open
+  registration_required: false
+  license: CC BY 4.0
+
+paper:
+  title: Memory-efficient transformer network with feature fusion for breast tumor segmentation and classification task
+  authors:
+    - Ahmed Iqbal
+    - Muhammad Sharif
+  venue: Engineering Applications of Artificial Intelligence
+  volume: 127 Part B
+  article_number: 107292
+  publication_year: 2024
+  doi: 10.1016/j.engappai.2023.107292
+
+data:
+  repository: Mendeley Data
+  landing_page: https://data.mendeley.com/datasets/3ksd7w7jkx/1
+  doi: 10.17632/3ksd7w7jkx.1
+  publication_date: 2023-10-20
+  stated_provenance: Images were obtained from Ultrasound Cases (ultrasoundcases.info), which did not provide ground-truth masks
+  acquisition_institution: Not reported
+  acquisition_device: Not reported
+
+quality_checks:
+  source_checked: Public Kaggle mirror of BUS_UC; the Mendeley file-tree API did not expose a downloadable manifest during verification
+  archive_sha256: 4ed815c3b0d2ae0a7df63a46cd1ff59e01d326ecd4f772612ced4faebafccc96
+  unique_image_mask_pairs: 811
+  class_counts_match_official_metadata: true
+  filename_pairing_complete: true
+  image_dimensions:
+    256_x_256: 811
+  mask_dimensions:
+    256_x_256: 810
+    257_x_256: 1
+  known_dimension_mismatch:
+    filename: 0319.png
+    image: 256 x 256
+    mask: 257 x 256
+  exact_duplicate_images: 0
+  exact_duplicate_masks: 0
+  archive_duplicate_layout_note: The mirror repeats the same content in combined, class-specific, and classification-only directories; the dataset count is 811, not the archive-wide PNG count
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+  methods:
+    - Read the Mendeley Data version 1 page and public metadata API response
+    - Checked the associated article's publisher metadata
+    - Integrity-tested a public BUS_UC mirror and enumerated all image and mask paths
+    - Verified image-mask filename pairing, PNG dimensions, class counts, and exact-file duplicates
+  sources:
+    - https://data.mendeley.com/datasets/3ksd7w7jkx/1
+    - https://data.mendeley.com/public-api/datasets/3ksd7w7jkx/snapshot/1
+    - https://doi.org/10.17632/3ksd7w7jkx.1
+    - https://doi.org/10.1016/j.engappai.2023.107292
+
+notes: The dataset was released in 2023, while the associated journal article appears in the January 2024 issue. The official record does not report patient count, acquisition details, diagnostic reference standard, or an official split. A checked public mirror contains 811 complete filename pairs, but mask 0319.png is one pixel wider than its image; users should inspect or correct that pair before training.

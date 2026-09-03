@@ -29,6 +29,7 @@ See [Scope](docs/scope.md).
 | [0007](datasets/0007.yaml) | Breast Ultrasound Image Database / QAMEBI | Breast | 2D B-mode BMP | 232 lesions/images (109 benign, 123 malignant) | binary classification; lesion segmentation | 🟢 Open download; no stated license | [Abbasian Ardakani et al., 2023](https://doi.org/10.1016/j.compbiomed.2022.106438) | [QAMEBI](https://qamebi.com/breast-ultrasound-images-database/) |
 | [0008](datasets/0008.yaml) | BUS-BRA | Breast | 2D B-mode PNG | 1,875 images / 1,064 women | segmentation; detection; pathology and BI-RADS classification | 🟢 Open; CC BY 4.0 | [Gómez-Flores et al., 2024](https://doi.org/10.1002/mp.16812) | [Zenodo](https://zenodo.org/records/8231412) |
 | [0009](datasets/0009.yaml) | BUSI_WHU | Breast | 2D B-mode BMP | 927 images / 816 patients | tumor segmentation; binary classification; mask-derived localization/measurement | 🟢 Open; CC BY 4.0 | [Data resource](https://doi.org/10.17632/k6cpmwybk3.3) | [Mendeley Data v3](https://data.mendeley.com/datasets/k6cpmwybk3/3) |
+| [0011](datasets/0011.yaml) | BUS_UC | Breast | 2D static ultrasound PNG | 811 image/mask pairs; patient count not reported | segmentation; binary classification; mask-derived localization | 🟢 Open; CC BY 4.0 | [Iqbal & Sharif, 2024](https://doi.org/10.1016/j.engappai.2023.107292) | [Mendeley Data](https://data.mendeley.com/datasets/3ksd7w7jkx/1) |
 
 ### Thyroid
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
