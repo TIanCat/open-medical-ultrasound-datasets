@@ -74,6 +74,7 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [0010](datasets/0010.yaml) | USenhance 2023 | Thyroid; carotid; liver; kidney; breast | 2D grayscale ultrasound PNG | 1,050 public training pairs + 364 public test inputs; 109 patients stated | low-to-high image reconstruction/enhancement | 🟢 Open download; CC BY-SA stated | [Challenge design](https://doi.org/10.5281/zenodo.7841250) | [Grand Challenge](https://ultrasoundenhance2023.grand-challenge.org/datasets/) |
+| [0012](datasets/0012.yaml) | Chinese multi-organ ultrasound image-text datasets | Breast; thyroid; liver | 2D ultrasound image pairs + Chinese reports | paper: 7,390 patients; public archive: 7,364 records / 17,149 images | report generation; image-text learning | 🟢 Open download; no stated dataset license | [Li et al., 2025](https://doi.org/10.1109/TMI.2024.3424978) | [Author repository](https://github.com/LijunRio/Ultrasound-Report-Generation) |
 | [US040](datasets/US040.yaml) | Clinical Ultrasound Image Repository | Abdominal; cardiac; OB/GYN | clinical DICOM | 2,000 studies | representation learning | 🟢 Open | AWS Registry of Open Data | [AWS](https://registry.opendata.aws/clinical-ultrasound-image-data/) |
 
 ### Other
