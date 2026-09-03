@@ -84,6 +84,7 @@ See [Scope](docs/scope.md).
 ### Other
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
+| [0017](datasets/0017.yaml) | Common Carotid Artery Ultrasound Images | Common carotid artery | 2D ultrasound PNG frames | 1,100 image/mask pairs / 11 subjects | artery-region segmentation; geometry measurement | 🟢 Open; CC BY 4.0 | [Data resource](https://doi.org/10.17632/d4xt63mgjm.1) | [Mendeley Data](https://data.mendeley.com/datasets/d4xt63mgjm/1) |
 | [US041](datasets/US041.yaml) | GIST514-DB | GI tract tumors | endoscopic US | 514 cases/images | classification; detection; segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106424) | [GitHub](https://github.com/WuJunde/Query2) |
 | [US042](datasets/US042.yaml) | LEPset | Pancreas | endoscopic US | 11,500 images / 420 patients | classification; pretraining | 🟢 Open | [Dataset](https://doi.org/10.5281/zenodo.8041285) | [Zenodo](https://zenodo.org/records/8041285) |
 | [US043](datasets/US043.yaml) | C-TRUS | Colon wall | 2D B-mode images | 827 images / 13 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-73647-6_10) | [GitHub](https://github.com/wwu-mmll/c-trus) |
