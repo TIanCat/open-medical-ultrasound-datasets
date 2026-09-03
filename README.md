@@ -63,6 +63,16 @@ See [Scope](docs/scope.md).
 | [0308](datasets/03_cardiac/0308.yaml) | CACTUS | Cardiac phantom | 2D B-mode images | 37,736 images | view classification; quality grading | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2025.110003) | [Data](https://doi.org/10.20383/103.01484) |
 | [0309](datasets/03_cardiac/0309.yaml) | MIMIC-IV-Echo | Heart | DICOM + measurements | 206,488 studies | measurement; multimodal learning | 🔴 Controlled | [Paper](https://doi.org/10.13026/307c-mr50) | [PhysioNet](https://physionet.org/content/mimic-iv-echo/1.0.1/) |
 
+### Lung
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [0401](datasets/04_lung/0401.yaml) | POCUS Dataset for COVID-19 Detection | Lung | 2D POCUS videos and images | Paper: 261 recordings / 216 patients; current metadata: 374 records | classification; severity scoring; feature segmentation | 🟢 Open | [Paper](https://doi.org/10.3390/app11020672) | [GitHub](https://github.com/jannisborn/covid19_ultrasound) |
+| [0402](datasets/04_lung/0402.yaml) | COVIDx-US | Lung | 2D POCUS videos and extracted frames | Repository: 242 videos / 29,651 frames | classification; severity assessment | 🟢 Open | [Paper](https://doi.org/10.31083/j.fbl2707198) | [GitHub](https://github.com/nrc-cnrc/COVID-US) |
+| [0403](datasets/04_lung/0403.yaml) | LUSS_phantom | Lung ultrasound phantom | 2D cine loops and extracted frames | 564 annotated frames | artefact segmentation; B-line quantification | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultras.2024.107251) | [Data](https://doi.org/10.5518/1485) |
+| [0404](datasets/04_lung/0404.yaml) | Lung Ultrasound Images for Automated AI-based Lung Disease Classification | Lung | 2D B-mode images | 1,062 images / 149 patients | 3-class lung condition classification | 🟢 Open | [Paper](https://doi.org/10.1016/j.dib.2025.112034) | [Mendeley Data](https://data.mendeley.com/datasets/hb3p34ytvx/2) |
+| [0405](datasets/04_lung/0405.yaml) | POCUS LUS Datasets | Lung | 2D POCUS images | 10 images / 8 upstream patient/source IDs | 3-class classification | 🟢 Open | No dedicated paper | [Figshare](https://doi.org/10.6084/m9.figshare.29364743.v1) |
+| [0406](datasets/04_lung/0406.yaml) | PU2756 | Lung / peripheral pulmonary tumor | 2D B-mode images | 2,756 images / 2,756 patients | segmentation; binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07715-0) | [Figshare](https://doi.org/10.6084/m9.figshare.32672274) |
+
 ### Liver and Gallbladder
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
@@ -76,15 +86,6 @@ See [Scope](docs/scope.md).
 | [US070](datasets/US070.yaml) | Saudi NAFLD Liver Ultrasound Dataset | Liver / NAFLD | 2D grayscale and color images | 10,352 images / 384 patients | steatosis grading; fibrosis staging; classification | 🟡 Application | [Paper](https://doi.org/10.1016/j.dib.2024.111266) | [OSF](https://doi.org/10.17605/OSF.IO/C2YG8) |
 | [US071](datasets/US071.yaml) | SMC-LUD | Liver / focal liver lesions | 2D B-mode images | 5,385 images / 1,021 patients | HCC vs hemangioma classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07023-7) | [Figshare](https://doi.org/10.6084/m9.figshare.31112716) |
 
-### Lung
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US072](datasets/US072.yaml) | POCUS Dataset for COVID-19 Detection | Lung | 2D POCUS videos and images | Paper: 261 recordings / 216 patients; current metadata: 374 records | classification; severity scoring; feature segmentation | 🟢 Open | [Paper](https://doi.org/10.3390/app11020672) | [GitHub](https://github.com/jannisborn/covid19_ultrasound) |
-| [US073](datasets/US073.yaml) | COVIDx-US | Lung | 2D POCUS videos and extracted frames | Repository: 242 videos / 29,651 frames | classification; severity assessment | 🟢 Open | [Paper](https://doi.org/10.31083/j.fbl2707198) | [GitHub](https://github.com/nrc-cnrc/COVID-US) |
-| [US074](datasets/US074.yaml) | LUSS_phantom | Lung ultrasound phantom | 2D cine loops and extracted frames | 564 annotated frames | artefact segmentation; B-line quantification | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultras.2024.107251) | [Data](https://doi.org/10.5518/1485) |
-| [US075](datasets/US075.yaml) | Lung Ultrasound Images for Automated AI-based Lung Disease Classification | Lung | 2D B-mode images | 1,062 images / 149 patients | 3-class lung condition classification | 🟢 Open | [Paper](https://doi.org/10.1016/j.dib.2025.112034) | [Mendeley Data](https://data.mendeley.com/datasets/hb3p34ytvx/2) |
-| [US076](datasets/US076.yaml) | POCUS LUS Datasets | Lung | 2D POCUS images | 10 images / 8 upstream patient/source IDs | 3-class classification | 🟢 Open | No dedicated paper | [Figshare](https://doi.org/10.6084/m9.figshare.29364743.v1) |
-| [US077](datasets/US077.yaml) | PU2756 | Lung / peripheral pulmonary tumor | 2D B-mode images | 2,756 images / 2,756 patients | segmentation; binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07715-0) | [Figshare](https://doi.org/10.6084/m9.figshare.32672274) |
 
 ### Kidney
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
