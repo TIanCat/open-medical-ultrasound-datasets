@@ -87,6 +87,18 @@ See [Scope](docs/scope.md).
 | [0509](datasets/05_liver_gallbladder/0509.yaml) | SMC-LUD | Liver / focal liver lesions | 2D B-mode images | 5,385 images / 1,021 patients | HCC vs hemangioma classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07023-7) | [Figshare](https://doi.org/10.6084/m9.figshare.31112716) |
 
 
+### Musculoskeletal
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [0601](datasets/06_musculoskeletal/0601.yaml) | LUMINOUS | Lumbar multifidus | 2D B-mode images | 109 subjects | segmentation; CSA/echo intensity | 🟢 Open | [Paper](https://doi.org/10.1186/s12891-020-03679-3) | [Data](http://data.sonography.ai/) |
+| [0602](datasets/06_musculoskeletal/0602.yaml) | deepMTJ test set | Muscle-tendon junction | 2D B-mode images | 1,344 images | localization; tracking | 🟢 Open | [Paper](https://doi.org/10.1109/TBME.2021.313054) | [Figshare](https://doi.org/10.6084/m9.figshare.16822978.v2) |
+| [0603](datasets/06_musculoskeletal/0603.yaml) | FALLMUD | Lower-leg muscle | 2D B-mode images | 812 images | fascicle/aponeurosis segmentation | 🟢 Open | ACM BCB 2021 | [Data](https://kalisteo.cea.fr/index.php/fallmud/) |
+| [0604](datasets/06_musculoskeletal/0604.yaml) | TUS-REC2024 | Forearm | tracked freehand US | 2,040 scans / 85 volunteers | 3D reconstruction; pose estimation | 🟡 Application | [Paper](https://doi.org/10.48550/arXiv.2506.21765) | [GitHub](https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/) |
+| [0605](datasets/06_musculoskeletal/0605.yaml) | Machine Learning-Driven Heckmatt Grading in FSHD | Muscle / FSHD | 2D B-mode images | 25,005 images / 290 participants | grading; segmentation | 🟢 Open | [Paper](https://doi.org/10.17632/yzg86vb895.1) | [Mendeley Data](https://data.mendeley.com/datasets/yzg86vb895/1) |
+| [0606](datasets/06_musculoskeletal/0606.yaml) | Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment | Muscle / NMD | 2D B-mode images | 3,917 images / 1,283 subjects | segmentation; quantitative assessment | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2021.104623) | [Mendeley Data](https://data.mendeley.com/datasets/3jykz7wz8d/1) |
+| [0607](datasets/06_musculoskeletal/0607.yaml) | Paired robotic and handheld lumbar spine ultrasound | Lumbar spine / vertebral bone surface | Paired CT + tracked 2D B-mode sweeps | 598 US scans / 63 volunteers; 6,091 annotated frames | segmentation; US-CT registration; 3D reconstruction | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-06047-9) | [Data](https://doi.org/10.48804/3XPCAE) |
+
+
 ### Kidney
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
@@ -101,16 +113,7 @@ See [Scope](docs/scope.md).
 
 
 
-### Musculoskeletal
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US053](datasets/US053.yaml) | LUMINOUS | Lumbar multifidus | 2D B-mode images | 109 subjects | segmentation; CSA/echo intensity | 🟢 Open | [Paper](https://doi.org/10.1186/s12891-020-03679-3) | [Data](http://data.sonography.ai/) |
-| [US054](datasets/US054.yaml) | deepMTJ test set | Muscle-tendon junction | 2D B-mode images | 1,344 images | localization; tracking | 🟢 Open | [Paper](https://doi.org/10.1109/TBME.2021.313054) | [Figshare](https://doi.org/10.6084/m9.figshare.16822978.v2) |
-| [US055](datasets/US055.yaml) | FALLMUD | Lower-leg muscle | 2D B-mode images | 812 images | fascicle/aponeurosis segmentation | 🟢 Open | ACM BCB 2021 | [Data](https://kalisteo.cea.fr/index.php/fallmud/) |
-| [US057](datasets/US057.yaml) | TUS-REC2024 | Forearm | tracked freehand US | 2,040 scans / 85 volunteers | 3D reconstruction; pose estimation | 🟡 Application | [Paper](https://doi.org/10.48550/arXiv.2506.21765) | [GitHub](https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/) |
-| [US058](datasets/US058.yaml) | Machine Learning-Driven Heckmatt Grading in FSHD | Muscle / FSHD | 2D B-mode images | 25,005 images / 290 participants | grading; segmentation | 🟢 Open | [Paper](https://doi.org/10.17632/yzg86vb895.1) | [Mendeley Data](https://data.mendeley.com/datasets/yzg86vb895/1) |
-| [US059](datasets/US059.yaml) | Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment | Muscle / NMD | 2D B-mode images | 3,917 images / 1,283 subjects | segmentation; quantitative assessment | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2021.104623) | [Mendeley Data](https://data.mendeley.com/datasets/3jykz7wz8d/1) |
-| [US062](datasets/US062.yaml) | Paired robotic and handheld lumbar spine ultrasound | Lumbar spine / vertebral bone surface | Paired CT + tracked 2D B-mode sweeps | 598 US scans / 63 volunteers; 6,091 annotated frames | segmentation; US-CT registration; 3D reconstruction | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-06047-9) | [Data](https://doi.org/10.48804/3XPCAE) |
+
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
