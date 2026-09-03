@@ -50,6 +50,19 @@ See [Scope](docs/scope.md).
 | [0209](datasets/02_obstetrics/0209.yaml) | FOCUS | Fetus / fetal heart / thorax | 2D four-chamber images | 300 images / 217 subjects | detection; segmentation; cardiothoracic ratio | 🟢 Open | Zenodo data resource | [Zenodo](https://doi.org/10.5281/zenodo.14597550) |
 | [0210](datasets/02_obstetrics/0210.yaml) | Maternal-Fetal Ultrasound Video Dataset | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal videos | 774 videos / 68,106 frames | plane classification; segmentation; landmark detection; biometry | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-06900-5) | [Zenodo](https://doi.org/10.5281/zenodo.17655183) |
 
+### Cardiac
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [0301](datasets/03_cardiac/0301.yaml) | CAMUS | Heart (A2C/A4C) | 2D echo sequences | 500 patients | segmentation; function measurement | 🟢 Open | [Paper](https://doi.org/10.1109/TMI.2019.2900516) | [CAMUS](https://www.creatis.insa-lyon.fr/Challenge/camus/) |
+| [0302](datasets/03_cardiac/0302.yaml) | EchoNet-Dynamic | Heart (A4C) | 2D echo videos | 10,030 videos | segmentation; EF/volume regression | 🟡 Application | [Paper](https://doi.org/10.1038/s41586-020-2145-8) | [GitHub](https://echonet.github.io/dynamic/) |
+| [0303](datasets/03_cardiac/0303.yaml) | EchoCP | Heart / PFO | contrast TTE videos | 60 videos / 30 patients | PFO grading; chamber segmentation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2105.08267) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/echocp) |
+| [0304](datasets/03_cardiac/0304.yaml) | Tufts Medical Echocardiogram Dataset (TMED-2) | Heart / aortic stenosis | 2D TTE images | 599 fully labeled studies | AS and view classification | 🟡 Application | Machine Learning for Healthcare Conference (MLHC 2021), PMLR | [TMED](https://tmed.cs.tufts.edu/tmed_v2.html) |
+| [0305](datasets/03_cardiac/0305.yaml) | EchoNet-LVH | Heart (PLAX) | 2D echo videos | 12,000 videos | wall/chamber measurement | 🟡 Application | [Paper](https://doi.org/10.1001/jamacardio.2021.6059) | [Project page](https://aimi.stanford.edu/datasets/echonet-lvh) |
+| [0306](datasets/03_cardiac/0306.yaml) | CardiacUDA / CardiacUDC | Heart (4 views) | 2D echo videos | 992 videos in paper | segmentation; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2309.11145) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset) |
+| [0307](datasets/03_cardiac/0307.yaml) | EchoNet-Pediatric | Pediatric heart | 2D echo videos | 7,643 videos | segmentation; EF/volume regression | 🟡 Application | [Paper](https://doi.org/10.1016/j.echo.2023.01.015) | [GitHub](https://echonet.github.io/pediatric/) |
+| [0308](datasets/03_cardiac/0308.yaml) | CACTUS | Cardiac phantom | 2D B-mode images | 37,736 images | view classification; quality grading | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2025.110003) | [Data](https://doi.org/10.20383/103.01484) |
+| [0309](datasets/03_cardiac/0309.yaml) | MIMIC-IV-Echo | Heart | DICOM + measurements | 206,488 studies | measurement; multimodal learning | 🔴 Controlled | [Paper](https://doi.org/10.13026/307c-mr50) | [PhysioNet](https://physionet.org/content/mimic-iv-echo/1.0.1/) |
+
 ### Liver and Gallbladder
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
@@ -85,18 +98,7 @@ See [Scope](docs/scope.md).
 |---|---|---|---|---|---|---|---|---|
 | [US090](datasets/US090.yaml) | BITE | Brain / brain tumor / resection cavity | Contrast-enhanced T1 MRI + intraoperative 2D/3D B-mode US | 14 patients | MRI-US and longitudinal registration; TRE evaluation | 🟢 Open | [Paper](https://doi.org/10.1118/1.4709600) | [BITE](https://nist.mni.mcgill.ca/bite-brain-images-of-tumors-for-evaluation-database/) |
 
-### Heart
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US031](datasets/US031.yaml) | CAMUS | Heart (A2C/A4C) | 2D echo sequences | 500 patients | segmentation; function measurement | 🟢 Open | [Paper](https://doi.org/10.1109/TMI.2019.2900516) | [CAMUS](https://www.creatis.insa-lyon.fr/Challenge/camus/) |
-| [US032](datasets/US032.yaml) | EchoNet-Dynamic | Heart (A4C) | 2D echo videos | 10,030 videos | segmentation; EF/volume regression | 🟡 Application | [Paper](https://doi.org/10.1038/s41586-020-2145-8) | [GitHub](https://echonet.github.io/dynamic/) |
-| [US033](datasets/US033.yaml) | EchoCP | Heart / PFO | contrast TTE videos | 60 videos / 30 patients | PFO grading; chamber segmentation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2105.08267) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/echocp) |
-| [US034](datasets/US034.yaml) | Tufts Medical Echocardiogram Dataset (TMED-2) | Heart / aortic stenosis | 2D TTE images | 599 fully labeled studies | AS and view classification | 🟡 Application | Machine Learning for Healthcare Conference (MLHC 2021), PMLR | [TMED](https://tmed.cs.tufts.edu/tmed_v2.html) |
-| [US035](datasets/US035.yaml) | EchoNet-LVH | Heart (PLAX) | 2D echo videos | 12,000 videos | wall/chamber measurement | 🟡 Application | [Paper](https://doi.org/10.1001/jamacardio.2021.6059) | [Project page](https://aimi.stanford.edu/datasets/echonet-lvh) |
-| [US036](datasets/US036.yaml) | CardiacUDA / CardiacUDC | Heart (4 views) | 2D echo videos | 992 videos in paper | segmentation; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2309.11145) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset) |
-| [US037](datasets/US037.yaml) | EchoNet-Pediatric | Pediatric heart | 2D echo videos | 7,643 videos | segmentation; EF/volume regression | 🟡 Application | [Paper](https://doi.org/10.1016/j.echo.2023.01.015) | [GitHub](https://echonet.github.io/pediatric/) |
-| [US038](datasets/US038.yaml) | CACTUS | Cardiac phantom | 2D B-mode images | 37,736 images | view classification; quality grading | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2025.110003) | [Data](https://doi.org/10.20383/103.01484) |
-| [US039](datasets/US039.yaml) | MIMIC-IV-Echo | Heart | DICOM + measurements | 206,488 studies | measurement; multimodal learning | 🔴 Controlled | [Paper](https://doi.org/10.13026/307c-mr50) | [PhysioNet](https://physionet.org/content/mimic-iv-echo/1.0.1/) |
+
 
 ### Musculoskeletal
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
