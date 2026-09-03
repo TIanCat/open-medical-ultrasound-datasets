@@ -1,0 +1,55 @@
+id: US075
+name: Lung Ultrasound Images for Automated AI-based Lung Disease Classification
+full_name: A Dataset of Lung Ultrasound Images for Automated AI-based Lung Disease Classification
+release_year: 2025
+
+anatomy:
+  primary: Lung
+  target: Pulmonary conditions
+
+modality:
+  type: B-mode lung ultrasound
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 1062
+  patients: 149
+
+annotations:
+  classification:
+    num_classes: 3
+    classes:
+      - Probably COVID-19
+      - Diseased lung but probably not COVID-19
+      - Healthy lung
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: A dataset of lung ultrasound images for automated AI-based lung disease classification
+  venue: Data in Brief
+  doi: 10.1016/j.dib.2025.112034
+
+data:
+  repository: Mendeley Data
+  url: https://data.mendeley.com/datasets/hb3p34ytvx/2
+  data_doi: 10.17632/hb3p34ytvx.2
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 1,062 images from 149 Ugandan patients: 338 images from 27 patients classified as probably COVID-19, 362 images from 67 patients with other lung disease, and 362 images from 55 healthy-lung patients. Three senior radiologists acquired the data at Mulago and Kiruddu National Referral Hospitals. Twelve thoracic regions were scanned longitudinally and transversely, initially producing 24 frames per patient; low-quality images were subsequently excluded. The patient-level split contains 723 training, 198 validation, and 141 test images. Files are JPEG or PNG with resolutions from 286 x 331 to 513 x 665 pixels. Mendeley v2 adds the original unprocessed data and processing, cleaning, and sorting scripts. The Mendeley page was accessible, but the underlying image files were not downloaded or inspected during verification."

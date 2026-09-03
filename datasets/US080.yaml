@@ -1,0 +1,54 @@
+id: US080
+name: HC18
+full_name: Head Circumference 2018 Challenge Dataset
+release_year: 2018
+
+anatomy:
+  primary: Fetus
+  target: Fetal head
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 1334
+  patients: 551
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: true
+    targets:
+      - Fetal head circumference ellipse outline
+
+tasks:
+  - Segmentation
+  - Head circumference measurement
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Automated measurement of fetal head circumference using 2D ultrasound images
+  venue: PLOS ONE
+  doi: 10.1371/journal.pone.0200412
+
+data:
+  repository: Zenodo
+  url: https://doi.org/10.5281/zenodo.1322000
+  data_doi: 10.5281/zenodo.1322000
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 1,334 fetal-head standard-plane images from 551 pregnant women: 999 training images and 335 test images. The training set provides expert-fitted head-circumference ellipse outlines, physical pixel spacing, and HC measurements in millimetres. The public test set provides images and pixel spacing, while its ellipse annotations and HC ground truth are retained by the challenge organizers for blind evaluation. The stable Zenodo concept DOI resolves to the latest version; record 1322001 is the superseded v1 and the latest version-specific DOI is 10.5281/zenodo.1327317. During verification, both official metadata CSV files from v1 were successfully transferred in full; the image ZIP archives were not downloaded."

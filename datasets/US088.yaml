@@ -1,0 +1,62 @@
+id: US088
+name: FOCUS
+full_name: Four-chamber Ultrasound Image Dataset for Fetal Cardiac Biometric Measurement
+release_year: 2025
+
+anatomy:
+  primary: Fetus
+  target: Fetal heart and thorax
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 300
+  patients: 217
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: true
+    targets:
+      - Fetal heart
+      - Fetal thorax
+
+tasks:
+  - Object detection
+  - Semantic segmentation
+  - Cardiothoracic diameter ratio measurement
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: null
+  venue: null
+  doi: null
+
+data:
+  repository: Zenodo
+  url: https://doi.org/10.5281/zenodo.14597550
+  data_doi: 10.5281/zenodo.14597550
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: >-
+  The archive contains 250 training and 50 testing four-chamber ultrasound
+  images. Each image has fetal cardiac and thoracic ellipse annotations,
+  rectangle or rotated-box annotations, and separate binary PNG masks.
+  The count of 217 subjects is reported by subsequent technical reports but
+  is not stated in the Zenodo description. The 61.2 MB Zenodo file endpoint
+  and archive preview were both verified.

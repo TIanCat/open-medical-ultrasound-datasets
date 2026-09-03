@@ -1,0 +1,57 @@
+id: US070
+name: Saudi NAFLD Liver Ultrasound Dataset
+full_name: Large annotated ultrasound dataset of non-alcoholic fatty liver from Saudi hospitals for analysis and applications
+release_year: 2024
+
+anatomy:
+  primary: Liver
+  target: Non-alcoholic fatty liver disease
+
+modality:
+  type: Grayscale and color ultrasound
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 10352
+  patients: 384
+
+annotations:
+  classification:
+    num_classes: 4
+    classes:
+      - Steatosis grade 0
+      - Steatosis grade 1
+      - Steatosis grade 2
+      - Steatosis grade 3
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+  - Grading
+
+access:
+  level: application
+  license: Custom confidentiality and data-use agreement
+
+paper:
+  title: Large annotated ultrasound dataset of non-alcoholic fatty liver from Saudi hospitals for analysis and applications
+  venue: Data in Brief
+  doi: 10.1016/j.dib.2024.111266
+
+data:
+  repository: Open Science Framework
+  url: https://doi.org/10.17605/OSF.IO/C2YG8
+  data_doi: 10.17605/OSF.IO/C2YG8
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 10,352 standardized 768 × 1024 PNG images from 384 patients: 8,772 grayscale and 1,580 color images. Full-image labels are based on corresponding liver biopsy results. Steatosis uses grades 0–3; fibrosis uses five categories from no fibrosis through cirrhosis. No bounding boxes, segmentation masks, patient IDs, examination dates, raw NAS scores, or biopsy reports are released. The OSF project and files were not accessible during verification; access requires formal approval and a signed confidentiality agreement and is restricted to non-commercial research."

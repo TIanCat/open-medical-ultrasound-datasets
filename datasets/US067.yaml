@@ -1,0 +1,55 @@
+id: US067
+name: GBUSV
+full_name: Gallbladder Ultrasound Video Dataset
+release_year: 2022
+
+anatomy:
+  primary: Gallbladder
+  target: Gallbladder and gallbladder pathology
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: video
+
+scale:
+  images: 15800
+  patients: null
+
+annotations:
+  classification:
+    num_classes: 2
+    classes:
+      - Non-malignant
+      - Malignant
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Self-supervised Representation Learning
+  - Video Classification
+
+access:
+  level: application
+  license: Custom GBUSV License Agreement
+
+paper:
+  title: Unsupervised Contrastive Learning of Image Representations from Ultrasound Videos with Hard Negative Mining
+  venue: MICCAI 2022
+  doi: 10.1007/978-3-031-16440-8_41
+
+data:
+  repository: GBUSV project website
+  url: https://gbc-iitd.github.io/data/gbusv
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The original release contains 64 videos and 15,800 unannotated frames: 12,251 frames from 32 malignant videos and 3,549 frames from 32 non-malignant videos. Videos contain 43–888 frames, resized to 360 × 480 pixels. Only video-level labels are provided. The current application agreement is labeled GBUSV v2.0, whereas the project page still documents the original 64-video release. Redistribution, modification, and commercial use require prior written approval."

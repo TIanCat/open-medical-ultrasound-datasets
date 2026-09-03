@@ -1,0 +1,54 @@
+id: US071
+name: SMC-LUD
+full_name: Samsung Medical Center Liver Ultrasound Dataset
+release_year: 2026
+
+anatomy:
+  primary: Liver
+  target: Focal liver lesions
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 5385
+  patients: 1021
+
+annotations:
+  classification:
+    num_classes: 2
+    classes:
+      - Hepatocellular carcinoma
+      - Hemangioma
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+
+access:
+  level: open
+  license: CC BY 4.0 with mandatory non-commercial research restriction
+
+paper:
+  title: "SMC-LUD: Large-Scale B-Mode Liver Ultrasound Dataset for Hepatocellular Carcinoma and Hemangioma Classification"
+  venue: Scientific Data
+  doi: 10.1038/s41597-026-07023-7
+
+data:
+  repository: Figshare
+  url: https://doi.org/10.6084/m9.figshare.31112716
+  data_doi: 10.6084/m9.figshare.31112716
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 5,385 anonymized images from 1,021 patients: 2,716 HCC images from 600 patients and 2,669 hemangioma images from 421 patients. Labels are image-level and data are grouped by patient. HCC diagnoses were histopathologically confirmed through surgical resection or biopsy; hemangiomas were radiologically diagnosed and reviewed by abdominal radiologists. HCC metadata include tumor size and UICC/AJCC pT stages. Clean and Caliper image subsets are provided; no segmentation masks are reported. Figshare displays CC BY 4.0, but both the repository and paper impose a non-commercial research-only restriction. The current v3 record provides one 1,328,048,074-byte ZIP. Its download endpoint was verified with a one-byte range request; the complete archive was not downloaded."

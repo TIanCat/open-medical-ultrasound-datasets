@@ -1,0 +1,56 @@
+id: US066
+name: GBCU
+full_name: Gallbladder Cancer Ultrasound Dataset
+release_year: 2022
+
+anatomy:
+  primary: Gallbladder
+  target: Gallbladder and gallbladder pathology
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 1255
+  patients: 218
+
+annotations:
+  classification:
+    num_classes: 3
+    classes:
+      - Normal
+      - Benign
+      - Malignant
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+  - Detection
+
+access:
+  level: application
+  license: Custom GBCU License Agreement
+
+paper:
+  title: Surpassing the Human Accuracy: Detecting Gallbladder Cancer From USG Images With Curriculum Learning
+  venue: CVPR 2022
+  doi: 10.1109/CVPR52688.2022.02022
+
+data:
+  repository: GBCU project website
+  url: https://gbc-iitd.github.io/data/gbcu
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 432 normal images from 71 patients, 558 benign images from 100 patients, and 265 malignant images from 47 patients. Expert axis-aligned bounding boxes cover the gallbladder and adjacent liver ROI, with additional boxes for abnormal pathologies. No pixel-wise masks are provided. Requests are limited to permanent employees or faculty; students must apply through a supervisor or department head. Redistribution, modification, and commercial use require prior written approval."

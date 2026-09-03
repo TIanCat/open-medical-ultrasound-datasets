@@ -1,0 +1,69 @@
+id: US089
+name: Maternal-Fetal Ultrasound Video Dataset
+full_name: Maternal-Fetal Ultrasound Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning
+release_year: 2025
+
+anatomy:
+  primary: Maternal pelvis
+  target: Pubic symphysis and fetal head
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: video
+
+scale:
+  images: 68106
+  videos: 774
+  patients: null
+
+annotations:
+  classification:
+    num_classes: 2
+    classes:
+      - Non-standard plane
+      - Standard plane
+
+  segmentation:
+    available: true
+    targets:
+      - Pubic symphysis
+      - Fetal head
+
+tasks:
+  - Standard-plane classification
+  - Semantic segmentation
+  - Landmark detection
+  - Angle of progression measurement
+  - Head-symphysis distance measurement
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Maternal-Fetal Ultrasouno Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning
+  venue: Scientific Data
+  doi: 10.1038/s41597-026-06900-5
+
+data:
+  repository: Zenodo
+  url: https://doi.org/10.5281/zenodo.17655183
+  data_doi: 10.5281/zenodo.17655183
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: >-
+  The dataset was published on Zenodo on 2025-11-20, while the associated
+  Scientific Data paper was published in 2026. It contains 774 videos and
+  68,106 frames from three institutions and three ultrasound devices.
+  Patient count is not reported. Segmentation masks are PNG files, and
+  landmark.json files provide pubic-symphysis and fetal-head coordinates
+  used to calculate AoP and HSD. The current DatasetV3.zip file is
+  1,084,176,447 bytes and its endpoint was verified using a partial-content
+  request. The paper title contains the publisher's spelling "Ultrasouno".

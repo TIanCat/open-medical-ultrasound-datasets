@@ -1,0 +1,52 @@
+id: US068
+name: liver_ultrasound
+full_name: liver_ultrasound Computer Vision Project
+release_year: 2023
+
+anatomy:
+  primary: Liver
+  target: Hepatic and adjacent abdominal structures
+
+modality:
+  type: Grayscale ultrasound
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 400
+  patients: null
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Detection
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: null
+  venue: null
+  doi: null
+
+data:
+  repository: Roboflow Universe
+  url: https://universe.roboflow.com/joe-klepich/liver_ultrasound
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 400 images with a 220/120/60 train/validation/test split in dataset version v11. Bounding-box labels are: 0, HCC, HV, IVC, K, K-C, K-M, LT SAG, LVR, PV, RT TRANS, SAG, SAG K, and TRANS. The meaning of class 0 and several abbreviations is not documented. Patient count, acquisition source, annotator details, and diagnostic reference standards are not provided."

@@ -1,0 +1,68 @@
+id: US073
+name: COVIDx-US
+full_name: COVIDx-US Open-Access Lung Ultrasound Benchmark Dataset
+release_year: 2021
+
+anatomy:
+  primary: Lung
+  target: Pulmonary infections and other lung conditions
+
+modality:
+  type: Point-of-care lung ultrasound
+  dimension: 2D
+  temporal: video and extracted static frames
+
+scale:
+  images: 29651
+  videos: 242
+  patients: null
+
+annotations:
+  classification:
+    num_classes: 4
+    classes:
+      - COVID-19
+      - Non-COVID-19 infection
+      - Other lung diseases or conditions
+      - Normal
+
+  severity_scoring:
+    available: true
+    videos: 173
+    scale:
+      - 0
+      - 1
+      - 2
+      - 3
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Binary classification
+  - Multi-class classification
+  - Ordinal severity assessment
+
+access:
+  level: open
+  license: GNU AGPL 3.0 for repository materials; source media retain source-specific terms
+
+paper:
+  title: "COVIDx-US: An Open-Access Benchmark Dataset of Ultrasound Imaging Data for AI-Driven COVID-19 Analytics"
+  venue: Frontiers in Bioscience (Landmark Edition)
+  doi: 10.31083/j.fbl2707198
+
+data:
+  repository: GitHub
+  url: https://github.com/nrc-cnrc/COVID-US
+  data_doi: null
+
+family:
+  type: aggregation
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The repository README reports 242 videos and 29,651 processed frames. Its current four-class and LUSS files contain 243 records: 72 COVID-19, 49 non-COVID pneumonia, 28 normal, and 94 other-condition records. The published paper describes v1.5 as 173 videos and 21,570 frames from 147 patients, whereas the repository history associates 242 videos and 29,651 frames with v1.4 and describes v1.5 as adding LUSS. Numeric LUSS values are available for 173 current metadata records; 69 are marked NA and one is blank. Repository masks remove embedded text and symbols and are not anatomical segmentation labels. The repository does not host the original videos; its scripts retrieve media from nine external public sources."
