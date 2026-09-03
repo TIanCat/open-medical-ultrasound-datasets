@@ -36,6 +36,20 @@ See [Scope](docs/scope.md).
 | [0107](datasets/01_thyroid/0107.yaml) | Thyroid Ultrasound Cine-clip | Thyroid nodule | 2D B-mode cine clips | 192 nodules / 17,412 frames | segmentation; risk stratification | 🟡 Application | [Paper](https://doi.org/10.1148/radiol.211667) | [Project page](https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip) |
 | [0108](datasets/01_thyroid/0108.yaml) | TN5000 | Thyroid nodule | 2D B-mode images | 5,000 images | detection; classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05757-4) | [Figshare](https://springernature.figshare.com/articles/dataset/TN5000_An_Ultrasound_Image_Dataset_for_Thyroid_Nodule_Detection_and_Classification/28455641) |
 
+### Obstetrics
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [0201](datasets/02_obstetrics/0201.yaml) | HC18 | Fetus / fetal head | 2D B-mode images | 1,334 images / 551 pregnant women | head delineation; circumference measurement | 🟢 Open | [Paper](https://doi.org/10.1371/journal.pone.0200412) | [Zenodo](https://doi.org/10.5281/zenodo.1322000) |
+| [0202](datasets/02_obstetrics/0202.yaml) | FETAL_PLANES_DB | Fetus / maternal cervix | 2D B-mode images | 12,400 images / 1,792 pregnant women | standard-plane classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-020-67076-5) | [Zenodo](https://doi.org/10.5281/zenodo.3904280) |
+| [0203](datasets/02_obstetrics/0203.yaml) | JNU-IFM | Maternal pubic symphysis / fetal head | 2D transperineal video frames | 6,224 frames / 78 videos / 51 women | segmentation; frame classification | 🟢 Open | [Paper](https://doi.org/10.1016/j.dib.2022.107904) | [Figshare](https://doi.org/10.6084/m9.figshare.14371652) |
+| [0204](datasets/02_obstetrics/0204.yaml) | African Fetal Standard Plane Dataset | Fetus / abdomen, brain, femur, thorax | 2D B-mode images | 450 images / 125 participant records | standard-plane classification; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-023-29490-3) | [Zenodo](https://doi.org/10.5281/zenodo.7540448) |
+| [0205](datasets/02_obstetrics/0205.yaml) | FPUS23 | 23-week fetal phantom | 2D B-mode images | 15,728 images | plane and orientation classification; object detection | 🟢 Open | [Paper](https://doi.org/10.1109/ACCESS.2023.3284315) | [GitHub](https://github.com/bharathprabakaran/FPUS23) |
+| [0206](datasets/0206.yaml) | Fetal Abdominal Structures Segmentation Dataset | Fetus / fetal abdomen | 2D B-mode images | 1,588 images / 169 pregnancies | multi-structure segmentation | 🟢 Open | Mendeley data resource | [Mendeley Data](https://doi.org/10.17632/4gcpm9dsc3.1) |
+| [0207](datasets/02_obstetrics/0207.yaml) | ACOUSLIC-AI | Fetus / fetal abdomen | 2D blind-sweep sequences | 300 public cases / 252,000 frames | frame localization; segmentation; circumference measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.media.2025.103640) | [Zenodo](https://doi.org/10.5281/zenodo.12697994) |
+| [0208](datasets/02_obstetrics/0208.yaml) | PSFHS | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal images | 1,358 images / 1,124 participants | segmentation; angle-of-progression measurement | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-024-03266-4) | [Zenodo](https://doi.org/10.5281/zenodo.10969427) |
+| [0209](datasets/02_obstetrics/0209.yaml) | FOCUS | Fetus / fetal heart / thorax | 2D four-chamber images | 300 images / 217 subjects | detection; segmentation; cardiothoracic ratio | 🟢 Open | Zenodo data resource | [Zenodo](https://doi.org/10.5281/zenodo.14597550) |
+| [0210](datasets/02_obstetrics/0210.yaml) | Maternal-Fetal Ultrasound Video Dataset | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal videos | 774 videos / 68,106 frames | plane classification; segmentation; landmark detection; biometry | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-06900-5) | [Zenodo](https://doi.org/10.5281/zenodo.17655183) |
+
 ### Liver and Gallbladder
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
@@ -65,19 +79,6 @@ See [Scope](docs/scope.md).
 | [US078](datasets/US078.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
 | [US079](datasets/US079.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
 
-### Obstetrics
-| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
-|---|---|---|---|---|---|---|---|---|
-| [US080](datasets/US080.yaml) | HC18 | Fetus / fetal head | 2D B-mode images | 1,334 images / 551 pregnant women | head delineation; circumference measurement | 🟢 Open | [Paper](https://doi.org/10.1371/journal.pone.0200412) | [Zenodo](https://doi.org/10.5281/zenodo.1322000) |
-| [US081](datasets/US081.yaml) | FETAL_PLANES_DB | Fetus / maternal cervix | 2D B-mode images | 12,400 images / 1,792 pregnant women | standard-plane classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-020-67076-5) | [Zenodo](https://doi.org/10.5281/zenodo.3904280) |
-| [US082](datasets/US082.yaml) | JNU-IFM | Maternal pubic symphysis / fetal head | 2D transperineal video frames | 6,224 frames / 78 videos / 51 women | segmentation; frame classification | 🟢 Open | [Paper](https://doi.org/10.1016/j.dib.2022.107904) | [Figshare](https://doi.org/10.6084/m9.figshare.14371652) |
-| [US083](datasets/US083.yaml) | African Fetal Standard Plane Dataset | Fetus / abdomen, brain, femur, thorax | 2D B-mode images | 450 images / 125 participant records | standard-plane classification; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-023-29490-3) | [Zenodo](https://doi.org/10.5281/zenodo.7540448) |
-| [US084](datasets/US084.yaml) | FPUS23 | 23-week fetal phantom | 2D B-mode images | 15,728 images | plane and orientation classification; object detection | 🟢 Open | [Paper](https://doi.org/10.1109/ACCESS.2023.3284315) | [GitHub](https://github.com/bharathprabakaran/FPUS23) |
-| [US085](datasets/US085.yaml) | Fetal Abdominal Structures Segmentation Dataset | Fetus / fetal abdomen | 2D B-mode images | 1,588 images / 169 pregnancies | multi-structure segmentation | 🟢 Open | Mendeley data resource | [Mendeley Data](https://doi.org/10.17632/4gcpm9dsc3.1) |
-| [US086](datasets/US086.yaml) | ACOUSLIC-AI | Fetus / fetal abdomen | 2D blind-sweep sequences | 300 public cases / 252,000 frames | frame localization; segmentation; circumference measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.media.2025.103640) | [Zenodo](https://doi.org/10.5281/zenodo.12697994) |
-| [US087](datasets/US087.yaml) | PSFHS | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal images | 1,358 images / 1,124 participants | segmentation; angle-of-progression measurement | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-024-03266-4) | [Zenodo](https://doi.org/10.5281/zenodo.10969427) |
-| [US088](datasets/US088.yaml) | FOCUS | Fetus / fetal heart / thorax | 2D four-chamber images | 300 images / 217 subjects | detection; segmentation; cardiothoracic ratio | 🟢 Open | Zenodo data resource | [Zenodo](https://doi.org/10.5281/zenodo.14597550) |
-| [US089](datasets/US089.yaml) | Maternal-Fetal Ultrasound Video Dataset | Maternal pelvis / fetal head / pubic symphysis | 2D transperineal videos | 774 videos / 68,106 frames | plane classification; segmentation; landmark detection; biometry | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-06900-5) | [Zenodo](https://doi.org/10.5281/zenodo.17655183) |
 
 ### Brain
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
