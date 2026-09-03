@@ -24,7 +24,7 @@ See [Scope](docs/scope.md).
 | [0002](datasets/0002.yaml) | OASBUD | Breast | 2D post-beamformed RF echoes (no B-mode images) | 100 lesions / 78 women / 2 RF planes per lesion | RF/QUS analysis; B-mode visualization; segmentation; binary classification | 🟢 Open | [Piotrzkowska-Wróblewska et al., 2017](https://doi.org/10.1002/mp.12538) | [Zenodo](https://zenodo.org/records/545928) |
 | [0003](datasets/0003.yaml) | Medical Image Database (MID) | Breast | 2D B-mode | 180 test images / 180 patients (+15 tuning images) | segmentation; contour initialization/evaluation | 🟢 Open; no stated license | [Rodtook et al., 2018](https://doi.org/10.1016/j.patcog.2018.01.032) | [Online Medical Images](https://www.onlinemedicalimages.com/index.php/en/site-map) |
 | [0004](datasets/0004.yaml) | STU-Hospital | Breast | 2D B-mode PNG | 42 image/mask pairs (external test set) | lesion segmentation | 🟢 Open; no stated dataset license | [Zhuang et al., 2019](https://doi.org/10.1371/journal.pone.0221535) | [GitHub](https://github.com/xbhlk/STU-Hospital) |
-| [0005](datasets/0005.yaml) | BUSI | Breast | 2D B-mode | 780 images | classification; segmentation | 🟢 Open | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [Mendeley Data](https://data.mendeley.com/datasets/k8t3gnx9h6/1) |
+| [0005](datasets/0005.yaml) | BUSI | Breast | 2D B-mode PNG | 780 images / 600 women | 3-class classification; lesion segmentation; mask-derived localization | 🟢 Open; no stated dataset license | [Al-Dhabyani et al., 2020](https://doi.org/10.1016/j.dib.2019.104863) | [MathWorks mirror](https://ssd.mathworks.com/supportfiles/image/data/Dataset_BUSI.zip) |
 
 ### Thyroid
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
