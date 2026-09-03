@@ -124,27 +124,25 @@ See [Scope](docs/scope.md).
 ### Kidney
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [US078](datasets/US078.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
-| [US079](datasets/US079.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
+| [0901](datasets/09_kidney/0901.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
+| [0902](datasets/09_kidney/0902.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
 
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [US040](datasets/US040.yaml) | Clinical Ultrasound Image Repository | Abdominal; cardiac; OB/GYN | clinical DICOM | 2,000 studies | representation learning | 🟢 Open | AWS Registry of Open Data | [AWS](https://registry.opendata.aws/clinical-ultrasound-image-data/) |
-
-
+| [1901](datasets/19_multi‑anatomy/1901.yaml) | Clinical Ultrasound Image Repository | Abdominal; cardiac; OB/GYN | clinical DICOM | 2,000 studies | representation learning | 🟢 Open | AWS Registry of Open Data | [AWS](https://registry.opendata.aws/clinical-ultrasound-image-data/) |
 
 
 
 ### Other
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [US041](datasets/US041.yaml) | GIST514-DB | GI tract tumors | endoscopic US | 514 cases/images | classification; detection; segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106424) | [GitHub](https://github.com/WuJunde/Query2) |
-| [US042](datasets/US042.yaml) | LEPset | Pancreas | endoscopic US | 11,500 images / 420 patients | classification; pretraining | 🟢 Open | [Dataset](https://doi.org/10.5281/zenodo.8041285) | [Zenodo](https://zenodo.org/records/8041285) |
-| [US043](datasets/US043.yaml) | C-TRUS | Colon wall | 2D B-mode images | 827 images / 13 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-73647-6_10) | [GitHub](https://github.com/wwu-mmll/c-trus) |
-| [US093](datasets/US093.yaml) | OpticNerveSheaths | Optic nerve sheath | transorbital 2D ultrasound images | 464 ultrasound images | optic nerve sheath segmentation/localization; optic nerve sheath diameter measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2023.05.011) | [Mendeley Data](https://data.mendeley.com/datasets/kw8gvp8m8x/2) |
-| [US098](datasets/US098.yaml) | Spinal Cord Injury Ultrasound Dataset | Porcine spinal cord / spinal cord injury | B-mode sagittal ultrasound images | 10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations | injury-status classification; anatomical structure segmentation; injury localization / object detection | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-025-16275-z) | [GitHub](https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset) |
+| [2001](datasets/20_other/2001.yaml) | GIST514-DB | GI tract tumors | endoscopic US | 514 cases/images | classification; detection; segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106424) | [GitHub](https://github.com/WuJunde/Query2) |
+| [2002](datasets/20_other/2002.yaml) | LEPset | Pancreas | endoscopic US | 11,500 images / 420 patients | classification; pretraining | 🟢 Open | [Dataset](https://doi.org/10.5281/zenodo.8041285) | [Zenodo](https://zenodo.org/records/8041285) |
+| [2003](datasets/20_other/2003.yaml) | C-TRUS | Colon wall | 2D B-mode images | 827 images / 13 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-73647-6_10) | [GitHub](https://github.com/wwu-mmll/c-trus) |
+| [2004](datasets/20_other/2004.yaml) | OpticNerveSheaths | Optic nerve sheath | transorbital 2D ultrasound images | 464 ultrasound images | optic nerve sheath segmentation/localization; optic nerve sheath diameter measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2023.05.011) | [Mendeley Data](https://data.mendeley.com/datasets/kw8gvp8m8x/2) |
+| [2005](datasets/20_other/2005.yaml) | Spinal Cord Injury Ultrasound Dataset | Porcine spinal cord / spinal cord injury | B-mode sagittal ultrasound images | 10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations | injury-status classification; anatomical structure segmentation; injury localization / object detection | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-025-16275-z) | [GitHub](https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset) |
 
 ## Contributing
 
