@@ -1,0 +1,135 @@
+id: US024
+name: UBPD
+full_name: Ultrasonic Brachial Plexus Dataset
+release_year: 2022
+release_year_basis: The dataset was introduced in the 2022 MallesNet paper
+name_correction: The paper consistently uses UBPD; the earlier CSV value UPBD was a transposition error
+
+anatomy:
+  primary: Brachial plexus
+  surrounding_targets:
+    - Artery
+    - Vein
+    - Muscle
+  acquisition_region: From the middle of the right neck toward the shoulder
+
+modality:
+  type: 2D ultrasound frames extracted from videos
+  probe: High-frequency ultrasound probe
+  systems:
+    - Siemens ACUSON NX3 Elite
+    - Philips EPIQ5
+  acquisition_depth_cm: 4
+  video_duration_seconds: 8
+  extraction: 10-15 frames were randomly selected from each video while ensuring that at least one target appeared in each selected frame
+  raw_image_dimensions: Varied and not enumerated in the paper
+  paper_preprocessing: Resized to 640 x 640 for model training
+
+scale:
+  patients: 101
+  ultrasound_videos: 101
+  image_count:
+    abstract_and_contribution_sections: 1055
+    dataset_methods_section: 1052
+    experiment_split_total: 1052
+    adopted_for_table: 1052
+    rationale: The detailed acquisition description and 955 + 97 experiment split agree on 1,052; the paper's abstract and contribution summary state 1,055
+  official_experiment_split:
+    training_images: 955
+    training_patients: 91
+    testing_images: 97
+    testing_patients: 10
+
+annotations:
+  tool: LabelMe
+  annotators: Professional anesthesiologists
+  type: Pixel-level masks for four anatomical object categories
+  categories:
+    - Nerve
+    - Artery
+    - Vein
+    - Muscle
+  masks_per_image: Corresponding masks are stated for the dataset, but the current archive could not be inspected
+  inter_annotator_study: Not reported in the paper
+
+tasks:
+  - Brachial plexus nerve segmentation
+  - Multi-class or multi-object segmentation of nerve and surrounding anatomy
+  - Context-assisted brachial plexus localization for regional anesthesia
+
+splits:
+  training:
+    patients: 91
+    images: 955
+  testing:
+    patients: 10
+    images: 97
+  patient_level_split: true
+  validation_split: Not separately stated
+
+access:
+  level: currently-unavailable-or-unverified
+  paper_download_URL: https://UBPD.worldwidetracing.com:9443/
+  current_status: The HTTPS endpoint failed during verification and the HTTP endpoint returned an empty response
+  account_or_application_required: Not verified
+  license: Not stated in the paper and not verifiable from the unavailable site
+  redistribution_terms: Not verified
+  caution: Do not label the dataset open or application-based without a working first-party access page or author confirmation
+
+cohort_and_acquisition:
+  operators: Professional anesthesiologists
+  clinical_view: Internal jugular vein, common carotid artery, muscle, and brachial plexus visible together
+  procedure: The probe was positioned at the middle of the right neck and slowly slid downward after a suitable view was found
+  institution: Not unambiguously assigned to the complete dataset in the paper's dataset section
+  ethics_approval: Not stated in the inspected dataset section
+
+paper:
+  title: "MallesNet: A multi-object assistance based network for brachial plexus segmentation in ultrasound images"
+  journal: Medical Image Analysis
+  volume: 80
+  article_number: 102511
+  publication_year: 2022
+  doi: 10.1016/j.media.2022.102511
+  PMID: 35753278
+
+data:
+  repository: Authors' UBPD site
+  landing_page: https://UBPD.worldwidetracing.com:9443/
+  persistent_dataset_identifier: Not provided
+  alternate_verified_mirror: Not identified
+
+quality_checks:
+  complete_paper_read: true
+  dataset_and_split_pages_visually_checked: true
+  site_checks:
+    HTTPS_port_9443: SSL connection failed
+    HTTPS_default_port: SSL connection failed
+    HTTP_port_9443: Empty server response
+    checked_on: 2026-09-04
+  archive_downloaded: false
+  reason_not_downloaded: The only first-party download endpoint was unreachable
+  archive_file_count_verified: false
+  archive_format_verified: false
+  license_verified: false
+  image_count_discrepancy_preserved: true
+  split_arithmetic:
+    images: 955 + 97 = 1052
+    patients: 91 + 10 = 101
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the complete peer-reviewed MallesNet paper and visually checked its dataset and experimental-split pages
+    - Confirmed the paper metadata and DOI through ScienceDirect, PubMed/OpenAlex, and DBLP records
+    - Compared every image-count statement in the abstract, contribution, methods, and experiment sections
+    - Tested the exact first-party URL printed in the paper, including port 9443, plus default HTTPS and HTTP variants
+    - Withheld claims about current application steps, license, file formats, and archive contents because the official site was unavailable
+  sources:
+    - https://doi.org/10.1016/j.media.2022.102511
+    - https://UBPD.worldwidetracing.com:9443/
+
+notes: The correct dataset acronym is UBPD. The paper reports 1,055 images in its abstract and contribution summary, but its detailed methods state 1,052 and its 955-image training plus 97-image test split also totals 1,052. The entry therefore displays both values and uses 1,052 as the internally reconciled released count. Current access conditions remain unverified because the authors' site is unreachable.
