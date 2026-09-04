@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **93 medical ultrasound dataset resources** across **13 anatomical categories**.  
+This repository currently catalogs **96 medical ultrasound dataset resources** across **14 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -21,9 +21,10 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 08 | Brain | 8 | 0801–0808 |
 | 09 | Kidney | 2 | 0901–0902 |
 | 10 | Prostate | 3 | 1001–1003 |
+| 11 | Prostate | 3 | 1101–1103 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
 | 20 | Other | 7 | 2001–2008 |
-| **Total** | **12 categories** | **93** | — |
+| **Total** | **14 categories** | **96** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
