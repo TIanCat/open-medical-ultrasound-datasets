@@ -1,0 +1,151 @@
+id: "0015"
+name: "BUS-CoT"
+full_name: "A Chain-of-thought Reasoning Breast Ultrasound Dataset Covering All Histopathology Categories"
+aliases: []
+
+release_year: 2026
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+    - "Doppler"
+    - "Elastography"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 4838
+  - unit: "lesion"
+    count: 11850
+  - unit: "image"
+    count: 11439
+
+annotations:
+  classification:
+    unit: "lesion"
+    num_classes: 99
+    class_system: "WHO Classification of Tumours"
+    superclasses:
+      - "Benign"
+      - "Malignant"
+      - "Uncertain malignant potential"
+    note: >-
+      The paper states that the complete dataset covers all 99 WHO-defined
+      histopathology categories. The reported broad-category counts
+      (4,856 benign, 4,514 malignant, and 2,069 uncertain malignant potential)
+      sum to 11,439 rather than the reported 11,850 lesions, so these counts
+      are not encoded as a formal distribution here.
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast lesion"
+    format: "mask"
+    annotation_method: >-
+      Lesion regions were identified by radiologists, segmented with MedSAM2,
+      and manually reviewed and adjusted by radiologists.
+
+  grading:
+    unit: "lesion"
+    system: "BI-RADS"
+    categories: null
+
+  reasoning:
+    unit: "image"
+    format: "structured_and_natural_language"
+    components:
+      - "observation"
+      - "feature"
+      - "diagnosis"
+      - "pathology"
+      - "reasoning_chain"
+    annotators:
+      - "Senior breast ultrasound experts"
+
+  reports:
+    unit: "lesion"
+    type: "ultrasound_report"
+
+tasks:
+  - "classification"
+  - "segmentation"
+  - "grading"
+  - "reasoning"
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "A Chain-of-thought Reasoning Breast Ultrasound Dataset Covering All Histopathology Categories"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-026-06702-9"
+
+data:
+  repository: "Figshare"
+  url: "https://doi.org/10.6084/m9.figshare.30838715"
+  doi: "10.6084/m9.figshare.30838715"
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+
+family:
+  type: "aggregate"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://www.nature.com/articles/s41597-026-06702-9"
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC12988125/"
+    - "https://doi.org/10.6084/m9.figshare.30838715"
+
+subsets:
+  BUS-Lesion:
+    description: "Curated high-quality lesion-focused subset for model training and evaluation"
+    scale:
+      - unit: "image"
+        count: 5163
+    annotations:
+      classification:
+        unit: "image"
+        num_classes: 2
+        classes:
+          - "Benign"
+          - "Malignant"
+        distribution:
+          Benign: 2694
+          Malignant: 2469
+    splits:
+      training:
+        count: 4338
+      test:
+        count: 825
+
+notes: >-
+  BUS-CoT is an aggregate dataset constructed from peer-reviewed publications,
+  existing public breast ultrasound datasets, and peer-reviewed online case
+  repositories including Radiopaedia and Eurorad. It should therefore be counted
+  as an aggregate resource rather than as a new primary acquisition family.
+  BUS-Expert is the complete release, while BUS-Lesion is a curated subset.
+  The dataset paper reports five ultrasound device types. The Figshare resource
+  is openly available, but the dataset-specific license was not independently
+  verified here; the article license should not be assumed to be the dataset license.

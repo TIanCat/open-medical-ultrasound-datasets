@@ -34,7 +34,7 @@ See [Scope](docs/scope.md).
 | [0012](datasets/00_breast/0012.yaml) | BUS-UCLM | Breast | 2D B-mode + Color Doppler | 683 image-mask pairs / 38 patients | classification; segmentation | 🟢 Open | [Vallez et al., 2025](https://doi.org/10.1038/s41597-025-04562-3) | [Mendeley Data v3](https://data.mendeley.com/datasets/7fvgj4jsp7/3) |
 | [0013](datasets/00_breast/0013.yaml) | US3M | Breast |  2D B-mode + Color Doppler + Elastography | 1,532 images / 248 patients | classification | 🟢 Open | [Yan et al., 2024](https://doi.org/10.1016/j.inffus.2024.102592) | [Kaggle](https://www.kaggle.com/datasets/timesxy/multimodal-breast-ultrasound-dataset-us3m) |
 | [0014](datasets/00_breast/0014.yaml) | ALN-Ultra | Breast  | Paired ultrasound images + videos | 257 patients; exact image/video counts unavailable | classification | 🔴 Controlled  | -- | [Zenodo replacement record](https://zenodo.org/records/18483501) |
-
+| [0015](datasets/00_breast/0015.yaml) | BUS-CoT | Breast | 2D B-mode + Doppler + Elastography | 11,439 images / 11,850 lesions / 4,838 patients | classification; segmentation; grading; reasoning | 🟢 Open | [Yu et al., 2026](https://doi.org/10.1038/s41597-026-06702-9) | [Figshare](https://doi.org/10.6084/m9.figshare.30838715) |
 
 ### Thyroid
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
