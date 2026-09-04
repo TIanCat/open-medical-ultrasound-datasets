@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **96 medical ultrasound dataset resources** across **14 anatomical categories**.
+This repository currently catalogs **99 medical ultrasound dataset resources** across **14 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -25,7 +25,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 11 | Ovary | 3 | 1201–1203 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
 | 20 | Other | 7 | 2001–2008 |
-| **Total** | **14 categories** | **96** | — |
+| **Total** | **14 categories** | **99** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
@@ -181,6 +181,7 @@ See [Scope](docs/scope.md).
 |---|---|---|---|---|---|---|---|---|
 | [1201](datasets/12_ovary/1201.yaml) | Ovarian Ultrasound Image Dataset | Ovary | 2D B-mode | 6,879 images | classification | 🟢 Open| -- | [Kaggle](https://www.kaggle.com/datasets/ucimachinelearning/ovarian-ultrasound-image-dataset) |
 | [1202](datasets/12_ovary/1202.yaml) | PCOS | Ovary / PCOS | 2D B-mode | 12,680 images (Figshare-reported) | binary classification | 🟢 Open | -- | [Figshare](https://figshare.com/articles/dataset/PCOS_Dataset/27682557) |
+| [1203](datasets/12_ovary/1203.yaml) | MMOTU | Ovary / ovarian tumor | 2D B-mode + Color Doppler + CEUS | 1,639 images / 294 patients | classification; segmentation | 🟢 Open | [Lyu et al., 2026](https://doi.org/10.1016/j.patcog.2025.112311) | [GitHub](https://github.com/cv516Buaa/MMOTU_DS2Net) |
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

@@ -1,0 +1,170 @@
+id: "1203"
+name: "MMOTU"
+full_name: "Multi-Modality Ovarian Tumor Ultrasound Image Dataset"
+aliases:
+  - "Multi-Modality Ovarian Tumor Ultrasound"
+  - "OTU_2D + OTU_CEUS"
+
+release_year: 2022
+
+anatomy:
+  primary: "Ovary"
+  target:
+    - "Ovarian tumor"
+
+modality:
+  type:
+    - "B-mode"
+    - "Color Doppler"
+    - "Contrast-enhanced ultrasound"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 294
+  - unit: "image"
+    count: 1639
+    note: >-
+      The dataset contains 1,469 images in the OTU_2D subset and
+      170 images in the OTU_CEUS subset.
+  - unit: "pair"
+    count: 1639
+    note: >-
+      Pixel-wise semantic annotations are provided for images in
+      both OTU_2D and OTU_CEUS.
+
+annotations:
+  classification:
+    unit: "image"
+    label_type: "multiclass"
+    num_classes: 8
+    classes:
+      - "Chocolate cyst"
+      - "Serous cystadenoma"
+      - "Teratoma"
+      - "Theca cell tumor"
+      - "Simple cyst"
+      - "Normal ovary"
+      - "Mucinous cystadenoma"
+      - "High-grade serous"
+    annotators:
+      - "27 Obstetrics and Gynecology experts"
+    reference_standard: "Pathological reports"
+    note: >-
+      Global category annotations are provided for both subsets.
+      OTU_2D contains eight categories including Normal ovary.
+      The original paper describes OTU_CEUS as a seven-category
+      tumor-recognition setting when Normal ovary is excluded.
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Ovarian tumor"
+    format: "PNG_mask"
+    count: 1639
+    annotators:
+      - "27 Obstetrics and Gynecology experts"
+    annotation_method: >-
+      Each image was initially annotated by one expert and subsequently
+      checked by another expert, with pathological reports used as
+      clinical reference.
+    note: >-
+      The original semantic annotations preserve tumor-category
+      information, while the official segmentation implementation
+      converts them into binary background-versus-ovarian-tumor masks.
+
+tasks:
+  - "classification"
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 1070
+    note: >-
+      OTU_2D: 1,000 images from 171 patients.
+      OTU_CEUS: 70 images from 20 patients.
+  test:
+    count: 569
+    note: >-
+      OTU_2D: 469 images from 76 patients.
+      OTU_CEUS: 100 images from 27 patients.
+      The original dataset construction maintains patient independence
+      between training and test sets.
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "Unsupervised cross-domain semantic segmentation on multi-modality ovarian tumor ultrasound data"
+  venue: "Pattern Recognition"
+  doi: "10.1016/j.patcog.2025.112311"
+
+data:
+  repository: "Google Drive via official GitHub repository"
+  url: "https://drive.google.com/drive/folders/1c5n0fVKrM9-SZE1kacTXPt1pt844iAs1?usp=sharing"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Beijing Shijitan Hospital, Capital Medical University"
+  period: null
+  scanners:
+    - "Mindray Resona8"
+  transducers: null
+  frequencies: null
+  note: >-
+    The dataset contains 1,469 OTU_2D images and 170 images extracted
+    from CEUS sequences. A later detailed description reports that
+    OTU_2D comprises 1,253 conventional 2D ultrasound images and
+    216 Color Doppler Flow Imaging images.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://github.com/cv516Buaa/MMOTU_DS2Net"
+    - "https://arxiv.org/abs/2207.06799"
+    - "https://doi.org/10.1016/j.patcog.2025.112311"
+
+notes: >-
+  MMOTU is a single-center multi-modality ovarian tumor ultrasound
+  dataset collected at Beijing Shijitan Hospital, Capital Medical
+  University. It contains 1,639 images from 294 patients and consists
+  of the OTU_2D and OTU_CEUS subsets. The GitHub repository was created
+  in July 2022 and the original arXiv description was released in 2022,
+  so 2022 is used as the dataset release year. The work was subsequently
+  published in Pattern Recognition in 2026 under the revised title
+  "Unsupervised cross-domain semantic segmentation on multi-modality
+  ovarian tumor ultrasound data."
+
+  Pixel-wise semantic annotations and global tumor-category annotations
+  were produced by 27 Obstetrics and Gynecology experts. Each image was
+  annotated by one expert and checked by another, with pathological
+  reports used as reference. The official MMOTU segmentation code uses
+  two classes, "background" and "OvarianTumor", and binary mask files
+  with the suffix "_binary.PNG".
+
+  Although unsupervised domain adaptation is the principal methodological
+  task investigated in the associated paper, it is not listed as a native
+  dataset task because it is an experimental learning setting rather than
+  an additional annotation type.
+
+  The GitHub repository contains an Apache-2.0 LICENSE inherited from
+  MMSegmentation and explicitly copyrighted to the MMSegmentation authors.
+  No separate dataset-specific license was identified for the MMOTU image
+  files, so access.license is conservatively left null.
