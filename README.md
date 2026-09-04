@@ -19,11 +19,11 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 06 | Musculoskeletal | 7 | 0601–0607 |
 | 07 | Vessel | 6 | 0701–0706 |
 | 08 | Brain | 8 | 0801–0808 |
-| 09 | Kidney | 2 | 0901–0902 |
+| 09 | Kidney | 1 | 0901–0901 |
 | 10 | Prostate | 3 | 1001–1003 |
 | 11 | Nerve | 3 | 1101–1103 |
 | 12 | Ovary | 4 | 1201–1204 |
-| 19 | Multi-anatomy | 3 | 1901–1903 |
+| 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 7 | 2001–2007 |
 | **Total** | **15 categories** | **100** | — |
 
@@ -158,7 +158,7 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [0901](datasets/09_kidney/0901.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
-| [0902](datasets/09_kidney/0902.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
+
 
 ### Prostate
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
@@ -191,7 +191,7 @@ See [Scope](docs/scope.md).
 | [1901](datasets/19_multi‑anatomy/1901.yaml) | Clinical Ultrasound Image Repository | Abdominal; cardiac; OB/GYN | clinical DICOM | 2,000 studies | representation learning | 🟢 Open | AWS Registry of Open Data | [AWS](https://registry.opendata.aws/clinical-ultrasound-image-data/) |
 | [1902](datasets/19_multi‑anatomy/1902.yaml) | USenhance 2023 | Thyroid; carotid; liver; kidney; breast | 2D grayscale ultrasound PNG | 1,050 public training pairs + 364 public test inputs; 109 patients stated | low-to-high image reconstruction/enhancement | 🟢 Open download; CC BY-SA stated | [Challenge design](https://doi.org/10.5281/zenodo.7841250) | [Grand Challenge](https://ultrasoundenhance2023.grand-challenge.org/datasets/) |
 | [1903](datasets/19_multi‑anatomy/1903.yaml) | Chinese multi-organ ultrasound image-text datasets | Breast; thyroid; liver | 2D ultrasound image pairs + Chinese reports | paper: 7,390 patients; public archive: 7,364 records / 17,149 images | report generation; image-text learning | 🟢 Open download; no stated dataset license | [Li et al., 2025](https://doi.org/10.1109/TMI.2024.3424978) | [Author repository](https://github.com/LijunRio/Ultrasound-Report-Generation) |
-
+| [1904](datasets/19_multi‑anatomy/1904.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
 
 ### Other
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
