@@ -1,0 +1,138 @@
+id: "1204"
+name: "PCOSGen"
+full_name: "PCOSGen Dataset for Automatic Polycystic Ovary Syndrome Classification"
+aliases:
+  - "PCOSGen-train"
+  - "PCOSGen-test"
+  - "Auto-PCOS Dataset"
+
+release_year: 2023
+
+anatomy:
+  primary: "Ovary"
+  target:
+    - "Ovary"
+    - "Polycystic ovary"
+
+modality:
+  type:
+    - "Ultrasound"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: 4668
+    note: >-
+      PCOSGen consists of 3,200 training images and 1,468 test images.
+      The linked Zenodo record 14592001 is the updated training release.
+
+annotations:
+  classification:
+    unit: "image"
+    label_type: "hierarchical"
+    classes:
+      - "Normal"
+      - "Abnormal"
+    annotators:
+      - "Experienced gynecologist"
+    note: >-
+      Each image has a general classification indicating whether it is
+      normal or abnormal. For abnormal images, an additional specific
+      classification indicates whether evidence or visibility of a
+      polycystic ovary is present.
+
+tasks:
+  - "classification"
+
+splits:
+  unit: "image"
+  training:
+    count: 3200
+    labels: "public"
+    note: >-
+      The current updated training release is available at
+      Zenodo record 14592001.
+  test:
+    count: 1468
+    labels: "public"
+    note: >-
+      Test labels were initially withheld for the Auto-PCOS challenge
+      and were subsequently released. The updated test dataset is
+      available at Zenodo record 14591782.
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "Auto-PCOS Classification Challenge"
+  venue: "Authorea Preprints"
+  doi: "10.22541/au.170629258.80995260/v1"
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/14592001"
+  doi: "10.5281/zenodo.14592001"
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: >-
+    PCOSGen was assembled from multiple publicly accessible internet
+    resources including YouTube, ultrasoundcases.info, and Kaggle rather
+    than from a single clinical acquisition cohort. Original acquisition
+    institutions, scanners, probes, and patient counts are therefore not
+    consistently available.
+
+family:
+  type: "aggregate"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-04"
+  sources:
+    - "https://zenodo.org/records/14592001"
+    - "https://zenodo.org/records/14591782"
+    - "https://zenodo.org/records/10430727"
+    - "https://zenodo.org/records/10960327"
+    - "https://doi.org/10.22541/au.170629258.80995260/v1"
+
+notes: >-
+  PCOSGen was developed for the Auto-PCOS Classification Challenge and
+  aggregates ovarian ultrasound frames collected from multiple internet
+  resources, including YouTube, ultrasoundcases.info, and Kaggle. The
+  dataset therefore does not represent a single prospective or retrospective
+  clinical cohort and is classified as an aggregate dataset.
+
+  The original PCOSGen-train release appeared on Zenodo in December 2023
+  under record 10430727. The authors subsequently released an updated
+  training dataset under record 14592001 on January 3, 2025 and explicitly
+  requested that researchers use the updated release rather than previous
+  versions. It contains 3,200 images, with inconsistent resolutions but most
+  images approximately 300 x 300 pixels.
+
+  PCOSGen-test contains 1,468 images. Test labels were initially withheld
+  during the Auto-PCOS challenge and were later made public. The updated
+  test release is Zenodo record 14591782. Together, the official training
+  and test resources contain 4,668 ultrasound images.
+
+  The latest Zenodo descriptions provide two levels of classification:
+  a general normal-versus-abnormal label and, for abnormal images, a
+  specific indication of whether a polycystic ovary is visible. No native
+  segmentation, detection, landmark, or measurement annotations are
+  documented.
+
+  A dataset-specific license could not be unambiguously confirmed from the
+  currently retrievable Zenodo metadata, so access.license is conservatively
+  left null.
