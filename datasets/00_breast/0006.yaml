@@ -1,149 +1,100 @@
-id: US006
-name: Breast lesion ultrasound video dataset
-name_source: Descriptive name used in the original paper; the paper does not assign a formal dataset name
+id: "0006"
+name: "Breast lesion ultrasound video dataset"
+full_name: null
 aliases:
-  - BUSV
-  - BUV
-  - BreastVid
-alias_note: These short names are used by later papers and dataset catalogs rather than defined by the original paper
+  - "BUSV"
+  - "BUV"
+  - "BreastVid"
+
 release_year: 2022
 
 anatomy:
-  primary: Breast
-  target: Breast lesion
+  primary: "Breast"
+  target:
+    - "Breast lesion"
 
 modality:
-  type: B-mode ultrasound
-  dimension: 2D
-  temporal: video
-  released_representation: Extracted PNG frames grouped by video
-  image_resolution: Not reported in the paper or repository README
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "cine"
+  representation:
+    - "image_sequence"
 
 scale:
-  paper_reported_videos: 188
-  paper_reported_frames: 25272
-  frames_per_video_range: 28-413
-  paper_reported_class_distribution:
-    benign_videos: 75
-    malignant_videos: 113
-  subjects: Not reported
-  subject_note: Videos must not be treated as unique patients; the repository correction identifies four videos from the same patient
+  - unit: "video"
+    count: 188
+    note: "Paper-reported total before the repository's later correction notice."
+  - unit: "frame"
+    count: 25272
+    note: "Paper-reported total before the repository's later correction notice."
 
 annotations:
-  detection:
-    available: true
-    unit: frame
-    type: Breast lesion rectangle / bounding box
-    coverage: Each video frame, as stated by the paper
   classification:
-    available: true
-    unit: video lesion
+    unit: "video"
+    num_classes: 2
     classes:
-      - Benign
-      - Malignant
-  annotators:
-    number: 2
-    description: Pathologists with eight years of experience in breast pathology, as stated by the paper
-    agreement_or_adjudication: Not reported
-  segmentation_masks:
-    available: false
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 75
+      Malignant: 113
+    note: "Paper-reported distribution before the repository's 2023 correction notice."
+
+  detection:
+    unit: "frame"
+    targets:
+      - "Breast lesion"
+    format: "bounding_box"
 
 tasks:
-  - Frame-level breast lesion detection and localization
-  - Video-level benign versus malignant lesion classification
-
-split:
-  paper_protocol:
-    training_videos: 150
-    testing_videos: 38
-    selection: The paper states that 38 videos were randomly selected as the test set
-  repository_files:
-    - train.json
-    - val.json
-  split_caution: The repository's 2023 data-correction notice does not state revised split counts; users should inspect the downloaded JSON after applying the announced corrections
+  - "detection"
+  - "classification"
 
 access:
-  level: open with use restrictions
-  registration_required: false for the Google Drive link during verification
-  permitted_uses:
-    - Non-commercial research
-    - Education
-  modification_permission: The repository README permits editing or processing images and annotations for the permitted uses
-  commercial_use: Not permitted by the repository statement
-  formal_dataset_license: Not supplied
-  repository_license_file: Present but empty at verified commit
+  level: "open"
+  license: null
+  requirements:
+    - "Use is restricted to non-commercial research and education according to the repository statement."
 
 paper:
-  title: A New Dataset and a Baseline Model for Breast Lesion Detection in Ultrasound Videos
-  authors:
-    - Zhi Lin
-    - Junhao Lin
-    - Lei Zhu
-    - Huazhu Fu
-    - Jing Qin
-    - Liansheng Wang
-  venue: Medical Image Computing and Computer Assisted Intervention (MICCAI 2022)
-  series: Lecture Notes in Computer Science
-  volume: 13433
-  pages: 614-623
-  publication_year: 2022
-  online_publication_date: 2022-09-16
-  doi: 10.1007/978-3-031-16437-8_59
-  arxiv: 2207.00141
+  title: "A New Dataset and a Baseline Model for Breast Lesion Detection in Ultrasound Videos"
+  venue: "Medical Image Computing and Computer-Assisted Intervention (MICCAI)"
+  doi: "10.1007/978-3-031-16437-8_59"
 
 data:
-  official_repository: https://github.com/jhl-Det/CVA-Net
-  verified_commit: 4c954035a9d61165f24b02bfa15c0f1468372ff2
-  google_drive: https://drive.google.com/file/d/1LVXK34OJhC2LkqqyMmVFnXsXQavvZdeF/view?usp=sharing
-  baidu_drive: https://pan.baidu.com/s/1yYME7-DvvIEZzCb72NXaJA?pwd=jnie
-  archive:
-    filename: Miccai 2022 BUV Dataset.7z
-    size_bytes: 4206824798
-    format: 7z
-  expected_layout:
-    frame_directory: rawframes
-    annotation_files:
-      - train.json
-      - val.json
+  repository: "GitHub"
+  url: "https://github.com/jhl-Det/CVA-Net"
+  doi: null
 
 acquisition:
-  systems_as_reported:
-    - LOGIQ-E9
-    - PHILIPS TIS L9-3
-  institution: Not reported
-  acquisition_period: Not reported
-  scanning_description: Each video follows a complete scan from lesion appearance to its largest section and then disappearance
-
-quality_notes:
-  paper_typo: The contribution list and dataset paragraph each say 118 videos, but the abstract, class counts (75 + 113), test split, and conclusion support 188 videos
-  repository_correction_date: 2023-03-25
-  repository_correction:
-    duplicate_and_wrong_label: Delete rawframes/benign/x66ef02e7f1b9a0ef because it duplicates a malignant video and should be malignant
-    same_patient_videos:
-      - benign/x63c9ba1377f35bf6 (97 frames)
-      - benign/x5a1c46ec6377e946 (100 frames)
-      - malignant/2390fbea047347b (102 frames)
-      - malignant/7a39ab5d4970bf89 (105 frames)
-    correction_for_same_patient_videos: The README states that all four should be labeled malignant and that some frames overlap
-    revised_totals: Not explicitly reported by the repository; not inferred here
-  archive_inspection: The 4.2 GB archive header, filename, size, and accessibility were verified with byte-range requests; the complete archive was not downloaded
+  countries: null
+  institutions: null
+  period: null
+  scanners:
+    - "LOGIQ-E9"
+    - "PHILIPS TIS L9-3"
+  transducers: null
+  frequencies: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
-  methods:
-    - Read the author-submitted arXiv source and Springer metadata
-    - Cloned and inspected the official CVA-Net repository at the recorded commit
-    - Verified that the CSV's former jhl-Det/BreastVid repository does not exist
-    - Checked the official Google Drive warning page and 7z header using byte-range requests
-    - Recorded the repository's 2023 duplicate, patient-overlap, and label corrections without inferring revised totals
+verification:
+  status: "verified"
+  date: "2026-09-03"
   sources:
-    - https://doi.org/10.1007/978-3-031-16437-8_59
-    - https://arxiv.org/abs/2207.00141
-    - https://github.com/jhl-Det/CVA-Net
-    - https://drive.google.com/file/d/1LVXK34OJhC2LkqqyMmVFnXsXQavvZdeF/view?usp=sharing
+    - "https://doi.org/10.1007/978-3-031-16437-8_59"
+    - "https://arxiv.org/abs/2207.00141"
+    - "https://github.com/jhl-Det/CVA-Net"
 
-notes: The original paper does not name the dataset BUSV or BreastVid and does not report the number of patients, acquisition institution, acquisition period, image resolution, diagnostic reference standard, or annotation-adjudication procedure. The empty repository LICENSE file is not a license grant; use is governed only by the non-commercial research/education statement in the README.
+notes: >-
+  The original paper does not assign a formal dataset name; BUSV, BUV, and BreastVid
+  are aliases used in later literature or catalogs. The repository distributes extracted
+  PNG frames grouped by video rather than conventional encoded video files. A 2023
+  repository correction identifies one duplicated/wrongly labelled video and four
+  same-patient videos requiring label correction; revised global totals were not
+  explicitly reported, so the scale and class distribution above retain the
+  paper-reported values with this caveat.
