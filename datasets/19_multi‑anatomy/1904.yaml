@@ -1,0 +1,107 @@
+id: US026
+name: Multi-Anatomical Ultrafast Ultrasound Dataset
+full_name: "Multi-Anatomical Ultrafast Ultrasound Dataset: Raw RF Signals acquired with a GE 11L-D probe"
+release_year: 2026
+release_year_basis: The first Zenodo version was published on 2026-05-06; the current version was published on 2026-08-27
+
+anatomy:
+  type: multi-anatomy
+  in_vivo_regions:
+    - Abdomen
+    - Arm
+    - Back
+    - Breast
+    - Carotid / neck
+    - Leg
+  in_vitro_target: CIRS tissue-mimicking phantom
+
+modality:
+  type: Ultrafast plane-wave ultrasound raw RF channel data
+  acquisition_system: Verasonics Vantage 256
+  probe: GE 11L-D linear array
+  plane_wave_angles_per_acquisition: 105
+  sampling_frequency_MHz: 20.833
+  released_format: NPZ
+
+scale:
+  total_acquisitions: 20431
+  in_vivo_acquisitions: 20121
+  volunteers: 16
+  phantom_acquisitions: 310
+  by_body_region:
+    abdomen: 2599
+    arm: 4422
+    back: 3246
+    breast: 2874
+    carotid: 2736
+    leg: 4244
+  phantom_by_setting:
+    full_speckle: 302
+    inclusions: 8
+  approximate_archive_size: 4 TB
+
+annotations:
+  semantic_labels: false
+  segmentation_masks: false
+  acquisition_metadata:
+    fields:
+      - acquisition_id
+      - volunteer_id
+      - body_region
+  caution: Body-region metadata are not diagnostic, classification, or pixel-wise annotations
+
+tasks:
+  - Ultrasound beamforming and image reconstruction
+  - Sparse-array RF-channel inpainting
+  - Deep-learning method development on raw ultrasound signals
+
+splits:
+  official_full_dataset_split: Not provided
+  related_paper_subset: Test volunteers 005, 008, and 017 are identified in the paper; this is not a general split for the full release
+
+access:
+  level: open
+  registration_required: false
+  license: CC BY 4.0
+
+paper:
+  title: Deep Learning-Based Inpainting for Sparse Arrays in Ultrafast Ultrasound Imaging
+  venue: IEEE Transactions on Computational Imaging
+  volume: 12
+  pages: 187-202
+  doi: 10.1109/TCI.2025.3648531
+  relation_to_dataset: The Zenodo record is marked as a supplement to this article, which uses a subset of the released acquisitions
+
+data:
+  host: Zenodo
+  current_version: v2
+  current_record: https://zenodo.org/records/22125184
+  current_version_doi: 10.5281/zenodo.22125184
+  concept_doi: 10.5281/zenodo.20054330
+  original_record: https://zenodo.org/records/20054331
+
+quality_checks:
+  metadata_rows_parsed: 20431
+  unique_sequential_acquisition_ids: true
+  metadata_missing_values: 0
+  regional_counts_sum_to_in_vivo_total: true
+  phantom_counts_sum_to_phantom_total: true
+  raw_RF_archives_downloaded: false
+  reason_not_downloaded: The approximately 4 TB signal archive was not required to verify the catalogue metadata
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the current and original Zenodo records and the released README
+    - Parsed every row of the released acquisition metadata CSV
+    - Checked the linked IEEE paper and its relation to the dataset
+  sources:
+    - https://zenodo.org/records/22125184
+    - https://doi.org/10.5281/zenodo.20054330
+    - https://doi.org/10.1109/TCI.2025.3648531
+
+notes: This is a raw RF acquisition resource rather than a labeled diagnostic image dataset. The related paper uses 103 of the 105 transmitted plane-wave angles and a subset of volunteers; those experimental choices are not properties of every potential use of the full dataset.
