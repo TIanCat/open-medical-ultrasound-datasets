@@ -1,0 +1,109 @@
+id: US027
+name: US simulation & segmentation
+alias: AbdomenUS
+alias_caution: AbdomenUS is used by downstream repositories for the real-image subset; it is not the official Kaggle dataset title
+release_year: 2020
+release_year_basis: The Kaggle resource was first published on 2020-07-07
+
+anatomy:
+  type: multi-organ abdomen
+  real_subset_structures_with_manual_annotations:
+    - Liver
+    - Kidneys
+    - Gallbladder
+    - Spleen
+    - Vessels
+  simulated_subset_foreground_classes:
+    - Liver
+    - Kidney
+    - Pancreas
+    - Vessels
+    - Adrenal gland
+    - Gallbladder
+    - Bony structures
+    - Spleen
+
+modality:
+  real_subset: 2D clinical ultrasound scans
+  simulated_subset: 2D ray-cast ultrasound images generated from CT anatomy
+  real_acquisition_system: SonoSite M-Turbo V1.3
+
+scale:
+  total_images: 1543
+  real_images: 617
+  real_subjects: 11
+  real_images_with_manual_masks: 61
+  simulated_images: 926
+  CT_scans_used_for_simulation: 13
+  CT_source: VISCERAL Anatomy3
+
+annotations:
+  real_subset:
+    method: Manual pixel-wise annotations
+    annotated_images: 61
+    foreground_groups: 5
+    caution: The other 556 real scans are not described as having manual masks
+  simulated_subset:
+    method: Silver-standard labels inherited from the CT-derived simulation pipeline
+    foreground_classes: 8
+    label_values_including_background: 9
+  key_caution: The eight foreground classes belong to the simulated subset and must not be attributed to all 617 real scans
+
+tasks:
+  - Abdominal organ and structure segmentation
+  - Patient-specific ultrasound simulation
+  - Real-to-synthetic image translation
+  - Cross-domain and domain-adaptation research
+
+splits:
+  official_train_validation_test_split: Not stated on the Kaggle dataset page
+  subject_disjointness: Not stated for derived experiments
+
+access:
+  level: public Kaggle download
+  license_metadata: Data files © Original Authors
+  reusable_dataset_license: Not explicitly stated
+  caution: Public availability does not by itself establish permission for unrestricted reuse
+
+paper:
+  title: Improving realism in patient-specific abdominal ultrasound simulation using CycleGANs
+  authors: Santiago Vitale et al.
+  venue: International Journal of Computer Assisted Radiology and Surgery
+  volume: 15
+  issue: 2
+  pages: 183-192
+  online_publication_year: 2019
+  issue_year: 2020
+  doi: 10.1007/s11548-019-02046-5
+
+data:
+  host: Kaggle
+  landing_page: https://www.kaggle.com/datasets/ignaciorlando/ussimandsegm
+  Kaggle_slug: ignaciorlando/ussimandsegm
+  current_Kaggle_version_number: 5
+  stated_dataset_version: "2.1"
+  total_bytes: 1829434865
+
+quality_checks:
+  official_Kaggle_metadata_inspected: true
+  paper_and_public_description_cross_checked: true
+  full_archive_downloaded: false
+  count_arithmetic_checked: "617 + 926 = 1543"
+
+family:
+  type: primary resource with real and simulated subsets
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the official Kaggle description and current metadata
+    - Checked the associated journal article and PubMed record
+    - Compared the official title with the downstream AbdomenUS shorthand
+    - Kept the real and simulated annotation schemes separate
+  sources:
+    - https://www.kaggle.com/datasets/ignaciorlando/ussimandsegm
+    - https://doi.org/10.1007/s11548-019-02046-5
+    - https://pubmed.ncbi.nlm.nih.gov/31392671/
+
+notes: The resource combines two materially different subsets. Only 61 of the 617 real scans are described as manually annotated, whereas all 926 simulated images have CT-derived silver-standard labels with eight foreground classes.
