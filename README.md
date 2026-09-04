@@ -24,7 +24,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 11 | Nerve | 3 | 1101–1103 |
 | 12 | Ovary | 4 | 1201–1204 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
-| 20 | Other | 7 | 2001–2008 |
+| 20 | Other | 7 | 2001–2007 |
 | **Total** | **15 categories** | **100** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
