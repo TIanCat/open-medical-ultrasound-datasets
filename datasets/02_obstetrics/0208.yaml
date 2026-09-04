@@ -1,61 +1,94 @@
-id: US087
-name: PSFHS
-full_name: "PSFHS: Intrapartum ultrasound image dataset for AI-based segmentation of pubic symphysis and fetal head"
+id: "0208"
+name: "PSFHS"
+full_name: "PSFHS: Intrapartum Ultrasound Image Dataset for AI-based Segmentation of Pubic Symphysis and Fetal Head"
+aliases: []
+
 release_year: 2024
 
 anatomy:
-  primary: Maternal pelvis
-  target: Pubic symphysis and fetal head
+  primary: "Maternal pelvis"
+  target:
+    - "Pubic symphysis"
+    - "Fetal head"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 1358
-  patients: 1124
+  - unit: "patient"
+    count: 1124
+  - unit: "image"
+    count: 1358
 
 annotations:
-  classification:
-    num_classes: 0
-    classes: []
-
   segmentation:
-    available: true
+    unit: "image"
+    type: "multiclass"
     targets:
-      - Pubic symphysis
-      - Fetal head
+      - "Pubic symphysis"
+      - "Fetal head"
+    format: "MHA_mask"
+    count: 1358
+    annotators:
+      - "Two annotators per image with physician refinement"
+    note: "Label values 0, 1, and 2 represent background, pubic symphysis, and fetal head."
 
 tasks:
-  - Semantic segmentation
-  - Angle of progression measurement
+  - "segmentation"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "PSFHS: Intrapartum ultrasound image dataset for AI-based segmentation of pubic symphysis and fetal head"
-  venue: Scientific Data
-  doi: 10.1038/s41597-024-03266-4
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-024-03266-4"
 
 data:
-  repository: Zenodo
-  url: https://doi.org/10.5281/zenodo.10969427
-  data_doi: 10.5281/zenodo.10969427
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/10969427"
+  doi: "10.5281/zenodo.10969427"
+  version: "V1"
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Zhujiang Hospital, Southern Medical University"
+    - "First Affiliated Hospital of Jinan University"
+  period: null
+  scanners:
+    - "ObEye"
+    - "Esaote MyLab"
+  transducers:
+    - "Portable 3.5 MHz probe"
+  frequencies:
+    - "3.5 MHz"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related:
+    - "0203"
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1038/s41597-024-03266-4"
+    - "https://zenodo.org/records/10969427"
 
 notes: >-
-  The dataset contains 1,358 transperineal ultrasound images from 1,124
-  pregnant participants at two medical institutions. Images and labels are
-  paired .mha files. Label values 0, 1, and 2 represent background, pubic
-  symphysis, and fetal head. Each image was annotated by two annotators and
-  reviewed by a physician. The 132 MB Zenodo file endpoint was verified
-  using a partial-content request.
+  PSFHS provides image/ground-truth-mask pairs only. The Scientific Data paper
+  demonstrates that angle of progression (AoP) can be calculated from the final
+  PS/FH segmentation masks and reports an average AoP of 98.33° ± 21.11°, but the
+  public Zenodo archive contains the images and segmentation labels rather than a
+  separate AoP ground-truth table. AoP measurement is therefore treated as a
+  derived use rather than a native dataset task.

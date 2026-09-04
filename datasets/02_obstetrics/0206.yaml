@@ -1,61 +1,93 @@
-id: US085
-name: Fetal Abdominal Structures Segmentation Dataset
-full_name: Fetal Abdominal Structures Segmentation Dataset Using Ultrasonic Images
+id: "0206"
+name: "Fetal Abdominal Structures Segmentation Dataset"
+full_name: "Fetal Abdominal Structures Segmentation Dataset Using Ultrasonic Images"
+aliases: []
+
 release_year: 2023
 
 anatomy:
-  primary: Fetus
-  target: Fetal abdomen (abdominal aorta, intrahepatic umbilical vein, stomach, and liver)
+  primary: "Fetus"
+  target:
+    - "Fetal abdominal aorta"
+    - "Intrahepatic umbilical vein"
+    - "Fetal stomach"
+    - "Fetal liver"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 1588
-  patients: 169
+  - unit: "patient"
+    count: 169
+  - unit: "image"
+    count: 1588
+    note: "The Mendeley description states nearly 1,500 images; 1,588 is the count reported by later dataset inventories and public reuse studies."
 
 annotations:
-  classification:
-    num_classes: 0
-    classes: []
-
   segmentation:
-    available: true
+    unit: "image"
+    type: "multiclass"
     targets:
-      - Abdominal aorta
-      - Intrahepatic umbilical vein
-      - Stomach
-      - Liver
+      - "Fetal abdominal aorta"
+      - "Intrahepatic umbilical vein"
+      - "Fetal stomach"
+      - "Fetal liver"
+    format: "NPY"
+    annotators:
+      - "Expert clinicians"
+    note: "Annotations were created in 3D Slicer and exported as NumPy dictionaries."
 
 tasks:
-  - Semantic segmentation
+  - "segmentation"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
-paper:
-  title: null
-  venue: null
-  doi: null
+paper: null
 
 data:
-  repository: Mendeley Data
-  url: https://doi.org/10.17632/4gcpm9dsc3.1
-  data_doi: 10.17632/4gcpm9dsc3.1
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/4gcpm9dsc3/1"
+  doi: "10.17632/4gcpm9dsc3.1"
+  version: "1"
+
+acquisition:
+  countries:
+    - "Brazil"
+  institutions:
+    - "Maternity of University Hospital Polydoro Ernani de São Thiago, Universidade Federal de Santa Catarina"
+  period: "September 2021 to September 2023"
+  scanners:
+    - "Siemens Acuson"
+    - "GE Voluson 730"
+    - "Philips EPIQ Elite"
+  transducers:
+    - "Curved linear transducer"
+  frequencies:
+    - "2-9 MHz"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://data.mendeley.com/datasets/4gcpm9dsc3/1"
+    - "https://doi.org/10.17632/4gcpm9dsc3.1"
 
 notes: >-
-  The official Mendeley description states nearly 1,500 images, while later
-  public studies report 1,588 images from 169 term pregnancies. Images were
-  converted from DICOM to PNG, and annotations were exported from 3D Slicer
-  as .npy dictionaries. The dataset page was verified, but the actual data
-  archive was not downloaded during this verification.
+  The official Mendeley record describes a cohort of 169 term pregnancies and
+  nearly 1,500 fetal abdominal-circumference images. Public reuse studies report
+  1,588 released images. Images were originally stored in DICOM, converted to PNG,
+  and annotated in 3D Slicer. The dataset does not define a native classification
+  task or a dedicated peer-reviewed dataset paper.

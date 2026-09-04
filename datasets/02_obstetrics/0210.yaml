@@ -1,69 +1,131 @@
-id: US089
-name: Maternal-Fetal Ultrasound Video Dataset
-full_name: Maternal-Fetal Ultrasound Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning
+id: "0210"
+name: "Maternal-Fetal Ultrasound Video Dataset"
+full_name: "Maternal-Fetal Ultrasound Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning"
+aliases: []
+
 release_year: 2025
 
 anatomy:
-  primary: Maternal pelvis
-  target: Pubic symphysis and fetal head
+  primary: "Maternal pelvis"
+  target:
+    - "Pubic symphysis"
+    - "Fetal head"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: video
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  images: 68106
-  videos: 774
-  patients: null
+  - unit: "patient"
+    count: 774
+  - unit: "video"
+    count: 774
+  - unit: "frame"
+    count: 68106
 
 annotations:
   classification:
-    num_classes: 2
-    classes:
-      - Non-standard plane
-      - Standard plane
+    unit: "video"
+    label_type: "multi_task_binary"
+    note: "CSV files provide independent binary clinical judgment labels used for standard-plane selection and downstream processing."
 
   segmentation:
-    available: true
+    unit: "frame"
+    type: "multiclass"
     targets:
-      - Pubic symphysis
-      - Fetal head
+      - "Pubic symphysis"
+      - "Fetal head"
+    format: "PNG_mask"
+
+  landmarks:
+    unit: "frame"
+    targets:
+      - "Pubic symphysis axis point 1"
+      - "Pubic symphysis axis point 2"
+      - "Head-symphysis distance point"
+      - "Angle-of-progression tangency point"
+    format: "JSON_coordinates"
+
+  measurements:
+    unit: "frame"
+    targets:
+      - "Angle of progression"
+      - "Head-symphysis distance"
+    format: "derived_from_landmarks"
+    units:
+      "Angle of progression": "degree"
+      "Head-symphysis distance": "mm"
 
 tasks:
-  - Standard-plane classification
-  - Semantic segmentation
-  - Landmark detection
-  - Angle of progression measurement
-  - Head-symphysis distance measurement
+  - "standard_plane_classification"
+  - "segmentation"
+  - "landmark_detection"
+  - "measurement"
+
+splits:
+  unit: "video"
+  training:
+    count: 434
+  validation:
+    count: 40
+  test:
+    count: 300
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
 paper:
-  title: Maternal-Fetal Ultrasouno Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning
-  venue: Scientific Data
-  doi: 10.1038/s41597-026-06900-5
+  title: "Maternal-Fetal Ultrasouno Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-026-06900-5"
 
 data:
-  repository: Zenodo
-  url: https://doi.org/10.5281/zenodo.17655183
-  data_doi: 10.5281/zenodo.17655183
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/17655183"
+  doi: "10.5281/zenodo.17655183"
+  version: "V3"
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "First Affiliated Hospital of Jinan University"
+    - "Third Affiliated Hospital of Sun Yat-sen University"
+    - "Zhujiang Hospital of Southern Medical University"
+  period: null
+  scanners:
+    - "ObEye"
+    - "GE Voluson P8"
+    - "Esaote MyLab"
+  transducers: null
+  frequencies:
+    - "3-5 MHz"
+  note: "Videos were acquired at 24 frames/s and have an average duration of approximately 2 seconds."
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related:
+    - "0203"
+    - "0208"
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1038/s41597-026-06900-5"
+    - "https://zenodo.org/records/17655183"
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC12966494/"
 
 notes: >-
-  The dataset was published on Zenodo on 2025-11-20, while the associated
-  Scientific Data paper was published in 2026. It contains 774 videos and
-  68,106 frames from three institutions and three ultrasound devices.
-  Patient count is not reported. Segmentation masks are PNG files, and
-  landmark.json files provide pubic-symphysis and fetal-head coordinates
-  used to calculate AoP and HSD. The current DatasetV3.zip file is
-  1,084,176,447 bytes and its endpoint was verified using a partial-content
-  request. The paper title contains the publisher's spelling "Ultrasouno".
+  The public dataset was released on Zenodo in 2025 and subsequently described
+  in Scientific Data in 2026. It contains 774 videos from 774 pregnant women
+  across three institutions and devices. Landmark coordinates and derived AoP/HSD
+  parameters are stored in landmark.json files, so biometry is treated as a native
+  annotation task. The paper title contains the published spelling "Ultrasouno".

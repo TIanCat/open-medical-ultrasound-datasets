@@ -1,65 +1,115 @@
-id: US086
-name: ACOUSLIC-AI
-full_name: Abdominal Circumference Operator-agnostic UltraSound measurement in Low-Income Countries using Artificial Intelligence
+id: "0207"
+name: "ACOUSLIC-AI"
+full_name: "Abdominal Circumference Operator-agnostic UltraSound Measurement in Low-Income Countries using Artificial Intelligence"
+aliases: []
+
 release_year: 2024
 
 anatomy:
-  primary: Fetus
-  target: Fetal abdomen
+  primary: "Fetus"
+  target:
+    - "Fetal abdomen"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: sequence
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "sweep"
+  representation:
+    - "image_sequence"
 
 scale:
-  images: 252000
-  patients: 300
+  - unit: "case"
+    count: 300
+    note: "Public training and development set."
+  - unit: "frame"
+    count: 252000
+    note: "The 300 public cases contain 840 frames each across six blind sweeps."
 
 annotations:
-  classification:
-    num_classes: 2
-    classes:
-      - Optimal plane
-      - Suboptimal plane
+  localization:
+    unit: "frame"
+    targets:
+      - "Optimal fetal abdominal circumference plane"
+      - "Suboptimal fetal abdominal circumference plane"
+    format: "mask"
+    note: "Mask labels distinguish frames/regions suitable or suboptimal for AC measurement."
 
   segmentation:
-    available: true
+    unit: "frame"
+    type: "contour"
     targets:
-      - Fetal abdomen
+      - "Fetal abdomen"
+    format: "ellipse_annotation"
+    note: "Abdominal circumference annotations are provided in frames where AC can be measured."
+
+  measurements:
+    unit: "sweep"
+    targets:
+      - "Abdominal circumference"
+    format: "tabular_metadata"
+    unit_of_measurement: "mm"
 
 tasks:
-  - Frame localization
-  - Semantic segmentation
-  - Abdominal circumference measurement
+  - "localization"
+  - "segmentation"
+  - "measurement"
+
+splits:
+  unit: "case"
+  training:
+    count: 300
+    access: "public"
+  validation:
+    count: 10
+    access: "private"
+  test:
+    count: 282
+    access: "private"
 
 access:
-  level: open
-  license: CC BY-NC-SA 4.0
+  level: "open"
+  license: "CC BY-NC-SA 4.0"
+  requirements:
+    - "Public release is limited to the 300-case training and development set."
 
 paper:
   title: "ACOUSLIC-AI challenge report: Fetal abdominal circumference measurement on blind-sweep ultrasound data from low-income countries"
-  venue: Medical Image Analysis
-  doi: 10.1016/j.media.2025.103640
+  venue: "Medical Image Analysis"
+  doi: "10.1016/j.media.2025.103640"
 
 data:
-  repository: Zenodo
-  url: https://doi.org/10.5281/zenodo.12697994
-  data_doi: 10.5281/zenodo.12697994
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/12697994"
+  doi: "10.5281/zenodo.12697994"
+  version: "1.1"
+
+acquisition:
+  countries:
+    - "Sierra Leone"
+  institutions:
+    - "Three Public Health Units in Sierra Leone"
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: "Blind-sweep ultrasound was acquired by novice operators using a predefined protocol."
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://acouslic-ai.grand-challenge.org/datasets/"
+    - "https://zenodo.org/records/12697994"
+    - "https://doi.org/10.1016/j.media.2025.103640"
 
 notes: >-
-  Zenodo version 1.1 publicly distributes the 300-case training set. Each
-  case contains 840 frames covering six blind sweeps, giving 252,000 public
-  frames. The complete challenge comprises 592 cases: 300 training, 10
-  validation, and 282 test cases; validation and test data are private.
-  Mask value 1 denotes an optimal plane and value 2 a suboptimal plane.
-  Version 1.1 corrects circumference measurements that were twice too large
-  in version 1.0. The Zenodo file endpoint was verified using a 1 KB range
-  request; the full 38 GB archive was not downloaded.
+  The complete challenge contains 592 cases: 300 public training/development,
+  10 hidden validation, and 282 hidden test cases. Only the 300-case training set
+  is distributed through Zenodo. Version 1.1 corrects circumference measurements
+  that were too large by a factor of two in version 1.0.
