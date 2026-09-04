@@ -1,146 +1,98 @@
-id: US007
-name: Breast Ultrasound Image Database
-name_source: Descriptive database name used by the paper and later comparison literature
+id: "0007"
+name: "Breast Ultrasound Image Database"
+full_name: "Breast Ultrasound Image Database"
 aliases:
-  - QAMEBI
-alias_note: QAMEBI is the hosting research-group website name, not a formal dataset acronym defined in the paper
+  - "QAMEBI"
+
 release_year: 2022
-release_year_basis: The official ZIP paths date to 2022-11 and the article was available online in December 2022; the journal issue is January 2023
 
 anatomy:
-  primary: Breast
-  target: Breast lesion
+  primary: "Breast"
+  target:
+    - "Breast lesion"
 
 modality:
-  type: B-mode ultrasound
-  dimension: 2D
-  temporal: static
-  released_image_format: 24-bit BMP
-  released_mask_format: 1-bit TIFF
-  released_resolution:
-    width_range_pixels: 344-1000
-    height_range_pixels: 314-710
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  lesions: 232
-  original_images: 232
-  lesion_only_images: 232
-  binary_masks: 232
-  total_released_files: 696
-  class_distribution:
-    benign: 109
-    malignant: 123
-  patients: Not explicitly reported
+  - unit: "lesion"
+    count: 232
+  - unit: "image"
+    count: 232
 
 annotations:
   classification:
-    available: true
-    unit: lesion / image
+    unit: "lesion"
+    num_classes: 2
     classes:
-      - Benign
-      - Malignant
-    reference_standard:
-      methods_as_reported:
-        - Fine-needle aspiration
-        - Core-needle biopsy
-        - Open biopsy
-      caution: Fine-needle aspiration is cytologic sampling, so describing every case as histopathologically confirmed is imprecise
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 109
+      Malignant: 123
+
   segmentation:
-    available: true
-    unit: image
-    target: Breast lesion
-    type: Binary lesion mask
-    source: Radiologist-defined mask
-    annotators: One radiologist, as reported in the 2024 peer-reviewed comparison table
-    experience_and_adjudication: Not confirmed from accessible primary text
-  derived_localization:
-    available: true
-    note: Bounding boxes can be derived from the binary masks; no native bounding-box files are supplied
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast lesion"
+    format: "mask"
+    count: 232
+    annotators:
+      - "Radiologist"
 
 tasks:
-  - Benign versus malignant lesion classification
-  - Breast lesion segmentation
-  - Mask-derived lesion localization
+  - "classification"
+  - "segmentation"
 
 access:
-  level: open download
-  registration_required: false
-  dataset_license: Not stated
-  website_notice: All Rights Reserved
-  reuse_note: The dataset page requests citation; a 2025 author reply permits sample images in a manuscript when the paper is cited, but this is not a general open license
+  level: "open"
+  license: null
+  requirements: []
 
 paper:
   title: "An open-access breast lesion ultrasound image database: Applicable in artificial intelligence studies"
-  authors:
-    - Ali Abbasian Ardakani
-    - Afshin Mohammadi
-    - Mohammad Mirza-Aghazadeh-Attari
-    - U. Rajendra Acharya
-  venue: Computers in Biology and Medicine
-  volume: 152
-  article_number: 106438
-  publication_year: 2023
-  online_publication_date: 2022-12-16
-  doi: 10.1016/j.compbiomed.2022.106438
-  pmid: 36535208
-  access: Subscription article; abstract and indexed section snippets were accessible
+  venue: "Computers in Biology and Medicine"
+  doi: "10.1016/j.compbiomed.2022.106438"
 
 data:
-  landing_page: https://qamebi.com/breast-ultrasound-images-database/
-  archives:
-    benign:
-      url: https://qamebi.com/wp-content/uploads/2022/11/Benign.zip
-      archive_size_bytes: 40589788
-      archive_md5: c8f03d744feba0b3d67b10f123fc9b61
-      cases: 109
-    malignant:
-      url: https://qamebi.com/wp-content/uploads/2022/11/Malignant.zip
-      archive_size_bytes: 58088504
-      archive_md5: 1d2b08bd12545515ee67318f085c5e18
-      cases: 123
-  case_triplet:
-    original_image: N Class Image.bmp
-    lesion_only_image: N Class Lesion.bmp
-    binary_mask: N Class Mask.tif
-  validation:
-    all_case_ids_contiguous: true
-    all_triplets_complete: true
-    all_triplet_dimensions_match: true
-    exact_duplicate_original_images: 0
+  repository: "QAMEBI"
+  url: "https://qamebi.com/breast-ultrasound-images-database/"
+  doi: null
 
 acquisition:
-  cohort: Consecutive women older than 18 presenting to a cancer imaging center, acquired at initial presentation before treatment or subsequent imaging
-  ultrasound_system: Aixplorer Ultimate (SuperSonic Imagine), confirmed by the dataset author on the official page in 2026
-  transducer: Not confirmed from accessible primary text
-  frequency: Not confirmed from accessible primary text
-  institution: The cancer imaging center is not named in accessible primary text
-  acquisition_period: Not confirmed
-  inclusion_summary: No history of breast cancer in either breast
-  ethics_approval: IR.SBMU.RETECH.REC.1400.215
-  consent: Written informed consent reported
-  deidentification: The paper states that released images retain no patient identifiers
-
-limitations:
-  official_split: Not provided
-  patient_mapping: Not provided in the downloaded files
-  clinical_metadata: No age, BI-RADS, histologic subtype, biopsy-method-per-case, or patient identifier file was found in the archives
-  image_artifacts: A 2024 peer-reviewed comparison notes cropped skin layers, lesions extending beyond image bounds, measurement markers, and visible biopsy needles in examples
+  countries:
+    - "Iran"
+  institutions: null
+  period: null
+  scanners:
+    - "Aixplorer Ultimate (SuperSonic Imagine)"
+  transducers: null
+  frequencies: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
-  methods:
-    - Checked the official QAMEBI landing page and direct download links
-    - Downloaded and tested both official ZIP archives
-    - Matched all 232 case triplets and decoded every BMP and TIFF header
-    - Visually inspected representative original, lesion-only, and binary-mask files
-    - Compared the primary article metadata and indexed section text with the 2024 peer-reviewed dataset comparison
+verification:
+  status: "verified"
+  date: "2026-09-04"
   sources:
-    - https://doi.org/10.1016/j.compbiomed.2022.106438
-    - https://qamebi.com/breast-ultrasound-images-database/
-    - https://pmc.ncbi.nlm.nih.gov/articles/PMC10830496/
+    - "https://doi.org/10.1016/j.compbiomed.2022.106438"
+    - "https://qamebi.com/breast-ultrasound-images-database/"
+    - "https://pubmed.ncbi.nlm.nih.gov/36535208/"
 
-notes: The website supplies two directly downloadable class archives but no formal license or official split. The original article calls the cases histopathologically proven while listing fine-needle aspiration among the reference methods; because FNA is cytology, the exact confirmation method is recorded without broadening that claim.
+notes: >-
+  The dataset contains 232 breast lesions, including 109 benign and 123 malignant
+  lesions. Each lesion is represented by an original ultrasound image together with
+  lesion-related annotation files on the official site. Patient-level identifiers,
+  an official train/validation/test split, and a formal dataset license are not
+  provided. The paper lists fine-needle aspiration, core-needle biopsy, and open biopsy
+  among the reference methods; therefore, the broad label "histopathologically proven"
+  should be interpreted with caution because fine-needle aspiration is cytologic sampling.
