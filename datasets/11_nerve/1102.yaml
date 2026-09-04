@@ -1,0 +1,128 @@
+id: "1102"
+name: "UBPD"
+full_name: "Ultrasonic Brachial Plexus Dataset"
+aliases:
+  - "Ultrasound Brachial Plexus Dataset"
+
+release_year: 2022
+
+anatomy:
+  primary: "Peripheral nerve"
+  target:
+    - "Brachial plexus"
+    - "Muscle"
+    - "Vein"
+    - "Artery"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "participant"
+    count: 101
+  - unit: "image"
+    count: 1052
+    note: >-
+      The Dataset section reports 1,052 images. The abstract, highlights,
+      and contribution summary report 1,055 images; the paper's stated
+      training/test split of 955 + 97 images supports a total of 1,052.
+  - unit: "pair"
+    count: 1052
+    note: "Each ultrasound image has corresponding anatomical-structure segmentation annotations."
+
+annotations:
+  segmentation:
+    unit: "image"
+    type: "multiclass"
+    targets:
+      - "Brachial plexus nerve"
+      - "Muscle"
+      - "Vein"
+      - "Artery"
+    format: "mask"
+    count: 1052
+    annotators:
+      - "Professional anesthesiologists"
+    annotation_method: "Manual annotation with LabelMe"
+
+tasks:
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 955
+    note: "Collected from 91 patients."
+  test:
+    count: 97
+    note: "Collected from 10 patients."
+
+access:
+  level: "application"
+  license: null
+  requirements:
+    - "Contact the dataset administrators or authors for current access and research-use terms"
+    - "Citation of the associated paper"
+
+paper:
+  title: "MallesNet: A multi-object assistance based network for brachial plexus segmentation in ultrasound images"
+  venue: "Medical Image Analysis"
+  doi: "10.1016/j.media.2022.102511"
+
+data:
+  repository: "Author-hosted UBPD website"
+  url: "https://ubpd.worldwidetracing.com:9443/"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Sichuan Provincial Hospital for Women and Children / Affiliated Women's and Children's Hospital of Chengdu Medical College"
+  period: null
+  scanners:
+    - "SIEMENS ACUSON NX3 Elite"
+    - "Philips EPIQ5"
+  transducers:
+    - "High-frequency probe"
+  frequencies: null
+  note: >-
+    Ultrasound was acquired from the right neck using a 4 cm imaging depth.
+    One approximately 8-second ultrasound video was collected from each
+    patient, and 10-15 frames were randomly extracted from each video.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1016/j.media.2022.102511"
+    - "https://pubmed.ncbi.nlm.nih.gov/35753278/"
+    - "https://ubpd.worldwidetracing.com:9443/"
+    - "https://ultrasound-open-access.nidusai.ca/"
+
+notes: >-
+  UBPD was constructed from 101 patients for multi-structure segmentation
+  in brachial plexus ultrasound. Professional anesthesiologists acquired
+  the ultrasound data and manually annotated the brachial plexus nerve,
+  muscle, vein, and artery using LabelMe. The paper contains an internal
+  inconsistency in dataset size: the abstract, highlights, and contribution
+  summary state 1,055 images, whereas Section 3 states 1,052 images and the
+  reported experimental split contains 955 training plus 97 test images,
+  also totaling 1,052. Therefore, 1,052 is used as the canonical image count.
+  The original author-hosted dataset website was unreachable during
+  verification on 2026-09-04. A current secondary ultrasound-dataset catalog
+  describes the resource as requiring citation and contact with administrators
+  for specific research-use terms; because the original access terms and files
+  could not be independently inspected, the license is left null and
+  verification.status is set to partial.
