@@ -21,7 +21,8 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 08 | Brain | 8 | 0801–0808 |
 | 09 | Kidney | 2 | 0901–0902 |
 | 10 | Prostate | 3 | 1001–1003 |
-| 11 | Prostate | 3 | 1101–1103 |
+| 11 | Nerve | 3 | 1101–1103 |
+| 11 | Ovary | 3 | 1201–1203 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
 | 20 | Other | 7 | 2001–2008 |
 | **Total** | **14 categories** | **96** | — |
@@ -179,7 +180,7 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [1201](datasets/12_ovary/1201.yaml) | Ovarian Ultrasound Image Dataset | Ovary | 2D B-mode | 6,879 images | classification | 🟢 Open| -- | [Kaggle](https://www.kaggle.com/datasets/ucimachinelearning/ovarian-ultrasound-image-dataset) |
-
+| [1202](datasets/12_ovary/1202.yaml) | PCOS | Ovary / PCOS | 2D B-mode | 12,680 images (Figshare-reported) | binary classification | 🟢 Open | -- | [Figshare](https://figshare.com/articles/dataset/PCOS_Dataset/27682557) |
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

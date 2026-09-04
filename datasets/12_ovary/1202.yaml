@@ -1,0 +1,109 @@
+id: "1202"
+name: "PCOS Dataset"
+full_name: "Figshare Polycystic Ovary Syndrome Ultrasound Dataset"
+aliases:
+  - "Figshare PCOS Dataset"
+  - "PCOS Ultrasound Dataset"
+
+release_year: 2024
+
+anatomy:
+  primary: "Ovary"
+  target:
+    - "Ovary"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: 12680
+    note: >-
+      The Figshare record states that the dataset contains 12,680 ultrasound
+      images. Several downstream studies using this resource instead report
+      11,784 binary-classification images, including 6,784 PCOS and 5,000
+      non-PCOS images. Because the Figshare record is the primary source,
+      12,680 is retained as the canonical catalog count.
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 2
+    classes:
+      - "PCOS"
+      - "Non-PCOS"
+    note: >-
+      Downstream studies consistently describe the released resource as a
+      binary PCOS-versus-non-PCOS ovarian ultrasound classification dataset.
+      However, the Figshare metadata does not provide an official class
+      distribution. Several studies report a usable subset of 6,784 PCOS and
+      5,000 non-PCOS images, totaling 11,784 images.
+
+tasks:
+  - "classification"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper: null
+
+data:
+  repository: "Figshare"
+  url: "https://figshare.com/articles/dataset/PCOS_Dataset/27682557"
+  doi: "10.6084/m9.figshare.27682557.v1"
+  version: "1"
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: >-
+    The Figshare record does not document the original acquisition sites,
+    scanners, transducers, imaging protocols, or patient counts because the
+    release aggregates ultrasound images sourced from publicly available
+    datasets.
+
+family:
+  type: "aggregate"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-04"
+  sources:
+    - "https://figshare.com/articles/dataset/PCOS_Dataset/27682557"
+    - "https://doi.org/10.6084/m9.figshare.27682557.v1"
+    - "https://datasetcatalog.nlm.nih.gov/dataset?q=0000769122"
+    - "https://www.nature.com/articles/s41598-026-40718-w"
+
+notes: >-
+  This resource was posted to Figshare on 2024-11-12 by Indirani A and is
+  intended for automated PCOS detection and explainable-AI research. The
+  Figshare metadata explicitly states that the images were sourced from
+  publicly available datasets, so this entry is classified as an aggregate
+  rather than a primary clinical dataset.
+
+  The primary Figshare record reports 12,680 ultrasound images but does not
+  document the contributing source datasets, patient count, acquisition
+  institutions, scanner information, official train/validation/test split, or
+  class distribution. Later publications using the same Figshare DOI generally
+  describe the data as grayscale ovarian ultrasound images for binary PCOS
+  classification and commonly report 11,784 usable images, comprising 6,784
+  PCOS and 5,000 non-PCOS images. This discrepancy cannot be fully reconciled
+  from the public metadata, so 12,680 is retained as the canonical repository
+  count and verification.status is set to partial.
+
+  No dedicated associated dataset publication is listed by Figshare or the
+  NLM Dataset Catalog. Later papers using the resource are therefore treated
+  as downstream studies rather than as the dataset's primary paper.
