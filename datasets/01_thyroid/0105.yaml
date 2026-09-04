@@ -1,29 +1,58 @@
-id: 0105
+id: "0105"
 name: "TN3K"
-full_name: "TN3K"
+full_name: "Thyroid Nodule 3K"
+aliases:
+  - "Thyroid Nodule Region Segmentation Dataset"
+
 release_year: 2022
 
 anatomy:
   primary: "Thyroid"
-  target: "thyroid nodule"
+  target:
+    - "Thyroid nodule"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "3,493 images from 2,421 patients (2,879 training; 614 test)"
+  - unit: "patient"
+    count: 2421
+  - unit: "image"
+    count: 3493
 
 annotations:
-  summary: "pixel-wise binary thyroid-nodule masks"
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Thyroid nodule"
+    format: "mask"
+    count: 3493
+    annotators:
+      - "Volunteers under guidance of an experienced radiologist"
+      - "Radiologist review"
+      - "Senior clinician verification for ambiguous cases"
 
 tasks:
-  - "thyroid-nodule segmentation"
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 2879
+  test:
+    count: 614
+  note: "Images from the same patient are kept within a single subset."
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
   title: "Thyroid Region Prior Guided Attention for Ultrasound Segmentation of Thyroid Nodules"
@@ -33,13 +62,39 @@ paper:
 data:
   repository: "GitHub"
   url: "https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation"
-  data_doi: null
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Zhujiang Hospital, Southern Medical University"
+  period: "January 2016 to August 2020"
+  scanners:
+    - "GE Logiq E9"
+    - "ARIETTA 850"
+    - "RESONA 70B"
+  transducers: null
+  frequencies: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1016/j.compbiomed.2022.106389"
+    - "https://pubmed.ncbi.nlm.nih.gov/36812810/"
+    - "https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation"
 
-notes: "Dataset and official split are distributed from the project repository."
+notes: >-
+  TN3K contains 3,493 grayscale thyroid ultrasound images from 2,421 patients.
+  Samples were selected from more than 30,000 candidate images and may contain
+  one or multiple nodules. The public release is intended for thyroid-nodule
+  segmentation; a benign/malignant classification label should not be assumed
+  for TN3K merely because some project code or related repositories contain
+  classification utilities.
