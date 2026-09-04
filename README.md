@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **90 medical ultrasound dataset resources** across **12 anatomical categories**.  
+This repository currently catalogs **93 medical ultrasound dataset resources** across **13 anatomical categories**.  
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -23,7 +23,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 10 | Prostate | 3 | 1001–1003 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
 | 20 | Other | 7 | 2001–2008 |
-| **Total** | **12 categories** | **91** | — |
+| **Total** | **12 categories** | **93** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
@@ -163,6 +163,8 @@ See [Scope](docs/scope.md).
 |---|---|---|---|---|---|---|---|---|
 | [1001](datasets/10_prostate/1001.yaml) | Prostate-MRI-US-Biopsy | Prostate / prostate cancer | 3D transrectal US + MRI | 1,151 patients / 2,799 studies / 102,397 MR+US DICOM images | segmentation; localization; grading; measurement; registration | 🟢 Open | -- | [TCIA](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/) |
 | [1002](datasets/10_prostate/1002.yaml) | μ-RegPro | Prostate  | 3D TRUS + T2-weighted MRI | 108 paired cases (65 train / 8 validation / 35 test) | registration; segmentation; landmark detection | 🟢 Open | -- | [ μ-RegPro / Zenodo](https://muregpro.github.io/) |
+| [1003](datasets/10_prostate/1003.yaml) | Micro-Ultrasound Prostate Segmentation Dataset | Prostate  | 3D 29-MHz micro-ultrasound | 75 patients / 75 volumes (55 train / 20 test) | segmentation  | 🟢 Open | [Jiang et al., 2024](https://doi.org/10.1016/j.compmedimag.2024.102326) | [Zenodo](https://zenodo.org/records/10475293) |
+
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

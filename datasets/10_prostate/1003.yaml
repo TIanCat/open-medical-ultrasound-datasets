@@ -1,0 +1,125 @@
+id: "1003"
+name: "Micro-Ultrasound Prostate Segmentation Dataset"
+full_name: "Micro-Ultrasound Prostate Segmentation Dataset"
+aliases:
+  - "MicroSeg dataset"
+
+release_year: 2024
+
+anatomy:
+  primary: "Prostate"
+  target:
+    - "Prostate gland"
+
+modality:
+  type:
+    - "Micro-ultrasound"
+  dimension: "3D"
+  temporal: "static"
+  representation:
+    - "volume"
+
+scale:
+  - unit: "patient"
+    count: 75
+  - unit: "volume"
+    count: 75
+    note: "One de-identified NIfTI micro-ultrasound scan is provided per patient."
+
+annotations:
+  segmentation:
+    unit: "volume"
+    type: "binary"
+    targets:
+      - "Prostate gland"
+    format: "NIfTI_mask"
+    count: 75
+    annotation_sets:
+      expert:
+        annotator: "Expert urologist"
+        coverage:
+          training_patients: 55
+          test_patients: 20
+      training_non_expert:
+        annotator: "Graduate student"
+        coverage:
+          training_patients: 55
+      test_master_student:
+        annotator: "Master's student"
+        coverage:
+          test_patients: 20
+      test_medical_student:
+        annotator: "Medical student"
+        coverage:
+          test_patients: 20
+      test_clinician:
+        annotator: "Urologist with limited micro-ultrasound experience"
+        coverage:
+          test_patients: 20
+    note: >-
+      Expert prostate segmentations are provided for all 75 patients.
+      Additional non-expert annotations are supplied to study inter-observer
+      variation and annotation difficulty.
+
+tasks:
+  - "segmentation"
+
+splits:
+  unit: "patient"
+  training:
+    count: 55
+  test:
+    count: 20
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper:
+  title: "MicroSegNet: A deep learning approach for prostate segmentation on micro-ultrasound images"
+  venue: "Computerized Medical Imaging and Graphics"
+  doi: "10.1016/j.compmedimag.2024.102326"
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/10475293"
+  doi: "10.5281/zenodo.10475293"
+  version: null
+
+acquisition:
+  countries:
+    - "United States"
+  institutions:
+    - "University of Florida"
+  period: null
+  scanners: null
+  transducers: null
+  frequencies:
+    - "29 MHz"
+  note: >-
+    Data were acquired from patients undergoing micro-ultrasound-guided
+    prostate biopsy. The release contains fully de-identified 3D NIfTI scans.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://zenodo.org/records/10475293"
+    - "https://doi.org/10.5281/zenodo.10475293"
+    - "https://doi.org/10.1016/j.compmedimag.2024.102326"
+    - "https://github.com/mirthAI/MicroSegNet"
+
+notes: >-
+  This is an independent University of Florida micro-ultrasound acquisition
+  family and is unrelated to the UCLA/TCIA Prostate-MRI-US-Biopsy dataset
+  (1001) or the UCLH μ-RegPro MRI-TRUS registration dataset (1002).
+  The associated MicroSegNet paper trains on 55 patients and evaluates on
+  20 held-out patients. Later studies commonly process the 3D scans as axial
+  slices, but the atlas records the native public resource at the patient/volume
+  level rather than treating derived slice counts as the primary dataset scale.
