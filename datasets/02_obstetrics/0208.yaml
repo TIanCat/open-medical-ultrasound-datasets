@@ -1,0 +1,61 @@
+id: US087
+name: PSFHS
+full_name: "PSFHS: Intrapartum ultrasound image dataset for AI-based segmentation of pubic symphysis and fetal head"
+release_year: 2024
+
+anatomy:
+  primary: Maternal pelvis
+  target: Pubic symphysis and fetal head
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 1358
+  patients: 1124
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: true
+    targets:
+      - Pubic symphysis
+      - Fetal head
+
+tasks:
+  - Semantic segmentation
+  - Angle of progression measurement
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: "PSFHS: Intrapartum ultrasound image dataset for AI-based segmentation of pubic symphysis and fetal head"
+  venue: Scientific Data
+  doi: 10.1038/s41597-024-03266-4
+
+data:
+  repository: Zenodo
+  url: https://doi.org/10.5281/zenodo.10969427
+  data_doi: 10.5281/zenodo.10969427
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: >-
+  The dataset contains 1,358 transperineal ultrasound images from 1,124
+  pregnant participants at two medical institutions. Images and labels are
+  paired .mha files. Label values 0, 1, and 2 represent background, pubic
+  symphysis, and fetal head. Each image was annotated by two annotators and
+  reviewed by a physician. The 132 MB Zenodo file endpoint was verified
+  using a partial-content request.

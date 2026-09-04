@@ -1,0 +1,59 @@
+id: US069
+name: BEHSOF
+full_name: BEHSOF - Advanced Non-alcoholic fatty liver dataset with clinical metadata and ultrasound images for Deep learning Models
+release_year: 2024
+
+anatomy:
+  primary: Liver
+  target: Non-alcoholic fatty liver disease
+
+modality:
+  type: Ultrasound + clinical + laboratory + FibroScan
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 1669
+  patients: 113
+
+annotations:
+  classification:
+    num_classes: 4
+    classes:
+      - Steatosis stage 0
+      - Steatosis stage 1
+      - Steatosis stage 2
+      - Steatosis stage 3
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+  - Grading
+  - Regression
+  - Multimodal Prediction
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: null
+  venue: null
+  doi: null
+
+data:
+  repository: Figshare
+  url: https://figshare.com/articles/dataset/BEHSOF/26389069
+  data_doi: 10.6084/m9.figshare.26389069.v4
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 113 participants: 18 from Taleghani Hospital and 95 from Behbood Clinic. The derived image curation contains 1,669 images. Steatosis stages 0/1/2/3 contain 12/57/36/8 participants; FibroScan fibrosis stages F0/F1/F2 contain 24/78/11. Clinical data include demographics, anthropometric measurements, blood tests, CAP score, elasticity/E score, and FibroScan results. The 1,669-image count comes from a derived Kaggle curation and is not stated for the original Figshare release."

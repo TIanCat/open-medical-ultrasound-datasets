@@ -1,0 +1,101 @@
+id: "0001"
+name: "UDIAT / Dataset B"
+full_name: "Breast Ultrasound Dataset B"
+aliases:
+  - "Dataset B"
+
+release_year: 2017
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 163
+  - unit: "image"
+    count: 163
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 110
+      Malignant: 53
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast lesion"
+    format: "mask"
+    annotators:
+      - "Experienced radiologists"
+
+tasks:
+  - "classification"
+  - "segmentation"
+  - "detection"
+
+access:
+  level: "application"
+  license: "Research-use licence agreement"
+  requirements:
+    - "Institutional email address"
+    - "Submitted licence agreement"
+    - "Manual approval"
+
+paper:
+  title: "Automated Breast Ultrasound Lesions Detection Using Convolutional Neural Networks"
+  venue: "IEEE Journal of Biomedical and Health Informatics"
+  doi: "10.1109/JBHI.2017.2731873"
+
+
+data:
+  repository: "Manchester Metropolitan University"
+  url: "https://helward.mmu.ac.uk/STAFF/m.yap/dataset.php"
+  doi: null
+
+acquisition:
+  countries:
+    - "Spain"
+  institutions:
+    - "UDIAT Diagnostic Centre, Parc Tauli Corporation, Sabadell"
+  period: "2012"
+  scanners:
+    - "Siemens ACUSON Sequoia C512"
+  transducers:
+    - "17L5 HD linear array"
+  frequencies:
+    - "8.5 MHz"
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://e-space.mmu.ac.uk/619005/1/revised_manuscript_R2.pdf"
+    - "https://pubmed.ncbi.nlm.nih.gov/28796627/"
+    - "https://helward.mmu.ac.uk/STAFF/m.yap/dataset.php"
+
+notes: >-
+  Images are from different women and may contain one or more lesions.
+  The paper reports lesion delineations by experienced radiologists.
+  The dataset is available through an application-based research-use workflow.

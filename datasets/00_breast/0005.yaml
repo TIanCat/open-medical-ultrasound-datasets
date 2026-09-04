@@ -1,0 +1,95 @@
+id: "0005"
+name: "BUSI"
+full_name: "Dataset of Breast Ultrasound Images"
+aliases:
+  - "Breast Ultrasound Images Dataset"
+
+release_year: 2020
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 600
+  - unit: "image"
+    count: 780
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 3
+    classes:
+      - "Normal"
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Normal: 133
+      Benign: 437
+      Malignant: 210
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast lesion"
+    format: "mask"
+
+tasks:
+  - "classification"
+  - "segmentation"
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "Dataset of breast ultrasound images"
+  venue: "Data in Brief"
+  doi: "10.1016/j.dib.2019.104863"
+
+data:
+  repository: "Cairo University"
+  url: "https://data.mendeley.com/datasets/k8t3gnx9h6/1"
+  doi: null
+
+acquisition:
+  countries:
+    - "Egypt"
+  institutions:
+    - "Baheya Hospital for Early Detection & Treatment of Women's Cancer, Cairo"
+  period: "2018"
+  scanners:
+    - "GE LOGIQ E9"
+    - "GE LOGIQ E9 Agile"
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC6906728/"
+    - "https://scholar.cu.edu.eg/?q=afahmy/pages/dataset"
+
+notes: >-
+  The dataset contains 780 images from 600 women. The widely used released-file
+  distribution is 133 normal, 437 benign, and 210 malignant images. The original
+  Data in Brief article contains an internal inconsistency in its class-count table,
+  so the released-file distribution is used here. The Mendeley record
+  10.17632/k8t3gnx9h6.1 is a later supplementary resource about BUSI data issues
+  and is not treated as the original BUSI dataset source.

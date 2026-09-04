@@ -1,0 +1,48 @@
+id: US094
+name: "ReMIND"
+full_name: "The Brain Resection Multimodal Imaging Database (ReMIND)"
+release_year: 2023
+
+anatomy:
+  primary: "Brain"
+  target: "brain tumor / resection cavity"
+
+modality:
+  type: "preoperative MRI + intraoperative MRI + intraoperative ultrasound"
+  dimension: "3D/2D multimodal"
+  temporal: "preoperative and intraoperative"
+
+scale:
+  summary: "114 neurosurgical cases"
+
+annotations:
+  summary: "multimodal images with expert segmentations for tumor, brain parenchyma, resection cavity and residual/resected tissue; registration/navigation metadata"
+
+tasks:
+  - "multimodal image registration"
+  - "tumor segmentation"
+  - "resection-cavity segmentation"
+  - "image-guided neurosurgery research"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "ReMIND: The Brain Resection Multimodal Imaging Database"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-024-03295-z"
+
+data:
+  repository: "ReMIND"
+  url: "https://www.cancerimagingarchive.net/collection/remind/"
+  data_doi: "10.7937/3RAG-D070"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the Scientific Data paper and TCIA collection page."

@@ -1,0 +1,124 @@
+id: "0010"
+name: "TDSC-ABUS2023"
+full_name: "Tumor Detection, Segmentation and Classification Challenge on Automated 3D Breast Ultrasound 2023"
+aliases: []
+
+release_year: 2023
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast tumor"
+
+modality:
+  type:
+    - "ABUS"
+  dimension: "3D"
+  temporal: "static"
+  representation:
+    - "volume"
+
+scale:
+  - unit: "case"
+    count: 200
+  - unit: "volume"
+    count: 200
+
+annotations:
+  classification:
+    unit: "case"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 85
+      Malignant: 115
+
+  segmentation:
+    unit: "volume"
+    type: "binary"
+    targets:
+      - "Breast tumor"
+    format: "voxel_mask"
+
+  detection:
+    unit: "volume"
+    targets:
+      - "Breast tumor"
+    format: "3D_bounding_box"
+    note: "Detection boxes are derived from the tumor segmentation boundaries for the challenge task."
+
+tasks:
+  - "classification"
+  - "segmentation"
+  - "detection"
+
+splits:
+  unit: "case"
+  training:
+    count: 100
+    distribution:
+      Benign: 42
+      Malignant: 58
+  validation:
+    count: 30
+    distribution:
+      Benign: 13
+      Malignant: 17
+  test:
+    count: 70
+    distribution:
+      Benign: 30
+      Malignant: 40
+
+access:
+  level: "application"
+  license: null
+  requirements:
+    - "Signed organizer agreement"
+    - "Organizer approval by email"
+    - "Redistribution is prohibited"
+    - "Current participation rules restrict the shared data to challenge use"
+
+paper:
+  title: "Tumor Detection, Segmentation and Classification Challenge on Automated 3D Breast Ultrasound: The TDSC-ABUS Challenge"
+  venue: "arXiv"
+  doi: "10.48550/arXiv.2501.15588"
+
+data:
+  repository: "Grand Challenge"
+  url: "https://tdsc-abus2023.grand-challenge.org/Dataset/"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Harbin Medical University Cancer Hospital"
+  period: null
+  scanners:
+    - "Invenia ABUS (GE Healthcare)"
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://tdsc-abus2023.grand-challenge.org/Dataset/"
+    - "https://tdsc-abus2023.grand-challenge.org/Participation/"
+    - "https://github.com/PerceptionComputingLab/TDSC-ABUS2023"
+    - "https://arxiv.org/abs/2501.15588"
+
+notes: >-
+  The dataset contains 200 tumor-containing 3D ABUS cases. The official split is
+  100 training, 30 validation, and 70 test cases. The training data include NRRD
+  volumes, voxel-level tumor masks, and benign/malignant labels. Access requires
+  a signed agreement and organizer approval, so file-level verification was not performed.

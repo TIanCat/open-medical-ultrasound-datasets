@@ -1,0 +1,137 @@
+id: "0008"
+name: "BUS-BRA"
+full_name: "BUS-BRA: A Breast Ultrasound Dataset for Assessing Computer-aided Diagnosis Systems"
+aliases: []
+
+release_year: 2023
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast tumor"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 1064
+  - unit: "image"
+    count: 1875
+
+annotations:
+  classification:
+    unit: "patient"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 722
+      Malignant: 342
+    image_distribution:
+      Benign: 1268
+      Malignant: 607
+    reference_standard: "Biopsy"
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast tumor"
+    format: "mask"
+    count: 1875
+    annotators:
+      - "Senior ultrasonographer"
+
+  detection:
+    unit: "image"
+    targets:
+      - "Breast tumor"
+    format: "bounding_box"
+    count: 1875
+
+  grading:
+    unit: "patient"
+    system: "BI-RADS"
+    categories:
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    distribution:
+      "2": 304
+      "3": 279
+      "4": 393
+      "5": 88
+    image_distribution:
+      "2": 562
+      "3": 463
+      "4": 693
+      "5": 157
+
+tasks:
+  - "classification"
+  - "segmentation"
+  - "detection"
+  - "grading"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper:
+  title: "BUS-BRA: A breast ultrasound dataset for assessing computer-aided diagnosis systems"
+  venue: "Medical Physics"
+  doi: "10.1002/mp.16812"
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/8231412"
+  doi: "10.5281/zenodo.8231412"
+  version: "1.0"
+
+acquisition:
+  countries:
+    - "Brazil"
+  institutions:
+    - "National Institute of Cancer, Rio de Janeiro"
+  period: null
+  scanners:
+    - "GE Logiq 5"
+    - "GE Logiq 7"
+    - "Toshiba Aplio 300"
+    - "U-Systems"
+  transducers: null
+  frequencies:
+    - "10-12 MHz"
+    - "10-14 MHz"
+    - "12-14 MHz"
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1002/mp.16812"
+    - "https://zenodo.org/records/8231412"
+    - "https://github.com/wgomezf/BUS-BRA"
+
+notes: >-
+  All images have corresponding lesion masks, and the released metadata also provide
+  bounding boxes, pathology, histology, BI-RADS categories, and standardized 5-fold and
+  10-fold cross-validation partitions. Patient-level pathology counts are 722 benign and
+  342 malignant, whereas image-level counts are 1,268 benign and 607 malignant. One
+  released bounding box does not exactly match its corresponding mask extent. The outer
+  cross-validation folds keep images from the same patient together, while the separate
+  inner-validation flags should be regenerated if fully patient-disjoint validation is required.

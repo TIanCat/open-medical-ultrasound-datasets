@@ -1,0 +1,97 @@
+id: "0011"
+name: "BUS_UC"
+full_name: "BUS_UC Breast Ultrasound Dataset"
+aliases: []
+
+release_year: 2023
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast tumor"
+
+modality:
+  type:
+    - "Unspecified ultrasound"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: 811
+  - unit: "pair"
+    count: 811
+    note: "Each ultrasound image has a corresponding tumor mask."
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 358
+      Malignant: 453
+    reference_standard: null
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast tumor"
+    format: "mask"
+    count: 811
+    annotators:
+      - "Experienced radiologist"
+
+tasks:
+  - "classification"
+  - "segmentation"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper:
+  title: "Memory-efficient transformer network with feature fusion for breast tumor segmentation and classification task"
+  venue: "Engineering Applications of Artificial Intelligence"
+  doi: "10.1016/j.engappai.2023.107292"
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/3ksd7w7jkx/1"
+  doi: "10.17632/3ksd7w7jkx.1"
+  version: "1"
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://data.mendeley.com/datasets/3ksd7w7jkx/1"
+    - "https://doi.org/10.17632/3ksd7w7jkx.1"
+    - "https://doi.org/10.1016/j.engappai.2023.107292"
+
+notes: >-
+  The release contains 811 image-mask pairs, comprising 358 benign and
+  453 malignant images. The Mendeley page states that the source images were
+  obtained from Ultrasound Cases and were subsequently annotated by an experienced
+  radiologist. Patient identifiers, patient count, acquisition device, diagnostic
+  reference standard, and an official split are not reported. One checked public
+  mirror contains a one-pixel image-mask dimension mismatch for file 0319.png.

@@ -1,0 +1,48 @@
+id: 0107
+name: "Thyroid Ultrasound Cine-clip"
+full_name: "Thyroid Ultrasound Cine-clip"
+release_year: 2022
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid nodule"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "cine clip"
+
+scale:
+  summary: "192 nodules/cine clips from 167 patients; 17,412 frames"
+
+annotations:
+  summary: "radiologist nodule segmentations, demographics, lesion size/location, ACR TI-RADS descriptors, and histopathologic diagnoses"
+
+tasks:
+  - "thyroid-nodule segmentation"
+  - "TI-RADS feature prediction"
+  - "malignancy/risk stratification"
+  - "video representation learning"
+
+access:
+  level: application
+  license: "Stanford research-use terms"
+
+paper:
+  title: "Toward Reduction in False-Positive Thyroid Nodule Biopsies with a Deep Learning-Based Risk Stratification System Using US Cine-Clip Images"
+  venue: "Radiology"
+  doi: "10.1148/radiol.211667"
+
+data:
+  repository: "Stanford AIMI"
+  url: "https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Stanford AIMI portal access; the article reports 192 biopsy-confirmed nodules from 167 patients."

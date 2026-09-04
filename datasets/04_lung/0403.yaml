@@ -1,0 +1,58 @@
+id: US074
+name: LUSS_phantom
+full_name: Lung ultrasound COVID phantom dataset used for training machine learning model
+release_year: 2024
+
+anatomy:
+  primary: Lung phantom
+  target: Lung ultrasound objects and artefacts
+
+modality:
+  type: Phantom lung ultrasound
+  dimension: 2D
+  temporal: cine loops and extracted static frames
+
+scale:
+  images: 564
+  patients: null
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: true
+    targets:
+      - Ribs
+      - Pleural line
+      - A-lines
+      - B-lines
+      - B-line confluence
+
+tasks:
+  - Semantic segmentation
+  - B-line artefact quantification
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Deep learning for real-time multi-class segmentation of artefacts in lung ultrasound
+  venue: Ultrasonics
+  doi: 10.1016/j.ultras.2024.107251
+
+data:
+  repository: University of Leeds Research Data Repository
+  url: https://doi.org/10.5518/1485
+  data_doi: 10.5518/1485
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 564 manually annotated frames generated from two-second cine loops acquired from a COVID-19 lung ultrasound training phantom using multiple diagnostic ultrasound systems. Polygon annotations were converted into pixel-wise semantic masks for five foreground targets: ribs, pleural line, A-lines, B-lines, and B-line confluence. Five annotators labelled 100 images each; a senior sonographer labelled another 64 images, with peer review for consistency. The repository provides a 135 MB VideoClips archive, a 91 MB LUS_model train/test and model archive, and a MATLAB frame-extraction script under CC BY 4.0. The archive endpoint was verified using a one-byte range request; the full archive was not downloaded. No patient data are included. The separate clinical transfer-learning dataset described in the paper is available only upon request and is outside this public dataset."

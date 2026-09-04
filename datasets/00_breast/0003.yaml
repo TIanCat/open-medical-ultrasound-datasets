@@ -1,0 +1,103 @@
+id: "0003"
+name: "Medical Image Database"
+full_name: "Medical Image Database"
+aliases:
+  - "MID"
+
+release_year: 2018
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 180
+    note: "Paper-reported test cohort; the number of patients corresponding to the 15 tuning images was not reported."
+  - unit: "image"
+    count: 195
+    note: "180 test images plus 15 parameter-tuning images used in the associated paper."
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 3
+    classes:
+      - "Breast cancer"
+      - "Cyst"
+      - "Fibroadenoma"
+    distribution:
+      Breast cancer: 60
+      Cyst: 60
+      Fibroadenoma: 60
+    note: "These are the paper-reported test groups; the resource does not define an official classification benchmark split."
+
+  segmentation:
+    unit: "image"
+    type: "contour"
+    targets:
+      - "Breast lesion"
+    format: "contour_overlay"
+    annotators:
+      - "Three radiology experts"
+    aggregation: "majority_vote"
+
+tasks:
+  - "segmentation"
+  - "classification"
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "Automatic initialization of active contours and level set method in ultrasound images of breast abnormalities"
+  venue: "Pattern Recognition"
+  doi: "10.1016/j.patcog.2018.01.032"
+
+data:
+  repository: "Online Medical Images"
+  url: "https://www.onlinemedicalimages.com/index.php/en/site-map"
+  doi: null
+
+acquisition:
+  countries:
+    - "Thailand"
+  institutions:
+    - "Thammasat University Hospital"
+  period: null
+  scanners:
+    - "Philips iU22"
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://doi.org/10.1016/j.patcog.2018.01.032"
+    - "https://www.onlinemedicalimages.com/images/medical/publications/paper_3.pdf"
+    - "https://www.onlinemedicalimages.com/index.php/en/"
+
+notes: >-
+  The associated paper evaluates 180 images from 180 patients and uses 15 additional
+  database images for parameter tuning. The live website contains additional ultrasound,
+  Doppler, elastography, and ground-truth entries, but its catalog includes repeated or
+  incompletely described records; therefore, the structured scale above follows the
+  clearly defined paper cohort. The website delivers ground truth primarily as
+  contour-overlaid images rather than a clearly documented bulk archive of binary masks.

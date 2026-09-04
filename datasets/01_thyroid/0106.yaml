@@ -1,0 +1,47 @@
+id: 0106
+name: "SegThy"
+full_name: "SegThy"
+release_year: 2022
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid lobes"
+
+modality:
+  type: "tracked freehand ultrasound with MRI subset"
+  dimension: "3D reconstructed"
+  temporal: "sweep"
+
+scale:
+  summary: "two sub-datasets totaling 214 subjects: 28 healthy volunteers and 186 clinical patients"
+
+annotations:
+  summary: "tracking/calibration data; manual thyroid-lobe segmentation for labeled 3D ultrasound; MRI thyroid segmentations in the healthy subset"
+
+tasks:
+  - "3D thyroid segmentation"
+  - "thyroid volumetry"
+  - "ultrasound-MRI comparison and spatial reconstruction"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "Tracked 3D Ultrasound and Deep Neural Network-Based Thyroid Segmentation Reduce Interobserver Variability in Thyroid Volumetry"
+  venue: "PLOS ONE"
+  doi: "10.1371/journal.pone.0268550"
+
+data:
+  repository: "Technical University of Munich"
+  url: "https://www.cs.cit.tum.de/en/camp/publications/segthy-dataset/"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The PLOS ONE experiment used the 28 healthy volunteers; the public SegThy family also includes 186 clinical patients."

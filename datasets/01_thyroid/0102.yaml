@@ -1,0 +1,46 @@
+id: 0102
+name: "TN-SCUI2020"
+full_name: "TN-SCUI2020"
+release_year: 2020
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid nodule"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "4,554 images/cases: 3,644 training (1,641 benign, 2,003 malignant) and 910 test"
+
+annotations:
+  summary: "benign/malignant class label and detailed pixel-level nodule delineation for each image"
+
+tasks:
+  - "thyroid-nodule binary segmentation"
+  - "benign-versus-malignant classification"
+
+access:
+  level: open
+  license: "Challenge terms"
+
+paper:
+  title: "Thyroid Nodule Segmentation and Classification in Ultrasound Images"
+  venue: "TN-SCUI2020 / MICCAI Challenge"
+  doi: "10.5281/zenodo.3715942"
+
+data:
+  repository: "Zenodo / TN-SCUI2020"
+  url: "https://zenodo.org/records/3715942"
+  data_doi: "10.5281/zenodo.3715942"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The Zenodo record contains the challenge design document; dataset access is associated with the challenge."

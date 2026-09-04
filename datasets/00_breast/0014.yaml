@@ -1,0 +1,84 @@
+id: "0014"
+name: "ALN-Ultra"
+full_name: "Early-stage Breast Cancer Ultrasound Dataset with Paired Images and Videos for Axillary Lymph Node Metastasis Prediction"
+aliases: []
+
+release_year: 2025
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast cancer"
+
+modality:
+  type:
+    - "Unspecified ultrasound"
+  dimension: null
+  temporal: "mixed"
+  representation:
+    - "image"
+    - "video"
+
+scale:
+  - unit: "patient"
+    count: 257
+
+annotations:
+  classification:
+    unit: "patient"
+    num_classes: 2
+    classes:
+      - "ALN-negative"
+      - "ALN-positive"
+    distribution:
+      ALN-negative: 128
+      ALN-positive: 129
+    reference_standard: "Histopathological biopsy"
+    note: "The class distribution is reported by a 2026 secondary evaluation and could not be independently checked against the currently restricted label file."
+
+tasks:
+  - "classification"
+
+access:
+  level: "controlled"
+  license: null
+  requirements:
+    - "Zenodo login or access approval is required for the restricted files"
+
+paper: null
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/18483501"
+  doi: "10.5281/zenodo.18483501"
+  version: "v1"
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-04"
+  sources:
+    - "https://zenodo.org/records/18483501"
+    - "https://doi.org/10.1148/ryai.250600"
+
+notes: >-
+  ALN-Ultra is described as paired ultrasound image/video data from 257 patients
+  with early-stage breast cancer for axillary lymph node metastasis prediction.
+  The current Zenodo replacement record is publicly visible, but its files are
+  restricted. Exact image and video counts, file formats, detailed label schema,
+  and official splits therefore cannot currently be verified. The original 2025
+  Zenodo record was 10.5281/zenodo.15003119. The current live replacement page
+  does not display an explicit license value in its Rights section, so the
+  license is recorded as null rather than inferred from earlier metadata.

@@ -1,0 +1,54 @@
+id: US064
+name: B-mode-and-CEUS-Liver
+full_name: Ultrasound data of a variety of liver masses
+release_year: 2021
+
+anatomy:
+  primary: Liver
+  target: Focal liver mass
+
+modality:
+  type: B-mode + CEUS
+  dimension: 2D
+  temporal: static images + cine loops
+
+scale:
+  images: 1859
+  patients: 120
+
+annotations:
+  classification:
+    num_classes: null
+    classes: []
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Classification
+  - Temporal Analysis
+  - Treatment Response Assessment
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: null
+  venue: null
+  doi: null
+
+data:
+  repository: The Cancer Imaging Archive
+  url: https://www.cancerimagingarchive.net/collection/b-mode-and-ceus-liver/
+  data_doi: 10.7937/TCIA.2021.v4z7-tc39
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The complete Version 2 contains 120 studies, 120 series, and 1,859 DICOM instances totaling 272.16 GB. Clinical diagnosis, treatment, and follow-up data are provided. Lesion characterization reference standards include pathology and contrast-enhanced cross-sectional imaging. Treatment-response reference standards are available for many HCC cases. No consistent bounding-box or pixel-wise lesion annotations are released."

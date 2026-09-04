@@ -1,0 +1,59 @@
+id: US081
+name: FETAL_PLANES_DB
+full_name: FETAL_PLANES_DB Common Maternal-Fetal Ultrasound Images
+release_year: 2020
+
+anatomy:
+  primary: Fetus
+  target: Fetal standard planes and maternal cervix
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 12400
+  patients: 1792
+
+annotations:
+  classification:
+    num_classes: 6
+    classes:
+      - Fetal abdomen
+      - Fetal brain
+      - Fetal femur
+      - Fetal thorax
+      - Maternal cervix
+      - Other
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Standard-plane classification
+  - Fine-grained fetal brain plane classification
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Evaluation of deep convolutional neural networks for automatic classification of common maternal fetal ultrasound planes
+  venue: Scientific Reports
+  doi: 10.1038/s41598-020-67076-5
+
+data:
+  repository: Zenodo
+  url: https://doi.org/10.5281/zenodo.3904280
+  data_doi: 10.5281/zenodo.3904280
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 12,400 images from 1,792 pregnant women attending second- and third-trimester routine screening at two hospitals in Barcelona. An expert maternal-fetal clinician assigned six main plane labels: fetal abdomen, fetal brain, fetal femur, fetal thorax, maternal cervix, and other. Brain images additionally have trans-thalamic, trans-cerebellar, and trans-ventricular subplane labels. Patient identifiers, ultrasound machine, operator, and the paper's patient-level training/test split are included. The 2,088,522,169-byte Zenodo archive is openly available under CC BY 4.0; a 1,024-byte range request returned HTTP 206 during verification, but the full archive was not downloaded."

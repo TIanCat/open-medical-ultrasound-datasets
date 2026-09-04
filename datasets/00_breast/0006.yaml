@@ -1,0 +1,100 @@
+id: "0006"
+name: "Breast lesion ultrasound video dataset"
+full_name: null
+aliases:
+  - "BUSV"
+  - "BUV"
+  - "BreastVid"
+
+release_year: 2022
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "cine"
+  representation:
+    - "image_sequence"
+
+scale:
+  - unit: "video"
+    count: 188
+    note: "Paper-reported total before the repository's later correction notice."
+  - unit: "frame"
+    count: 25272
+    note: "Paper-reported total before the repository's later correction notice."
+
+annotations:
+  classification:
+    unit: "video"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 75
+      Malignant: 113
+    note: "Paper-reported distribution before the repository's 2023 correction notice."
+
+  detection:
+    unit: "frame"
+    targets:
+      - "Breast lesion"
+    format: "bounding_box"
+
+tasks:
+  - "detection"
+  - "classification"
+
+access:
+  level: "open"
+  license: null
+  requirements:
+    - "Use is restricted to non-commercial research and education according to the repository statement."
+
+paper:
+  title: "A New Dataset and a Baseline Model for Breast Lesion Detection in Ultrasound Videos"
+  venue: "Medical Image Computing and Computer-Assisted Intervention (MICCAI)"
+  doi: "10.1007/978-3-031-16437-8_59"
+
+data:
+  repository: "GitHub"
+  url: "https://github.com/jhl-Det/CVA-Net"
+  doi: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners:
+    - "LOGIQ-E9"
+    - "PHILIPS TIS L9-3"
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://doi.org/10.1007/978-3-031-16437-8_59"
+    - "https://arxiv.org/abs/2207.00141"
+    - "https://github.com/jhl-Det/CVA-Net"
+
+notes: >-
+  The original paper does not assign a formal dataset name; BUSV, BUV, and BreastVid
+  are aliases used in later literature or catalogs. The repository distributes extracted
+  PNG frames grouped by video rather than conventional encoded video files. A 2023
+  repository correction identifies one duplicated/wrongly labelled video and four
+  same-patient videos requiring label correction; revised global totals were not
+  explicitly reported, so the scale and class distribution above retain the
+  paper-reported values with this caveat.

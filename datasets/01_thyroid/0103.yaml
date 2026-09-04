@@ -1,0 +1,46 @@
+id: 0103
+name: "KFGNet dataset"
+full_name: "KFGNet dataset"
+release_year: 2022
+
+anatomy:
+  primary: "Thyroid"
+  target: "thyroid nodule"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "video"
+
+scale:
+  summary: "3,668 videos; about 23,219 extracted localization frames; reported classification test set of 244 videos (125 benign, 119 malignant)"
+
+annotations:
+  summary: "nodule/key-frame localization annotations and video-level benign/malignant labels"
+
+tasks:
+  - "nodule and key-frame localization"
+  - "benign-versus-malignant video classification"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "KFGNet: Key-Frame Guided Network for Thyroid Nodule Recognition Using Ultrasound Videos"
+  venue: "Project release"
+  doi: null
+
+data:
+  repository: "GitHub / Baidu Netdisk"
+  url: "https://github.com/NeuronXJTU/KFGNet"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Official repository supplies a Baidu Netdisk dataset link and access code."

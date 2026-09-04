@@ -1,0 +1,61 @@
+id: US085
+name: Fetal Abdominal Structures Segmentation Dataset
+full_name: Fetal Abdominal Structures Segmentation Dataset Using Ultrasonic Images
+release_year: 2023
+
+anatomy:
+  primary: Fetus
+  target: Fetal abdomen (abdominal aorta, intrahepatic umbilical vein, stomach, and liver)
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 1588
+  patients: 169
+
+annotations:
+  classification:
+    num_classes: 0
+    classes: []
+
+  segmentation:
+    available: true
+    targets:
+      - Abdominal aorta
+      - Intrahepatic umbilical vein
+      - Stomach
+      - Liver
+
+tasks:
+  - Semantic segmentation
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: null
+  venue: null
+  doi: null
+
+data:
+  repository: Mendeley Data
+  url: https://doi.org/10.17632/4gcpm9dsc3.1
+  data_doi: 10.17632/4gcpm9dsc3.1
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: >-
+  The official Mendeley description states nearly 1,500 images, while later
+  public studies report 1,588 images from 169 term pregnancies. Images were
+  converted from DICOM to PNG, and annotations were exported from 3D Slicer
+  as .npy dictionaries. The dataset page was verified, but the actual data
+  archive was not downloaded during this verification.

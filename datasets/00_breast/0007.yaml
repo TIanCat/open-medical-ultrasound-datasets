@@ -1,0 +1,98 @@
+id: "0007"
+name: "Breast Ultrasound Image Database"
+full_name: "Breast Ultrasound Image Database"
+aliases:
+  - "QAMEBI"
+
+release_year: 2022
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "lesion"
+    count: 232
+  - unit: "image"
+    count: 232
+
+annotations:
+  classification:
+    unit: "lesion"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 109
+      Malignant: 123
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Breast lesion"
+    format: "mask"
+    count: 232
+    annotators:
+      - "Radiologist"
+
+tasks:
+  - "classification"
+  - "segmentation"
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "An open-access breast lesion ultrasound image database: Applicable in artificial intelligence studies"
+  venue: "Computers in Biology and Medicine"
+  doi: "10.1016/j.compbiomed.2022.106438"
+
+data:
+  repository: "QAMEBI"
+  url: "https://qamebi.com/breast-ultrasound-images-database/"
+  doi: null
+
+acquisition:
+  countries:
+    - "Iran"
+  institutions: null
+  period: null
+  scanners:
+    - "Aixplorer Ultimate (SuperSonic Imagine)"
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1016/j.compbiomed.2022.106438"
+    - "https://qamebi.com/breast-ultrasound-images-database/"
+    - "https://pubmed.ncbi.nlm.nih.gov/36535208/"
+
+notes: >-
+  The dataset contains 232 breast lesions, including 109 benign and 123 malignant
+  lesions. Each lesion is represented by an original ultrasound image together with
+  lesion-related annotation files on the official site. Patient-level identifiers,
+  an official train/validation/test split, and a formal dataset license are not
+  provided. The paper lists fine-needle aspiration, core-needle biopsy, and open biopsy
+  among the reference methods; therefore, the broad label "histopathologically proven"
+  should be interpreted with caution because fine-needle aspiration is cytologic sampling.

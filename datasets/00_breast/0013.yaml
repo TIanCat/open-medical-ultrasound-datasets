@@ -1,0 +1,89 @@
+id: "0013"
+name: "US3M"
+full_name: "Multimodal Breast Ultrasound Dataset US3M"
+aliases: []
+
+release_year: 2024
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast tumor"
+
+modality:
+  type:
+    - "B-mode"
+    - "Color Doppler"
+    - "Elastography"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 248
+  - unit: "image"
+    count: 1532
+    note: "781 B-mode images, 253 Color Doppler images, and 498 elastography images."
+
+annotations:
+  classification:
+    unit: "patient"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 145
+      Malignant: 103
+    reference_standard: "Pathology result"
+
+tasks:
+  - "classification"
+
+access:
+  level: "open"
+  license: "CC BY-NC 4.0"
+  requirements:
+    - "Non-commercial research or educational use"
+
+paper:
+  title: "TDF-Net: Trusted Dynamic Feature Fusion Network for breast cancer diagnosis using incomplete multimodal ultrasound"
+  venue: "Information Fusion"
+  doi: "10.1016/j.inffus.2024.102592"
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/datasets/timesxy/multimodal-breast-ultrasound-dataset-us3m"
+  doi: null
+  version: "1"
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Second Affiliated Hospital of Harbin Medical University"
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1016/j.inffus.2024.102592"
+    - "https://github.com/TimesXY/TDF_Net"
+    - "https://www.kaggle.com/datasets/timesxy/multimodal-breast-ultrasound-dataset-us3m"
+
+notes: >-
+  All 248 released patient folders contain all three ultrasound modalities.
+  Missing modalities in the TDF-Net study are simulated experimentally rather
+  than intrinsically absent from the public dataset. The release contains no
+  segmentation masks, clinical-variable table, or official train/validation/test split.

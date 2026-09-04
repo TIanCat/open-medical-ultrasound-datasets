@@ -1,0 +1,129 @@
+id: "0002"
+name: "OASBUD"
+full_name: "Open Access Series of Breast Ultrasonic Data"
+aliases: []
+
+release_year: 2017
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast focal lesion"
+
+modality:
+  type:
+    - "RF"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "signal"
+
+scale:
+  - unit: "patient"
+    count: 78
+  - unit: "lesion"
+    count: 100
+  - unit: "acquisition"
+    count: 200
+
+annotations:
+  classification:
+    unit: "lesion"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 48
+      Malignant: 52
+
+  grading:
+    unit: "lesion"
+    system: "BI-RADS"
+    categories:
+      - "3"
+      - "4A"
+      - "4B"
+      - "4C"
+      - "5"
+    distribution:
+      "3": 31
+      "4A": 11
+      "4B": 16
+      "4C": 17
+      "5": 25
+
+  segmentation:
+    unit: "acquisition"
+    type: "binary"
+    targets:
+      - "Breast lesion"
+    format: "ROI mask"
+    count: 200
+
+tasks:
+  - "classification"
+  - "segmentation"
+  - "grading"
+  - "signal_analysis"
+
+access:
+  level: "open"
+  license: "CC BY-NC 4.0"
+  requirements: []
+
+paper:
+  title: "Open access database of raw ultrasonic signals acquired from malignant and benign breast lesions"
+  venue: "Medical Physics"
+  doi: "10.1002/mp.12538"
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/545928"
+  doi: "10.5281/zenodo.545928"
+  version: "v1"
+  files:
+    - name: "OASBUD.mat"
+      format: "MATLAB v5 MAT-file"
+      size_bytes: 296800010
+      md5: "e2b770a6ee2f06ebe480ed0962252100"
+      checksum_verified: true
+
+acquisition:
+  countries:
+    - "Poland"
+  institutions:
+    - "Institute of Oncology, Warsaw"
+  period: "November 2013 to October 2015"
+  scanners:
+    - "Ultrasonix SonixTouch Research"
+  transducers:
+    - "L14-5/38 linear array"
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.12538"
+    - "https://pubmed.ncbi.nlm.nih.gov/28859252/"
+    - "https://zenodo.org/records/545928"
+    - "https://zenodo.org/api/records/545928"
+
+signal_data:
+  scan_planes_per_lesion: 2
+  scan_plane_relation: "orthogonal"
+  b_mode_included: false
+  b_mode_derivable_from_rf: true
+
+notes: >-
+  Each lesion has two orthogonal RF acquisitions with paired binary ROI masks.
+  B-mode images are not stored directly but can be generated from the RF echoes.
+  Malignant lesions were histologically assessed by core-needle biopsy; some benign
+  lesions were histologically assessed and the remainder were followed for two years.
+  The two acquisitions from the same lesion should remain together when creating data splits.
+

@@ -1,0 +1,59 @@
+id: US084
+name: FPUS23
+full_name: FPUS23 Ultrasound Fetus Phantom Dataset
+release_year: 2023
+
+anatomy:
+  primary: Fetal phantom
+  target: Head, arms, legs, and abdomen at 23 weeks gestation
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 15728
+  patients: 0
+
+annotations:
+  classification:
+    num_classes: 4
+    classes:
+      - hdvb
+      - hdvf
+      - huvb
+      - huvf
+
+  segmentation:
+    available: false
+    targets: []
+
+tasks:
+  - Diagnostic-plane classification
+  - Phantom orientation classification
+  - Anatomy recognition
+  - Anatomical object detection
+
+access:
+  level: open
+  license: MIT
+
+paper:
+  title: "FPUS23: An Ultrasound Fetus Phantom Dataset with Deep Neural Network Evaluations for Fetus Orientations, Fetal Planes, and Anatomical Features"
+  venue: IEEE Access
+  doi: 10.1109/ACCESS.2023.3284315
+
+data:
+  repository: GitHub and Google Drive
+  url: https://github.com/bharathprabakaran/FPUS23
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "A non-human dataset of 15,728 ultrasound images acquired from a 23-week fetal phantom. Four orientation labels (hdvb, hdvf, huvb, and huvf) cover all images. Diagnostic-plane labels cover 5,265 images and comprise AC, BPD, FL, and No Plane. Anatomy labels for head, arms, legs, and abdomen cover 9,317 images. Bounding-box annotations for the same structures occur in 9,455 images and may contain multiple boxes per image. The repository provides XML annotations, source code, trained models, and an MIT license. Original images are linked through Google Drive; during verification, the link resolved but the direct request returned a 2,435-byte HTML interstitial rather than image data, so the complete source-image archive was not downloaded."

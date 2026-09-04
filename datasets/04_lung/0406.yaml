@@ -1,0 +1,56 @@
+id: US077
+name: PU2756
+full_name: A Pulmonary Ultrasound Dataset for Tumor Segmentation and Classification
+release_year: 2026
+
+anatomy:
+  primary: Lung
+  target: Peripheral pulmonary tumor
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 2756
+  patients: 2756
+
+annotations:
+  classification:
+    num_classes: 2
+    classes:
+      - Benign
+      - Malignant
+
+  segmentation:
+    available: true
+    targets:
+      - Pulmonary tumor
+
+tasks:
+  - Classification
+  - Segmentation
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: A Pulmonary Ultrasound Dataset for Tumor Segmentation and Classification
+  venue: Scientific Data
+  doi: 10.1038/s41597-026-07715-0
+
+data:
+  repository: Figshare
+  url: https://doi.org/10.6084/m9.figshare.32672274
+  data_doi: 10.6084/m9.figshare.32672274.v1
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 2,756 B-mode ultrasound images from 2,756 unique patients, with one image per patient: 1,755 malignant and 1,001 benign. Expert annotations include pixel-level pulmonary tumor masks, while benign/malignant labels are confirmed through biopsy pathology. The public Figshare v1 record provides images.zip, masks.zip, and five_fold_split.xlsx under CC BY 4.0. During verification, five_fold_split.xlsx was successfully transferred in full (HTTP 200; 452,323 bytes); the large image and mask archives were not downloaded in full. The previous Figshare record 30278779 is unavailable."

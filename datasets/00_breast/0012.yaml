@@ -1,0 +1,108 @@
+id: "0012"
+name: "BUS-UCLM"
+full_name: "BUS-UCLM: Breast Ultrasound Lesion Segmentation Dataset"
+aliases: []
+
+release_year: 2024
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+    - "Color Doppler"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 38
+  - unit: "image"
+    count: 683
+  - unit: "pair"
+    count: 683
+    note: "Each image has a corresponding RGB segmentation mask."
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 3
+    classes:
+      - "Normal"
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Normal: 419
+      Benign: 174
+      Malignant: 90
+    reference_standard: "Biopsy for lesion malignancy"
+
+  segmentation:
+    unit: "image"
+    type: "multiclass"
+    targets:
+      - "Benign breast lesion"
+      - "Malignant breast lesion"
+    format: "RGB_mask"
+    count: 683
+    annotators:
+      - "Two expert radiologists"
+    note: "Green denotes benign lesion, red malignant lesion, and black background or normal tissue."
+
+tasks:
+  - "classification"
+  - "segmentation"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper:
+  title: "BUS-UCLM: Breast ultrasound lesion segmentation dataset"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-025-04562-3"
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/7fvgj4jsp7/3"
+  doi: "10.17632/7fvgj4jsp7.3"
+  version: "3"
+
+acquisition:
+  countries:
+    - "Spain"
+  institutions:
+    - "Ciudad Real General University Hospital"
+  period: "2022-2023"
+  scanners:
+    - "Siemens ACUSON S2000"
+  transducers:
+    - "18L6 HD"
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1038/s41597-025-04562-3"
+    - "https://data.mendeley.com/datasets/7fvgj4jsp7/3"
+    - "https://github.com/noeliavallez/BUS-UCLM-Dataset"
+
+notes: >-
+  The dataset contains 683 images from 38 patients: 419 normal, 174 benign,
+  and 90 malignant. Some released images contain Doppler information; the public
+  metadata identify 37 Doppler-marked records. Version 3 is licensed under
+  CC BY 4.0, whereas version 1 used CC BY-NC 3.0. The public v3 PNG files have
+  dimensions of 856 x 606, while the paper reports 768 x 1024; this discrepancy
+  remains unresolved. Normal images have all-background masks.

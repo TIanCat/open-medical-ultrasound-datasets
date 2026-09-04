@@ -1,0 +1,60 @@
+id: US065
+name: Annotated Ultrasound Liver Images
+full_name: Annotated Ultrasound Liver images
+release_year: 2022
+
+anatomy:
+  primary: Liver
+  target: Liver mass
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 735
+  patients: null
+
+annotations:
+  classification:
+    num_classes: 3
+    classes:
+      - Normal
+      - Benign
+      - Malignant
+
+  segmentation:
+    available: true
+    targets:
+      - Ultrasound scan region
+      - Liver
+      - Liver mass
+
+tasks:
+  - Classification
+  - Segmentation
+  - Detection
+
+access:
+  level: open
+  license: CC BY 4.0
+
+paper:
+  title: Improving artificial intelligence pipeline for liver malignancy diagnosis using ultrasound images and video frames
+  venue: Briefings in Bioinformatics
+  doi: 10.1093/bib/bbac569
+
+data:
+  repository: Zenodo
+  url: https://zenodo.org/records/7272660
+  data_doi: 10.5281/zenodo.7272660
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The public release contains exactly 735 JPG images: 435 malignant, 200 benign, and 100 normal. JSON annotations describe ultrasound scan outlines, liver regions, and liver-mass regions. It is an annotated subset associated with a larger study of 50,063 images and video frames from 11,468 patients; the full study cohorts are not included. The Zenodo record requests that users contact and appropriately credit the authors."

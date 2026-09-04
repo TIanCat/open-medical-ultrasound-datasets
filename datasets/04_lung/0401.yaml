@@ -1,0 +1,67 @@
+id: US072
+name: POCUS Dataset for COVID-19 Detection
+full_name: A Lung Ultrasound Dataset for COVID-19 Detection
+release_year: 2020
+
+anatomy:
+  primary: Lung
+  target: Pulmonary pathologies
+
+modality:
+  type: Lung point-of-care ultrasound
+  dimension: 2D
+  temporal: mixed
+
+scale:
+  images: 59
+  videos: 202
+  patients: 216
+
+annotations:
+  classification:
+    num_classes: 4
+    classes:
+      - COVID-19
+      - Bacterial pneumonia
+      - Non-COVID-19 viral pneumonia
+      - Healthy
+
+  severity_scoring:
+    available: true
+    videos: 136
+    num_classes: 4
+
+  segmentation:
+    available: true
+    targets:
+      - A-lines
+      - B-lines
+      - Consolidation
+
+tasks:
+  - Classification
+  - Severity scoring
+  - Segmentation
+
+access:
+  level: mixed
+  license: Mixed per-source licenses, including CC BY 4.0, CC BY-NC 4.0, and source-specific terms
+
+paper:
+  title: Accelerating Detection of Lung Pathologies with Explainable Ultrasound Image Analysis
+  venue: Applied Sciences
+  doi: 10.3390/app11020672
+
+data:
+  repository: GitHub
+  url: https://github.com/jannisborn/covid19_ultrasound
+  data_doi: null
+
+family:
+  type: aggregation
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "The stable paper release contains 261 recordings from 216 patients: 202 videos and 59 static images. It contains 92 COVID-19, 73 bacterial-pneumonia, 90 healthy, and 6 non-COVID viral-pneumonia recordings assembled from 41 sources. The continuously updated metadata currently lists 374 source records: 271 videos and 103 images. Not every listed record is directly hosted because access and redistribution rights differ by source. Disease labels and visible LUS patterns were reviewed by medical experts. Four-level lung severity scores were later added for 136 videos. A-line, B-line, and consolidation segmentation annotations for 50 selected records are provided through the external PULSE Lab dataset. The optional uninformative class is an auxiliary out-of-distribution resource, not a core diagnostic class. Patient- or video-level splitting is required to prevent frame-level data leakage."

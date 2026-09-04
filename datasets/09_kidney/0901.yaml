@@ -1,0 +1,60 @@
+id: US078
+name: The Open Kidney Ultrasound Data Set
+full_name: The Open Kidney Ultrasound Data Set
+release_year: 2023
+
+anatomy:
+  primary: Kidney
+  target: Native and transplanted kidney structures
+
+modality:
+  type: B-mode
+  dimension: 2D
+  temporal: static
+
+scale:
+  images: 534
+  patients: 514
+
+annotations:
+  classification:
+    num_classes: 2
+    classes:
+      - Native kidney
+      - Transplanted kidney
+
+  segmentation:
+    available: true
+    targets:
+      - Renal capsule
+      - Renal cortex
+      - Renal medulla
+      - Central echogenic complex
+
+tasks:
+  - Semantic segmentation
+  - View classification
+  - Kidney-type classification
+
+access:
+  level: application
+  license: CC BY-NC-SA
+
+paper:
+  title: The Open Kidney Ultrasound Data Set
+  venue: International Workshop on Advances in Simplifying Medical Ultrasound
+  doi: 10.1007/978-3-031-44521-7_15
+
+data:
+  repository: GitHub and UBC OneDrive
+  url: https://github.com/rsingla92/kidneyUS#data-access
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-02
+
+notes: "Contains 514 unique anonymized B-mode PNG images from 514 distinct patients and 20 additional duplicate copies used to assess annotation consistency, giving 534 delivered image files. The images include native and transplanted kidneys. Two expert sonographers independently supplied fine-grained polygon annotations for the renal capsule, cortex, medulla, and central echogenic complex. Image-quality, view-type (transverse, longitudinal, or other), and kidney-type labels are also included. The public GitHub repository contains code and annotation resources, but the source ultrasound images require registration and manual approval before they are released through UBC OneDrive. The registration form returned HTTP 200 during verification. Data and code are licensed under CC BY-NC-SA and may not be used commercially."

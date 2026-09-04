@@ -1,0 +1,92 @@
+id: "0004"
+name: "STU-Hospital"
+full_name: null
+aliases: []
+
+release_year: 2019
+
+anatomy:
+  primary: "Breast"
+  target:
+    - "Breast lesion"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: 42
+  - unit: "pair"
+    count: 42
+    note: "Each released ultrasound image has a corresponding lesion mask."
+
+
+
+annotations:
+  segmentation:
+    unit: "image"
+    type: "soft"
+    targets:
+      - "Breast lesion"
+    format: "grayscale_mask"
+    annotators:
+      - "Two clinical experts"
+    aggregation: "average"
+
+tasks:
+  - "segmentation"
+
+access:
+  level: "open"
+  license: null
+  requirements: []
+
+paper:
+  title: "An RDAU-NET model for lesion segmentation in breast ultrasound images"
+  venue: "PLOS ONE"
+  doi: "10.1371/journal.pone.0221535"
+
+data:
+  repository: "GitHub"
+  url: "https://github.com/xbhlk/STU-Hospital"
+  doi: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Imaging Department, First Affiliated Hospital of Shantou University"
+  period: null
+  scanners:
+    - "GE Voluson E10 Ultrasound Diagnostic System"
+  transducers:
+    - "L11-5 50 mm broadband linear-array transducer"
+  frequencies:
+    - "7.5 MHz"
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://doi.org/10.1371/journal.pone.0221535"
+    - "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0221535"
+    - "https://github.com/xbhlk/STU-Hospital"
+
+notes: >-
+  STU-Hospital is the public repository name rather than a formal dataset name defined
+  in the paper. The 42 images constitute an external test subset of the paper's larger
+  test cohort. The released masks are grayscale expert-aggregation masks rather than
+  consistently binary masks, and many mask dimensions differ from the released
+  128 x 128 ultrasound images. The repository does not provide patient-level metadata,
+  per-image benign/malignant labels, a formal dataset license, or official preprocessing
+  instructions.
