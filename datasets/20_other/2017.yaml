@@ -1,0 +1,149 @@
+id: US030
+name: PCOSGen
+full_name: PCOSGen train and test datasets for the Auto-PCOS Classification Challenge
+release_year: 2023
+release_year_basis: The challenge document states that the training set was first released on 2023-12-25; the test set followed on 2024-01-15
+
+anatomy:
+  primary: Ovary
+  condition: Polycystic ovary syndrome
+
+modality:
+  source: Frames extracted from ultrasound videos
+  released_format: JPEG
+  released_color_mode: RGB
+  B_mode_status: Not explicitly stated in the records or challenge document
+  acquisition_device: Not reported
+  source_resources:
+    - YouTube
+    - ultrasoundcases.info
+    - Kaggle
+
+scale:
+  total_images: 4668
+  train_images: 3200
+  test_images: 1468
+  patients_or_subjects: Not reported
+  verified_label_counts:
+    train:
+      appears_normal: 903
+      appears_abnormal: 2297
+      evidence_visible: 362
+      evidence_not_visible: 2838
+    test:
+      appears_normal: 416
+      appears_abnormal: 1052
+      evidence_visible: 549
+      evidence_not_visible: 919
+    combined:
+      appears_normal: 1319
+      appears_abnormal: 3349
+      evidence_visible: 911
+      evidence_not_visible: 3757
+
+annotations:
+  level: image
+  general_field:
+    labels:
+      - Appears normal
+      - Appears abnormal
+  specific_field:
+    intended_scope: Images labeled abnormal
+    labels:
+      - Visible
+      - Not-visible
+    meaning: Whether evidence or visibility of a polycystic ovary is present in the image
+  annotator: Experienced gynaecologist based in New Delhi, India
+  pixel_wise_masks: false
+  diagnosis_caution: The records describe image appearance labels and do not provide patient-level diagnostic criteria or clinical reference data
+
+tasks:
+  - Normal-versus-abnormal ultrasound-frame classification
+  - Polycystic-ovary evidence-visibility classification
+  - Hierarchical image classification using both released fields
+
+splits:
+  official_train_images: 3200
+  official_test_images: 1468
+  patient_disjointness: Cannot be assessed because patient identifiers are not supplied
+  cross_split_byte_identical_images_found: 0
+
+access:
+  level: open
+  registration_required: false
+  Zenodo_license: CC BY 4.0
+  documentation_note: The challenge document says the research and dataset development are solely intended for academic and research purposes
+  provenance_caution: The images were collected from multiple internet resources; source-level permissions are not documented in the challenge paper
+
+paper:
+  dedicated_peer_reviewed_dataset_paper: false
+  challenge_document:
+    title: Auto-PCOS Classification Challenge
+    host: Zenodo
+    URL: https://zenodo.org/records/10430727/files/Meta_Data.pdf
+
+data:
+  train:
+    current_version: v2
+    current_record: https://zenodo.org/records/14592001
+    current_version_doi: 10.5281/zenodo.14592001
+    concept_doi: 10.5281/zenodo.10430726
+  test:
+    current_version: v3
+    current_record: https://zenodo.org/records/14591782
+    current_version_doi: 10.5281/zenodo.14591782
+    concept_doi: 10.5281/zenodo.10510878
+
+quality_checks:
+  archive_integrity:
+    train_ZIP: passed
+    test_ZIP: passed
+  file_label_matching:
+    train_JPEGs_matching_usable_label_rows: 3200
+    test_JPEGs_matching_label_rows: 1468
+    train_label_sheet_extra_rows: 1
+    train_extra_row_detail: Placeholder row with a missing filename and Unknown / Not-visible values
+  image_decode_test:
+    all_images_decoded: true
+    all_images_RGB: true
+    train_dimensions:
+      unique_sizes: 1794
+      width_range_pixels: 170-300
+      height_range_pixels: 108-300
+      images_at_300_x_300: 757
+    test_dimensions:
+      unique_sizes: 1
+      size_pixels: 300 x 300
+  exact_duplicate_audit:
+    method: SHA-256 comparison of decoded archive files
+    train_groups_with_identical_bytes: 80
+    train_redundant_files: 80
+    train_groups_with_conflicting_labels: 36
+    test_groups_with_identical_bytes: 19
+    test_redundant_files: 19
+    test_groups_with_conflicting_labels: 5
+    combined_within_split_groups: 99
+    combined_groups_with_conflicting_labels: 41
+    cross_split_groups: 0
+  label_consistency:
+    test_rows_appears_normal_and_visible: 2
+    train_rows_appears_normal_and_visible: 0
+
+family:
+  type: primary challenge dataset with separate train and test records
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the full challenge document and the updated train and test Zenodo records
+    - Downloaded and integrity-tested both current ZIP archives
+    - Parsed the train XLSX and test CSV labels and matched them to every image filename
+    - Decoded all 4,668 JPEG files and measured their dimensions and color modes
+    - Computed byte-level hashes to identify within-split duplicates, conflicting labels, and cross-split overlap
+  sources:
+    - https://zenodo.org/records/14592001
+    - https://zenodo.org/records/14591782
+    - https://zenodo.org/records/10430727/files/Meta_Data.pdf
+
+notes: PCOSGen is an image-level classification dataset, not a segmentation dataset. The two-label hierarchy is imperfect in the released test CSV, and exact duplicate images with conflicting labels occur within both splits. Without subject identifiers, patient-level independence cannot be verified.
