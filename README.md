@@ -5,10 +5,11 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 ## Overview
 
 - 104 verified primary dataset families
-- 89 open access
-- 13 application/registration
+- 86 open access
+- 14 application/registration
 - 2 controlled/restricted
-- Last updated: 2026-09-02
+- 2 unavailable/withdrawn
+- Last updated: 2026-09-04
 
 ## Scope
 
@@ -26,12 +27,12 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [US044](datasets/US044.yaml) | DDTI | Thyroid nodule | 2D B-mode images | 389 cases; 637 processed images | segmentation; TI-RADS analysis | 🟢 Open | [Paper](https://doi.org/10.1117/12.2073532) | [Data](https://cimalab.unal.edu.co/projects/detail/20/) |
-| [US045](datasets/US045.yaml) | TN-SCUI2020 | Thyroid nodule | 2D B-mode images | 4,554 images/cases | segmentation; classification | 🟢 Open | [Paper](https://doi.org/10.5281/zenodo.3715942) | [Zenodo](https://zenodo.org/records/3715942) |
-| [US046](datasets/US046.yaml) | KFGNet dataset | Thyroid nodule | 2D B-mode videos | 3,668 videos | localization; classification | 🟢 Open | Project release | [GitHub](https://github.com/NeuronXJTU/KFGNet) |
-| [US047](datasets/US047.yaml) | TG3K | Thyroid gland | 2D B-mode frames | ~3,583–3,585 frames | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
+| [US045](datasets/US045.yaml) | TN-SCUI2020 | Thyroid nodule | 2D B-mode images | 4,554 images/cases | segmentation; classification | ⚫ Unavailable | [Challenge document](https://doi.org/10.5281/zenodo.3715942) | [Zenodo record](https://zenodo.org/records/3715942) |
+| [US046](datasets/US046.yaml) | KFGNet dataset | Thyroid nodule | 2D B-mode videos | 3,668 videos | localization; classification | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-16440-8_23) | [GitHub](https://github.com/NeuronXJTU/KFGNet) |
+| [US047](datasets/US047.yaml) | TG3K | Thyroid gland | 2D B-mode frames | 3,585 frames / 16 videos | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
 | [US048](datasets/US048.yaml) | TN3K | Thyroid nodule | 2D B-mode images | 3,493 images / 2,421 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
 | [US049](datasets/US049.yaml) | SegThy | Thyroid | tracked US + MRI | 214 subjects in 2 subsets | 3D segmentation; volumetry | 🟢 Open | [Paper](https://doi.org/10.1371/journal.pone.0268550) | [Data](https://www.cs.cit.tum.de/en/camp/publications/segthy-dataset/) |
-| [US050](datasets/US050.yaml) | Thyroid Ultrasound Cine-clip | Thyroid nodule | 2D B-mode cine clips | 192 nodules / 17,412 frames | segmentation; risk stratification | 🟡 Application | [Paper](https://doi.org/10.1148/radiol.211667) | [Project page](https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip) |
+| [US050](datasets/US050.yaml) | Thyroid Ultrasound Cine-clip | Thyroid nodule | 2D B-mode cine clips | 192 nodules / 17,412 frames | segmentation; risk stratification | 🟡 Application | [Paper](https://doi.org/10.1148/ryai.210174) | [Project page](https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip) |
 | [US051](datasets/US051.yaml) | TN5000 | Thyroid nodule | 2D B-mode images | 5,000 images | detection; classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05757-4) | [Figshare](https://springernature.figshare.com/articles/dataset/TN5000_An_Ultrasound_Image_Dataset_for_Thyroid_Nodule_Detection_and_Classification/28455641) |
 
 ### Obstetrics
@@ -46,7 +47,7 @@ See [Scope](docs/scope.md).
 | [US033](datasets/US033.yaml) | EchoCP | Heart / PFO | contrast TTE videos | 60 videos / 30 patients | PFO grading; chamber segmentation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2105.08267) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/echocp) |
 | [US034](datasets/US034.yaml) | Tufts Medical Echocardiogram Dataset (TMED-2) | Heart / aortic stenosis | 2D TTE images | 599 fully labeled studies | AS and view classification | 🟡 Application | Machine Learning for Healthcare Conference (MLHC 2021), PMLR | [TMED](https://tmed.cs.tufts.edu/tmed_v2.html) |
 | [US035](datasets/US035.yaml) | EchoNet-LVH | Heart (PLAX) | 2D echo videos | 12,000 videos | wall/chamber measurement | 🟡 Application | [Paper](https://doi.org/10.1001/jamacardio.2021.6059) | [Project page](https://aimi.stanford.edu/datasets/echonet-lvh) |
-| [US036](datasets/US036.yaml) | CardiacUDA / CardiacUDC | Heart (4 views) | 2D echo videos | 992 videos in paper | segmentation; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2309.11145) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset) |
+| [US036](datasets/US036.yaml) | CardiacUDA / CardiacUDC | Heart (4 views) | 2D echo videos | 992 videos | segmentation; domain adaptation | 🟢 Open | [Paper](https://doi.org/10.48550/arXiv.2309.11145) | [Kaggle](https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset) |
 | [US037](datasets/US037.yaml) | EchoNet-Pediatric | Pediatric heart | 2D echo videos | 7,643 videos | segmentation; EF/volume regression | 🟡 Application | [Paper](https://doi.org/10.1016/j.echo.2023.01.015) | [GitHub](https://echonet.github.io/pediatric/) |
 | [US038](datasets/US038.yaml) | CACTUS | Cardiac phantom | 2D B-mode images | 37,736 images | view classification; quality grading | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2025.110003) | [Data](https://doi.org/10.20383/103.01484) |
 | [US039](datasets/US039.yaml) | MIMIC-IV-Echo | Heart | DICOM + measurements | 206,488 studies | measurement; multimodal learning | 🔴 Controlled | [Paper](https://doi.org/10.13026/307c-mr50) | [PhysioNet](https://physionet.org/content/mimic-iv-echo/1.0.1/) |
@@ -55,11 +56,13 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [US053](datasets/US053.yaml) | LUMINOUS | Lumbar multifidus | 2D B-mode images | 109 subjects | segmentation; CSA/echo intensity | 🟢 Open | [Paper](https://doi.org/10.1186/s12891-020-03679-3) | [Data](http://data.sonography.ai/) |
-| [US054](datasets/US054.yaml) | deepMTJ test set | Muscle-tendon junction | 2D B-mode images | 1,344 images | localization; tracking | 🟢 Open | [Paper](https://doi.org/10.1109/TBME.2021.313054) | [Figshare](https://doi.org/10.6084/m9.figshare.16822978.v2) |
+| [US054](datasets/US054.yaml) | deepMTJ test set | Muscle-tendon junction | 2D B-mode images | 1,344 images | localization; tracking | 🟢 Open | [Paper](https://doi.org/10.1109/TBME.2021.3130548) | [Figshare](https://doi.org/10.6084/m9.figshare.16822978.v2) |
 | [US055](datasets/US055.yaml) | FALLMUD | Lower-leg muscle | 2D B-mode images | 812 images | fascicle/aponeurosis segmentation | 🟢 Open | ACM BCB 2021 | [Data](https://kalisteo.cea.fr/index.php/fallmud/) |
+| [US056](datasets/US056.yaml) | Knee Ultrasound Dataset in a Population-Based Cohort | Knee joint | 2D B-mode images | 7,571 images | phenotype and association analysis | 🟢 Open | [Dataset](https://doi.org/10.7910/DVN/SKP9IB) | [Harvard Dataverse](https://doi.org/10.7910/DVN/SKP9IB) |
 | [US057](datasets/US057.yaml) | TUS-REC2024 | Forearm | tracked freehand US | 2,040 scans / 85 volunteers | 3D reconstruction; pose estimation | 🟡 Application | [Paper](https://doi.org/10.48550/arXiv.2506.21765) | [GitHub](https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/) |
-| [US058](datasets/US058.yaml) | Machine Learning-Driven Heckmatt Grading in FSHD | Muscle / FSHD | 2D B-mode images | 25,005 images / 290 participants | grading; segmentation | 🟢 Open | [Paper](https://doi.org/10.17632/yzg86vb895.1) | [Mendeley Data](https://data.mendeley.com/datasets/yzg86vb895/1) |
+| [US058](datasets/US058.yaml) | Machine Learning-Driven Heckmatt Grading in FSHD | Muscle / FSHD | 2D B-mode images | 25,005 images / 290 participants | grading; segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.clinph.2025.01.016) | [Mendeley Data](https://data.mendeley.com/datasets/yzg86vb895/1) |
 | [US059](datasets/US059.yaml) | Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment | Muscle / NMD | 2D B-mode images | 3,917 images / 1,283 subjects | segmentation; quantitative assessment | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2021.104623) | [Mendeley Data](https://data.mendeley.com/datasets/3jykz7wz8d/1) |
+| [US060](datasets/US060.yaml) | DeepUS-ReconSeg | Forearm soft tissue | paired 2D B-mode frames | 4,200 images / 14 subjects | reconstruction; enhancement | ⚫ Unavailable | [Paper](https://doi.org/10.1016/j.dib.2025.112083) | [Withdrawn record](https://data.mendeley.com/datasets/tgbjc4rcg2/1) |
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
@@ -72,6 +75,7 @@ See [Scope](docs/scope.md).
 | [US041](datasets/US041.yaml) | GIST514-DB | GI tract tumors | endoscopic US | 514 cases/images | classification; detection; segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106424) | [GitHub](https://github.com/WuJunde/Query2) |
 | [US042](datasets/US042.yaml) | LEPset | Pancreas | endoscopic US | 11,500 images / 420 patients | classification; pretraining | 🟢 Open | [Dataset](https://doi.org/10.5281/zenodo.8041285) | [Zenodo](https://zenodo.org/records/8041285) |
 | [US043](datasets/US043.yaml) | C-TRUS | Colon wall | 2D B-mode images | 827 images / 13 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-73647-6_10) | [GitHub](https://github.com/wwu-mmll/c-trus) |
+| [US052](datasets/US052.yaml) | Dermatologic Ultrasound Images for Classification | Skin lesion | 2D high-frequency US | 202 images | classification | 🟢 Open | [Paper](https://doi.org/10.1111/srt.13086) | [Kaggle](https://www.kaggle.com/datasets/alfageme/dermatologic-ultrasound-images) |
 
 
 ## Contributing

@@ -13,7 +13,7 @@ modality:
   temporal: "video"
 
 scale:
-  summary: "3,668 videos; about 23,219 extracted localization frames; reported classification test set of 244 videos (125 benign, 119 malignant)"
+  summary: "3,668 videos; 23,219 extracted localization frames; reported classification test set of 244 videos (125 benign, 119 malignant)"
 
 annotations:
   summary: "nodule/key-frame localization annotations and video-level benign/malignant labels"
@@ -27,9 +27,9 @@ access:
   license: null
 
 paper:
-  title: "KFGNet: Key-Frame Guided Network for Thyroid Nodule Recognition Using Ultrasound Videos"
-  venue: "Project release"
-  doi: null
+  title: "Key-frame Guided Network for Thyroid Nodule Recognition Using Ultrasound Videos"
+  venue: "MICCAI 2022"
+  doi: "10.1007/978-3-031-16440-8_23"
 
 data:
   repository: "GitHub / Baidu Netdisk"
@@ -41,6 +41,6 @@ family:
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
 notes: "Official repository supplies a Baidu Netdisk dataset link and access code."

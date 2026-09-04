@@ -30,19 +30,19 @@ access:
 
 paper:
   title: "Toward Reduction in False-Positive Thyroid Nodule Biopsies with a Deep Learning-Based Risk Stratification System Using US Cine-Clip Images"
-  venue: "Radiology"
-  doi: "10.1148/radiol.211667"
+  venue: "Radiology: Artificial Intelligence"
+  doi: "10.1148/ryai.210174"
 
 data:
   repository: "Stanford AIMI"
   url: "https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip"
-  data_doi: null
+  data_doi: "10.71718/7m5n-rh16"
 
 family:
   type: primary
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
 notes: "Stanford AIMI portal access; the article reports 192 biopsy-confirmed nodules from 167 patients."

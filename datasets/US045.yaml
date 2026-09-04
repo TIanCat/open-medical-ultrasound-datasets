@@ -23,7 +23,7 @@ tasks:
   - "benign-versus-malignant classification"
 
 access:
-  level: open
+  level: unavailable
   license: "Challenge terms"
 
 paper:
@@ -41,6 +41,6 @@ family:
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
-notes: "The Zenodo record contains the challenge design document; dataset access is associated with the challenge."
+notes: "The Zenodo record contains only the challenge design document. It is not a dataset download, and the original challenge terms restricted use of the images to challenge participation."

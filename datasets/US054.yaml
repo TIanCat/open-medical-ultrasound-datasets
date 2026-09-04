@@ -29,7 +29,7 @@ access:
 paper:
   title: "A Human-Centered Machine-Learning Approach for Muscle-Tendon Junction Tracking in Ultrasound Images"
   venue: "IEEE Transactions on Biomedical Engineering"
-  doi: "10.1109/TBME.2021.313054"
+  doi: "10.1109/TBME.2021.3130548"
 
 data:
   repository: "Figshare"
@@ -41,6 +41,6 @@ family:
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
 notes: "Test set is downloadable and licensed CC BY 4.0."

@@ -13,7 +13,7 @@ modality:
   temporal: "video"
 
 scale:
-  summary: "paper dataset: 992 videos (516 site G, 476 site R) from about 100 patients; current Kaggle release exposes an A4C subset"
+  summary: "992 videos (516 site G, 476 site R) from about 100 patients across LVLA, PALA, LVSA, and A4C views"
 
 annotations:
   summary: "pixel-wise masks for view-specific structures: LV/RV, pulmonary artery, and four chambers; sparse training-frame labels and dense validation/test labels"
@@ -41,6 +41,6 @@ family:
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
-notes: "The paper describes 992 videos; the publicly visible Kaggle package currently contains only the A4C subset."
+notes: "The official Kaggle data card describes all four views and the complete 992-video dataset."

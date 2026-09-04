@@ -36,13 +36,13 @@ paper:
 data:
   repository: "Stanford AIMI"
   url: "https://echonet.github.io/dynamic/"
-  data_doi: "10.71718/qd7p-4h31"
+  data_doi: "10.71718/yqp5-y078"
 
 family:
   type: primary
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
 notes: "Registration and acceptance of the Stanford Research Use Agreement are required."

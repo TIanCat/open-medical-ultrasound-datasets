@@ -1,0 +1,46 @@
+id: US060
+name: "DeepUS-ReconSeg"
+full_name: "DeepUS-ReconSeg: A Multi-Angle Paired B-Mode Ultrasound Dataset for Medical Imaging Reconstruction and Segmentation"
+release_year: 2025
+
+anatomy:
+  primary: "Forearm"
+  target: "healthy forearm soft tissue"
+
+modality:
+  type: "multi-angle B-mode ultrasound"
+  dimension: "2D"
+  temporal: "image frames"
+
+scale:
+  summary: "4,200 grayscale images from 14 healthy subjects, stored in 42 MATLAB files with 100 frames each"
+
+annotations:
+  summary: "high- and low-resolution B-mode images organized by acquisition parameters and subject; no manual annotations or segmentation masks"
+
+tasks:
+  - "paired ultrasound image reconstruction"
+  - "super-resolution and image enhancement"
+
+access:
+  level: unavailable
+  license: null
+
+paper:
+  title: "DeepUS-ReconSeg: A Multi-Angle Paired B-Mode Ultrasound Dataset for Medical Imaging Reconstruction and Segmentation"
+  venue: "Data in Brief"
+  doi: "10.1016/j.dib.2025.112083"
+
+data:
+  repository: "Mendeley Data (withdrawn)"
+  url: "https://data.mendeley.com/datasets/tgbjc4rcg2/1"
+  data_doi: "10.17632/tgbjc4rcg2.1"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+
+notes: "Mendeley Data DOI 10.17632/tgbjc4rcg2.1; version 1 was removed at the author's request. The paper describes 4,200 images but explicitly states that no manual annotations or segmentation masks are included."

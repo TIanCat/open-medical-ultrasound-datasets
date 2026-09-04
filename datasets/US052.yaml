@@ -1,0 +1,46 @@
+id: US052
+name: "Dermatologic Ultrasound Images for Classification"
+full_name: "Dermatologic Ultrasound Images for Classification"
+release_year: 2022
+
+anatomy:
+  primary: "Skin"
+  target: "skin lesion"
+
+modality:
+  type: "high-frequency dermatologic ultrasound with color Doppler"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "202 images in the public Kaggle curation"
+
+annotations:
+  summary: "histopathologic diagnosis, benign/malignant label, sex, age, and probe-resolution metadata"
+
+tasks:
+  - "benign-versus-malignant skin-lesion classification"
+  - "dermatologic pathology classification"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "Discriminative Deep Learning-Based Benignity/Malignancy Diagnosis of Dermatologic Ultrasound Skin Lesions With Pretrained Artificial Intelligence Architecture"
+  venue: "Skin Research and Technology"
+  doi: "10.1111/srt.13086"
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/datasets/alfageme/dermatologic-ultrasound-images"
+  data_doi: null
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+
+notes: "The Kaggle curation contains 202 images; the associated paper reports a separate study cohort of 235 images plus a 35-image external test set."

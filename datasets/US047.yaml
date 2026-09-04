@@ -13,7 +13,7 @@ modality:
   temporal: "video frames"
 
 scale:
-  summary: "16 videos, approximately 3,583-3,585 extracted frames"
+  summary: "3,585 frames extracted from 16 ultrasound videos"
 
 annotations:
   summary: "pixel-wise thyroid-gland masks"
@@ -40,6 +40,6 @@ family:
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
-notes: "Public sources differ by two frames; both counts are retained as a range."
+notes: "The dataset contains pixel-wise thyroid-gland masks for 3,585 selected frames from 16 ultrasound videos."

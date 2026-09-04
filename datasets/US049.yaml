@@ -25,7 +25,7 @@ tasks:
 
 access:
   level: open
-  license: null
+  license: "CC BY 4.0"
 
 paper:
   title: "Tracked 3D Ultrasound and Deep Neural Network-Based Thyroid Segmentation Reduce Interobserver Variability in Thyroid Volumetry"
@@ -42,6 +42,6 @@ family:
   parent: null
 
 verified:
-  date: 2026-09-02
+  date: 2026-09-04
 
 notes: "The PLOS ONE experiment used the 28 healthy volunteers; the public SegThy family also includes 186 clinical patients."

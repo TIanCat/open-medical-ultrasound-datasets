@@ -1,0 +1,47 @@
+id: US056
+name: "Knee Ultrasound Dataset in a Population-Based Cohort"
+full_name: "Development of an AI/ML-Ready Knee Ultrasound Dataset in a Population-Based Cohort"
+release_year: 2023
+
+anatomy:
+  primary: "Knee"
+  target: "knee-joint osteoarthritis phenotype"
+
+modality:
+  type: "B-mode ultrasound"
+  dimension: "2D"
+  temporal: "static"
+
+scale:
+  summary: "7,571 ultrasound images in the reviewed public release"
+
+annotations:
+  summary: "knee ultrasound images linked to population-cohort metadata for pain, radiographic change, and osteoarthritis phenotype; dataset metadata and provenance files"
+
+tasks:
+  - "knee-osteoarthritis imaging-phenotype discovery"
+  - "pain and radiographic-change association analysis"
+  - "ultrasound representation learning"
+
+access:
+  level: open
+  license: null
+
+paper:
+  title: "Development of an AI/ML-Ready Knee Ultrasound Dataset in a Population-Based Cohort"
+  venue: "Harvard Dataverse"
+  doi: "10.7910/DVN/SKP9IB"
+
+data:
+  repository: "Harvard Dataverse"
+  url: "https://doi.org/10.7910/DVN/SKP9IB"
+  data_doi: "10.7910/DVN/SKP9IB"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+
+notes: "This is a versioned, continuously updated AI/ML-ready resource, not a fixed train/validation/test classification benchmark."
