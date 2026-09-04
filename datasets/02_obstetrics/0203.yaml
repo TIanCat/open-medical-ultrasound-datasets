@@ -1,60 +1,109 @@
-id: US082
-name: JNU-IFM
-full_name: Jinan University Intelligent Fetal Monitoring Dataset
+id: "0203"
+name: "JNU-IFM"
+full_name: "JNU-IFM Dataset for Segmenting Pubic Symphysis-Fetal Head"
+aliases: []
+
 release_year: 2022
 
 anatomy:
-  primary: Maternal pelvis and fetus
-  target: Pubic symphysis and fetal head
+  primary: "Maternal pelvis and fetus"
+  target:
+    - "Pubic symphysis"
+    - "Fetal head"
 
 modality:
-  type: B-mode transperineal ultrasound
-  dimension: 2D
-  temporal: static frames extracted from videos
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "cine"
+  representation:
+    - "image_sequence"
 
 scale:
-  images: 6224
-  patients: 51
+  - unit: "patient"
+    count: 51
+  - unit: "video"
+    count: 78
+  - unit: "frame"
+    count: 6224
 
 annotations:
   classification:
+    unit: "frame"
     num_classes: 4
     classes:
-      - None
-      - OnlySP
-      - OnlyHead
-      - SP+Head
+      - "None"
+      - "OnlySP"
+      - "OnlyHead"
+      - "SP+Head"
+    distribution:
+      None: 1022
+      OnlySP: 323
+      OnlyHead: 1136
+      SP+Head: 3743
 
   segmentation:
-    available: true
+    unit: "frame"
+    type: "multiclass"
     targets:
-      - Pubic symphysis
-      - Fetal head
+      - "Pubic symphysis"
+      - "Fetal head"
+    format: "mask"
+    count: 6224
+    annotators:
+      - "Dataset annotators with validation by two experienced radiologists"
+    note: "Mask pixel value 7 denotes pubic symphysis and value 8 denotes fetal head; background is 0."
 
 tasks:
-  - Semantic segmentation
-  - Frame classification
-  - Standard-plane identification
+  - "classification"
+  - "segmentation"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
 paper:
-  title: The JNU-IFM dataset for segmenting pubic symphysis-fetal head
-  venue: Data in Brief
-  doi: 10.1016/j.dib.2022.107904
+  title: "The JNU-IFM dataset for segmenting pubic symphysis-fetal head"
+  venue: "Data in Brief"
+  doi: "10.1016/j.dib.2022.107904"
 
 data:
-  repository: Figshare
-  url: https://doi.org/10.6084/m9.figshare.14371652
-  data_doi: 10.6084/m9.figshare.14371652.v2
+  repository: "Figshare"
+  url: "https://figshare.com/articles/dataset/JNU-IFM/14371652"
+  doi: "10.6084/m9.figshare.14371652"
+  version: "2"
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Nanfang Hospital, Southern Medical University"
+    - "Jinan University"
+  period: "2019 to early 2020"
+  scanners:
+    - "Youkey D8 wireless 2D ultrasound system"
+  transducers:
+    - "Convex probe"
+  frequencies:
+    - "3.53 MHz"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1016/j.dib.2022.107904"
+    - "https://figshare.com/articles/dataset/JNU-IFM/14371652"
+    - "https://pmc.ncbi.nlm.nih.gov/articles/PMC8842023/"
 
-notes: "Contains 6,224 frames extracted from 78 intrapartum transperineal ultrasound videos acquired from 51 pregnant women. Each video folder provides grayscale image frames, masks, enhanced mask previews, and a frame-label CSV. Masks encode the pubic symphysis as pixel value 7 and the fetal head as pixel value 8. Frame labels are None, OnlySP, OnlyHead, and SP+Head. The images were cropped and overwritten to remove interface toolbars and text, converted to grayscale, and retained at 1295x1026 pixels without downsampling. Figshare v2 is public under CC BY 4.0. During verification, readme.txt was downloaded in full and a 1,024-byte range request to us_data.zip returned HTTP 206; the complete archive was not downloaded."
+notes: >-
+  JNU-IFM contains 6,224 selected frames extracted from 78 intrapartum transperineal
+  ultrasound videos from 51 pregnant women. The released data are organized as image
+  sequences with per-frame segmentation masks and four frame-level visibility labels.
+  Although angle-of-progression estimation is a natural downstream use, an explicit
+  AoP ground-truth measurement is not treated here as a native annotation task.

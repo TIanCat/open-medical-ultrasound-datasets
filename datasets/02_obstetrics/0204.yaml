@@ -1,58 +1,106 @@
-id: US083
-name: African Fetal Standard Plane Dataset
-full_name: Maternal Fetal Ultrasound Planes from Low-Resource Imaging Settings in Five African Countries
+id: "0204"
+name: "African Fetal Standard Plane Dataset"
+full_name: "Maternal Fetal Ultrasound Planes from Low-Resource Imaging Settings in Five African Countries"
+aliases: []
+
 release_year: 2023
 
 anatomy:
-  primary: Fetus
-  target: Abdomen, brain, femur, and thorax standard planes
+  primary: "Fetus"
+  target:
+    - "Fetal abdomen"
+    - "Fetal brain"
+    - "Fetal femur"
+    - "Fetal thorax"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 450
-  patients: 125
+  - unit: "patient"
+    count: 125
+    note: "The Methods section states 25 patients per country across five countries; the paper overview also refers to approximately 120 patients."
+  - unit: "image"
+    count: 450
 
 annotations:
   classification:
+    unit: "image"
     num_classes: 4
     classes:
-      - Fetal abdomen
-      - Fetal brain
-      - Fetal femur
-      - Fetal thorax
-
-  segmentation:
-    available: false
-    targets: []
+      - "Fetal abdomen"
+      - "Fetal brain"
+      - "Fetal femur"
+      - "Fetal thorax"
+    note: "Uganda and Ghana contain no thorax images."
 
 tasks:
-  - Standard-plane classification
-  - Cross-country generalization
-  - Domain adaptation
+  - "standard_plane_classification"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: null
+  requirements: []
 
 paper:
-  title: Generalisability of fetal ultrasound deep learning models to low-resource imaging settings in five African countries
-  venue: Scientific Reports
-  doi: 10.1038/s41598-023-29490-3
+  title: "Generalisability of fetal ultrasound deep learning models to low-resource imaging settings in five African countries"
+  venue: "Scientific Reports"
+  doi: "10.1038/s41598-023-29490-3"
 
 data:
-  repository: Zenodo
-  url: https://doi.org/10.5281/zenodo.7540448
-  data_doi: 10.5281/zenodo.7540448
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/7540448"
+  doi: "10.5281/zenodo.7540448"
+  version: "v1.0"
+
+acquisition:
+  countries:
+    - "Malawi"
+    - "Egypt"
+    - "Uganda"
+    - "Ghana"
+    - "Algeria"
+  institutions:
+    - "Queen Elizabeth Central Hospital, Malawi"
+    - "Sayedaty Centre, Egypt"
+    - "Mulago National Referral Hospital, Uganda"
+    - "KBTH Polyclinic Centre, Accra, Ghana"
+    - "EPH Kouba and Clinique Des Lilas, Algeria"
+  period: "November 2021 to February 2022"
+  scanners:
+    - "Mindray DC-N2"
+    - "GE Voluson P8"
+    - "Siemens ultrasound system"
+    - "EDAN DUS 60"
+    - "GE ultrasound system"
+  transducers:
+    - "Curved transducer"
+  frequencies:
+    - "3-7.5 MHz"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related:
+    - "FETAL_PLANES_DB"
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1038/s41598-023-29490-3"
+    - "https://zenodo.org/records/7540448"
 
-notes: "Contains 450 routinely acquired maternal-fetal ultrasound images from centres in Malawi, Egypt, Uganda, Ghana, and Algeria. The country-level table reports 25 participant records per country, totalling 125, although the paper narrative also describes the cohort as approximately 120 patients. Malawi, Egypt, and Algeria each provide 100 images; Uganda and Ghana each provide 75 and contain no thorax images. The archive includes plane labels, patient identifiers, country information, and the experimental splits. The complete 42,845,356-byte Zenodo archive was successfully transferred during verification and returned HTTP 200, but it was discarded rather than retained."
+notes: >-
+  This resource contains independently acquired fetal standard-plane images from five
+  African clinical centres and is therefore treated as a primary multi-centre acquisition.
+  The associated study evaluates cross-country generalisation and transfer learning using
+  FETAL_PLANES_DB as a high-resource source domain, but domain adaptation is not encoded
+  as a native dataset task because the direct supervision consists of fetal-plane labels.
+  The public Zenodo metadata currently does not expose a clear dataset-specific license,
+  so license is left null rather than inferred from the article license.

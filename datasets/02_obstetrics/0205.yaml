@@ -1,59 +1,144 @@
-id: US084
-name: FPUS23
-full_name: FPUS23 Ultrasound Fetus Phantom Dataset
+id: "0205"
+name: "FPUS23"
+full_name: "FPUS23: An Ultrasound Fetus Phantom Dataset"
+aliases: []
+
 release_year: 2023
 
 anatomy:
-  primary: Fetal phantom
-  target: Head, arms, legs, and abdomen at 23 weeks gestation
+  primary: "Fetal phantom"
+  target:
+    - "Fetal head"
+    - "Fetal abdomen"
+    - "Fetal arms"
+    - "Fetal legs"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 15728
-  patients: 0
+  - unit: "image"
+    count: 15728
 
 annotations:
   classification:
-    num_classes: 4
-    classes:
-      - hdvb
-      - hdvf
-      - huvb
-      - huvf
+    unit: "image"
+    label_sets:
+      diagnostic_plane:
+        label_type: "single_label"
+        num_classes: 4
+        classes:
+          - "AC Plane"
+          - "BPD Plane"
+          - "FL Plane"
+          - "No Plane"
+        distribution:
+          AC Plane: 1386
+          BPD Plane: 1280
+          FL Plane: 1281
+          No Plane: 1318
+        count: 5265
+      fetal_orientation:
+        label_type: "single_label"
+        num_classes: 4
+        classes:
+          - "hdvb"
+          - "hdvf"
+          - "huvb"
+          - "huvf"
+        distribution:
+          hdvb: 3757
+          hdvf: 3235
+          huvb: 3980
+          huvf: 4756
+        count: 15728
+      fetal_anatomy:
+        label_type: "multi_label"
+        num_classes: 4
+        classes:
+          - "Head"
+          - "Arms"
+          - "Legs"
+          - "Abdomen"
+        positive_counts:
+          Head: 3003
+          Arms: 1629
+          Legs: 2159
+          Abdomen: 2526
+        count: 9317
 
-  segmentation:
-    available: false
-    targets: []
+  detection:
+    unit: "image"
+    targets:
+      - "Fetal head"
+      - "Fetal arms"
+      - "Fetal legs"
+      - "Fetal abdomen"
+    format: "bounding_box"
+    annotation_format: "XML"
+    count: 9455
+    object_counts:
+      Head: 4370
+      Arms: 4853
+      Legs: 4572
+      Abdomen: 6435
 
 tasks:
-  - Diagnostic-plane classification
-  - Phantom orientation classification
-  - Anatomy recognition
-  - Anatomical object detection
+  - "standard_plane_classification"
+  - "classification"
+  - "detection"
 
 access:
-  level: open
-  license: MIT
+  level: "open"
+  license: null
+  requirements: []
 
 paper:
-  title: "FPUS23: An Ultrasound Fetus Phantom Dataset with Deep Neural Network Evaluations for Fetus Orientations, Fetal Planes, and Anatomical Features"
-  venue: IEEE Access
-  doi: 10.1109/ACCESS.2023.3284315
+  title: "FPUS23: An Ultrasound Fetus Phantom Dataset With Deep Neural Network Evaluations for Fetus Orientations, Fetal Planes, and Anatomical Features"
+  venue: "IEEE Access"
+  doi: "10.1109/ACCESS.2023.3284315"
 
 data:
-  repository: GitHub and Google Drive
-  url: https://github.com/bharathprabakaran/FPUS23
-  data_doi: null
+  repository: "GitHub / Google Drive"
+  url: "https://github.com/bharathprabakaran/FPUS23"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "Austria"
+  institutions:
+    - "Technische Universität Wien (TU Wien)"
+  period: null
+  scanners:
+    - "Philips EPIQ 7"
+  transducers:
+    - "X6-1 xMATRIX array transducer"
+  frequencies: null
+  note: "Data were acquired from a 23-week US-7 SPACE FAN-ST fetal ultrasound phantom."
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1109/ACCESS.2023.3284315"
+    - "https://github.com/bharathprabakaran/FPUS23"
+    - "https://arxiv.org/abs/2303.07852"
 
-notes: "A non-human dataset of 15,728 ultrasound images acquired from a 23-week fetal phantom. Four orientation labels (hdvb, hdvf, huvb, and huvf) cover all images. Diagnostic-plane labels cover 5,265 images and comprise AC, BPD, FL, and No Plane. Anatomy labels for head, arms, legs, and abdomen cover 9,317 images. Bounding-box annotations for the same structures occur in 9,455 images and may contain multiple boxes per image. The repository provides XML annotations, source code, trained models, and an MIT license. Original images are linked through Google Drive; during verification, the link resolved but the direct request returned a 2,435-byte HTML interstitial rather than image data, so the complete source-image archive was not downloaded."
+notes: >-
+  FPUS23 is a non-human fetal-phantom dataset. Diagnostic-plane labels cover 5,265
+  images, fetal-orientation labels cover all 15,728 images, fetal-anatomy labels cover
+  9,317 images, and bounding-box annotations cover 9,455 images. The GitHub repository
+  itself carries an MIT license, while the linked source-image archive is hosted
+  separately on Google Drive; because the image-archive license is not stated
+  independently on the data page, access.license is left null.
