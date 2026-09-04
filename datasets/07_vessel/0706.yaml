@@ -1,0 +1,96 @@
+id: "0706"
+name: "CCAUI"
+full_name: "Common Carotid Artery Ultrasound Images"
+aliases:
+  - "Common Carotid Artery Ultrasound Images Dataset"
+
+release_year: 2022
+
+anatomy:
+  primary: "Vessel"
+  target:
+    - "Common carotid artery"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "participant"
+    count: 11
+  - unit: "image"
+    count: 1100
+  - unit: "pair"
+    count: 1100
+    note: "Each ultrasound image has one corresponding expert-verified mask."
+
+annotations:
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Common carotid artery"
+    format: "mask"
+    count: 1100
+    annotators:
+      - "Technician"
+      - "Expert verification"
+
+tasks:
+  - "segmentation"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper: null
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/d4xt63mgjm/1"
+  doi: "10.17632/d4xt63mgjm.1"
+  version: "1"
+
+acquisition:
+  countries:
+    - "Poland"
+  institutions:
+    - "Silesian University of Technology (Politechnika Slaska)"
+  period: null
+  scanners:
+    - "Mindary UMT-500Plus"
+  transducers:
+    - "L13-3s linear probe"
+  frequencies: null
+  note: >-
+    The Mendeley record lists Politechnika Slaska as the associated institution
+    but does not explicitly identify the clinical acquisition site. The scanner
+    name is preserved using the spelling reported by the source record.
+    Original DICOM time series were converted to cropped PNG images.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://data.mendeley.com/datasets/d4xt63mgjm/1"
+    - "https://doi.org/10.17632/d4xt63mgjm.1"
+
+notes: >-
+  The public release contains 1,100 carotid ultrasound images from 11 participants
+  and 1,100 corresponding expert-verified masks, for 2,200 PNG files in total.
+  The Mendeley description states that each participant contributes 100 images
+  and was examined on the left and right sides at least once. The resource can
+  support carotid geometry measurement and evaluation, but no independent
+  measurement ground-truth table is distributed; measurement is therefore treated
+  as a mask-derived use rather than a native dataset task. No dedicated peer-reviewed
+  dataset paper was identified, so paper is set to null.

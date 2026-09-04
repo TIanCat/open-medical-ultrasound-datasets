@@ -136,7 +136,7 @@ See [Scope](docs/scope.md).
 | [0703](datasets/07_vessel/0703.yaml) | CCA | Carotid artery | 2D B-mode carotid ultrasound images | 2,307 images: 2,107 training images and 200 held-out validation images; additional external-device test sets are referenced | carotid artery segmentation; unseen-device / cross-domain generalization | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-43901-8_13) | [GitHub](https://github.com/yuan-12138/MI-SegNet) |
 | [0704](datasets/07_vessel/0704.yaml) | ULMShare | Mouse microvasculature / ultrasound localization microscopy | raw RF channel data and ULM-related acquisitions | 99 acquisitions from 61 mice; approximately 30 TB | ULM reconstruction; microbubble localization/tracking; vessel imaging; algorithm benchmarking | 🟢 Open | FRDR data resource | [FRDR](https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550) |
 | [0705](datasets/07_vessel/0705.yaml) | UK Biobank carotid ultrasound | Carotid artery | carotid 2D B-mode ultrasound imaging fields | large UK Biobank imaging resource; participant/image counts depend on the specific field and release | carotid phenotype analysis; intima-media thickness / vascular measurement; epidemiology and risk-association research | 🟡 Application | UK Biobank imaging resource | [UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) |
-
+| [0706](datasets/07_vessel/0706.yaml) | CCAUI | Common carotid artery | 2D B-mode | 1,100 images + 1,100 expert masks / 11 participants | segmentation | 🟢 Open | -- | [ Mendeley Data](https://data.mendeley.com/datasets/d4xt63mgjm/1) |
 
 ### Brain
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
