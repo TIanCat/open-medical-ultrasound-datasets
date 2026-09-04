@@ -1,48 +1,112 @@
-id: 0107
+id: "0107"
 name: "Thyroid Ultrasound Cine-clip"
 full_name: "Thyroid Ultrasound Cine-clip"
+aliases:
+  - "TUSC"
+  - "Stanford Thyroid Ultrasound Cine-clip"
+
 release_year: 2022
 
 anatomy:
   primary: "Thyroid"
-  target: "thyroid nodule"
+  target:
+    - "Thyroid nodule"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "cine clip"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "192 nodules/cine clips from 167 patients; 17,412 frames"
+  - unit: "patient"
+    count: 167
+  - unit: "lesion"
+    count: 192
+  - unit: "video"
+    count: 192
+  - unit: "frame"
+    count: 17412
 
 annotations:
-  summary: "radiologist nodule segmentations, demographics, lesion size/location, ACR TI-RADS descriptors, and histopathologic diagnoses"
+  classification:
+    unit: "lesion"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 175
+      Malignant: 17
+    reference_standard: "Histopathological diagnosis"
+
+  segmentation:
+    unit: "frame"
+    type: "binary"
+    targets:
+      - "Thyroid nodule"
+    format: "mask"
+    annotators:
+      - "Radiologists"
+
+  grading:
+    unit: "lesion"
+    system: "ACR TI-RADS"
+    categories: null
+    note: "The dataset includes ACR TI-RADS descriptors and related structured radiology information."
 
 tasks:
-  - "thyroid-nodule segmentation"
-  - "TI-RADS feature prediction"
-  - "malignancy/risk stratification"
-  - "video representation learning"
+  - "segmentation"
+  - "classification"
+  - "grading"
 
 access:
-  level: application
-  license: "Stanford research-use terms"
+  level: "application"
+  license: null
+  requirements:
+    - "Stanford AIMI access workflow and dataset terms"
 
 paper:
   title: "Toward Reduction in False-Positive Thyroid Nodule Biopsies with a Deep Learning-Based Risk Stratification System Using US Cine-Clip Images"
-  venue: "Radiology"
-  doi: "10.1148/radiol.211667"
+  venue: "Radiology: Artificial Intelligence"
+  doi: "10.1148/ryai.210174"
 
 data:
-  repository: "Stanford AIMI"
+  repository: "Stanford Center for Artificial Intelligence in Medicine & Imaging"
   url: "https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip"
-  data_doi: null
+  doi: "10.71718/7m5n-rh16"
+  version: null
+
+acquisition:
+  countries:
+    - "United States"
+  institutions:
+    - "Stanford University Medical Center"
+  period: "April 2017 to May 2018"
+  scanners: null
+  transducers: null
+  frequencies: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip"
+    - "https://doi.org/10.1148/ryai.210174"
+    - "https://pubmed.ncbi.nlm.nih.gov/35652118/"
+    - "https://doi.org/10.71718/7m5n-rh16"
 
-notes: "Stanford AIMI portal access; the article reports 192 biopsy-confirmed nodules from 167 patients."
+notes: >-
+  The dataset contains 192 biopsy-confirmed thyroid nodules from 167 patients and
+  17,412 cine frames. In addition to radiologist-annotated nodule segmentations,
+  it provides demographics, lesion size and location, ACR TI-RADS descriptors,
+  and histopathological diagnoses. The associated paper was published in
+  Radiology: Artificial Intelligence with DOI 10.1148/ryai.210174; the separate
+  DOI 10.71718/7m5n-rh16 identifies the dataset resource.
