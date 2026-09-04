@@ -22,7 +22,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 09 | Kidney | 2 | 0901–0902 |
 | 10 | Prostate | 3 | 1001–1003 |
 | 11 | Nerve | 3 | 1101–1103 |
-| 11 | Ovary | 4 | 1201–1204 |
+| 12 | Ovary | 4 | 1201–1204 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
 | 20 | Other | 7 | 2001–2008 |
 | **Total** | **14 categories** | **100** | — |
