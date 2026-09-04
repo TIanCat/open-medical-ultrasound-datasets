@@ -1,0 +1,130 @@
+id: US029
+name: MMOTU
+full_name: Multi-Modality Ovarian Tumor Ultrasound image dataset
+release_year: 2022
+release_year_basis: The dataset and its arXiv preprint were publicly released in 2022
+
+anatomy:
+  primary: Ovary
+  target: Ovarian tumor / lesion
+
+modality:
+  subsets:
+    OTU_2d:
+      type: 2D ultrasound images
+      traditional_2D_images: 1253
+      color_Doppler_flow_images: 216
+    OTU_CEUS:
+      type: Contrast-enhanced ultrasound image frames extracted from CEUS sequences
+      images: 170
+  three_dimensional_data: false
+  folder_name_caution: The public repository calls the CEUS folder OTU_3d, but the paper identifies these data as OTU_CEUS and explicitly marks the dataset as containing no 3D data
+  scanner: Mindray Resona8
+  acquisition: Transvaginal ultrasound
+
+scale:
+  total_images: 1639
+  total_patients: 294
+  OTU_2d:
+    images: 1469
+    patients: 247
+  OTU_CEUS:
+    images: 170
+    patients: 47
+
+annotations:
+  pixel_wise:
+    available: true
+    target: Binary lesion area
+    note: The paper converts the category-aware segmentation setting into binary lesion-area segmentation
+  global_categories:
+    OTU_2d_classes: 8
+    OTU_CEUS_classes: 7
+    labels:
+      - Chocolate cyst
+      - Serous cystadenoma
+      - Teratoma
+      - Theca cell tumor
+      - Simple cyst
+      - Normal ovary
+      - Mucinous cystadenoma
+      - High grade serous
+    CEUS_exception: Normal ovary is absent from OTU_CEUS
+  annotation_team: 27 obstetrics and gynecology experts
+  workflow: Each image was annotated by one expert and checked by another with reference to pathological reports
+
+tasks:
+  - Binary ovarian lesion-area segmentation within one modality
+  - Ovarian tumor and normal-ovary category recognition
+  - Bidirectional unsupervised cross-domain semantic segmentation between OTU_2d and OTU_CEUS
+
+splits:
+  patient_overlap_between_train_and_test: false
+  OTU_2d:
+    train_images: 1000
+    train_patients: 171
+    test_images: 469
+    test_patients: 76
+  OTU_CEUS:
+    train_images: 70
+    train_patients: 20
+    test_images: 100
+    test_patients: 27
+  validation_caution: The paper's internal five-fold validation may contain images from the same patients across train and validation folds; this does not alter the patient-disjoint official test split
+
+access:
+  level: public download
+  hosts:
+    - GitHub
+    - Google Drive
+  dataset_license: Not separately stated
+  repository_code_license: Apache-2.0
+  license_caution: The repository license identifies MMSegmentation code copyright and should not be assumed to license the clinical dataset
+
+cohort_and_acquisition:
+  institution: Beijing Shijitan Hospital, Capital Medical University
+  privacy_processing: Images were manually cropped to remove patient-identifying information
+  released_demographics: Gender is available; age and weight are withheld
+  diagnostic_description: Available only after a research request according to the paper
+
+paper:
+  title: Unsupervised cross-domain semantic segmentation on multi-modality ovarian tumor ultrasound data
+  venue: Pattern Recognition
+  volume: 171
+  article_number: 112311
+  publication_year: 2026
+  doi: 10.1016/j.patcog.2025.112311
+  preprint:
+    title: "MMOTU: A Large-Scale Multimodal Ovarian Tumor Ultrasound Dataset and Benchmark for Segmenting Ovarian Tumors"
+    arxiv: "2207.06799"
+
+data:
+  repository: https://github.com/cv516Buaa/MMOTU_DS2Net
+  download_host: Google Drive
+
+quality_checks:
+  complete_paper_read: true
+  dataset_section_and_split_table_checked: true
+  repository_structure_checked: true
+  full_image_archive_downloaded: false
+  count_arithmetic:
+    images: "1469 + 170 = 1639"
+    patients: "247 + 47 = 294"
+
+family:
+  type: primary multimodal dataset with two subsets
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the complete dataset paper and visually checked its dataset and split pages
+    - Read the official repository and distinguished OTU_CEUS from its misleading OTU_3d folder name
+    - Verified image, patient, category, and patient-disjoint train/test counts
+    - Checked the final journal publication and DOI
+  sources:
+    - https://github.com/cv516Buaa/MMOTU_DS2Net
+    - https://arxiv.org/abs/2207.06799
+    - https://doi.org/10.1016/j.patcog.2025.112311
+
+notes: MMOTU has two image modalities, OTU_2d and OTU_CEUS. It does not include a 3D volume subset. The 170-image repository folder named OTU_3d is retained by the project for compatibility but must not be interpreted as 3D ultrasound data.
