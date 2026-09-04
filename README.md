@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **100 medical ultrasound dataset resources** across **15 anatomical categories**.
+This repository currently catalogs **100 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -26,7 +26,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 13 | Animal | 6 | 1301–1306 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 7 | 2001–2007 |
-| **Total** | **15 categories** | **100** | — |
+| **Total** | **16 categories** | **100** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
