@@ -17,12 +17,12 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 04 | Lung | 6 | 0401–0406 |
 | 05 | Liver & Gallbladder | 9 | 0501–0509 |
 | 06 | Musculoskeletal | 7 | 0601–0607 |
-| 07 | Vessel | 5 | 0701–0705 |
+| 07 | Vessel | 6 | 0701–0706 |
 | 08 | Brain | 8 | 0801–0808 |
 | 09 | Kidney | 2 | 0901–0902 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
 | 20 | Other | 8 | 2001–2008 |
-| **Total** | **12 categories** | **90** | — |
+| **Total** | **12 categories** | **91** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
