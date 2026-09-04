@@ -1,0 +1,48 @@
+id: US092
+name: "In vivo rat brain for Ultrasound Localization Microscopy"
+full_name: "In vivo rat brain for Ultrasound Localization Microscopy: raw and beamformed data"
+release_year: 2023
+
+anatomy:
+  primary: "Rat brain"
+  target: "cerebral microvasculature"
+
+modality:
+  type: "raw RF ultrasound + beamformed B-mode / ULM data"
+  dimension: "2D sequences"
+  temporal: "cine / high-frame-rate sequence"
+
+scale:
+  summary: "23 Zenodo files; about 156.9 GB; approximately 200,000 frames/images"
+
+annotations:
+  summary: "raw RF and beamformed data with acquisition metadata; no consistent semantic disease or structure labels"
+
+tasks:
+  - "ultrasound beamforming"
+  - "image reconstruction"
+  - "ultrasound localization microscopy"
+  - "microbubble localization and tracking"
+
+access:
+  level: open
+  license: "CC BY 4.0"
+
+paper:
+  title: "Performance benchmarking of microbubble-localization algorithms for ultrasound localization microscopy"
+  venue: "Nature Biomedical Engineering"
+  doi: "10.1038/s41551-021-00824-8"
+
+data:
+  repository: "In vivo rat brain for Ultrasound Localization Microscopy"
+  url: "https://zenodo.org/records/7883227"
+  data_doi: "10.5281/zenodo.7883227"
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-03
+
+notes: "Verified from the Zenodo record and the linked ULM benchmarking paper."

@@ -1,42 +1,41 @@
-id: US100
-name: "OPULM PALA"
-full_name: "Open Platform for Ultrasound Localization Microscopy - Performance Assessment of Localization Algorithms"
-release_year: 2020
+id: US104
+name: "UK Biobank carotid ultrasound"
+full_name: "UK Biobank carotid ultrasound imaging resource"
+release_year: null
 
 anatomy:
-  primary: "Microvasculature"
-  target: "microbubbles / vascular structures"
+  primary: "Carotid artery"
+  target: "common carotid artery"
 
 modality:
-  type: "ultrafast contrast-enhanced ultrasound / ULM"
-  dimension: "2D sequences"
-  temporal: "high-frame-rate sequence"
+  type: "carotid B-mode ultrasound"
+  dimension: "2D"
+  temporal: "image/video resource"
 
 scale:
-  summary: "6 benchmark datasets including simulated and in vivo acquisitions"
+  summary: "large UK Biobank imaging resource; participant/image counts depend on the specific field and release"
 
 annotations:
-  summary: "ultrafast sequences with microbubble localization, trajectory or reconstruction reference information and processing scripts"
+  summary: "carotid imaging plus participant phenotype/clinical data; no unified public manual semantic segmentation labels"
 
 tasks:
-  - "microbubble localization"
-  - "microbubble trajectory tracking"
-  - "vascular reconstruction"
-  - "ULM algorithm benchmarking"
+  - "carotid phenotype analysis"
+  - "carotid intima-media thickness measurement"
+  - "vascular risk association research"
 
 access:
-  level: open
-  license: "CC BY 4.0"
+  level: application
+  license: "UK Biobank access terms"
 
 paper:
-  title: "Performance benchmarking of microbubble-localization algorithms for ultrasound localization microscopy"
-  venue: "Nature Biomedical Engineering"
-  doi: "10.1038/s41551-021-00824-8"
+  title: "No single dedicated dataset paper; UK Biobank imaging resource"
+  venue: "UK Biobank Showcase"
+  doi: null
 
 data:
-  repository: "OPULM PALA"
-  url: "https://zenodo.org/records/4343435"
-  data_doi: "10.5281/zenodo.4343435"
+  repository: "UK Biobank Showcase"
+  url: "https://biobank.ndph.ox.ac.uk/showcase/"
+  data_doi: null
 
 family:
   type: primary
@@ -45,4 +44,4 @@ family:
 verified:
   date: 2026-09-03
 
-notes: "Verified from the Zenodo OPULM PALA record and linked Nature Biomedical Engineering paper."
+notes: "Verified as a UK Biobank application-controlled carotid ultrasound resource family; access is not open download."

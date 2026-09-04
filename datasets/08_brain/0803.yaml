@@ -1,42 +1,42 @@
-id: US092
-name: "In vivo rat brain for Ultrasound Localization Microscopy"
-full_name: "In vivo rat brain for Ultrasound Localization Microscopy: raw and beamformed data"
-release_year: 2023
+id: US096
+name: "Dataset of 3D ultrasound neuroimages"
+full_name: "Dataset of 3D ultrasound neuroimages and Supporting Info"
+release_year: 2026
 
 anatomy:
-  primary: "Rat brain"
-  target: "cerebral microvasculature"
+  primary: "Neonatal brain"
+  target: "transfontanellar neuroimages"
 
 modality:
-  type: "raw RF ultrasound + beamformed B-mode / ULM data"
-  dimension: "2D sequences"
-  temporal: "cine / high-frame-rate sequence"
+  type: "3D transfontanellar ultrasound"
+  dimension: "3D volumes and 2D slices"
+  temporal: "static volume"
 
 scale:
-  summary: "23 Zenodo files; about 156.9 GB; approximately 200,000 frames/images"
+  summary: "small 3D neuroimage resource; current record has 9 files and supporting information"
 
 annotations:
-  summary: "raw RF and beamformed data with acquisition metadata; no consistent semantic disease or structure labels"
+  summary: "original 3D ultrasound neuroimages / derived 2D slices and supporting files; no consistent manual semantic segmentation labels"
 
 tasks:
-  - "ultrasound beamforming"
-  - "image reconstruction"
-  - "ultrasound localization microscopy"
-  - "microbubble localization and tracking"
+  - "data augmentation"
+  - "2D ultrasound slice synthesis"
+  - "GAN training"
+  - "ultrasound image representation research"
 
 access:
   level: open
   license: "CC BY 4.0"
 
 paper:
-  title: "Performance benchmarking of microbubble-localization algorithms for ultrasound localization microscopy"
-  venue: "Nature Biomedical Engineering"
-  doi: "10.1038/s41551-021-00824-8"
+  title: "No dedicated peer-reviewed dataset paper verified; Zenodo data resource"
+  venue: "Zenodo"
+  doi: null
 
 data:
-  repository: "In vivo rat brain for Ultrasound Localization Microscopy"
-  url: "https://zenodo.org/records/7883227"
-  data_doi: "10.5281/zenodo.7883227"
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/19593033"
+  data_doi: "10.5281/zenodo.19593033"
 
 family:
   type: primary
@@ -45,4 +45,4 @@ family:
 verified:
   date: 2026-09-03
 
-notes: "Verified from the Zenodo record and the linked ULM benchmarking paper."
+notes: "Updated from the earlier 2025 Zenodo record 14917169 to the 2026 record with supporting information."

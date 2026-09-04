@@ -17,12 +17,13 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 04 | Lung | 6 | 0401–0406 |
 | 05 | Liver & Gallbladder | 9 | 0501–0509 |
 | 06 | Musculoskeletal | 7 | 0601–0607 |
-| 07 | Vessel | 6 | 0701–0706 |
-| 08 | Brain | 8 | 0801–0808 |
+| 07 | Vessel | 4 | 0701–0704 |
+| 08 | Brain | 5 | 0801–0805 |
 | 09 | Kidney | 1 | 0901–0901 |
 | 10 | Prostate | 3 | 1001–1003 |
 | 11 | Nerve | 3 | 1101–1103 |
 | 12 | Ovary | 4 | 1201–1204 |
+| 13 | Animal | 6 | 1301–1306 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 7 | 2001–2007 |
 | **Total** | **15 categories** | **100** | — |
@@ -134,24 +135,22 @@ See [Scope](docs/scope.md).
 ### Vessel
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [0701](datasets/07_vessel/0701.yaml) | OPULM PALA | Microvasculature / ultrasound contrast microbubbles | ultrafast contrast-enhanced ultrasound / ULM microbubble data | 6 benchmark datasets including simulated and in vivo acquisitions | microbubble localization; trajectory tracking; vascular reconstruction; ULM algorithm benchmarking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/4343435) |
+| [0701](datasets/07_vessel/0701.yaml) | UK Biobank carotid ultrasound | Carotid artery | carotid 2D B-mode ultrasound imaging fields | large UK Biobank imaging resource; participant/image counts depend on the specific field and release | carotid phenotype analysis; intima-media thickness / vascular measurement; epidemiology and risk-association research | 🟡 Application | UK Biobank imaging resource | [UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) |
 | [0702](datasets/07_vessel/0702.yaml) | CUBS | Carotid artery | 2D B-mode static carotid ultrasound images | 1,088 participants; 2,176 common carotid artery images | carotid LI/MA boundary segmentation; carotid intima-media thickness measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2021.03.003) | [Mendeley Data](https://data.mendeley.com/datasets/fpv535fss7/1) |
 | [0703](datasets/07_vessel/0703.yaml) | CCA | Carotid artery | 2D B-mode carotid ultrasound images | 2,307 images: 2,107 training images and 200 held-out validation images; additional external-device test sets are referenced | carotid artery segmentation; unseen-device / cross-domain generalization | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-43901-8_13) | [GitHub](https://github.com/yuan-12138/MI-SegNet) |
-| [0704](datasets/07_vessel/0704.yaml) | ULMShare | Mouse microvasculature / ultrasound localization microscopy | raw RF channel data and ULM-related acquisitions | 99 acquisitions from 61 mice; approximately 30 TB | ULM reconstruction; microbubble localization/tracking; vessel imaging; algorithm benchmarking | 🟢 Open | FRDR data resource | [FRDR](https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550) |
-| [0705](datasets/07_vessel/0705.yaml) | UK Biobank carotid ultrasound | Carotid artery | carotid 2D B-mode ultrasound imaging fields | large UK Biobank imaging resource; participant/image counts depend on the specific field and release | carotid phenotype analysis; intima-media thickness / vascular measurement; epidemiology and risk-association research | 🟡 Application | UK Biobank imaging resource | [UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) |
-| [0706](datasets/07_vessel/0706.yaml) | CCAUI | Common carotid artery | 2D B-mode | 1,100 images + 1,100 expert masks / 11 participants | segmentation | 🟢 Open | -- | [ Mendeley Data](https://data.mendeley.com/datasets/d4xt63mgjm/1) |
+| [0704](datasets/07_vessel/0704.yaml) | CCAUI | Common carotid artery | 2D B-mode | 1,100 images + 1,100 expert masks / 11 participants | segmentation | 🟢 Open | -- | [ Mendeley Data](https://data.mendeley.com/datasets/d4xt63mgjm/1) |
 
 ### Brain
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [0801](datasets/08_brain/0801.yaml) | BITE | Brain / brain tumor / resection cavity | Contrast-enhanced T1 MRI + intraoperative 2D/3D B-mode US | 14 patients | MRI-US and longitudinal registration; TRE evaluation | 🟢 Open | [Paper](https://doi.org/10.1118/1.4709600) | [BITE](https://nist.mni.mcgill.ca/bite-brain-images-of-tumors-for-evaluation-database/) |
 | [0802](datasets/08_brain/0802.yaml) | RESECT | Brain / low-grade glioma | preoperative MRI + intraoperative ultrasound (tracked 2D sweeps / reconstructed 3D iUS) | 23 low-grade glioma surgery cases | multimodal registration; landmark-error evaluation; tumor / resection-cavity segmentation in extension resources | 🟢 Open | [Paper](https://doi.org/10.1002/mp.12268) | [Sigma2 / NIRD](https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2017.00004) |
-| [0803](datasets/08_brain/0803.yaml) | In vivo rat brain for Ultrasound Localization Microscopy | Rat brain / cerebral microvasculature | raw RF ultrasound channel data + beamformed B-mode / ULM data | 23 Zenodo files; about 156.9 GB; approximately 200,000 frames/images | beamforming; image reconstruction; ULM; microbubble localization/tracking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/7883227) |
+| [0803](datasets/08_brain/0803.yaml) | Dataset of 3D ultrasound neuroimages | Neonatal brain / transfontanelle ultrasound | 3D transfontanellar ultrasound volumes and derived 2D slices | small 3D neuroimage resource; current record has 9 files and supporting information | data augmentation; 2D slice synthesis; GAN training; image enhancement / representation research | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/19593033) |
 | [0804](datasets/08_brain/0804.yaml) | ReMIND | Brain / brain tumor / neurosurgery | preoperative MRI + intraoperative MRI + intraoperative ultrasound | 114 neurosurgical cases | MRI-ultrasound registration; tumor/resection-cavity segmentation; residual lesion analysis | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-024-03295-z) | [TCIA](https://www.cancerimagingarchive.net/collection/remind/) |
 | [0805](datasets/08_brain/0805.yaml) | BraTioUS | Brain / glioma | intraoperative 2D B-mode ultrasound | 1,669 B-mode iUS images from 142 glioma patients | brain tumor binary segmentation; derived tumor/no-tumor classification | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/20800464) |
-| [0806](datasets/08_brain/0806.yaml) | Dataset of 3D ultrasound neuroimages | Neonatal brain / transfontanelle ultrasound | 3D transfontanellar ultrasound volumes and derived 2D slices | small 3D neuroimage resource; current record has 9 files and supporting information | data augmentation; 2D slice synthesis; GAN training; image enhancement / representation research | 🟢 Open | Zenodo data resource | [Zenodo](https://zenodo.org/records/19593033) |
-| [0807](datasets/08_brain/0807.yaml) | Mouse Brain Tumor Ultrasound | Mouse brain / brain tumor | high-resolution B-mode ultrasound images/videos | 1,856 images: 1,448 tumor images and 408 no-tumor images | tumor segmentation; derived tumor/no-tumor binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05619-z) | [Figshare](https://doi.org/10.6084/m9.figshare.27237894) |
-| [0808](datasets/08_brain/0808.yaml) | Open-3DULM / Transcranial mice brain | Mouse brain / transcranial microvasculature | ultrafast ultrasound localization microscopy cine / 4D data | 5 mice; 370 ultrafast cine videos | 3D ULM reconstruction; cerebral blood-flow / vascular analysis; 4D spatiotemporal representation | 🟢 Open | [Paper](https://doi.org/10.1038/s44172-025-00415-4) | [Zenodo](https://zenodo.org/records/14289690) |
+
+
+
 
 
 ### Kidney
@@ -185,6 +184,17 @@ See [Scope](docs/scope.md).
 | [1204](datasets/12_ovary/1204.yaml) | PCOSGen | Ovary / PCOS | 2D ultrasound images | 4,668 images (3,200 train / 1,468 test) | classification | 🟢 Open | [Handa et al., 2024](https://doi.org/10.22541/au.170629258.80995260/v1) | [Zenodo train](https://zenodo.org/records/14592001); [test](https://zenodo.org/records/14591782) |
 
 
+### Animal 
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [1301](datasets/13_animal/1301.yaml) | OPULM PALA | Microvasculature / ultrasound contrast microbubbles | ultrafast contrast-enhanced ultrasound / ULM microbubble data | 6 benchmark datasets including simulated and in vivo acquisitions | microbubble localization; trajectory tracking; vascular reconstruction; ULM algorithm benchmarking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/4343435) |
+| [1302](datasets/13_animal/1302.yaml) | In vivo rat brain for Ultrasound Localization Microscopy | Rat brain / cerebral microvasculature | raw RF ultrasound channel data + beamformed B-mode / ULM data | 23 Zenodo files; about 156.9 GB; approximately 200,000 frames/images | beamforming; image reconstruction; ULM; microbubble localization/tracking | 🟢 Open | [Paper](https://doi.org/10.1038/s41551-021-00824-8) | [Zenodo](https://zenodo.org/records/7883227) |
+| [1303](datasets/13_animal/1303.yaml) | Mouse Brain Tumor Ultrasound | Mouse brain / brain tumor | high-resolution B-mode ultrasound images/videos | 1,856 images: 1,448 tumor images and 408 no-tumor images | tumor segmentation; derived tumor/no-tumor binary classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05619-z) | [Figshare](https://doi.org/10.6084/m9.figshare.27237894) |
+| [1304](datasets/13_animal/1304.yaml) | Open-3DULM / Transcranial mice brain | Mouse brain / transcranial microvasculature | ultrafast ultrasound localization microscopy cine / 4D data | 5 mice; 370 ultrafast cine videos | 3D ULM reconstruction; cerebral blood-flow / vascular analysis; 4D spatiotemporal representation | 🟢 Open | [Paper](https://doi.org/10.1038/s44172-025-00415-4) | [Zenodo](https://zenodo.org/records/14289690) |
+| [1305](datasets/13_animal/1305.yaml) | Spinal Cord Injury Ultrasound Dataset | Porcine spinal cord / spinal cord injury | B-mode sagittal ultrasound images | 10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations | injury-status classification; anatomical structure segmentation; injury localization / object detection | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-025-16275-z) | [GitHub](https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset) |
+| [1306](datasets/13_animal/1306.yaml) | ULMShare | Mouse microvasculature / ultrasound localization microscopy | raw RF channel data and ULM-related acquisitions | 99 acquisitions from 61 mice; approximately 30 TB | ULM reconstruction; microbubble localization/tracking; vessel imaging; algorithm benchmarking | 🟢 Open | FRDR data resource | [FRDR](https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550) |
+
+
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
@@ -200,9 +210,9 @@ See [Scope](docs/scope.md).
 | [2002](datasets/20_other/2002.yaml) | LEPset | Pancreas | endoscopic US | 11,500 images / 420 patients | classification; pretraining | 🟢 Open | [Dataset](https://doi.org/10.5281/zenodo.8041285) | [Zenodo](https://zenodo.org/records/8041285) |
 | [2003](datasets/20_other/2003.yaml) | C-TRUS | Colon wall | 2D B-mode images | 827 images / 13 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-73647-6_10) | [GitHub](https://github.com/wwu-mmll/c-trus) |
 | [2004](datasets/20_other/2004.yaml) | OpticNerveSheaths | Optic nerve sheath | transorbital 2D ultrasound images | 464 ultrasound images | optic nerve sheath segmentation/localization; optic nerve sheath diameter measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2023.05.011) | [Mendeley Data](https://data.mendeley.com/datasets/kw8gvp8m8x/2) |
-| [2005](datasets/20_other/2005.yaml) | Spinal Cord Injury Ultrasound Dataset | Porcine spinal cord / spinal cord injury | B-mode sagittal ultrasound images | 10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations | injury-status classification; anatomical structure segmentation; injury localization / object detection | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-025-16275-z) | [GitHub](https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset) |
+| [2005](datasets/20_other/2005.yaml) | Ultrasound Elastography Dataset for Unsupervised Training | CIRS Model 059 breast phantom | Paired ultrasound RF data | 2,200 unlabeled RF pairs | displacement/optical-flow estimation; unsupervised fine-tuning | 🟢 Public download; license not stated | [Paper](https://doi.org/10.1007/978-3-030-59716-0_48) | [IMPACT Lab](https://users.encs.concordia.ca/~impact/ultrasound-elastography-dataset-for-unsupervised-training/) |
 | [2006](datasets/20_other/2006.yaml) | Regensburg Pediatric Appendicitis Dataset | Appendix / pediatric abdomen | 2D B-mode images + tabular clinical data | release: 782 records / 2,097 images; paper: 579 patients / 1,709 images | diagnosis; management; severity; multimodal learning | 🟢 Open; CC BY-NC 4.0 | [Paper](https://doi.org/10.1016/j.media.2023.103042) | [Zenodo](https://doi.org/10.5281/zenodo.7711412) |
-| [2007](datasets/20_other/2007.yaml) | Ultrasound Elastography Dataset for Unsupervised Training | CIRS Model 059 breast phantom | Paired ultrasound RF data | 2,200 unlabeled RF pairs | displacement/optical-flow estimation; unsupervised fine-tuning | 🟢 Public download; license not stated | [Paper](https://doi.org/10.1007/978-3-030-59716-0_48) | [IMPACT Lab](https://users.encs.concordia.ca/~impact/ultrasound-elastography-dataset-for-unsupervised-training/) |
+
 
 ## Contributing
 
