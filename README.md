@@ -157,6 +157,11 @@ See [Scope](docs/scope.md).
 | [0901](datasets/09_kidney/0901.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
 | [0902](datasets/09_kidney/0902.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
 
+### Kidney
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [1001](datasets/10_prostate/1001.yaml) | Prostate-MRI-US-Biopsy | Prostate / prostate cancer | 3D transrectal US + MRI | 1,151 patients / 2,799 studies / 102,397 MR+US DICOM images | segmentation; localization; grading; measurement; registration | 🟢 Open | [Sonn et al., 2013](https://doi.org/10.1016/j.juro.2012.08.095) | [TCIA](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/) |
+
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

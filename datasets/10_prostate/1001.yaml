@@ -1,0 +1,169 @@
+id: "1001"
+name: "Prostate-MRI-US-Biopsy"
+full_name: "Prostate MRI and Ultrasound With Pathology and Coordinates of Tracked Biopsy"
+aliases: []
+
+release_year: 2020
+
+anatomy:
+  primary: "Prostate"
+  target:
+    - "Prostate gland"
+    - "Prostate cancer-suspicious region"
+    - "Prostate biopsy core"
+
+modality:
+  type:
+    - "B-mode"
+    - "MRI"
+  dimension: "3D"
+  temporal: "static"
+  representation:
+    - "volume"
+
+scale:
+  - unit: "patient"
+    count: 1151
+  - unit: "study"
+    count: 2799
+  - unit: "series"
+    count: 4819
+  - unit: "image"
+    count: 102397
+    note: "Current TCIA v2 total across the MR and US DICOM collection."
+
+annotations:
+  segmentation:
+    unit: "volume"
+    type: "surface"
+    targets:
+      - "Prostate gland"
+      - "Prostate cancer-suspicious region"
+    format: "STL_surface"
+    note: >-
+      Prostate surfaces were generated semi-automatically for MRI and ultrasound.
+      Suspicious target/ROI surfaces were manually delineated on MRI and propagated
+      to ultrasound through MRI-US registration. IDC reports 1,017 prostate
+      annotations and 1,317 target-lesion annotations in the original STL resource.
+
+  localization:
+    unit: "biopsy_core"
+    targets:
+      - "Targeted biopsy core"
+      - "Systematic biopsy core"
+    format: "3D_coordinates"
+    note: >-
+      Biopsy-core coordinates are provided relative to ultrasound images.
+      Corresponding MRI coordinates are available for approximately 70% of the dataset.
+
+  grading:
+    label_sets:
+      gleason:
+        unit: "biopsy_core"
+        system: "Gleason score"
+        categories: null
+        note: "Primary and secondary Gleason scores are provided for biopsy cores; blank entries represent benign tissue."
+      ucla_suspicion:
+        unit: "ROI"
+        system: "UCLA suspicion score"
+        categories:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+        note: "Likert-like MRI suspicion score with close correspondence to PI-RADS v2."
+
+  measurements:
+    unit: "mixed"
+    targets:
+      - "Prostate volume"
+      - "ROI volume"
+      - "Cancer length in biopsy core"
+      - "Total tissue length of biopsy core"
+    format: "tabular_metadata"
+
+  registration:
+    unit: "case"
+    modalities:
+      - "MRI"
+      - "Ultrasound"
+    format: "paired_surfaces_and_coordinates"
+    note: >-
+      MRI targets were fused nonrigidly with real-time 3D transrectal ultrasound
+      during tracked biopsy. Prostate surfaces, target surfaces, biopsy coordinates,
+      and MRI/US series identifiers support multimodal registration research.
+
+tasks:
+  - "segmentation"
+  - "localization"
+  - "grading"
+  - "measurement"
+  - "registration"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements:
+    - "TCIA data citation and usage policy apply."
+    - "DICOM bulk download uses the NBIA Data Retriever."
+
+paper:
+  title: "Targeted biopsy in the detection of prostate cancer using an office based magnetic resonance ultrasound fusion device"
+  venue: "The Journal of Urology"
+  doi: "10.1016/j.juro.2012.08.095"
+
+data:
+  repository: "The Cancer Imaging Archive"
+  url: "https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/"
+  doi: "10.7937/TCIA.2020.A61IOC1A"
+  version: "2"
+
+acquisition:
+  countries:
+    - "United States"
+  institutions:
+    - "UCLA Clark Urology Center"
+  period: null
+  scanners:
+    - "Hitachi Hi-Vision 5500"
+    - "Hitachi Noblus"
+    - "Siemens Trio 3T"
+    - "Siemens Verio 3T"
+    - "Siemens Skyra 3T"
+  transducers:
+    - "7.5 MHz end-fire transrectal ultrasound probe"
+    - "C41V 2-10 MHz end-fire transrectal ultrasound probe"
+  frequencies:
+    - "7.5 MHz"
+    - "2-10 MHz"
+  note: >-
+    Three-dimensional transrectal ultrasound volumes were acquired by rotating
+    the end-fire probe approximately 200 degrees about its axis and resampling
+    to isotropic resolution. Version 2 also adds diffusion-weighted MRI for
+    837 participants.
+
+family:
+  type: "primary"
+  parent: null
+  related:
+    - "Prostate-MRI-US-Biopsy-DICOM-Annotations"
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/"
+    - "https://portal.imaging.datacommons.cancer.gov/collections/prostate_mri_us_biopsy/"
+    - "https://doi.org/10.7937/TCIA.2020.A61IOC1A"
+    - "https://doi.org/10.1016/j.juro.2012.08.095"
+
+notes: >-
+  This is an independent multimodal prostate imaging collection derived from tracked
+  MRI-ultrasound fusion biopsy sessions. The current TCIA version contains 1,151
+  participants, 2,799 studies, 4,819 series, and 102,397 MR/US DICOM images.
+  Ultrasound is 3D transrectal imaging. The collection also provides target and biopsy
+  spreadsheets, STL prostate/ROI surfaces, and biopsy overlay files. Because the dataset
+  contains native prostate-specific ultrasound resources and additional prostate ultrasound
+  datasets are expected to be added to the atlas, it is assigned to a dedicated Prostate
+  category rather than Other.
