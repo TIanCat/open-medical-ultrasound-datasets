@@ -1,45 +1,66 @@
-id: 0104
-name: "TG3K"
-full_name: "TG3K"
+id: '0104'
+name: TG3K
+full_name: Thyroid Gland 3K
+aliases: []
 release_year: 2022
-
 anatomy:
-  primary: "Thyroid"
-  target: "thyroid gland"
-
+  primary: Thyroid
+  target:
+  - Thyroid gland
 modality:
-  type: "B-mode ultrasound"
-  dimension: "2D"
-  temporal: "video frames"
-
+  type:
+  - B-mode
+  dimension: 2D
+  temporal: static
+  representation:
+  - image
 scale:
-  summary: "16 videos, approximately 3,583-3,585 extracted frames"
-
+- unit: image
+  count: 3585
 annotations:
-  summary: "pixel-wise thyroid-gland masks"
-
+  segmentation:
+    unit: image
+    type: binary
+    targets:
+    - Thyroid gland
+    format: mask
+    count: 3585
 tasks:
-  - "thyroid-gland segmentation"
-
+- segmentation
 access:
   level: open
   license: null
-
+  requirements: []
 paper:
-  title: "Thyroid Region Prior Guided Attention for Ultrasound Segmentation of Thyroid Nodules"
-  venue: "Computers in Biology and Medicine"
-  doi: "10.1016/j.compbiomed.2022.106389"
-
+  title: Thyroid Region Prior Guided Attention for Ultrasound Segmentation of Thyroid Nodules
+  venue: Computers in Biology and Medicine
+  doi: 10.1016/j.compbiomed.2022.106389
 data:
-  repository: "GitHub"
-  url: "https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation"
-  data_doi: null
-
+  repository: GitHub
+  url: https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation
+  doi: null
+  version: null
+acquisition:
+  countries:
+  - Germany
+  institutions:
+  - University Hospital Magdeburg
+  period: null
+  scanners:
+  - GE Logiq E9
+  transducers: null
+  frequencies: null
 family:
-  type: primary
+  type: derived
   parent: null
-
-verified:
-  date: 2026-09-02
-
-notes: "Public sources differ by two frames; both counts are retained as a range."
+  related:
+  - Thyroid Segmentation in Ultrasonography Dataset / 3DThyroid (Wunderling et al., 2017)
+verification:
+  status: verified
+  date: '2026-09-04'
+  sources:
+  - https://doi.org/10.1016/j.compbiomed.2022.106389
+  - https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation
+  - https://archive.iar.kit.edu/opencas/index.html?q=node%2F29
+  - https://doi.org/10.1117/12.2254234
+notes: TG3K is not an independent clinical acquisition. Gong et al. constructed it by extracting 2D frames from the 16 tracked 3D thyroid ultrasound records introduced by Wunderling et al. (2017), retaining frames in which the thyroid gland occupies more than 6% of the image. The 2022 paper reports 3,585 retained images. Some secondary resources report 3,583 frames; the atlas uses the count stated in the primary 2022 paper. The original 3D source dataset is not yet represented by a separate atlas ID, so family.parent is left null and the source family is recorded under family.related.

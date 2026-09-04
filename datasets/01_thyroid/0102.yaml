@@ -1,46 +1,102 @@
-id: 0102
+id: "0102"
 name: "TN-SCUI2020"
-full_name: "TN-SCUI2020"
+full_name: "Thyroid Nodule Segmentation and Classification in Ultrasound Images 2020"
+aliases:
+  - "TNSCUI2020"
+  - "TN-SCUI 2020"
+
 release_year: 2020
 
 anatomy:
   primary: "Thyroid"
-  target: "thyroid nodule"
+  target:
+    - "Thyroid nodule"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "4,554 images/cases: 3,644 training (1,641 benign, 2,003 malignant) and 910 test"
+  - unit: "image"
+    count: 4554
 
 annotations:
-  summary: "benign/malignant class label and detailed pixel-level nodule delineation for each image"
+  classification:
+    unit: "image"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 1641
+      Malignant: 2003
+    note: "The distribution above refers to the 3,644-image training set; test labels were used by the challenge organizers."
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Thyroid nodule"
+    format: "mask"
+    annotators:
+      - "Experienced clinicians"
 
 tasks:
-  - "thyroid-nodule binary segmentation"
-  - "benign-versus-malignant classification"
+  - "classification"
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 3644
+  test:
+    count: 910
+    note: "The challenge test cohort included 400 validation images and 510 final-ranking images."
 
 access:
-  level: open
-  license: "Challenge terms"
+  level: "open"
+  license: null
+  requirements: []
 
-paper:
-  title: "Thyroid Nodule Segmentation and Classification in Ultrasound Images"
-  venue: "TN-SCUI2020 / MICCAI Challenge"
-  doi: "10.5281/zenodo.3715942"
+paper: null
 
 data:
-  repository: "Zenodo / TN-SCUI2020"
-  url: "https://zenodo.org/records/3715942"
-  data_doi: "10.5281/zenodo.3715942"
+  repository: "Grand Challenge"
+  url: "https://tn-scui2020.grand-challenge.org/"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions:
+    - "Ruijin Hospital, Shanghai Jiao Tong University School of Medicine"
+    - "Chinese Medical Ultrasound Artificial Intelligence Alliance"
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://tn-scui2020.grand-challenge.org/Home/"
+    - "https://zenodo.org/records/3715942"
+    - "https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/TN-SCUI2020.md"
 
-notes: "The Zenodo record contains the challenge design document; dataset access is associated with the challenge."
+notes: >-
+  The dataset was released for the MICCAI 2020 TN-SCUI challenge. Each image is
+  associated with a benign/malignant label and a detailed nodule delineation.
+  The Zenodo DOI 10.5281/zenodo.3715942 identifies the accepted challenge design
+  document rather than a peer-reviewed dataset paper or the image archive itself,
+  so it is not entered under paper.doi or data.doi.

@@ -1,46 +1,104 @@
-id: 0103
+id: "0103"
 name: "KFGNet dataset"
-full_name: "KFGNet dataset"
+full_name: null
+aliases:
+  - "KFGNet thyroid ultrasound video dataset"
+
 release_year: 2022
 
 anatomy:
   primary: "Thyroid"
-  target: "thyroid nodule"
+  target:
+    - "Thyroid nodule"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "video"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "3,668 videos; about 23,219 extracted localization frames; reported classification test set of 244 videos (125 benign, 119 malignant)"
+  - unit: "video"
+    count: 3668
+  - unit: "frame"
+    count: 23219
+    note: "Frames extracted from the videos for training the nodule detection/localization stage."
 
 annotations:
-  summary: "nodule/key-frame localization annotations and video-level benign/malignant labels"
+  detection:
+    unit: "frame"
+    targets:
+      - "Thyroid nodule"
+    format: "bounding_box"
+    count: 23219
+
+  classification:
+    unit: "video"
+    num_classes: 2
+    classes:
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Benign: 125
+      Malignant: 119
+    note: "This distribution refers to the 244-video classification evaluation subset selected from the localization test cohort."
 
 tasks:
-  - "nodule and key-frame localization"
-  - "benign-versus-malignant video classification"
+  - "detection"
+  - "localization"
+  - "classification"
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
-  title: "KFGNet: Key-Frame Guided Network for Thyroid Nodule Recognition Using Ultrasound Videos"
-  venue: "Project release"
-  doi: null
+  title: "Key-frame Guided Network for Thyroid Nodule Recognition Using Ultrasound Videos"
+  venue: "Medical Image Computing and Computer Assisted Intervention (MICCAI)"
+  doi: "10.1007/978-3-031-16440-8_23"
 
 data:
   repository: "GitHub / Baidu Netdisk"
   url: "https://github.com/NeuronXJTU/KFGNet"
-  data_doi: null
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "China"
+  institutions: null
+  period: "April 2020 to December 2021"
+  scanners:
+    - "SAMSUNG MEDISON H60"
+    - "SAMSUNG MEDISON HS50"
+    - "SAMSUNG MEDISON X60"
+  transducers:
+    - "Linear-array transducer"
+  frequencies:
+    - "7.5 MHz"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://doi.org/10.1007/978-3-031-16440-8_23"
+    - "https://conferences.miccai.org/2022/papers/276-Paper0419.html"
+    - "https://github.com/NeuronXJTU/KFGNet"
 
-notes: "Official repository supplies a Baidu Netdisk dataset link and access code."
+notes: >-
+  The full dataset contains 3,668 B-mode ultrasound videos. For key-frame
+  localization, 23,219 frames were extracted to train a Faster R-CNN-based
+  nodule detector, and the 3,668 videos were split into 2,648 training,
+  504 validation, and 516 test videos. The paper reports a separate
+  244-video benign/malignant classification subset from the localization
+  test cohort because the full label distribution was highly imbalanced.
+  The repository provides the ultrasound data through Baidu Netdisk and
+  does not state a formal dataset license.

@@ -2,13 +2,31 @@
 
 A curated and continuously updated atlas of publicly accessible medical ultrasound imaging datasets.
 
+
 ## Overview
 
-- 103 verified primary dataset families
-- 86 open access
-- 15 application/registration
-- 2 controlled/restricted
-- Last updated: 2026-09-03
+This repository currently catalogs **90 medical ultrasound dataset resources** across **12 anatomical categories**.  
+Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
+
+| Code | Category | Datasets | ID range |
+|---|---|---:|---|
+| 00 | Breast | 15 | 0001–0015 |
+| 01 | Thyroid | 8 | 0101–0108 |
+| 02 | Obstetrics | 10 | 0201–0210 |
+| 03 | Cardiac | 9 | 0301–0309 |
+| 04 | Lung | 6 | 0401–0406 |
+| 05 | Liver & Gallbladder | 9 | 0501–0509 |
+| 06 | Musculoskeletal | 7 | 0601–0607 |
+| 07 | Vessel | 5 | 0701–0705 |
+| 08 | Brain | 8 | 0801–0808 |
+| 09 | Kidney | 2 | 0901–0902 |
+| 19 | Multi-anatomy | 3 | 1901–1903 |
+| 20 | Other | 8 | 2001–2008 |
+| **Total** | **12 categories** | **90** | — |
+
+> Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
+
+**Last updated:** 2026-09-04
 
 ## Scope
 
@@ -39,11 +57,11 @@ See [Scope](docs/scope.md).
 ### Thyroid
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [0101](datasets/01_thyroid/0101.yaml) | DDTI | Thyroid nodule | 2D B-mode images | 389 cases; 637 processed images | segmentation; TI-RADS analysis | 🟢 Open | [Paper](https://doi.org/10.1117/12.2073532) | [Data](https://cimalab.unal.edu.co/projects/detail/20/) |
-| [0102](datasets/01_thyroid/0102.yaml) | TN-SCUI2020 | Thyroid nodule | 2D B-mode images | 4,554 images/cases | segmentation; classification | 🟢 Open | [Paper](https://doi.org/10.5281/zenodo.3715942) | [Zenodo](https://zenodo.org/records/3715942) |
-| [0103](datasets/01_thyroid/0103.yaml) | KFGNet dataset | Thyroid nodule | 2D B-mode videos | 3,668 videos | localization; classification | 🟢 Open | Project release | [GitHub](https://github.com/NeuronXJTU/KFGNet) |
+| [0101](datasets/01_thyroid/0101.yaml) | DDTI | Thyroid | 2D B-mode | 389 original cases / 637 processed images | segmentation; grading | 🟢 Open | [Pedraza et al., 2015](https://doi.org/10.1117/12.2073532) | [CIM@LAB](https://cimalab.unal.edu.co/projects/detail/20/) |
+| [0102](datasets/01_thyroid/0102.yaml) | TN-SCUI2020 | Thyroid | 2D B-mode | 4,554 images | segmentation; classification | 🟢 Open | -- | [Zenodo](https://zenodo.org/records/3715942) |
+| [0103](datasets/01_thyroid/0103.yaml) | KFGNet | Thyroid | 2D B-mode cine | 3,668 videos / 23,219 localization frames | detection; localization; classification | 🟢 Open | [Wang et al., 2022](https://doi.org/10.1007/978-3-031-16440-8_23) | [GitHub](https://github.com/NeuronXJTU/KFGNet) |
 | [0104](datasets/01_thyroid/0104.yaml) | TG3K | Thyroid gland | 2D B-mode frames | ~3,583–3,585 frames | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
-| [0105](datasets/01_thyroid/0105.yaml) | TN3K | Thyroid nodule | 2D B-mode images | 3,493 images / 2,421 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
+| [0105](datasets/01_thyroid/0105.yaml) | TN3K | Thyroid | 2D B-mode | 3,493 images / 2,421 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
 | [0106](datasets/01_thyroid/0106.yaml) | SegThy | Thyroid | tracked US + MRI | 214 subjects in 2 subsets | 3D segmentation; volumetry | 🟢 Open | [Paper](https://doi.org/10.1371/journal.pone.0268550) | [Data](https://www.cs.cit.tum.de/en/camp/publications/segthy-dataset/) |
 | [0107](datasets/01_thyroid/0107.yaml) | Thyroid Ultrasound Cine-clip | Thyroid nodule | 2D B-mode cine clips | 192 nodules / 17,412 frames | segmentation; risk stratification | 🟡 Application | [Paper](https://doi.org/10.1148/radiol.211667) | [Project page](https://aimi.stanford.edu/datasets/thyroid-ultrasound-cine-clip) |
 | [0108](datasets/01_thyroid/0108.yaml) | TN5000 | Thyroid nodule | 2D B-mode images | 5,000 images | detection; classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-05757-4) | [Figshare](https://springernature.figshare.com/articles/dataset/TN5000_An_Ultrasound_Image_Dataset_for_Thyroid_Nodule_Detection_and_Classification/28455641) |
