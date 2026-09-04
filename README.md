@@ -57,8 +57,8 @@ See [Scope](docs/scope.md).
 ### Thyroid
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [0101](datasets/01_thyroid/0101.yaml) | DDTI | Thyroid nodule | 2D B-mode images | 389 cases; 637 processed images | segmentation; TI-RADS analysis | 🟢 Open | [Paper](https://doi.org/10.1117/12.2073532) | [Data](https://cimalab.unal.edu.co/projects/detail/20/) |
-| [0102](datasets/01_thyroid/0102.yaml) | TN-SCUI2020 | Thyroid nodule | 2D B-mode images | 4,554 images/cases | segmentation; classification | 🟢 Open | [Paper](https://doi.org/10.5281/zenodo.3715942) | [Zenodo](https://zenodo.org/records/3715942) |
+| [0101](datasets/01_thyroid/0101.yaml) | DDTI | Thyroid | 2D B-mode | 389 original cases / 637 processed images | segmentation; grading | 🟢 Open | [Pedraza et al., 2015](https://doi.org/10.1117/12.2073532) | [CIM@LAB](https://cimalab.unal.edu.co/projects/detail/20/) |
+| [0102](datasets/01_thyroid/0102.yaml) | TN-SCUI2020 | Thyroid | 2D B-mode | 4,554 images | segmentation; classification | 🟢 Open | -- | [Zenodo](https://zenodo.org/records/3715942) |
 | [0103](datasets/01_thyroid/0103.yaml) | KFGNet dataset | Thyroid nodule | 2D B-mode videos | 3,668 videos | localization; classification | 🟢 Open | Project release | [GitHub](https://github.com/NeuronXJTU/KFGNet) |
 | [0104](datasets/01_thyroid/0104.yaml) | TG3K | Thyroid gland | 2D B-mode frames | ~3,583–3,585 frames | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
 | [0105](datasets/01_thyroid/0105.yaml) | TN3K | Thyroid nodule | 2D B-mode images | 3,493 images / 2,421 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2022.106389) | [GitHub](https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation) |
