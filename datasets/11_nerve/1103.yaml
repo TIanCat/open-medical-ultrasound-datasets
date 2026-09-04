@@ -1,0 +1,160 @@
+id: "1103"
+name: "Regional-US Brachial Plexus"
+full_name: "Brachial Plexus and Needle Annotations Data in Ultrasound Videos"
+aliases:
+  - "Regional-US Brachial Plexus Dataset"
+  - "Brachial Plexus and Needle Annotations"
+
+release_year: 2022
+
+anatomy:
+  primary: "Peripheral nerve"
+  target:
+    - "Brachial plexus"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "cine"
+  representation:
+    - "video"
+
+scale:
+  - unit: "participant"
+    count: 227
+    note: "The associated publications report 227 prospectively recruited subjects."
+  - unit: "video"
+    count: 227
+    note: >-
+      The repository and associated publications report 227 unique ultrasound
+      videos. The three scanner-specific cohorts described in detail comprise
+      196 Esaote, 15 Sonosite, and 15 Butterfly videos; the repository also
+      contains an additional annotated demo video, while its participant
+      linkage is not explicitly documented.
+  - unit: "frame"
+    count: 41000
+    note: >-
+      The authors report approximately 41,000 annotated video frames overall.
+      Detailed scanner-specific counts reported in the literature are 34,926
+      Esaote frames, 2,186 Sonosite frames, and 3,088 Butterfly frames; these
+      sum to 40,200 before considering the additional demo video.
+
+annotations:
+  classification:
+    unit: "video"
+    label_type: "multiclass"
+    classes:
+      - "Supraclavicular brachial plexus"
+      - "Interscalene brachial plexus"
+      - "Negative"
+    format: "CSV"
+    note: >-
+      Scanner-specific subjects_data.csv files provide the anatomical-region
+      label for each listed video.
+
+  segmentation:
+    unit: "frame"
+    type: "binary"
+    targets:
+      - "Brachial plexus"
+      - "Needle"
+    format: "mask"
+    annotators:
+      - "Experienced anesthesiologists"
+    annotation_method: >-
+      Brachial-plexus annotations were created with expert annotation assisted
+      by object tracking and active-contour methods. Needle masks were generated
+      from manually annotated needle-tip and skin-entry coordinates.
+    note: >-
+      Brachial-plexus masks are available across the scanner-specific video
+      cohorts. Needle masks are available only for the subset of Sonosite videos
+      acquired with the needle in situ.
+
+  landmarks:
+    unit: "frame"
+    targets:
+      - "Needle tip"
+      - "Needle tail-end at skin"
+    format: "JSON_coordinates"
+    annotators:
+      - "Experienced anesthesiologists"
+    note: >-
+      Needle landmark annotations are provided for six Sonosite videos. The
+      coordinate files are stored as JSON-formatted text files indexed by frame.
+
+tasks:
+  - "classification"
+  - "segmentation"
+  - "landmark_detection"
+
+access:
+  level: "open"
+  license: null
+  requirements:
+    - "Non-commercial use under the repository-stated data use agreement"
+
+paper:
+  title: "Nerve Block Target Localization and Needle Guidance for Autonomous Robotic Ultrasound Guided Regional Anesthesia"
+  venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  doi: "10.1109/IROS58592.2024.10801467"
+
+data:
+  repository: "GitHub"
+  url: "https://github.com/Regional-US/brachial_plexus"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "India"
+  institutions:
+    - "All India Institute of Medical Sciences, New Delhi"
+  period: null
+  scanners:
+    - "Esaote MyLab One"
+    - "Fujifilm Sonosite M-Turbo"
+    - "Butterfly iQ"
+  transducers:
+    - "High-frequency linear probe"
+  frequencies:
+    - "12-15 MHz"
+  note: >-
+    The prospective study was conducted jointly by the All India Institute of
+    Medical Sciences, New Delhi, and the International Institute of Information
+    Technology, Hyderabad. The 12-15 MHz linear-probe specification is reported
+    for the main Esaote MyLab One cohort. Subjects were scanned for
+    supraclavicular and interscalene brachial plexus, with varying gain and
+    imaging-depth settings to increase acquisition diversity.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://github.com/Regional-US/brachial_plexus"
+    - "https://doi.org/10.1109/IROS58592.2024.10801467"
+    - "https://arxiv.org/abs/2308.03717"
+
+notes: >-
+  This is a multi-device brachial-plexus ultrasound video dataset designed for
+  ultrasound-guided regional-anesthesia research. The public repository was
+  created and the first data were uploaded in December 2022; needle annotation
+  data were added subsequently. The repository contains scanner-specific data
+  from Esaote MyLab One, Sonosite M-Turbo, and Butterfly iQ systems, together
+  with brachial-plexus annotations, active-contour-assisted masks, and a
+  Sonosite needle-annotation subset. Although bounding-box annotation text files
+  are present, the repository explicitly states that individual boxes have no
+  independent meaning and that their union is used to define the nerve-plexus
+  mask; therefore, object detection is not listed as a native dataset task.
+  The authors report 227 subjects, 227 videos, and approximately 41,000
+  annotated frames. Detailed device-specific counts account for 226 videos and
+  40,200 frames, while the repository additionally contains one annotated demo
+  video; the exact correspondence of this demo video to the reported total is
+  not explicitly documented. The repository does not provide a machine-readable
+  open-source/data license, but states that the deidentified videos are shared
+  under a non-commercial data use agreement.
