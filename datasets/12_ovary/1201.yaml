@@ -1,0 +1,106 @@
+id: "1201"
+name: "Ovarian Ultrasound Image Dataset"
+full_name: "Ovarian Ultrasound Image Dataset"
+aliases:
+  - "Multiclass Ovarian Disorder Dataset"
+
+release_year: 2025
+
+anatomy:
+  primary: "Ovary"
+  target:
+    - "Ovary"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: 6879
+
+annotations:
+  classification:
+    unit: "image"
+    num_classes: 5
+    classes:
+      - "Healthy ovary"
+      - "Dominant follicle"
+      - "Polycystic ovary"
+      - "Simple cyst"
+      - "Complex cyst"
+    distribution:
+      "Healthy ovary": 1465
+      "Dominant follicle": 1297
+      "Polycystic ovary": 1423
+      "Simple cyst": 1326
+      "Complex cyst": 1368
+    annotators:
+      - "Medical experts"
+    note: >-
+      The Kaggle data card states that each image was labeled by medical
+      experts. The annotation protocol, number of annotators, and clinical
+      reference standard are not documented.
+
+tasks:
+  - "classification"
+
+access:
+  level: "open"
+  license: "CC0: Public Domain"
+  requirements: []
+
+paper: null
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/datasets/ucimachinelearning/ovarian-ultrasound-image-dataset"
+  doi: null
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: >-
+    The Kaggle data card describes the images as high-resolution grayscale
+    ovarian ultrasound scans collected from clinical ultrasound examinations,
+    but does not provide acquisition-site, scanner, transducer, patient-count,
+    or imaging-protocol information.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-04"
+  sources:
+    - "https://www.kaggle.com/datasets/ucimachinelearning/ovarian-ultrasound-image-dataset"
+    - "https://www.kaggle.com/ucimachinelearning/datasets"
+
+notes: >-
+  This Kaggle release contains 6,879 grayscale ovarian ultrasound images for
+  five-class ovarian-condition classification: healthy ovary, dominant
+  follicle, polycystic ovary, simple cyst, and complex cyst. The class counts
+  reported on the data card sum exactly to 6,879 images. No segmentation,
+  detection, landmark, or measurement annotations are documented, so
+  classification is treated as the only native task.
+
+  Dataset provenance is incompletely documented. The Kaggle page does not
+  report the number of patients, acquisition institution or country, scanner,
+  transducer, acquisition period, official train/validation/test split, or a
+  dedicated dataset publication. The uploader account is named "UCI Machine
+  Learning", but its Kaggle profile identifies it as Universal Computing
+  Innovations; therefore, this dataset should not be described as an official
+  UCI Machine Learning Repository resource. The Kaggle data card lists the
+  dataset license as CC0: Public Domain. Verification is consequently marked
+  partial despite the dataset being publicly downloadable.

@@ -175,6 +175,12 @@ See [Scope](docs/scope.md).
 | [1103](datasets/11_nerve/1103.yaml) | Regional-US Brachial Plexus | Supraclavicular / interscalene brachial plexus | 2D B-mode cine | 227 videos / 227 subjects | classification; segmentation; landmark detection | 🟢 Open | [Tyagi et al., 2024](https://doi.org/10.1109/IROS58592.2024.10801467) | [GitHub](https://github.com/Regional-US/brachial_plexus) |
 
 
+### Ovary
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [1201](datasets/12_ovary/1201.yaml) | Ovarian Ultrasound Image Dataset | Ovary | 2D B-mode | 6,879 images | classification | 🟢 Open| -- | [Kaggle](https://www.kaggle.com/datasets/ucimachinelearning/ovarian-ultrasound-image-dataset) |
+
+
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
