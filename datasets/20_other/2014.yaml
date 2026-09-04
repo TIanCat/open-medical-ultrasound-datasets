@@ -1,0 +1,184 @@
+id: US025
+name: Regional-US brachial_plexus
+display_name: Regional-US brachial plexus and needle dataset
+release_year: 2023
+release_year_basis: The associated preprint and public dataset announcement appeared in 2023; the GitHub repository itself was created in December 2022
+formal_dataset_name_caution: The paper and repository do not assign a distinct formal dataset title, so the display name is descriptive rather than quoted as an official name
+
+anatomy:
+  primary: Brachial plexus
+  regions:
+    - Supraclavicular brachial plexus
+    - Interscalene brachial plexus
+  nearby_structures_considered_for_guidance:
+    - Subclavian artery
+    - Pleura
+    - Clavicle
+  intervention: Ultrasound-guided regional anesthesia
+
+modality:
+  type: 2D ultrasound video
+  main_system:
+    device: eSaote MyLab One
+    probe_frequency_MHz: 12-15
+    public_video_resolution_pixels: 542 x 562
+  external_generalization_systems:
+    - Sonosite M-Turbo
+    - Butterfly IQ handheld scanner
+  file_formats:
+    videos: MP4
+    masks: JPG
+    bounding_boxes_and_needle_coordinates: TXT
+    subject_and_acquisition_metadata: CSV
+
+scale:
+  paper_and_README_claim:
+    patients: 227
+    videos: 227
+    frames: Approximately 41,000
+  current_repository_machine_folders:
+    patients_or_video_records: 226
+    videos: 226
+    per_frame_nerve_active_contour_masks: 40200
+    by_system:
+      eSaote:
+        videos: 196
+        frames_and_masks: 34926
+        positive_frames_reported_in_metadata: 26966
+      Sonosite:
+        videos: 15
+        frames_and_masks: 2186
+      Butterfly:
+        videos: 15
+        frames_and_masks: 3088
+  current_repository_demo:
+    additional_video: 1
+    additional_demo_masks: 588
+    caution: The demo is outside the three machine-specific folders and has no row in their subject metadata; whether it accounts for the paper's 227th patient is not documented
+  count_reconciliation: The three machine datasets total 226 videos and 40,200 frames; the repository has 227 MP4 files only when the separate demo video is included
+
+annotations:
+  nerve:
+    targets:
+      - Supraclavicular brachial plexus
+      - Interscalene brachial plexus
+    seed_annotation: Expert anesthesiologists drew one or more bounding boxes over the approximate plexus area on selected frames
+    propagation: Subsequent frames were tracked with CSR-DCF and KCF algorithms
+    review: Automated boxes were approved or rejected by an annotator; rejected cases were redrawn as new seeds, with second-expert review for uncertain frames
+    union_mask: Multiple boxes in one frame are fused; individual boxes do not have separate semantic meaning
+    final_mask: The fused contour was contracted with morphological geodesic active contours using video-specific parameters selected to match plexus boundaries
+    interpretation_caution: These are expert-seeded and vetted algorithmic masks, not independent manual pixel-by-pixel contours for every frame
+    current_repository:
+      bounding_box_TXT_files: 226
+      active_contour_JPG_masks: 40200
+      empty_bounding_box_files: 2
+      empty_file_context: Both correspond to videos marked negative with zero positive labels in the metadata, so they are not assumed to be corrupt
+  needle:
+    videos: 6
+    paper_frames: 1061
+    current_repository_mask_JPGs: 1060
+    current_repository_coordinate_TXTs: 6
+    labels: Needle tip and skin-entry/tail-end coordinates; four-pixel-wide connecting line used as the needle mask
+    discrepancy: Sonosite metadata lists 124 frames for s683 but the current needle-mask folder has 123 files; the other five video mask counts match metadata
+
+tasks:
+  - Supraclavicular and interscalene brachial plexus localization
+  - Brachial plexus segmentation
+  - Cross-scanner generalization and fine-tuning
+  - Needle segmentation
+  - Needle-tip and skin-entry localization
+  - Needle trajectory-angle estimation and extrapolation
+  - Target-intersection guidance for robotic regional anesthesia research
+
+splits:
+  fixed_public_train_validation_test_files: Not provided
+  paper_protocol: Stratified five-fold cross-validation with 61:19:20 train/validation/test proportions
+  stratification_factors:
+    - Left or right side
+    - High, medium, or low gain
+    - Male or female sex
+  unit_caution: Derived experiments should split by patient/video rather than by frame
+  needle_protocol: Five needle videos for fine-tuning and the sixth for testing in each reported experiment
+
+access:
+  level: public-download with use restriction
+  registration_required: false for the public GitHub repository
+  stated_terms: Non-commercial data-use agreement
+  standalone_LICENSE_file: false
+  GitHub_detected_license: null
+  caution: The README states a non-commercial agreement but does not provide a complete standalone license text; users should contact the authors if their intended use is unclear
+
+cohort_and_acquisition:
+  study_design: Prospective
+  main_sites:
+    - All India Institute of Medical Sciences, New Delhi, India
+    - International Institute of Information Technology, Hyderabad, India
+  ethics_approval: IEC/18/1/2020, RP-02/2020
+  written_informed_consent: true
+  age_range_years: 20-80
+  main_cohort_exclusions:
+    - Known brachial plexus injury
+    - Brachial plexopathy
+    - Cervical trauma
+    - Limitation of neck movement
+    - Patient refusal
+
+paper:
+  title: Nerve Block Target Localization and Needle Guidance for Autonomous Robotic Ultrasound Guided Regional Anesthesia
+  venue: 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  pages: 5867-5872
+  publication_year: 2024
+  doi: 10.1109/IROS58592.2024.10801467
+  preprint: arXiv:2308.03717
+
+data:
+  repository: GitHub
+  landing_page: https://github.com/Regional-US/brachial_plexus
+  default_branch: master
+  repository_created: 2022-12-10
+  last_data_push_observed: 2024-03-25
+  persistent_dataset_identifier: Not provided
+
+quality_checks:
+  complete_paper_read: true
+  annotation_and_task_pages_visually_checked: true
+  current_GitHub_tree:
+    retrieved_recursively: true
+    truncated: false
+    entries: 42572
+    files: 42321
+    total_blob_bytes: 842106988
+    file_types:
+      JPG: 41848
+      TXT: 233
+      MP4: 227
+      MD: 5
+      GIF: 5
+      CSV: 3
+  machine_metadata_CSVs_parsed: true
+  machine_video_counts_match_metadata_rows: true
+  machine_mask_counts_match_metadata_frame_totals: true
+  paper_repository_count_discrepancies_preserved: true
+  standalone_license_search: No LICENSE file and no GitHub-detected license
+  full_video_pixel_content_downloaded: false
+  reason_not_downloaded: The complete recursive file tree, metadata CSVs, README, and annotation inventory were sufficient for file-level verification; full video content was not required for this catalogue audit
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the complete IROS paper and visually inspected the dataset-curation, annotation, generalization, and needle-guidance pages
+    - Confirmed the formal proceedings citation, dates, pages, and DOI through Crossref
+    - Read the current GitHub README and all three machine metadata CSV files
+    - Retrieved the complete non-truncated Git tree and counted all videos, nerve masks, needle masks, coordinate files, and metadata records
+    - Reconciled the paper's approximate counts with exact current repository counts without treating the separate demo as a documented 227th patient
+    - Distinguished expert-seeded/vetted tracking and active-contour masks from fully manual per-frame pixel contours
+  sources:
+    - https://github.com/Regional-US/brachial_plexus
+    - https://doi.org/10.1109/IROS58592.2024.10801467
+    - https://arxiv.org/abs/2308.03717
+
+notes: The public repository is directly downloadable but states a non-commercial data-use agreement without a standalone license. The paper and README report 227 patients/videos and approximately 41,000 annotated frames. In the current branch, the three scanner-specific datasets contain 226 videos and exactly 40,200 per-frame nerve masks; a separate demo adds one MP4 and 588 masks but is not represented in the scanner metadata. The repository also contains 1,060 needle masks versus 1,061 frames reported in the paper.
