@@ -162,7 +162,7 @@ See [Scope](docs/scope.md).
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [1001](datasets/10_prostate/1001.yaml) | Prostate-MRI-US-Biopsy | Prostate / prostate cancer | 3D transrectal US + MRI | 1,151 patients / 2,799 studies / 102,397 MR+US DICOM images | segmentation; localization; grading; measurement; registration | 🟢 Open | -- | [TCIA](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/) |
-
+| [1002](datasets/10_prostate/1002.yaml) | μ-RegPro | Prostate  | 3D TRUS + T2-weighted MRI | 108 paired cases (65 train / 8 validation / 35 test) | registration; segmentation; landmark detection | 🟢 Open | -- | [ μ-RegPro / Zenodo](https://muregpro.github.io/) |
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

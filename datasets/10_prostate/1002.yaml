@@ -1,0 +1,162 @@
+id: "1002"
+name: "μ-RegPro"
+full_name: "MR to Ultrasound Registration for Prostate Challenge"
+aliases:
+  - "mu-RegPro"
+  - "MR to Ultrasound Registration for Prostate Challenge"
+
+release_year: 2023
+
+anatomy:
+  primary: "Prostate"
+  target:
+    - "Prostate gland"
+    - "Prostate anatomical landmarks"
+    - "Prostate lesions"
+
+modality:
+  type:
+    - "B-mode"
+    - "MRI"
+  dimension: "3D"
+  temporal: "static"
+  representation:
+    - "volume"
+
+scale:
+  - unit: "patient"
+    count: 108
+  - unit: "pair"
+    count: 108
+    note: "Each case contains one paired pre-operative T2-weighted MRI volume and one reconstructed 3D TRUS volume."
+  - unit: "volume"
+    count: 216
+
+annotations:
+  segmentation:
+    unit: "volume"
+    type: "binary"
+    targets:
+      - "Prostate gland"
+    format: "voxel_mask"
+    count: 73
+    note: >-
+      Prostate masks are publicly provided for the 65 training and 8 validation
+      cases. Test labels were hidden during the challenge.
+
+  landmarks:
+    unit: "case"
+    targets:
+      - "Prostate apex"
+      - "Prostate base"
+      - "Urethra"
+      - "Visible lesion"
+      - "Zonal structures"
+      - "Gland junctions"
+      - "Vas deferens"
+      - "Seminal vesicles"
+      - "Calcifications"
+      - "Fluid-filled cysts"
+    format: "3D_coordinates"
+    count: 73
+    note: >-
+      Training and validation cases contain patient-specific corresponding
+      anatomical landmarks visible in both MRI and TRUS. At least three
+      additional landmarks per case were used for challenge evaluation.
+
+  registration:
+    unit: "case"
+    modalities:
+      - "MRI"
+      - "Ultrasound"
+    format: "paired_volumes_with_corresponding_labels"
+    note: >-
+      The challenge task is non-rigid registration of pre-operative MRI to
+      intra-operative 3D TRUS. No ground-truth dense deformation field is
+      provided; registration is evaluated using prostate overlap, landmark
+      target-registration error, boundary distance, deformation regularity,
+      and runtime.
+
+tasks:
+  - "registration"
+  - "segmentation"
+  - "landmark_detection"
+
+splits:
+  unit: "case"
+  training:
+    count: 65
+  validation:
+    count: 8
+  test:
+    count: 35
+
+access:
+  level: "open"
+  license: "CC BY-NC-SA 4.0"
+  requirements:
+    - "Research use only"
+    - "Non-commercial use"
+    - "Redistribution and reuse must follow the challenge data-use policy"
+
+paper: null
+
+data:
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/8004388"
+  doi: "10.5281/zenodo.8004388"
+  version: "1.1.0"
+  additional_resources:
+    challenge_homepage:
+      url: "https://muregpro.github.io/"
+    challenge_description:
+      doi: "10.5281/zenodo.7844907"
+    holdout_test:
+      doi: "10.5281/zenodo.19414480"
+      release_year: 2026
+      note: "The holdout test dataset was separately released on Zenodo in 2026."
+
+acquisition:
+  countries:
+    - "United Kingdom"
+  institutions:
+    - "University College London Hospital"
+  period: null
+  scanners:
+    - "1.5 T MRI scanner"
+    - "3 T MRI scanner"
+    - "Standard clinical ultrasound system"
+  transducers:
+    - "Bi-plane transperineal probe"
+  frequencies:
+    - "9.0 MHz"
+  note: >-
+    Each TRUS volume was reconstructed from 57-112 parasagittal frames acquired
+    by rotating a digital transperineal stepper. MRI volumes were T2-weighted.
+    Both MRI and TRUS volumes were resampled to 0.8 mm isotropic voxel spacing.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://muregpro.github.io/"
+    - "https://muregpro.github.io/data.html"
+    - "https://muregpro.github.io/task.html"
+    - "https://muregpro.github.io/policies.html"
+    - "https://zenodo.org/records/8004388"
+    - "https://doi.org/10.5281/zenodo.19414480"
+
+notes: >-
+  μ-RegPro is an independent UCLH prostate MRI-TRUS registration dataset derived
+  from participants in the SmartTarget Biopsy Clinical Trial and is unrelated to
+  the UCLA/TCIA Prostate-MRI-US-Biopsy acquisition family (1001). Of 141 enrolled
+  men, 108 had transverse ultrasound acquisitions suitable for the challenge and
+  were included. The 108 cases were split into 65 training, 8 validation, and
+  35 test cases. No dedicated peer-reviewed dataset/challenge paper was identified,
+  so paper is set to null rather than using the Zenodo challenge-description DOI
+  as a paper DOI.
