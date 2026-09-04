@@ -1,0 +1,150 @@
+id: US021
+name: μ-RegPro
+full_name: MR to Ultrasound Registration for Prostate Challenge
+release_year: 2023
+release_year_basis: The challenge and version 1.0.0 training dataset were released in 2023
+
+anatomy:
+  primary: Prostate gland
+  targets:
+    - Whole prostate gland
+    - Paired anatomical and pathological landmarks visible in MR and TRUS
+
+modality:
+  MRI:
+    sequence: T2-weighted MRI
+    field_strength_T:
+      - 1.5
+      - 3
+    volume_shape_voxels: 120 x 128 x 128
+  ultrasound:
+    type: Transrectal ultrasound acquired with a transperineal probe
+    source_frames_per_case: 57-112
+    acquisition_frequency_MHz: 9.0
+    acquisition_depth_mm: 65
+    reconstruction: Parasagittal frames reconstructed into a 3D volume
+    volume_shape_voxels: 81 x 118 x 88
+  pairing: One pre-operative MR volume and one intra-operative TRUS volume per included patient
+  resampling: Both modalities resampled to 0.8 mm isotropic voxels
+  format: Compressed NIfTI
+
+scale:
+  enrolled_in_source_trial: 141
+  completed_both_biopsy_strategies: 129
+  included_patients: 108
+  paired_MR_TRUS_volumes: 108
+  excluded_sagittal_plane_cases: 33
+  included_plane: Transverse
+
+annotations:
+  MR_label_volumes: 108
+  TRUS_label_volumes: 108
+  downloaded_label_shape:
+    MRI: 120 x 128 x 128 x 6
+    TRUS: 81 x 118 x 88 x 6
+  downloaded_label_values:
+    - 0
+    - 255
+  official_description:
+    - Complete prostate-gland segmentations
+    - Paired anatomical and pathological landmarks
+    - Apex and base
+    - Urethra and visible lesions
+    - Zonal structures and junctions
+    - Vas deferens and seminal vesicles
+    - Calcifications and fluid-filled cysts when present
+  provenance:
+    MR_prostate_masks: Acquired under the SmartTarget clinical-trial protocol
+    TRUS_prostate_masks: Automatically contoured on original TRUS slices and manually edited by two medical-imaging research fellows
+  channel_mapping_caution: The downloaded files are six-channel binary label volumes, but a per-channel label dictionary was not found in the Zenodo archives
+
+tasks:
+  - MRI-to-TRUS deformable registration
+  - Prostate-gland and landmark alignment
+  - Multimodal registration benchmarking
+  - Registration-assisted prostate biopsy or focal-therapy research
+
+splits:
+  training_patients: 65
+  validation_patients: 8
+  holdout_test_patients: 35
+  patient_disjoint: true by case numbering and official split description
+  holdout_history: Labels were hidden during the challenge; a labeled holdout archive was publicly deposited in 2026
+
+access:
+  level: public-download with use restrictions
+  registration_required: false for the tested Zenodo downloads
+  training_validation_license: CC BY-NC-SA 4.0
+  challenge_policy: Research use only; commercial use prohibited
+  holdout_Zenodo_license_metadata: CC BY 4.0
+  holdout_description_terms: Research use only and non-commercial
+  caution: The holdout record's license metadata conflicts with its description and the challenge-wide policy; the stricter terms should be followed until the authors clarify them
+
+cohort_and_acquisition:
+  source: SmartTarget Biopsy Clinical Trial
+  institution: University College London Hospital, London, UK
+  population: Men with a discrete PI-RADS 3-5 lesion on multiparametric MRI who required targeted transperineal biopsy
+
+paper:
+  role: Dataset record and challenge description; no peer-reviewed challenge-results paper was identified
+  title: MR to Ultrasound Registration for Prostate Challenge - Dataset
+  publisher: Zenodo
+  publication_year: 2023
+  doi: 10.5281/zenodo.7870104
+
+data:
+  challenge_page: https://muregpro.github.io/
+  dataset_description: https://muregpro.github.io/data.html
+  data_policy: https://muregpro.github.io/policies.html
+  training_validation_concept_doi: 10.5281/zenodo.7870104
+  training_validation_version_doi: 10.5281/zenodo.8004388
+  holdout_concept_doi: 10.5281/zenodo.19414480
+  holdout_version_doi: 10.5281/zenodo.19414481
+
+quality_checks:
+  complete_public_archives_downloaded: true
+  archives:
+    training:
+      cases: 65
+      bytes: 109513114
+      md5: a8ba7ddd5decef2fe5bfaa91a7176a1d
+    validation:
+      cases: 8
+      bytes: 12678307
+      md5: 3e0b7859269029307393c2bf9a9cb9ef
+    holdout:
+      cases: 35
+      bytes: 58341791
+      md5: 01afe9ead83e6f60cf0975ea08f4ba70
+  ZIP_integrity: passed for all three archives
+  per_case_files_verified:
+    MR_image: true
+    MR_label: true
+    TRUS_image: true
+    TRUS_label: true
+  file_count_matches_split: true
+  label_header_and_values_sampled: true
+  licensing_conflict_preserved: true
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the official challenge dataset, task, assessment, and policy pages
+    - Confirmed Zenodo metadata, version identifiers, file sizes, checksums, and licenses
+    - Downloaded and integrity-tested the training, validation, and newly released holdout archives
+    - Counted MR images, MR labels, TRUS images, and TRUS labels for every split
+    - Parsed representative NIfTI headers and label bytes without assuming an undocumented channel-to-structure mapping
+    - Searched for a peer-reviewed challenge-results paper and retained the Zenodo dataset record as the citable resource
+  sources:
+    - https://muregpro.github.io/data.html
+    - https://muregpro.github.io/task.html
+    - https://muregpro.github.io/assessment.html
+    - https://muregpro.github.io/policies.html
+    - https://doi.org/10.5281/zenodo.7870104
+    - https://doi.org/10.5281/zenodo.19414480
+
+notes: This is a 108-patient paired MR-TRUS registration dataset, not an approximately sized dataset family. All three official splits are now publicly downloadable. The current archives contain paired images and six-channel binary label volumes for every case. Because the 2026 holdout record has conflicting permissive license metadata and non-commercial text, this entry reports the stricter research-only restriction.
