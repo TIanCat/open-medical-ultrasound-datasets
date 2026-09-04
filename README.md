@@ -161,7 +161,7 @@ See [Scope](docs/scope.md).
 ### Prostate
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [1001](datasets/10_prostate/1001.yaml) | Prostate-MRI-US-Biopsy | Prostate / prostate cancer | 3D transrectal US + MRI | 1,151 patients / 2,799 studies / 102,397 MR+US DICOM images | segmentation; localization; grading; measurement; registration | 🟢 Open | [Sonn et al., 2013](https://doi.org/10.1016/j.juro.2012.08.095) | [TCIA](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/) |
+| [1001](datasets/10_prostate/1001.yaml) | Prostate-MRI-US-Biopsy | Prostate / prostate cancer | 3D transrectal US + MRI | 1,151 patients / 2,799 studies / 102,397 MR+US DICOM images | segmentation; localization; grading; measurement; registration | 🟢 Open | -- | [TCIA](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/) |
 
 
 ### Multi‑anatomy
