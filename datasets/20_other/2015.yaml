@@ -1,0 +1,87 @@
+id: US028
+name: Polycystic Ovary Ultrasound Images Dataset
+release_year: 2021
+release_year_basis: Dataverse version 1.0 was published on 2021-03-04
+
+anatomy:
+  primary: Ovary
+  condition: Polycystic ovary syndrome
+
+modality:
+  type: 2D ultrasound images
+  released_format: JPEG
+  B_mode_status: Not explicitly stated on the data page
+  acquisition_device: Not reported
+
+scale:
+  image_files: 54
+  patients_or_subjects: Not reported
+  archive_size: Approximately 1.6 MB
+
+annotations:
+  level: image
+  classes:
+    - PCOS
+    - Normal
+  provenance: The data-page description states that specialist doctors labeled the images
+  segmentation_masks: false
+  diagnostic_reference_procedure: Not reported
+
+tasks:
+  - Binary image classification of PCOS versus normal ovaries
+
+splits:
+  predefined_directories:
+    - train
+    - validation
+    - testing
+  per_split_counts: Not stated in the catalogue metadata
+  subject_disjointness: Cannot be assessed because subject identifiers and patient count are not supplied
+
+access:
+  level: open
+  registration_required: false
+  guestbook_required: false
+  license: CC0 1.0
+
+paper:
+  dedicated_dataset_paper: false
+  related_publication:
+    title: Study of Segmentation Technique and Stereology to Detect PCO Follicles on USG Images
+    venue: Journal of Computer Science
+    year: 2018
+    doi: 10.3844/jcssp.2018.351.359
+    caution: This predates the Dataverse release and is listed only as a related publication, not as a formal dataset descriptor
+
+data:
+  host: Telkom University Dataverse
+  version: "1.0"
+  persistent_id: doi:10.34820/FK2/QVCP6V
+  landing_page: https://doi.org/10.34820/FK2/QVCP6V
+
+quality_checks:
+  public_file_inventory_checked: true
+  JPEG_files_listed: 54
+  archive_downloaded: false
+  unsupported_details_left_unknown:
+    - Patient count
+    - Subject identifiers
+    - Acquisition device and protocol
+    - Diagnostic-reference procedure
+    - Exact per-split image counts
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the official Dataverse version 1.0 catalogue page
+    - Checked its file inventory, class description, access settings, and license
+    - Distinguished the released image labels from tasks discussed in related publications
+  sources:
+    - https://doi.org/10.34820/FK2/QVCP6V
+    - https://doi.org/10.3844/jcssp.2018.351.359
+
+notes: The release supports image-level PCOS-versus-normal classification only. No pixel-wise masks are listed, and the absence of subject identifiers means leakage between the provided image-level folders cannot be independently excluded.

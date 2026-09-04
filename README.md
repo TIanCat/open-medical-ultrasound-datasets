@@ -185,6 +185,7 @@ See [Scope](docs/scope.md).
 | [2012](datasets/20_other/2012.yaml) | Ultrasound Nerve Segmentation | Brachial plexus / neck | 2D grayscale ultrasound TIFF frames | 11,143 images: 5,635 train + 5,508 test | brachial plexus segmentation/localization | 🟡 Kaggle sign-in + competition rules | Kaggle competition | [Kaggle](https://www.kaggle.com/competitions/ultrasound-nerve-segmentation/data) |
 | [2013](datasets/20_other/2013.yaml) | UBPD | Brachial plexus + surrounding neck structures | 2D frames from 101 ultrasound videos | methods/split: 1,052 images; abstract: 1,055 | four-class nerve/artery/vein/muscle segmentation | 🔴 Official site unreachable; terms unverified | [Paper](https://doi.org/10.1016/j.media.2022.102511) | [Authors' site](https://UBPD.worldwidetracing.com:9443/) |
 | [2014](datasets/20_other/2014.yaml) | Regional-US brachial plexus and needle dataset | Brachial plexus / neck | Videos + 2D masks from three US systems | paper/README: 227 videos / ~41,000 frames; machine folders: 226 / 40,200 | nerve localization/segmentation; needle tip/trajectory guidance | 🟡 Public download; non-commercial agreement stated | [Paper](https://doi.org/10.1109/IROS58592.2024.10801467) | [GitHub](https://github.com/Regional-US/brachial_plexus) |
+| [2015](datasets/20_other/2015.yaml) | Polycystic Ovary Ultrasound Images Dataset | Ovary | 2D ultrasound JPEG images | 54 images; patient count not reported | PCOS-vs-normal image classification | 🟢 Open; CC0 1.0 | Dataverse data resource | [Dataverse](https://doi.org/10.34820/FK2/QVCP6V) |
 
 ## Contributing
 
