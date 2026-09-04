@@ -1,0 +1,113 @@
+id: US023
+name: Ultrasound Nerve Segmentation
+release_year: 2016
+release_year_basis: The Kaggle competition opened on 2016-05-19
+
+anatomy:
+  primary: Brachial plexus
+  region: Neck
+
+modality:
+  type: 2D grayscale ultrasound frames
+  file_format: TIFF
+  image_dimensions_pixels: 580 x 420, consistently reported in analyses of the Kaggle files but not displayed in the current Kaggle dataset description
+  temporal_caution: Kaggle states that the acquisition machine produced identical or very similar frames; these should not be treated as fully independent acquisitions
+
+scale:
+  training_ultrasound_images: 5635
+  training_binary_masks: 5635
+  testing_ultrasound_images: 5508
+  ultrasound_images_total: 11143
+  CSV_files: 2
+  Kaggle_total_files: 16780
+  Kaggle_displayed_size: 2.3 GB
+  reconciliation: 5,635 training images + 5,635 masks + 5,508 test images + 2 CSV files equals Kaggle's 16,780-file total
+  training_subjects:
+    count: 47
+    provenance: Derived in published and community analyses from the subject prefixes; the current Kaggle page does not display this count
+  testing_subjects: Not disclosed
+
+annotations:
+  training:
+    type: Binary segmentation masks
+    target: Brachial plexus
+    coverage: One mask file per training image
+    empty_mask_meaning: No brachial plexus pixels are annotated in that frame
+    annotators: Humans trained by experts
+    confidence_policy: Annotators were instructed to mark the brachial plexus only when confident that the landmark existed
+    alternative_encoding: train_masks.csv provides run-length encoded masks for convenience
+  testing:
+    masks_public: false
+    subject_identifiers_public: false
+  quality_warning: Kaggle explicitly warns of human-label noise, artifacts, and potential mistakes
+  nonempty_training_mask_count: Not independently verified because download requires account and rule acceptance
+
+tasks:
+  - Binary semantic segmentation of the brachial plexus
+  - Brachial plexus localization for ultrasound-guided regional anesthesia
+
+splits:
+  official_training_images: 5635
+  official_testing_images: 5508
+  training_filename_pattern: subject_imageNum.tif
+  testing_filename_pattern: imageNum.tif
+  train_test_subject_overlap: none, according to Kaggle
+  derived_validation_caution: Split by subject prefix rather than by frame to prevent leakage from repeated or near-duplicate frames
+
+access:
+  level: account-and-rules-gated
+  platform: Kaggle
+  account_required: true
+  competition_rules_acceptance_required: true
+  license_displayed: Subject to Competition Rules
+  open_license: false
+  redistribution_permission: Not established from the current public page
+
+paper:
+  dedicated_dataset_paper: false
+  citable_resource: Kaggle competition page
+  title: Ultrasound Nerve Segmentation
+  venue: Kaggle Featured Prediction Competition
+  DOI: null
+
+data:
+  repository: Kaggle
+  landing_page: https://www.kaggle.com/competitions/ultrasound-nerve-segmentation/data
+  overview: https://www.kaggle.com/competitions/ultrasound-nerve-segmentation
+  rules: https://www.kaggle.com/competitions/ultrasound-nerve-segmentation/rules
+  persistent_identifier: Not provided
+
+competition:
+  start_date: 2016-05-19
+  close_date: 2016-08-18
+  status: Completed; late submissions remain possible
+  evaluation: Dice coefficient based on run-length-encoded predicted masks
+
+quality_checks:
+  official_page_read: true
+  official_file_total_verified: true
+  official_access_gate_verified: true
+  archive_downloaded: false
+  reason_not_downloaded: Kaggle requires sign-in and acceptance of the competition rules
+  Kaggle_API_anonymous_file_list: Returned HTTP 401
+  image_and_mask_counts_cross_checked_against_total: true
+  paper_search: No dedicated dataset paper or DOI identified
+  pixel_level_verification: false
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the current Kaggle dataset description, file descriptions, access prompt, metadata, competition dates, and leaderboard status
+    - Reconciled the 11,143 ultrasound-image count with 5,635 masks and two CSV files to reproduce Kaggle's 16,780-file total exactly
+    - Confirmed that train and test are subject-disjoint and that subject prefixes are available only for training
+    - Preserved Kaggle's warnings about empty masks, annotation noise, and identical or similar frames
+    - Did not claim open access or an open license because download requires an account and competition-rules acceptance
+  sources:
+    - https://www.kaggle.com/competitions/ultrasound-nerve-segmentation/data
+    - https://www.kaggle.com/competitions/ultrasound-nerve-segmentation
+
+notes: The earlier row incorrectly labeled this resource as open. It is currently gated by Kaggle sign-in and acceptance of competition rules, and the displayed license is only "Subject to Competition Rules." The 16,780 number is a file count, whereas 11,143 is the number of ultrasound images. Empty masks encode no annotated brachial plexus and must not automatically be interpreted as a clinical negative label.
