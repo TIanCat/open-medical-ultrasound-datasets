@@ -20,8 +20,9 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 07 | Vessel | 6 | 0701–0706 |
 | 08 | Brain | 8 | 0801–0808 |
 | 09 | Kidney | 2 | 0901–0902 |
+| 10 | Prostate | 3 | 1001–1003 |
 | 19 | Multi-anatomy | 3 | 1901–1903 |
-| 20 | Other | 8 | 2001–2008 |
+| 20 | Other | 7 | 2001–2008 |
 | **Total** | **12 categories** | **91** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
@@ -157,7 +158,7 @@ See [Scope](docs/scope.md).
 | [0901](datasets/09_kidney/0901.yaml) | The Open Kidney Ultrasound Data Set | Kidney / native and transplanted kidney | 2D B-mode images | 534 files / 514 unique patients and images | segmentation; view and transplant-status classification | 🟡 Application | [Paper](https://doi.org/10.1007/978-3-031-44521-7_15) | [GitHub](https://github.com/rsingla92/kidneyUS#data-access) |
 | [0902](datasets/09_kidney/0902.yaml) | Ultrasound Normal Kidney Image | Kidney / liver / spleen | 2D B-mode images | 1,080 images | abdominal organ instance segmentation | 🟢 Open | Roboflow project | [Roboflow](https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image) |
 
-### Kidney
+### Prostate
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
 | [1001](datasets/10_prostate/1001.yaml) | Prostate-MRI-US-Biopsy | Prostate / prostate cancer | 3D transrectal US + MRI | 1,151 patients / 2,799 studies / 102,397 MR+US DICOM images | segmentation; localization; grading; measurement; registration | 🟢 Open | [Sonn et al., 2013](https://doi.org/10.1016/j.juro.2012.08.095) | [TCIA](https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/) |
@@ -179,9 +180,8 @@ See [Scope](docs/scope.md).
 | [2003](datasets/20_other/2003.yaml) | C-TRUS | Colon wall | 2D B-mode images | 827 images / 13 patients | segmentation | 🟢 Open | [Paper](https://doi.org/10.1007/978-3-031-73647-6_10) | [GitHub](https://github.com/wwu-mmll/c-trus) |
 | [2004](datasets/20_other/2004.yaml) | OpticNerveSheaths | Optic nerve sheath | transorbital 2D ultrasound images | 464 ultrasound images | optic nerve sheath segmentation/localization; optic nerve sheath diameter measurement | 🟢 Open | [Paper](https://doi.org/10.1016/j.ultrasmedbio.2023.05.011) | [Mendeley Data](https://data.mendeley.com/datasets/kw8gvp8m8x/2) |
 | [2005](datasets/20_other/2005.yaml) | Spinal Cord Injury Ultrasound Dataset | Porcine spinal cord / spinal cord injury | B-mode sagittal ultrasound images | 10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations | injury-status classification; anatomical structure segmentation; injury localization / object detection | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-025-16275-z) | [GitHub](https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset) |
-| [2006](datasets/20_other/2006.yaml) | Common Carotid Artery Ultrasound Images | Common carotid artery | 2D ultrasound PNG frames | 1,100 image/mask pairs / 11 subjects | artery-region segmentation; geometry measurement | 🟢 Open; CC BY 4.0 | [Data resource](https://doi.org/10.17632/d4xt63mgjm.1) | [Mendeley Data](https://data.mendeley.com/datasets/d4xt63mgjm/1) |
-| [2007](datasets/20_other/2007.yaml) | Regensburg Pediatric Appendicitis Dataset | Appendix / pediatric abdomen | 2D B-mode images + tabular clinical data | release: 782 records / 2,097 images; paper: 579 patients / 1,709 images | diagnosis; management; severity; multimodal learning | 🟢 Open; CC BY-NC 4.0 | [Paper](https://doi.org/10.1016/j.media.2023.103042) | [Zenodo](https://doi.org/10.5281/zenodo.7711412) |
-| [2008](datasets/20_other/2008.yaml) | Ultrasound Elastography Dataset for Unsupervised Training | CIRS Model 059 breast phantom | Paired ultrasound RF data | 2,200 unlabeled RF pairs | displacement/optical-flow estimation; unsupervised fine-tuning | 🟢 Public download; license not stated | [Paper](https://doi.org/10.1007/978-3-030-59716-0_48) | [IMPACT Lab](https://users.encs.concordia.ca/~impact/ultrasound-elastography-dataset-for-unsupervised-training/) |
+| [2006](datasets/20_other/2006.yaml) | Regensburg Pediatric Appendicitis Dataset | Appendix / pediatric abdomen | 2D B-mode images + tabular clinical data | release: 782 records / 2,097 images; paper: 579 patients / 1,709 images | diagnosis; management; severity; multimodal learning | 🟢 Open; CC BY-NC 4.0 | [Paper](https://doi.org/10.1016/j.media.2023.103042) | [Zenodo](https://doi.org/10.5281/zenodo.7711412) |
+| [2007](datasets/20_other/2007.yaml) | Ultrasound Elastography Dataset for Unsupervised Training | CIRS Model 059 breast phantom | Paired ultrasound RF data | 2,200 unlabeled RF pairs | displacement/optical-flow estimation; unsupervised fine-tuning | 🟢 Public download; license not stated | [Paper](https://doi.org/10.1007/978-3-030-59716-0_48) | [IMPACT Lab](https://users.encs.concordia.ca/~impact/ultrasound-elastography-dataset-for-unsupervised-training/) |
 
 ## Contributing
 
