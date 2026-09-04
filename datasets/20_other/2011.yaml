@@ -1,0 +1,135 @@
+id: US022
+name: Micro-Ultrasound Prostate Segmentation Dataset
+release_year: 2024
+release_year_basis: The Zenodo dataset was published on 2024-01-09
+
+anatomy:
+  primary: Prostate gland
+  target: Whole prostate capsule
+
+modality:
+  type: Micro-ultrasound
+  route: Transrectal
+  frequency_MHz: 29
+  acquisition: Rotational sweep from left to right with the probe kept approximately stationary in the cranial-caudal direction
+  plane: Pseudo-sagittal 2D images separated by the recorded rotation angle
+  source_images_per_sweep: Approximately 200-300
+  source_conversion: B-mode image sets were converted to DICOM series with pixel spacing and rotation angle stored as through-plane location
+  public_format: Compressed NIfTI volumes
+
+scale:
+  patients: 75
+  public_scan_volumes: 75
+  official_split:
+    training_patients_and_volumes: 55
+    testing_patients_and_volumes: 20
+  paper_experiment:
+    training_2D_images: 2060
+    testing_2D_images: 758
+    total_2D_images: 2818
+    preprocessing: Resized to 224 x 224 for the published experiments
+  count_caution: The canonical public unit is one NIfTI sweep volume per patient; 2D-image counts describe the paper's selected annotated slices, not independent patients
+
+annotations:
+  target: Prostate capsule
+  public_training:
+    expert_consensus_volumes: 55
+    beginner_non_expert_volumes: 55
+  public_testing:
+    expert_consensus_volumes: 20
+    medical_student_volumes: 20
+    masters_student_volumes: 20
+    clinician_with_limited_micro_US_experience_volumes: 20
+  public_annotation_volumes_total: 190
+  paper_annotation_process:
+    initial_annotation: A beginner annotated every fourth micro-US slice, yielding approximately 50-60 segmented slices per sweep
+    refinement: An intermediate annotator updated the initial annotations
+    expert_review: An expert urologist reviewed every annotated slice and supplied correction feedback until consensus
+    released_expert_label_meaning: Final consensus annotations were treated as expert-level ground truth
+    additional_test_raters: A medical student, a master's student, and a urologist with one year of micro-US reading experience independently annotated the 20 test cases
+
+tasks:
+  - Whole-prostate capsule segmentation
+  - Annotation-guided segmentation using expert/non-expert disagreement
+  - Inter-annotator comparison across experience levels
+  - Patient-level generalization evaluation
+
+splits:
+  training_patients: 55
+  testing_patients: 20
+  patient_disjoint: true
+  validation_split: Not provided as a separate official set
+
+access:
+  level: open
+  registration_required: false for the tested Zenodo record
+  license: CC BY 4.0
+  archive_size_bytes: 3570972743
+  archive_checksum_md5: 263379f4ba5a9e4d8496c763b801f82e
+
+cohort_and_acquisition:
+  institution: University of Florida
+  period: September 2021 to December 2022
+  participants: 75 men undergoing micro-ultrasound-guided prostate biopsy
+  clinical_indications:
+    - PSA elevation
+    - Abnormal biomarker
+    - Abnormal MRI
+  ethics: Institutional review board approval stated in the paper
+
+paper:
+  title: "MicroSegNet: A deep learning approach for prostate segmentation on micro-ultrasound images"
+  journal: Computerized Medical Imaging and Graphics
+  volume: 112
+  article_number: 102326
+  publication_year: 2024
+  doi: 10.1016/j.compmedimag.2024.102326
+  PMID: 38211358
+
+data:
+  repository: Zenodo
+  landing_page: https://zenodo.org/records/10475293
+  doi: 10.5281/zenodo.10475293
+  filename: Micro_Ultrasound_Prostate_Segmentation_Dataset.zip
+  code: https://github.com/mirthAI/MicroSegNet
+
+quality_checks:
+  complete_archive_downloaded: false
+  reason_not_downloaded: The single official archive is approximately 3.57 GB
+  Zenodo_metadata_verified: true
+  remote_ZIP_central_directory_verified: true
+  remote_ZIP_entries: 276
+  remote_ZIP_directories: 11
+  remote_ZIP_files: 265
+  all_files_compressed_NIfTI: true
+  indexed_files:
+    training_scans: 55
+    training_expert_annotations: 55
+    training_non_expert_annotations: 55
+    testing_scans: 20
+    testing_expert_annotations: 20
+    testing_medical_student_annotations: 20
+    testing_masters_student_annotations: 20
+    testing_clinician_annotations: 20
+  indexed_patient_numbers_complete_for_each_folder: true
+  metadata_and_archive_index_counts_agree: true
+  pixel_data_verified: false
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the complete associated paper and visually checked its acquisition and annotation-method pages
+    - Confirmed the formal citation, year, journal, DOI, and experiment split through PubMed and the paper
+    - Confirmed the official title, creators, description, date, access level, license, archive size, and checksum through Zenodo metadata
+    - Read the remote ZIP central directory without downloading the complete 3.57 GB archive and counted every scan and annotation file by folder
+    - Kept patient-volume counts separate from the paper's selected 2D annotated-slice counts
+  sources:
+    - https://doi.org/10.5281/zenodo.10475293
+    - https://doi.org/10.1016/j.compmedimag.2024.102326
+    - https://pubmed.ncbi.nlm.nih.gov/38211358/
+
+notes: This is a public 75-patient volume dataset with a fixed 55-patient training and 20-patient test split. The archive has one scan volume per patient and multiple rater-specific prostate masks. The formal paper does exist and reports 2,060 training plus 758 testing images after selecting annotated slices for model experiments.
