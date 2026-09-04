@@ -169,7 +169,7 @@ See [Scope](docs/scope.md).
 ### Nerve
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
-| [1101](datasets/11_nerve/1001.yaml) | Ultrasound Nerve Segmentation | Brachial plexus | 2D B-mode | 11,143 images: 5,635 labeled train / 5,508 unlabeled test; 47 train subjects | segmentation | 🟡 Application | -- | [Kaggle](https://www.kaggle.com/c/ultrasound-nerve-segmentation/data) |
+| [1101](datasets/11_nerve/1001.yaml) | Ultrasound Nerve Segmentation | Brachial plexus | 2D B-mode | 11,143 images; 47 train subjects | segmentation | 🟡 Application | -- | [Kaggle](https://www.kaggle.com/c/ultrasound-nerve-segmentation/data) |
 
 
 
