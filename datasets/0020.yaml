@@ -1,0 +1,242 @@
+id: US020
+name: Prostate-MRI-US-Biopsy
+full_name: Prostate MRI and Ultrasound With Pathology and Coordinates of Tracked Biopsy
+release_year: 2020
+release_year_basis: The DataCite record was issued in 2020 and TCIA version 1 was updated on 2020-09-17
+current_version: 2
+current_version_updated: 2023-10-20
+
+anatomy:
+  primary: Prostate gland
+  targets:
+    - Whole prostate gland
+    - MRI regions of interest suspicious for prostate cancer
+    - Tracked systematic and targeted biopsy cores
+
+modality:
+  ultrasound:
+    type: Transrectal ultrasound
+    dimension: 3D volume stored as a multi-frame DICOM object
+    acquisition: End-fire probe rotated 200 degrees about its axis, followed by interpolation to isotropic resolution
+    systems:
+      - Hitachi Hi-Vision 5500 with 7.5 MHz probe
+      - Hitachi Noblus with C41V 2-10 MHz end-fire probe
+    fusion_system: Artemis biopsy tracking and MRI-US fusion system
+    DICOM_private_tag_caution: Private tag (1129,"Eigen, Inc",1016), VoxelSize, is important for correct multi-frame US display and prostate-surface alignment
+  MRI:
+    original_v1_content: T2-weighted MRI
+    v2_additions_for_837_participants:
+      - Apparent diffusion coefficient maps
+      - High-b-value diffusion-weighted images, most commonly calculated b=1400
+    scope_caution: Other multiparametric MRI sequences informed clinical target definition, but the public collection contains T2-weighted imaging plus the v2 ADC/high-b-value supplement, not the complete source multiparametric studies
+    field_strength_T: 3
+    systems_reported:
+      - Siemens Trio
+      - Siemens Verio
+      - Siemens Skyra
+      - A small minority of studies imported from other institutions with varying T2 protocols
+    common_T2_protocol: 3D T2 SPC
+
+scale:
+  subjects: 1151
+  studies: 2799
+  series: 4819
+  DICOM_instances: 102397
+  image_download_size_bytes: 79608734240
+  image_download_size_displayed_by_TCIA: 79.61 GB
+  modality_breakdown_from_current_digest:
+    ultrasound:
+      subjects: 1151
+      studies: 1762
+      series: 1762
+      DICOM_instances: 1762
+      note: Each US series is represented by one multi-frame DICOM instance
+    MRI:
+      subjects: 842
+      studies: 1037
+      series: 3057
+      DICOM_instances: 100635
+  v2_diffusion_addition:
+    subjects: 837
+    series: 2040
+    DICOM_instances: 41278
+  subjects_with_US_but_no_MRI_in_current_digest: 309
+
+annotations:
+  surface_files:
+    format: Binary STL
+    prostate_surfaces:
+      available_for: MRI and US
+      method: Semi-automatic contouring with manual traces and optional vertex adjustment
+      software: Profuse for MRI; Artemis for US
+    target_surfaces:
+      MRI: Manually traced by a radiologist from interpretation of multiparametric MRI
+      US: Derived by nonrigidly registering MRI prostate and target surfaces to the US prostate surface
+      reported_average_US_registration_accuracy_mm: 3-4
+      caution: US target surfaces are transferred MRI targets, not independently drawn US lesion ground truth
+  target_spreadsheet:
+    rows: 1617
+    subjects: 840
+    fields:
+      - UCLA Likert-like suspicion score
+      - ROI volume in cubic centimeters
+      - Target number
+      - US and MR Series Instance UIDs
+      - De-identified patient ID
+    score_file_values:
+      0: 13
+      1: 114
+      2: 39
+      3: 655
+      4: 498
+      5: 298
+    score_caution: The page describes a 1-5 scale but also discusses scores 0 or 1; the released spreadsheet contains 13 rows scored 0
+  biopsy_spreadsheet:
+    rows: 24783
+    subjects: 1150
+    unit: One ultrasound-guided biopsy core per row
+    fields:
+      - Biopsy tip and base coordinates in US space
+      - Biopsy tip and base coordinates in MR space when available
+      - Primary and secondary Gleason scores
+      - Cancer length and percent cancer in the core
+      - Up to three tissue-fragment lengths
+      - Core label
+      - PSA
+      - MRI-derived prostate volume
+      - US and MR Series Instance UIDs
+      - De-identified patient ID
+    cores_with_primary_Gleason_score: 5073
+    cores_with_blank_primary_Gleason_treated_as_benign_by_documentation: 19710
+    rows_with_MR_series_UID: 18176
+    MR_series_UID_coverage_percent: 73.34
+    rows_with_all_six_nonplaceholder_MR_coordinates: 17065
+    usable_complete_MR_coordinate_coverage_percent: 68.86
+    rows_with_at_least_one_tissue_length: 14762
+    tissue_length_coverage_percent: 59.57
+  biopsy_overlays:
+    format: 3D Slicer MRML plus referenced prostate/target surfaces and biopsy vectors
+    core_colors:
+      blue: Benign
+      orange: Gleason grade 3+3
+      red: Gleason grade at least 3+4
+  segmentation_format_caution: Original segmentations are surface meshes, not voxel-label masks in the image download
+
+tasks:
+  - MRI-to-ultrasound deformable registration and fusion evaluation
+  - Prostate gland segmentation in MRI and 3D TRUS
+  - Suspicious prostate ROI localization or segmentation
+  - Tracked-biopsy trajectory localization and spatial analysis
+  - Biopsy-core pathology or Gleason-grade modeling
+  - Prostate cancer detection using imaging and biopsy outcomes
+
+splits:
+  official_train_validation_test_split: Not provided
+  subject_level_grouping_available: Patient IDs are present in DICOM metadata and supporting spreadsheets
+  leakage_caution: Any derived split should group all longitudinal MRI, TRUS, targets, and biopsy cores from one patient together
+
+access:
+  level: open
+  license: CC BY 4.0
+  citation_required: true
+  image_download: Public TCIA manifest; TCIA Data Retriever is required for bulk DICOM download
+  target_and_biopsy_spreadsheets: Direct public XLSX downloads
+  STL_and_biopsy_overlay_download: Public packages; TCIA page states IBM Aspera Connect is required
+  registration_required: No account requirement was stated for the tested manifest and spreadsheet links
+
+cohort_and_acquisition:
+  institution: UCLA Clark Urology Center
+  population: Consecutively accrued patients with suspected prostate cancer due to elevated PSA and/or suspicious imaging
+  inclusion: Consented patients who underwent or planned routine standard-of-care prostate biopsy
+  biopsy_system: Artemis
+  biopsy_types:
+    - MRI-targeted cores when applicable
+    - Systematic cores, usually based on a 12-core digital template
+  ethics_approval_identifier: Not stated on the TCIA collection page
+
+paper:
+  role: Dataset-authors' recommended clinical reference; not a dedicated descriptor of the complete 1,151-subject TCIA release
+  title: Targeted Biopsy in the Detection of Prostate Cancer Using an Office Based Magnetic Resonance Ultrasound Fusion Device
+  journal: Journal of Urology
+  volume: 189
+  issue: 1
+  pages: 86-92
+  publication_year: 2013
+  doi: 10.1016/j.juro.2012.08.095
+
+data:
+  repository: The Cancer Imaging Archive
+  landing_page: https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/
+  doi: 10.7937/TCIA.2020.A61IOC1A
+  version: 2
+  version_update: Added diffusion-weighted MRI for 837 participants
+  official_manifest: https://www.cancerimagingarchive.net/wp-content/uploads/Prostate-MRI-US-Biopsy-NBIA-manifest_v2_20231020.tcia
+  official_metadata_digest: https://www.cancerimagingarchive.net/wp-content/uploads/Prostate-MRI-US-Biopsy-NBIA-manifest_v2_20231020-nbia-digest.xlsx
+  target_spreadsheet: https://www.cancerimagingarchive.net/wp-content/uploads/Target-Data_2019-12-05-2.xlsx
+  biopsy_spreadsheet: https://www.cancerimagingarchive.net/wp-content/uploads/TCIA-Biopsy-Data_2020-07-14.xlsx
+  external_imaging_access: https://portal.imaging.datacommons.cancer.gov/explore/filters/?collection_id=prostate_mri_us_biopsy
+  converted_annotation_resource: https://doi.org/10.5281/zenodo.10069910
+
+quality_checks:
+  complete_image_archive_downloaded: false
+  reason_not_downloaded: The DICOM collection is approximately 79.61 GB and requires TCIA Data Retriever
+  current_manifest:
+    series_UIDs: 4819
+    unique_series_UIDs: 4819
+    equals_digest_series_UID_set: true
+  current_digest:
+    rows: 4819
+    subjects: 1151
+    studies: 2799
+    DICOM_instances: 102397
+    file_size_bytes: 79608734240
+    all_rows_CC_BY_4_0: true
+  version_reconciliation:
+    v1_rows_in_current_digest: 2779
+    v1_ultrasound_series: 1762
+    v1_MRI_series: 1017
+    v1_DICOM_instances: 61119
+    v2_added_MRI_series: 2040
+    v2_added_DICOM_instances: 41278
+    v2_added_subjects: 837
+  target_linkage:
+    unique_US_series_UIDs: 1262
+    unique_MR_series_UIDs: 1015
+    all_US_UIDs_present_in_digest: true
+    all_MR_UIDs_present_in_digest: true
+  biopsy_linkage:
+    unique_US_series_UIDs: 1761
+    unique_MR_series_UIDs: 1017
+    all_US_UIDs_present_in_digest: true
+    all_MR_UIDs_present_in_digest: true
+  subject_difference:
+    image_subjects: 1151
+    biopsy_spreadsheet_subjects: 1150
+    image_subject_without_biopsy_row: Prostate-MRI-US-Biopsy-0514
+  workbook_integrity:
+    metadata_digest_XLSX: passed
+    target_data_XLSX: passed
+    biopsy_data_XLSX: passed
+    formulas_in_checked_workbooks: 0
+
+family:
+  type: primary
+  parent: null
+
+verified:
+  date: 2026-09-04
+  methods:
+    - Read the current TCIA collection page, detailed annotation instructions, version history, and access table
+    - Confirmed the formal dataset title, version, dates, creators, DOI, and CC BY 4.0 license through DataCite
+    - Downloaded the current TCIA manifest and metadata digest and matched all 4,819 unique Series Instance UIDs exactly
+    - Reconciled current and v1 series and DICOM-instance totals by modality and release date
+    - Parsed every row in the Target Data and Biopsy Data spreadsheets and checked referenced series against the image digest
+    - Verified ZIP/XML integrity of all three downloaded XLSX files and confirmed they contain no formulas
+    - Confirmed the dataset-authors' recommended paper metadata in Crossref
+    - Did not claim pixel-level verification because the 79.61 GB DICOM collection was not downloaded
+  sources:
+    - https://www.cancerimagingarchive.net/collection/prostate-mri-us-biopsy/
+    - https://doi.org/10.7937/TCIA.2020.A61IOC1A
+    - https://doi.org/10.1016/j.juro.2012.08.095
+
+notes: Version 2 contains 1,151 subjects, 1,762 three-dimensional TRUS series and 3,057 MR series. MRI is available for 842 subjects, while all 1,151 have TRUS. The release provides linked prostate/target surfaces, biopsy trajectories and per-core pathology, but US target surfaces are MRI targets transferred through nonrigid registration with reported 3-4 mm average accuracy. The recommended 2013 paper is a clinical reference rather than a dedicated descriptor of the full TCIA release. No official machine-learning split is provided.
