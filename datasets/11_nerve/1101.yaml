@@ -1,0 +1,108 @@
+id: "1101"
+name: "Ultrasound Nerve Segmentation"
+full_name: "Kaggle Ultrasound Nerve Segmentation Dataset"
+aliases:
+  - "US Nerve Segmentation"
+  - "Nerve Segment Dataset"
+
+release_year: 2016
+
+anatomy:
+  primary: "Peripheral nerve"
+  target:
+    - "Brachial plexus"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "participant"
+    count: 47
+    note: "Subject identifiers are available for the 5,635-image training set; the number of test subjects is not publicly reported."
+  - unit: "image"
+    count: 11143
+    note: "5,635 training images and 5,508 test images."
+  - unit: "pair"
+    count: 5635
+    note: "Each training image has a corresponding brachial-plexus segmentation mask."
+
+annotations:
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Brachial plexus"
+    format: "mask"
+    count: 5635
+    annotators:
+      - "Human annotators trained by experts"
+    note: >-
+      Empty masks are valid for training images in which the brachial plexus
+      was not confidently identified. Test-set masks are withheld for competition
+      evaluation.
+
+tasks:
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 5635
+    labels: "public"
+  test:
+    count: 5508
+    labels: "withheld"
+    note: "Training and test subjects do not overlap."
+
+access:
+  level: "application"
+  license: null
+  requirements:
+    - "Kaggle account"
+    - "Acceptance of the competition rules"
+
+paper: null
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/c/ultrasound-nerve-segmentation/data"
+  doi: null
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-09-04"
+  sources:
+    - "https://www.kaggle.com/c/ultrasound-nerve-segmentation"
+    - "https://www.kaggle.com/c/ultrasound-nerve-segmentation/data"
+    - "https://ultrasound-open-access.nidusai.ca/"
+
+notes: >-
+  The Kaggle competition ran from May 19 to August 18, 2016. Images are
+  2D grayscale ultrasound frames of the neck used to identify the brachial plexus
+  for regional-anesthesia applications. The training set contains 5,635 images
+  from 47 subjects and corresponding binary masks; the test set contains 5,508
+  unlabeled images from non-overlapping subjects. Kaggle notes that the dataset
+  can contain identical or highly similar frames and that human annotations may
+  include noise or mistakes. No dedicated peer-reviewed dataset paper or dataset
+  DOI was identified. The competition page labels the license as "Subject to
+  Competition Rules", so access.license is left null and the rule-acceptance
+  requirement is represented under access.requirements.

@@ -166,6 +166,14 @@ See [Scope](docs/scope.md).
 | [1003](datasets/10_prostate/1003.yaml) | Micro-Ultrasound Prostate Segmentation Dataset | Prostate  | 3D 29-MHz micro-ultrasound | 75 patients / 75 volumes (55 train / 20 test) | segmentation  | 🟢 Open | [Jiang et al., 2024](https://doi.org/10.1016/j.compmedimag.2024.102326) | [Zenodo](https://zenodo.org/records/10475293) |
 
 
+### Nerve
+| ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
+|---|---|---|---|---|---|---|---|---|
+| [1101](datasets/11_nerve/1001.yaml) | Ultrasound Nerve Segmentation | Brachial plexus | 2D B-mode | 11,143 images: 5,635 labeled train / 5,508 unlabeled test; 47 train subjects | segmentation | 🟡 Application | -- | [Kaggle](https://www.kaggle.com/c/ultrasound-nerve-segmentation/data) |
+
+
+
+
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
 |---|---|---|---|---|---|---|---|---|
