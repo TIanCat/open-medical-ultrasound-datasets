@@ -2,13 +2,31 @@
 
 A curated and continuously updated atlas of publicly accessible medical ultrasound imaging datasets.
 
+
 ## Overview
 
-- 103 verified primary dataset families
-- 86 open access
-- 15 application/registration
-- 2 controlled/restricted
-- Last updated: 2026-09-03
+This repository currently catalogs **90 medical ultrasound dataset resources** across **12 anatomical categories**.  
+Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
+
+| Code | Category | Datasets | ID range |
+|---|---|---:|---|
+| 00 | Breast | 15 | 0001–0015 |
+| 01 | Thyroid | 8 | 0101–0108 |
+| 02 | Obstetrics | 10 | 0201–0210 |
+| 03 | Cardiac | 9 | 0301–0309 |
+| 04 | Lung | 6 | 0401–0406 |
+| 05 | Liver & Gallbladder | 9 | 0501–0509 |
+| 06 | Musculoskeletal | 7 | 0601–0607 |
+| 07 | Vessel | 5 | 0701–0705 |
+| 08 | Brain | 8 | 0801–0808 |
+| 09 | Kidney | 2 | 0901–0902 |
+| 19 | Multi-anatomy | 3 | 1901–1903 |
+| 20 | Other | 8 | 2001–2008 |
+| **Total** | **12 categories** | **90** | — |
+
+> Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
+
+**Last updated:** 2026-09-04
 
 ## Scope
 
