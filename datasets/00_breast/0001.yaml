@@ -28,7 +28,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
@@ -48,7 +47,6 @@ annotations:
 tasks:
   - "classification"
   - "segmentation"
-  - "detection"
 
 access:
   level: "application"

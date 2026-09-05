@@ -1,7 +1,6 @@
 id: "0015"
 name: "BUS-CoT"
 full_name: "A Chain-of-thought Reasoning Breast Ultrasound Dataset Covering All Histopathology Categories"
-aliases: []
 
 release_year: 2026
 
@@ -31,7 +30,6 @@ scale:
 annotations:
   classification:
     unit: "lesion"
-    num_classes: 99
     class_system: "WHO Classification of Tumours"
     superclasses:
       - "Benign"
@@ -80,6 +78,7 @@ tasks:
   - "segmentation"
   - "grading"
   - "reasoning"
+  - "report_generation"
 
 access:
   level: "open"
@@ -118,34 +117,15 @@ verification:
     - "https://pmc.ncbi.nlm.nih.gov/articles/PMC12988125/"
     - "https://doi.org/10.6084/m9.figshare.30838715"
 
-subsets:
-  BUS-Lesion:
-    description: "Curated high-quality lesion-focused subset for model training and evaluation"
-    scale:
-      - unit: "image"
-        count: 5163
-    annotations:
-      classification:
-        unit: "image"
-        num_classes: 2
-        classes:
-          - "Benign"
-          - "Malignant"
-        distribution:
-          Benign: 2694
-          Malignant: 2469
-    splits:
-      training:
-        count: 4338
-      test:
-        count: 825
-
 notes: >-
   BUS-CoT is an aggregate dataset constructed from peer-reviewed publications,
   existing public breast ultrasound datasets, and peer-reviewed online case
   repositories including Radiopaedia and Eurorad. It should therefore be counted
   as an aggregate resource rather than as a new primary acquisition family.
   BUS-Expert is the complete release, while BUS-Lesion is a curated subset.
-  The dataset paper reports five ultrasound device types. The Figshare resource
-  is openly available, but the dataset-specific license was not independently
-  verified here; the article license should not be assumed to be the dataset license.
+  BUS-Lesion contains 5,163 images, including 2,694 benign and 2,469 malignant
+  images, with 4,338 images in the released training split and 825 images in
+  the released test split. The dataset paper reports five ultrasound device types.
+  The Figshare resource is openly available, but the dataset-specific license was
+  not independently verified here; the article license should not be assumed to
+  be the dataset license.

@@ -1,0 +1,1836 @@
+Dataset validation report
+Generated: 2026-09-05T11:28:44+08:00
+Repository: /data3/wj/torch/open-medical-ultrasound-datasets
+Checked YAML files: 100
+================================================================================
+
+datasets/01_thyroid/0102.yaml
+  WARNING [aliases[0]]: duplicates name or full_name.
+    Hint: Keep aliases only for genuine alternative names.
+  WARNING [aliases[1]]: duplicates name or full_name.
+    Hint: Keep aliases only for genuine alternative names.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+
+datasets/01_thyroid/0103.yaml
+  ERROR [full_name]: must be a non-empty string.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [tasks]: task "localization" exists but annotations.localization is absent.
+
+datasets/01_thyroid/0104.yaml
+  ERROR [family.related[0]]: "Thyroid Segmentation in Ultrasonography Dataset / 3DThyroid (Wunderling et al., 2017)" is not a four-digit atlas ID.
+  ERROR [family.parent]: derived datasets must specify parent.
+  WARNING [data.url]: data URL is shared by atlas IDs: 0104, 0105.
+    Hint: Verify family relationships and possible duplication.
+  WARNING [paper.doi]: paper DOI is shared by atlas IDs: 0104, 0105.
+    Hint: Verify family relationships and possible duplication.
+
+datasets/01_thyroid/0105.yaml
+  WARNING [data.url]: data URL is shared by atlas IDs: 0104, 0105.
+    Hint: Verify family relationships and possible duplication.
+  WARNING [paper.doi]: paper DOI is shared by atlas IDs: 0104, 0105.
+    Hint: Verify family relationships and possible duplication.
+
+datasets/01_thyroid/0107.yaml
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+
+datasets/01_thyroid/0108.yaml
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.detection.annotation_format]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/02_obstetrics/0201.yaml
+  ERROR [annotations.segmentation.type]: 'contour' is invalid.
+    Hint: Allowed: binary, instance, multiclass, surface
+  WARNING [annotations.measurements.unit_of_measurement]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/02_obstetrics/0202.yaml
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+
+datasets/02_obstetrics/0203.yaml
+  ERROR [modality.representation[0]]: "image_sequence" is not allowed.
+    Hint: Allowed: IQ, RF, image, mixed, raw_channel, sequence, video, volume
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+
+datasets/02_obstetrics/0204.yaml
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  ERROR [family.related[0]]: "FETAL_PLANES_DB" is not a four-digit atlas ID.
+
+datasets/02_obstetrics/0205.yaml
+  WARNING [annotations.detection.annotation_format]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  WARNING [annotations.detection.object_counts]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/02_obstetrics/0207.yaml
+  ERROR [modality.representation[0]]: "image_sequence" is not allowed.
+    Hint: Allowed: IQ, RF, image, mixed, raw_channel, sequence, video, volume
+  ERROR [annotations.segmentation.type]: 'contour' is invalid.
+    Hint: Allowed: binary, instance, multiclass, surface
+  WARNING [annotations.measurements.unit_of_measurement]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.training.access]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.validation.access]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.test.access]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/02_obstetrics/0209.yaml
+  WARNING [annotations.detection.annotation_format]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/02_obstetrics/0210.yaml
+  ERROR [annotations.classification.label_type]: 'multi_task_binary' is invalid.
+    Hint: Allowed: binary, hierarchical, multiclass, multilabel, ordinal
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+
+datasets/03_cardiac/0301.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US031'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "multi-structure segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "left-ventricular volume and ejection-fraction estimation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0302.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US032'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "left-ventricular segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "ejection-fraction regression" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "ventricular-volume estimation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "cardiac-cycle analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0303.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US033'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "PFO diagnosis/grading" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "cardiac-chamber segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "contrast-bubble video analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0304.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US034'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "aortic-stenosis severity classification (none/early/significant)" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "five-class view classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "semi-supervised learning" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0305.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US035'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "cardiac chamber-size and wall-thickness regression" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "left-ventricular mass and hypertrophy phenotyping" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0306.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US036'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "multi-view cardiac-structure segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "unsupervised domain adaptation and cross-center generalization" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0307.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US037'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "left-ventricular segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "ejection-fraction and ventricular-volume regression" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "pediatric cardiac-function assessment" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0308.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US038'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "cardiac-view classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "ultrasound image-quality grading" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/03_cardiac/0309.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US039'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D/3D/Doppler' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "echocardiography representation learning" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "view analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "cardiac measurement prediction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "multimodal imaging and clinical-data research" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/04_lung/0401.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US072'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.severity_scoring]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Severity scoring" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [access.level]: 'mixed' is invalid.
+    Hint: Allowed: application, controlled, open
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [family.type]: 'aggregation' is invalid.
+    Hint: Allowed: aggregate, derived, primary, subset, version
+  ERROR [verification]: must be a mapping/object.
+
+datasets/04_lung/0402.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US073'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video and extracted static frames' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.severity_scoring]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Binary classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Multi-class classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Ordinal severity assessment" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [family.type]: 'aggregation' is invalid.
+    Hint: Allowed: aggregate, derived, primary, subset, version
+  ERROR [verification]: must be a mapping/object.
+
+datasets/04_lung/0403.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US074'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'cine loops and extracted static frames' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  ERROR [annotations.classification.classes]: must contain at least one item.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Semantic segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "B-line artefact quantification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/04_lung/0404.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US075'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/04_lung/0405.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US076'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [paper.title]: must be a non-empty string.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [family.type]: 'derivative' is invalid.
+    Hint: Allowed: aggregate, derived, primary, subset, version
+  ERROR [family.parent]: must be null or a four-digit atlas ID.
+    Hint: Example: parent: "0401"
+  ERROR [verification]: must be a mapping/object.
+
+datasets/04_lung/0406.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US077'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0501.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US063'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Regression" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0502.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US064'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'static images + cine loops' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  ERROR [annotations.classification.classes]: must contain at least one item.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Temporal Analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Treatment Response Assessment" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [paper.title]: must be a non-empty string.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0503.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US065'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Detection" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0504.yaml
+  ERROR [line 40, column 39]: invalid YAML: mapping values are not allowed here
+  in "/data3/wj/torch/open-medical-ultrasound-datasets/datasets/05_liver_gallbladder/0504.yaml", line 40, column 39
+
+datasets/05_liver_gallbladder/0505.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US067'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'video' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Self-supervised Representation Learning" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Video Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0506.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US068'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  ERROR [annotations.classification.classes]: must contain at least one item.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Detection" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [paper.title]: must be a non-empty string.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0507.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US069'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Grading" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Regression" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "Multimodal Prediction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [paper.title]: must be a non-empty string.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0508.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US070'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Grading" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/05_liver_gallbladder/0509.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US071'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0601.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US053'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "lumbar-multifidus segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "cross-sectional-area and echo-intensity quantification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0602.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US054'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "muscle-tendon-junction localization and tracking" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "cross-device benchmark evaluation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0603.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US055'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "muscle-fascicle segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "aponeurosis segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "muscle-architecture quantification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0604.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US057'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D to 3D' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "trackerless 3D freehand-ultrasound reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "relative-pose estimation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "spatial registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0605.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US058'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "Heckmatt-grade classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "muscle segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "healthy-versus-FSHD analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0606.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US059'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "muscle cross-sectional-area segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "grayscale/echogenicity quantification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "healthy-versus-abnormal muscle assessment" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/06_musculoskeletal/0607.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US062'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D ultrasound + 3D CT' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'tracked ultrasound sweeps' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  ERROR [annotations.classification.classes]: must contain at least one item.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "3D Reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/07_vessel/0701.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US104'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'image/video resource' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "carotid phenotype analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "carotid intima-media thickness measurement" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "vascular risk association research" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/07_vessel/0702.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US101'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'static image' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "carotid boundary segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "carotid intima-media thickness measurement" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/07_vessel/0703.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US102'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'static image' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "carotid artery segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "domain generalization across ultrasound devices" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/07_vessel/0704.yaml
+  ERROR [id]: id "0706" does not match filename "0704.yaml".
+    Hint: Use id: "0704".
+
+datasets/08_brain/0801.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US090'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D/3D ultrasound and 3D MRI' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  ERROR [annotations.classification.classes]: must contain at least one item.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "MRI-ultrasound registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Pre-/post-resection ultrasound registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Pre-/post-operative MRI registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "Target registration error evaluation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/08_brain/0802.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US091'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '3D/2D tracked' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'intraoperative acquisition' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "multimodal MRI-to-ultrasound registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "registration landmark-error evaluation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "tumor and resection-cavity segmentation in extension resources" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/08_brain/0803.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US096'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '3D volumes and 2D slices' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'static volume' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "data augmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "2D ultrasound slice synthesis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "GAN training" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "ultrasound image representation research" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/08_brain/0804.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US094'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '3D/2D multimodal' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'preoperative and intraoperative' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "multimodal image registration" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "tumor segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "resection-cavity segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "image-guided neurosurgery research" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/08_brain/0805.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US095'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'intraoperative static images' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "brain tumor segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "derived tumor/no-tumor image classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/09_kidney/0901.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US078'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Semantic segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "View classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Kidney-type classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/10_prostate/1001.yaml
+  ERROR [family.related[0]]: "Prostate-MRI-US-Biopsy-DICOM-Annotations" is not a four-digit atlas ID.
+
+datasets/10_prostate/1002.yaml
+  WARNING [aliases[1]]: duplicates name or full_name.
+    Hint: Keep aliases only for genuine alternative names.
+  ERROR [data.additional_resources]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/10_prostate/1003.yaml
+  WARNING [annotations.segmentation.annotation_sets]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+
+datasets/12_ovary/1201.yaml
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+
+datasets/12_ovary/1202.yaml
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+
+datasets/12_ovary/1203.yaml
+  ERROR [modality.type[2]]: "Contrast-enhanced ultrasound" is not allowed.
+    Hint: Allowed: B-mode, CEUS, CT, Color Doppler, Doppler, Elastography, IQ, M-mode, MRI, Micro-ultrasound, Power Doppler, RF, Raw channel data, Spectral Doppler, Ultrafast ultrasound, Ultrasound
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+
+datasets/13_animal/1301.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US100'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D sequences' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'high-frame-rate sequence' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "microbubble localization" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "microbubble trajectory tracking" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "vascular reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "ULM algorithm benchmarking" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+  WARNING [paper.doi]: paper DOI is shared by atlas IDs: 1301, 1302.
+    Hint: Verify family relationships and possible duplication.
+
+datasets/13_animal/1302.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US092'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D sequences' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'cine / high-frame-rate sequence' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "ultrasound beamforming" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "image reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "ultrasound localization microscopy" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "microbubble localization and tracking" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+  WARNING [paper.doi]: paper DOI is shared by atlas IDs: 1301, 1302.
+    Hint: Verify family relationships and possible duplication.
+
+datasets/13_animal/1303.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US097'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D images/videos' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'static images and videos' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "tumor segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "derived tumor/no-tumor binary classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/13_animal/1304.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US099'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '3D/4D cine' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'spatiotemporal sequence' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "3D ultrasound localization microscopy reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "microvascular analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "cerebral blood-flow quantification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "4D spatiotemporal analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/13_animal/1305.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US098'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D sagittal images' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'pre-injury and post-injury' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "injury-status binary classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "anatomical structure segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "injury localization" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "object detection" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/13_animal/1306.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US103'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D/3D acquisitions' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.temporal]: 'high-frame-rate sequence' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "ULM reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "microbubble localization and tracking" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "vascular imaging" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "algorithm benchmarking" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/19_multi‑anatomy/1901.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US040'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "general ultrasound representation learning and pretraining" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "metadata-based anatomy or view studies" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/19_multi‑anatomy/1902.yaml
+  ERROR [paper]: required field is missing.
+  ERROR [verification]: required field is missing.
+  ERROR [challenge_document]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [discrepancies]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [public_test_distribution]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [public_training_distribution]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [quality_checks]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [reference_generation]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [release_year_basis]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US010'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.primary]: required field is missing.
+  ERROR [anatomy.organs]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.terminology_note]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.type]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.primary]: must be a non-empty string.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.temporal]: required field is missing.
+  ERROR [modality.appearance]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.official_mode_wording]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.released_format]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.released_resolution_pixels]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.disease_labels]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.enhancement_reference]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.enhancement_reference_available_for_public_test]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.patient_metadata]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.segmentation_masks]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "Low-to-high ultrasound image reconstruction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Ultrasound image-quality enhancement" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [splits.current_public_test]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.official_design]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.patient_disjointness]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.public_training]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits]: must define at least one of training/validation/test.
+  ERROR [access.archive_license_file]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.data_usage_license]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.download_hosts]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.license_version]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.proposal_record_license]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.registration_required]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.level]: 'open download' is invalid.
+    Hint: Allowed: application, controlled, open
+  ERROR [data.repository]: required field is missing.
+  ERROR [data.url]: required field is missing.
+  ERROR [data.acquisition_center]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.files]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.official_page]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.repository]: must be a non-empty string.
+  ERROR [data.url]: must be a valid http(s) URL.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/19_multi‑anatomy/1903.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [ethics]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [formal_dataset_name]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [quality_checks]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [release_year_basis]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US012'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.primary]: required field is missing.
+  ERROR [anatomy.organs]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.type]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.primary]: must be a non-empty string.
+  ERROR [modality.dimension]: required field is missing.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.temporal]: required field is missing.
+  ERROR [modality.type]: required field is missing.
+  ERROR [modality.imaging]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.released_image_formats]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.released_resolution_pixels]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.text]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.image_pairing]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.manual_disease_labels]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.pseudo_labels]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.report_text]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.segmentation_masks]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "Ultrasound report generation from image pairs" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Image-text representation and feature-alignment research" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Unsupervised report clustering and pseudo-label learning" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [splits.paper]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.patient_disjointness]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.public_archive]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits]: must define at least one of training/validation/test.
+  ERROR [access.host]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.registration_required]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.level]: 'open download' is invalid.
+    Hint: Allowed: application, controlled, open
+  ERROR [paper.arxiv]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.authors]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.issue]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.online_publication_year]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.pages]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.print_issue_year]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.volume]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.repository]: required field is missing.
+  ERROR [data.url]: required field is missing.
+  ERROR [data.author_repository]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.download_url]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.file]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.project_page]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.repository]: must be a non-empty string.
+  ERROR [data.url]: must be a valid http(s) URL.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/19_multi‑anatomy/1904.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
+    Hint: Use len(classes) in build scripts.
+  ERROR [annotations.classification.classes]: must contain at least one item.
+  WARNING [annotations.segmentation.available]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [tasks[0]]: "Instance segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  WARNING [tasks]: annotations.classification exists but task "classification" is absent.
+  WARNING [tasks]: annotations.segmentation exists but task "segmentation" is absent.
+  ERROR [paper.title]: must be a non-empty string.
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/20_other/2001.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US041'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "GIST-versus-leiomyoma classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "lesion detection" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "instance segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "anatomical-location-aware analysis" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/20_other/2002.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US042'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "pancreatic-cancer binary classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "self-supervised learning and pretraining" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/20_other/2003.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US043'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "binary colon-wall segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "bowel-wall localization and thickness/inflammation quantification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/20_other/2004.yaml
+  ERROR [verification]: required field is missing.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US093'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.target]: must be a list.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.temporal]: 'static image' is invalid.
+    Hint: Allowed: cine, mixed, sequence, static, sweep, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.summary]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "optic nerve sheath segmentation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "optic nerve sheath localization" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "optic nerve sheath diameter measurement" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [data.data_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/20_other/2005.yaml
+  ERROR [full_name]: required field is missing.
+  ERROR [paper]: required field is missing.
+  ERROR [verification]: required field is missing.
+  ERROR [ethics_and_acquisition]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [papers]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [quality_checks]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [release_year_basis]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US019'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.background_elastic_modulus_kPa]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.caution]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.human_subject_data_in_public_dataset]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.inclusions]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.material]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.phantom_model]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.dimension]: required field is missing.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.temporal]: required field is missing.
+  ERROR [modality.acquisition_system]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.application]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.center_frequency_MHz]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.file_format]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.pairing]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.paper_network_input_size]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.probe]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.sampling_frequency_MHz]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.diagnostic_labels]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.displacement_ground_truth]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.pair_relationship]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.phantom_properties]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.segmentation_masks]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.strain_ground_truth]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "Ultrasound elastography displacement estimation" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Optical-flow or deformation estimation between RF acquisitions" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Unsupervised fine-tuning on real ultrasound RF data" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "Semi-supervised transfer from labeled computer-vision data to ultrasound RF data" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [splits.composition_shift]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.exact_public_train_validation_test_counts]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.official_reusable_split_files_verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.test_design]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.training_pairs_reported]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits]: must define at least one of training/validation/test.
+  ERROR [access.current_bulk_response]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.download_host]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.packaging]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.redistribution_terms]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.registration_required]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.level]: 'public-download' is invalid.
+    Hint: Allowed: application, controlled, open
+  ERROR [data.url]: required field is missing.
+  ERROR [data.direct_shared_folder]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.landing_page]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.persistent_identifier]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.url]: must be a valid http(s) URL.
+  ERROR [verification]: must be a mapping/object.
+
+datasets/20_other/2006.yaml
+  ERROR [full_name]: required field is missing.
+  ERROR [verification]: required field is missing.
+  ERROR [ethics_and_acquisition]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [quality_checks]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [release_year_basis]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [verified]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [id]: must be a four-digit string; got 'US018'.
+    Hint: Example: id: "1303"
+  ERROR [anatomy.depicted_regions]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [anatomy.exclusion_in_paper]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.representation]: required field is missing.
+  ERROR [modality.temporal]: required field is missing.
+  ERROR [modality.acquisition_systems_reported_by_paper]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.dimensions]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.format_caution]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.imaging_mode]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.release_content]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.released_file_formats]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.transducers_reported_by_paper]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.views_per_subject_reported_by_paper]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [modality.type]: must be a list.
+  ERROR [modality.dimension]: '2D still images' is invalid.
+    Hint: Allowed: 2D, 3D, 4D, mixed, or null when unknown
+  ERROR [modality.representation]: must be a list.
+  ERROR [scale]: must be a list.
+  ERROR [annotations.bounding_boxes]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.image_region_labels]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.label_caution]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.patient_level_targets]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.pixel_level_masks]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [annotations.structured_features]: unknown annotation type.
+    Hint: Allowed: classification, detection, grading, landmarks, localization, measurements, quality, reasoning, registration, reports, segmentation, tracking
+  ERROR [tasks[0]]: "Appendicitis diagnosis prediction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[1]]: "Surgical-versus-conservative management prediction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[2]]: "Complicated appendicitis severity prediction" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[3]]: "Multiview ultrasound classification" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[4]]: "Image-and-tabular multimodal learning" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [tasks[5]]: "Concept bottleneck learning from ultrasonographic findings" is not allowed.
+    Hint: Allowed: beamforming, classification, detection, enhancement, grading, landmark_detection, localization, measurement, pose_estimation, pretraining, quality_assessment, reasoning, reconstruction, registration, report_generation, segmentation, signal_analysis, standard_plane_classification, tracking
+  ERROR [splits.author_notebook_behavior]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.paper_model_selection]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.paper_train_test_ratio]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits.released_test_set_codes]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [splits]: must define at least one of training/validation/test.
+  ERROR [access.commercial_use]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [access.registration_required]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.analysis_subset]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.article_number]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.journal]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.preprint]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.publication_year]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [paper.volume]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.url]: required field is missing.
+  ERROR [data.code_repository]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.concept_doi]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.files]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.landing_page]: field is not part of Dataset Schema v1.
+    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
+  ERROR [data.url]: must be a valid http(s) URL.
+  ERROR [verification]: must be a mapping/object.
+
+Summary: 996 error(s), 74 warning(s).
+================================================================================
+Errors: 996
+Warnings: 74

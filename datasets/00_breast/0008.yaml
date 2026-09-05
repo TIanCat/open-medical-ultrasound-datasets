@@ -27,17 +27,14 @@ scale:
 annotations:
   classification:
     unit: "patient"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
     distribution:
       Benign: 722
       Malignant: 342
-    image_distribution:
-      Benign: 1268
-      Malignant: 607
     reference_standard: "Biopsy"
+    note: "Image-level distribution is 1,268 benign and 607 malignant images."
 
   segmentation:
     unit: "image"
@@ -69,11 +66,9 @@ annotations:
       "3": 279
       "4": 393
       "5": 88
-    image_distribution:
-      "2": 562
-      "3": 463
-      "4": 693
-      "5": 157
+    note: >-
+      Image-level BI-RADS distribution is 562 category 2, 463 category 3,
+      693 category 4, and 157 category 5 images.
 
 tasks:
   - "classification"

@@ -16,7 +16,7 @@ modality:
   dimension: "2D"
   temporal: "static"
   representation:
-    - "signal"
+    - "RF"
 
 scale:
   - unit: "patient"
@@ -29,7 +29,6 @@ scale:
 annotations:
   classification:
     unit: "lesion"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
@@ -82,12 +81,6 @@ data:
   url: "https://zenodo.org/records/545928"
   doi: "10.5281/zenodo.545928"
   version: "v1"
-  files:
-    - name: "OASBUD.mat"
-      format: "MATLAB v5 MAT-file"
-      size_bytes: 296800010
-      md5: "e2b770a6ee2f06ebe480ed0962252100"
-      checksum_verified: true
 
 acquisition:
   countries:
@@ -114,11 +107,6 @@ verification:
     - "https://zenodo.org/records/545928"
     - "https://zenodo.org/api/records/545928"
 
-signal_data:
-  scan_planes_per_lesion: 2
-  scan_plane_relation: "orthogonal"
-  b_mode_included: false
-  b_mode_derivable_from_rf: true
 
 notes: >-
   Each lesion has two orthogonal RF acquisitions with paired binary ROI masks.

@@ -30,7 +30,6 @@ scale:
 annotations:
   classification:
     unit: "patient"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"

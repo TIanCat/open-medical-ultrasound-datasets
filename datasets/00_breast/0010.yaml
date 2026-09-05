@@ -12,7 +12,7 @@ anatomy:
 
 modality:
   type:
-    - "ABUS"
+    - "B-mode"
   dimension: "3D"
   temporal: "static"
   representation:
@@ -27,7 +27,6 @@ scale:
 annotations:
   classification:
     unit: "case"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"

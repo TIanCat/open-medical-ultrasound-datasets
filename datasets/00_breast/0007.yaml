@@ -28,7 +28,6 @@ scale:
 annotations:
   classification:
     unit: "lesion"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"

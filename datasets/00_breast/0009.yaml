@@ -27,17 +27,14 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
     distribution:
       Benign: 560
       Malignant: 367
-    patient_distribution:
-      Benign: 560
-      Malignant: 256
     reference_standard: null
+    note: "Patient-level distribution is 560 benign and 256 malignant patients."
 
   segmentation:
     unit: "image"
@@ -56,7 +53,7 @@ annotations:
       - "Maximum tumor diameter"
       - "Minimum tumor diameter"
     format: "tabular_metadata"
-    source: "Patient_infos_BUSI-WHU.xlsx"
+    note: "Measurements are provided in Patient_infos_BUSI-WHU.xlsx."
 
 tasks:
   - "classification"

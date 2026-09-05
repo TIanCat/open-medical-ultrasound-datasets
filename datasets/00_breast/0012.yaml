@@ -31,7 +31,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 3
     classes:
       - "Normal"
       - "Benign"

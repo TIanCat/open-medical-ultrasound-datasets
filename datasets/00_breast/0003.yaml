@@ -30,7 +30,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 3
     classes:
       - "Breast cancer"
       - "Cyst"
@@ -43,13 +42,12 @@ annotations:
 
   segmentation:
     unit: "image"
-    type: "contour"
+    type: "binary"
     targets:
       - "Breast lesion"
     format: "contour_overlay"
     annotators:
       - "Three radiology experts"
-    aggregation: "majority_vote"
 
 tasks:
   - "segmentation"

@@ -1,6 +1,6 @@
 id: "0004"
 name: "STU-Hospital"
-full_name: null
+full_name: "STU-Hospital"
 aliases: []
 
 release_year: 2019
@@ -30,13 +30,12 @@ scale:
 annotations:
   segmentation:
     unit: "image"
-    type: "soft"
+    type: "binary"
     targets:
       - "Breast lesion"
     format: "grayscale_mask"
     annotators:
       - "Two clinical experts"
-    aggregation: "average"
 
 tasks:
   - "segmentation"
