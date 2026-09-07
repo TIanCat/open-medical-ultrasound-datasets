@@ -1,30 +1,64 @@
-id: US101
+id: "0702"
 name: "CUBS"
-full_name: "Carotid Ultrasound Boundary Study (CUBS)"
+full_name: "Carotid Ultrasound Boundary Study"
+aliases:
+  - "Carotid Ultrasound Boundary Study (CUBS)"
+
 release_year: 2021
 
 anatomy:
   primary: "Carotid artery"
-  target: "common carotid artery LI and MA boundaries"
+  target:
+    - "Common carotid artery"
+    - "Lumen-intima boundary"
+    - "Media-adventitia boundary"
 
 modality:
-  type: "B-mode carotid ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "static image"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "1,088 participants; 2,176 common carotid artery images"
+  - unit: "participant"
+    count: 1088
+  - unit: "image"
+    count: 2176
 
 annotations:
-  summary: "expert manual lumen-intima and media-adventitia boundary delineations; includes multiple computerized segmentation outputs"
+  segmentation:
+    unit: "image"
+    type: "surface"
+    targets:
+      - "Lumen-intima boundary"
+      - "Media-adventitia boundary"
+    format: "boundary_contour"
+    annotators:
+      - "Expert manual annotators"
+    note: >-
+      The dataset provides expert manual lumen-intima and media-adventitia
+      boundary delineations together with outputs from multiple computerized
+      segmentation systems.
+
+  measurements:
+    unit: "image"
+    targets:
+      - "Carotid intima-media thickness"
+    format: "derived_from_boundaries"
+    note: >-
+      Intima-media thickness is quantified from the paired lumen-intima and
+      media-adventitia boundary delineations.
 
 tasks:
-  - "carotid boundary segmentation"
-  - "carotid intima-media thickness measurement"
+  - "segmentation"
+  - "measurement"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "Carotid Ultrasound Boundary Study (CUBS): An Open Multicenter Analysis of Computerized Intima-Media Thickness Measurement Systems and Their Clinical Impact"
@@ -32,15 +66,27 @@ paper:
   doi: "10.1016/j.ultrasmedbio.2021.03.003"
 
 data:
-  repository: "CUBS"
+  repository: "Mendeley Data"
   url: "https://data.mendeley.com/datasets/fpv535fss7/1"
-  data_doi: "10.17632/fpv535fss7.1"
+  doi: "10.17632/fpv535fss7.1"
+  version: "1"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://data.mendeley.com/datasets/fpv535fss7/1"
+    - "https://doi.org/10.17632/fpv535fss7.1"
+    - "https://doi.org/10.1016/j.ultrasmedbio.2021.03.003"
 
-notes: "Verified from the Mendeley Data record and CUBS paper."
+notes: >-
+  CUBS contains 2,176 common-carotid-artery B-mode images from 1,088 participants.
+  Its core spatial annotations are paired lumen-intima and media-adventitia
+  boundaries rather than ordinary filled binary masks, so they are represented
+  as surface/boundary segmentation. Carotid intima-media thickness is a native
+  quantitative use of these paired boundaries.

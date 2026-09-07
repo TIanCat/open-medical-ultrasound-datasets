@@ -1,30 +1,57 @@
-id: US102
+id: "0703"
 name: "CCA"
-full_name: "CCA carotid artery ultrasound segmentation dataset used by MI-SegNet"
+full_name: "CCA Carotid Artery Ultrasound Segmentation Dataset Used by MI-SegNet"
+
 release_year: 2023
 
 anatomy:
   primary: "Carotid artery"
-  target: "carotid artery lumen/region"
+  target:
+    - "Carotid artery lumen"
+    - "Carotid artery region"
 
 modality:
-  type: "B-mode carotid ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "static image"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "2,307 images: 2,107 training images and 200 held-out validation images; additional external-device test sets are referenced"
+  - unit: "image"
+    count: 2307
 
 annotations:
-  summary: "pixel-wise carotid artery region segmentation masks, including author-provided expert annotations for external public artery data"
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Carotid artery region"
+    format: "mask"
+    count: 2307
+    note: >-
+      Pixel-wise carotid-artery region masks are provided. The associated study
+      also uses author-provided expert annotations for external public artery
+      datasets when evaluating unseen-device generalization.
 
 tasks:
-  - "carotid artery segmentation"
-  - "domain generalization across ultrasound devices"
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 2107
+  validation:
+    count: 200
+  note: >-
+    Additional external-device test sets are referenced in the associated study
+    but are not counted as part of this 2,307-image CCA release.
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
   title: "MI-SegNet: Mutual Information-Based US Segmentation for Unseen Domain Generalization"
@@ -32,15 +59,26 @@ paper:
   doi: "10.1007/978-3-031-43901-8_13"
 
 data:
-  repository: "CCA"
+  repository: "GitHub"
   url: "https://github.com/yuan-12138/MI-SegNet"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://github.com/yuan-12138/MI-SegNet"
+    - "https://doi.org/10.1007/978-3-031-43901-8_13"
 
-notes: "Verified from the MICCAI paper/preprint and the MI-SegNet GitHub repository; no standalone data DOI or explicit data license was confirmed."
+notes: >-
+  CCA contains 2,307 B-mode carotid-ultrasound images: 2,107 training images
+  and 200 held-out validation images. Domain generalization across ultrasound
+  devices is the experimental setting of the MI-SegNet study rather than a native
+  dataset task, so only segmentation is encoded under tasks. No standalone data
+  DOI or explicit dataset license was confirmed.

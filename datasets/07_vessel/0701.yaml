@@ -1,47 +1,79 @@
-id: US104
+id: "0701"
 name: "UK Biobank carotid ultrasound"
-full_name: "UK Biobank carotid ultrasound imaging resource"
+full_name: "UK Biobank Carotid Ultrasound Imaging Resource"
+
 release_year: null
 
 anatomy:
   primary: "Carotid artery"
-  target: "common carotid artery"
+  target:
+    - "Common carotid artery"
 
 modality:
-  type: "carotid B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "image/video resource"
+  temporal: "mixed"
+  representation:
+    - "image"
+    - "video"
 
 scale:
-  summary: "large UK Biobank imaging resource; participant/image counts depend on the specific field and release"
+  - unit: "participant"
+    count: null
+    note: >-
+      Participant counts depend on the selected UK Biobank carotid-ultrasound
+      fields and data release; no single fixed count applies to the resource family.
+  - unit: "image"
+    count: null
+    note: >-
+      Image/video counts depend on the selected UK Biobank fields and release.
 
 annotations:
-  summary: "carotid imaging plus participant phenotype/clinical data; no unified public manual semantic segmentation labels"
+  measurements:
+    unit: "participant"
+    targets:
+      - "Carotid intima-media thickness"
+      - "Carotid phenotype measurements"
+    format: "structured_metadata"
+    note: >-
+      Carotid imaging can be linked to UK Biobank phenotype and clinical fields.
+      Availability of specific carotid measurements depends on the selected fields
+      and release. No unified public manual semantic-segmentation label set is
+      treated as part of this atlas entry.
 
 tasks:
-  - "carotid phenotype analysis"
-  - "carotid intima-media thickness measurement"
-  - "vascular risk association research"
+  - "measurement"
 
 access:
-  level: application
+  level: "application"
   license: "UK Biobank access terms"
+  requirements:
+    - "Approved UK Biobank research application"
+    - "Compliance with UK Biobank access and data-use terms"
 
-paper:
-  title: "No single dedicated dataset paper; UK Biobank imaging resource"
-  venue: "UK Biobank Showcase"
-  doi: null
+paper: null
 
 data:
   repository: "UK Biobank Showcase"
   url: "https://biobank.ndph.ox.ac.uk/showcase/"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://biobank.ndph.ox.ac.uk/showcase/"
 
-notes: "Verified as a UK Biobank application-controlled carotid ultrasound resource family; access is not open download."
+notes: >-
+  This entry represents the UK Biobank carotid-ultrasound resource family rather
+  than a single frozen benchmark release. Participant and image counts therefore
+  vary by selected data field and release. The resource supports carotid phenotype
+  and intima-media-thickness analysis through linkage with UK Biobank participant
+  metadata. It is application-controlled rather than an open-download dataset.
