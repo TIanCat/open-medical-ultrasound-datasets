@@ -1,7 +1,6 @@
 id: "0207"
 name: "ACOUSLIC-AI"
 full_name: "Abdominal Circumference Operator-agnostic UltraSound Measurement in Low-Income Countries using Artificial Intelligence"
-aliases: []
 
 release_year: 2024
 
@@ -16,7 +15,7 @@ modality:
   dimension: "2D"
   temporal: "sweep"
   representation:
-    - "image_sequence"
+    - "sequence"
 
 scale:
   - unit: "case"
@@ -37,7 +36,7 @@ annotations:
 
   segmentation:
     unit: "frame"
-    type: "contour"
+    type: "binary"
     targets:
       - "Fetal abdomen"
     format: "ellipse_annotation"
@@ -48,7 +47,8 @@ annotations:
     targets:
       - "Abdominal circumference"
     format: "tabular_metadata"
-    unit_of_measurement: "mm"
+    units:
+      "Abdominal circumference": "mm"
 
 tasks:
   - "localization"
@@ -59,13 +59,13 @@ splits:
   unit: "case"
   training:
     count: 300
-    access: "public"
+    labels: "public"
   validation:
     count: 10
-    access: "private"
+    labels: "withheld"
   test:
     count: 282
-    access: "private"
+    labels: "withheld"
 
 access:
   level: "open"

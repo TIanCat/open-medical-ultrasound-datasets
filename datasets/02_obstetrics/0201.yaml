@@ -28,12 +28,14 @@ scale:
 annotations:
   segmentation:
     unit: "image"
-    type: "contour"
+    type: "binary"
     targets:
       - "Fetal head"
     format: "ellipse_outline"
     count: 999
-    note: "Ellipse outlines are publicly released for the training set; test-set outlines are withheld by the challenge organizers."
+    note: >-
+      Ellipse outlines are publicly released for the training set;
+      test-set outlines are withheld by the challenge organizers.
 
   measurements:
     unit: "image"
@@ -41,8 +43,11 @@ annotations:
       - "Head circumference"
     format: "tabular_metadata"
     count: 999
-    unit_of_measurement: "mm"
-    note: "Ground-truth HC is publicly released for the training set; test-set HC ground truth is withheld."
+    units:
+      "Head circumference": "mm"
+    note: >-
+      Ground-truth HC is publicly released for the training set;
+      test-set HC ground truth is withheld.
 
 tasks:
   - "segmentation"

@@ -1,30 +1,54 @@
-id: US038
+id: "0308"
 name: "CACTUS"
 full_name: "CACTUS"
+
 release_year: 2025
 
 anatomy:
   primary: "Cardiac phantom"
-  target: "cardiac views and image quality"
+  target:
+    - "Cardiac views"
+    - "Ultrasound image quality"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "37,736 phantom images"
+  - unit: "image"
+    count: 37736
 
 annotations:
-  summary: "cardiac-view labels and image-quality grades; views include A4C, subcostal, parasternal long-axis, parasternal short-axis aortic/mitral, and random"
+  classification:
+    unit: "image"
+    classes:
+      - "A4C"
+      - "Subcostal"
+      - "Parasternal long-axis"
+      - "Parasternal short-axis aortic"
+      - "Parasternal short-axis mitral"
+      - "Random"
+    note: "The dataset includes cardiac-view labels."
+
+  quality:
+    unit: "image"
+    targets:
+      - "Image quality"
+    format: "grade"
+    note: "The dataset includes ultrasound image-quality grades."
 
 tasks:
-  - "cardiac-view classification"
-  - "ultrasound image-quality grading"
+  - "classification"
+  - "quality_assessment"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "CACTUS: An Open Dataset and Framework for Automated Cardiac Assessment and Classification of Ultrasound Images Using Deep Transfer Learning"
@@ -34,13 +58,22 @@ paper:
 data:
   repository: "FRDR"
   url: "https://doi.org/10.20383/103.01484"
-  data_doi: "10.20383/103.01484"
+  doi: "10.20383/103.01484"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://doi.org/10.20383/103.01484"
+    - "https://doi.org/10.1016/j.compbiomed.2025.110003"
 
-notes: "FRDR dataset DOI 10.20383/103.01484; CC BY 4.0."
+notes: >-
+  CACTUS contains 37,736 cardiac-phantom ultrasound images with cardiac-view
+  labels and image-quality grades. These are encoded as classification and
+  quality-assessment tasks; the phantom origin is retained explicitly under anatomy.

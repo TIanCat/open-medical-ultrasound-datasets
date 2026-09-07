@@ -1,31 +1,53 @@
-id: US037
+id: "0307"
 name: "EchoNet-Pediatric"
 full_name: "EchoNet-Pediatric"
+
 release_year: 2023
 
 anatomy:
   primary: "Heart"
-  target: "pediatric left ventricle"
+  target:
+    - "Pediatric left ventricle"
 
 modality:
-  type: "echocardiography"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "video"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "7,643 labeled videos"
+  - unit: "video"
+    count: 7643
 
 annotations:
-  summary: "ejection fraction, end-systolic and end-diastolic left-ventricular volumes, and expert left-ventricular tracings"
+  segmentation:
+    unit: "frame"
+    type: "binary"
+    targets:
+      - "Left-ventricular endocardium"
+    format: "tracing"
+    note: "Expert left-ventricular tracings are included."
+
+  measurements:
+    unit: "video"
+    targets:
+      - "Ejection fraction"
+      - "End-systolic left-ventricular volume"
+      - "End-diastolic left-ventricular volume"
+    format: "tabular_metadata"
 
 tasks:
-  - "left-ventricular segmentation"
-  - "ejection-fraction and ventricular-volume regression"
-  - "pediatric cardiac-function assessment"
+  - "segmentation"
+  - "measurement"
 
 access:
-  level: application
+  level: "application"
   license: "Stanford Research Use Agreement"
+  requirements:
+    - "Registration"
+    - "Acceptance of Stanford research-use terms"
 
 paper:
   title: "Video-Based Deep Learning for Automated Assessment of Left Ventricular Ejection Fraction in Pediatric Patients"
@@ -35,13 +57,23 @@ paper:
 data:
   repository: "Stanford EchoNet"
   url: "https://echonet.github.io/pediatric/"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://echonet.github.io/pediatric/"
+    - "https://doi.org/10.1016/j.echo.2023.01.015"
 
-notes: "Registration and Stanford research-use terms apply."
+notes: >-
+  EchoNet-Pediatric contains 7,643 labeled pediatric echocardiography videos.
+  The released supervision consists of expert left-ventricular tracings and
+  cardiac-function measurements. Pediatric cardiac-function assessment is therefore
+  represented by segmentation and measurement rather than a separate free-text task.

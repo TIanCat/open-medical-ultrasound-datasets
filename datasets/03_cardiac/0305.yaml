@@ -1,30 +1,49 @@
-id: US035
+id: "0305"
 name: "EchoNet-LVH"
 full_name: "EchoNet-LVH"
+
 release_year: 2022
 
 anatomy:
   primary: "Heart"
-  target: "left-ventricular hypertrophy measurements"
+  target:
+    - "Left ventricle"
+    - "Interventricular septum"
+    - "Left-ventricular posterior wall"
 
 modality:
-  type: "echocardiography"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "video"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "12,000 labeled videos"
+  - unit: "video"
+    count: 12000
 
 annotations:
-  summary: "expert measurements, tracings, and calculations for interventricular septal thickness, left-ventricular internal diameter, and posterior-wall thickness"
+  measurements:
+    unit: "video"
+    targets:
+      - "Interventricular septal thickness"
+      - "Left-ventricular internal diameter"
+      - "Posterior-wall thickness"
+      - "Left-ventricular mass"
+    format: "measurement_and_tracing_metadata"
+    note: >-
+      The release includes expert measurements, tracings, and calculations used
+      for left-ventricular hypertrophy phenotyping.
 
 tasks:
-  - "cardiac chamber-size and wall-thickness regression"
-  - "left-ventricular mass and hypertrophy phenotyping"
+  - "measurement"
 
 access:
-  level: application
+  level: "application"
   license: "Stanford research-use terms"
+  requirements:
+    - "Stanford AIMI/Redivis research-use workflow"
 
 paper:
   title: "High-Throughput Precision Phenotyping of Left Ventricular Hypertrophy With Cardiovascular Deep Learning"
@@ -34,13 +53,24 @@ paper:
 data:
   repository: "Stanford AIMI"
   url: "https://aimi.stanford.edu/datasets/echonet-lvh"
-  data_doi: "10.71718/wtrx-wj56"
+  doi: "10.71718/wtrx-wj56"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://aimi.stanford.edu/datasets/echonet-lvh"
+    - "https://doi.org/10.1001/jamacardio.2021.6059"
+    - "https://doi.org/10.71718/wtrx-wj56"
 
-notes: "Download is provided through the Stanford AIMI/Redivis portal under research-use terms."
+notes: >-
+  EchoNet-LVH contains 12,000 labeled echocardiography videos. Left-ventricular
+  hypertrophy phenotyping is derived from the released cardiac measurements and
+  calculations, so the native task is represented as measurement rather than as
+  a separate free-text regression or phenotyping task.

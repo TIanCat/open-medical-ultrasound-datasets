@@ -1,31 +1,70 @@
-id: US034
-name: "Tufts Medical Echocardiogram Dataset (TMED-2)"
-full_name: "Tufts Medical Echocardiogram Dataset (TMED-2)"
+id: "0304"
+name: "TMED-2"
+full_name: "Tufts Medical Echocardiogram Dataset 2"
+aliases:
+  - "Tufts Medical Echocardiogram Dataset (TMED-2)"
+
 release_year: 2021
 
 anatomy:
   primary: "Heart"
-  target: "aortic stenosis and cardiac views"
+  target:
+    - "Aortic stenosis"
+    - "Cardiac views"
 
 modality:
-  type: "transthoracic echocardiography"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "fully labeled set: 599 studies from 577 patients, 17,270 labeled and 26,596 unlabeled images; additional view-only and unlabeled sets"
+  - unit: "patient"
+    count: 577
+    note: "Fully labeled set."
+  - unit: "study"
+    count: 599
+    note: "Fully labeled set."
+  - unit: "image"
+    count: 17270
+    note: "Labeled images in the fully labeled set."
+  - unit: "image"
+    count: 26596
+    note: "Unlabeled images reported in addition to the labeled set."
 
 annotations:
-  summary: "study-level aortic-stenosis severity labels; image-level view labels for PLAX, PSAX, A2C, A4C, and other"
+  classification:
+    unit: "mixed"
+    label_sets:
+      aortic_stenosis:
+        unit: "study"
+        classes:
+          - "None"
+          - "Early"
+          - "Significant"
+      cardiac_view:
+        unit: "image"
+        classes:
+          - "PLAX"
+          - "PSAX"
+          - "A2C"
+          - "A4C"
+          - "Other"
+    note: >-
+      The dataset provides study-level aortic-stenosis severity labels and
+      image-level cardiac-view labels.
 
 tasks:
-  - "aortic-stenosis severity classification (none/early/significant)"
-  - "five-class view classification"
-  - "semi-supervised learning"
+  - "classification"
 
 access:
-  level: application
+  level: "application"
   license: "TMED non-commercial research license"
+  requirements:
+    - "Application for access"
+    - "Non-commercial research use"
 
 paper:
   title: "A New Semi-Supervised Learning Benchmark for Classifying View and Diagnosing Aortic Stenosis from Echocardiograms"
@@ -35,13 +74,23 @@ paper:
 data:
   repository: "TMED"
   url: "https://tmed.cs.tufts.edu/tmed_v2.html"
-  data_doi: null
+  doi: null
+  version: "2"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://tmed.cs.tufts.edu/tmed_v2.html"
 
-notes: "Access is granted under an apply-for-access license for non-commercial research."
+notes: >-
+  TMED-2 includes a fully labeled cohort together with additional view-only and
+  unlabeled image sets. Semi-supervised learning is a benchmark paradigm enabled
+  by the resource rather than a native annotation task, so it is not encoded in
+  tasks. The two native supervised label sets are aortic-stenosis severity and
+  cardiac-view classification.

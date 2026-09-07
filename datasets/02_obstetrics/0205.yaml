@@ -1,7 +1,6 @@
 id: "0205"
 name: "FPUS23"
 full_name: "FPUS23: An Ultrasound Fetus Phantom Dataset"
-aliases: []
 
 release_year: 2023
 
@@ -30,8 +29,7 @@ annotations:
     unit: "image"
     label_sets:
       diagnostic_plane:
-        label_type: "single_label"
-        num_classes: 4
+        label_type: "multiclass"
         classes:
           - "AC Plane"
           - "BPD Plane"
@@ -44,8 +42,7 @@ annotations:
           No Plane: 1318
         count: 5265
       fetal_orientation:
-        label_type: "single_label"
-        num_classes: 4
+        label_type: "multiclass"
         classes:
           - "hdvb"
           - "hdvf"
@@ -58,8 +55,7 @@ annotations:
           huvf: 4756
         count: 15728
       fetal_anatomy:
-        label_type: "multi_label"
-        num_classes: 4
+        label_type: "multilabel"
         classes:
           - "Head"
           - "Arms"
@@ -80,13 +76,10 @@ annotations:
       - "Fetal legs"
       - "Fetal abdomen"
     format: "bounding_box"
-    annotation_format: "XML"
     count: 9455
-    object_counts:
-      Head: 4370
-      Arms: 4853
-      Legs: 4572
-      Abdomen: 6435
+    note: >-
+      Bounding boxes are stored in XML. Reported object counts are 4,370 head,
+      4,853 arms, 4,572 legs, and 6,435 abdomen instances.
 
 tasks:
   - "standard_plane_classification"

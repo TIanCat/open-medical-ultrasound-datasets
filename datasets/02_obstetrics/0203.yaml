@@ -1,7 +1,6 @@
 id: "0203"
 name: "JNU-IFM"
 full_name: "JNU-IFM Dataset for Segmenting Pubic Symphysis-Fetal Head"
-aliases: []
 
 release_year: 2022
 
@@ -17,7 +16,7 @@ modality:
   dimension: "2D"
   temporal: "cine"
   representation:
-    - "image_sequence"
+    - "sequence"
 
 scale:
   - unit: "patient"
@@ -30,7 +29,6 @@ scale:
 annotations:
   classification:
     unit: "frame"
-    num_classes: 4
     classes:
       - "None"
       - "OnlySP"
@@ -52,7 +50,9 @@ annotations:
     count: 6224
     annotators:
       - "Dataset annotators with validation by two experienced radiologists"
-    note: "Mask pixel value 7 denotes pubic symphysis and value 8 denotes fetal head; background is 0."
+    note: >-
+      Mask pixel value 7 denotes pubic symphysis and value 8 denotes fetal head;
+      background is 0.
 
 tasks:
   - "classification"

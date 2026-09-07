@@ -1,32 +1,71 @@
-id: US039
+id: "0309"
 name: "MIMIC-IV-Echo"
 full_name: "MIMIC-IV-Echo"
+
 release_year: 2026
 
 anatomy:
   primary: "Heart"
-  target: "clinical echocardiography studies"
+  target:
+    - "Cardiac chambers"
+    - "Systolic function"
+    - "Diastolic function"
+    - "Cardiac valves"
+    - "Aorta and great vessels"
+    - "Doppler hemodynamics"
 
 modality:
-  type: "DICOM echocardiography and structured measurements"
-  dimension: "2D/3D/Doppler"
+  type:
+    - "B-mode"
+    - "M-mode"
+    - "Color Doppler"
+    - "Spectral Doppler"
+  dimension: "mixed"
   temporal: "mixed"
+  representation:
+    - "mixed"
 
 scale:
-  summary: "v1.0.1: 206,488 studies from 91,372 patients; DICOM subset: 524,137 files from 7,228 TTE studies and 4,572 patients"
+  - unit: "study"
+    count: 206488
+    note: "MIMIC-IV-Echo v1.0.1 overall study count."
+  - unit: "patient"
+    count: 91372
+    note: "MIMIC-IV-Echo v1.0.1 overall patient count."
+  - unit: "file"
+    count: 524137
+    note: "DICOM subset file count."
+  - unit: "study"
+    count: 7228
+    note: "DICOM subset transthoracic-echocardiography study count."
+  - unit: "patient"
+    count: 4572
+    note: "DICOM subset patient count."
 
 annotations:
-  summary: "about 180-230 clinician-verified measurements per study covering chambers, systolic/diastolic function, valves, aorta/great vessels, and Doppler hemodynamics; linkage to MIMIC-IV"
+  measurements:
+    unit: "study"
+    targets:
+      - "Cardiac chamber measurements"
+      - "Systolic-function measurements"
+      - "Diastolic-function measurements"
+      - "Valve measurements"
+      - "Aorta and great-vessel measurements"
+      - "Doppler hemodynamic measurements"
+    format: "structured_metadata"
+    note: >-
+      Approximately 180-230 clinician-verified echocardiographic measurements
+      are available per study, with linkage to MIMIC-IV clinical data.
 
 tasks:
-  - "echocardiography representation learning"
-  - "view analysis"
-  - "cardiac measurement prediction"
-  - "multimodal imaging and clinical-data research"
+  - "measurement"
 
 access:
-  level: controlled
+  level: "controlled"
   license: "PhysioNet credentialed data-use agreement"
+  requirements:
+    - "PhysioNet credentialing"
+    - "Completion of the required data-use agreement"
 
 paper:
   title: "MIMIC-IV-Echo: Echocardiogram Matched Subset"
@@ -36,13 +75,25 @@ paper:
 data:
   repository: "PhysioNet"
   url: "https://physionet.org/content/mimic-iv-echo/1.0.1/"
-  data_doi: "10.13026/307c-mr50"
+  doi: "10.13026/307c-mr50"
+  version: "1.0.1"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://physionet.org/content/mimic-iv-echo/1.0.1/"
+    - "https://doi.org/10.13026/307c-mr50"
 
-notes: "Credentialed PhysioNet access and a data-use agreement are required."
+notes: >-
+  MIMIC-IV-Echo v1.0.1 contains 206,488 echocardiography studies from 91,372
+  patients. The DICOM subset contains 524,137 files from 7,228 transthoracic
+  echocardiography studies and 4,572 patients. The resource links echocardiographic
+  imaging and structured measurements to MIMIC-IV. Representation learning,
+  view analysis, and multimodal clinical research are important downstream uses,
+  but the native structured supervision recorded here is measurement metadata.

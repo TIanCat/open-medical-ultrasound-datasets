@@ -1,7 +1,6 @@
 id: "0206"
 name: "Fetal Abdominal Structures Segmentation Dataset"
 full_name: "Fetal Abdominal Structures Segmentation Dataset Using Ultrasonic Images"
-aliases: []
 
 release_year: 2023
 
@@ -26,7 +25,9 @@ scale:
     count: 169
   - unit: "image"
     count: 1588
-    note: "The Mendeley description states nearly 1,500 images; 1,588 is the count reported by later dataset inventories and public reuse studies."
+    note: >-
+      The Mendeley description states nearly 1,500 images; 1,588 is the count
+      reported by later dataset inventories and public reuse studies.
 
 annotations:
   segmentation:

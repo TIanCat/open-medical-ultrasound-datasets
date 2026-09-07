@@ -1,31 +1,61 @@
-id: US033
+id: "0303"
 name: "EchoCP"
 full_name: "EchoCP"
+
 release_year: 2021
 
 anatomy:
   primary: "Heart"
-  target: "patent foramen ovale"
+  target:
+    - "Patent foramen ovale"
+    - "Cardiac chambers"
 
 modality:
-  type: "contrast-enhanced transthoracic echocardiography"
+  type:
+    - "B-mode"
+    - "CEUS"
   dimension: "2D"
-  temporal: "video"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "60 apical four-chamber videos from 30 patients (2 videos per patient)"
+  - unit: "patient"
+    count: 30
+  - unit: "video"
+    count: 60
+    note: "Two apical four-chamber videos are provided per patient."
 
 annotations:
-  summary: "PFO diagnosis and grade annotations; sparsely annotated cardiac-chamber segmentation masks by four experienced sonographers"
+  classification:
+    unit: "patient"
+    note: "The dataset includes patent-foramen-ovale diagnostic labels."
+
+  grading:
+    unit: "patient"
+    system: "PFO grading"
+    categories: null
+    note: "Patent-foramen-ovale grade annotations are included."
+
+  segmentation:
+    unit: "frame"
+    type: "multiclass"
+    targets:
+      - "Cardiac chambers"
+    format: "mask"
+    annotators:
+      - "Four experienced sonographers"
+    note: "Cardiac-chamber segmentation masks are sparsely annotated."
 
 tasks:
-  - "PFO diagnosis/grading"
-  - "cardiac-chamber segmentation"
-  - "contrast-bubble video analysis"
+  - "classification"
+  - "grading"
+  - "segmentation"
 
 access:
-  level: open
+  level: "open"
   license: "Apache 2.0"
+  requirements: []
 
 paper:
   title: "EchoCP: An Echocardiography Dataset in Contrast Transthoracic Echocardiography for Patent Foramen Ovale Diagnosis"
@@ -35,13 +65,24 @@ paper:
 data:
   repository: "Kaggle"
   url: "https://www.kaggle.com/datasets/xiaoweixumedicalai/echocp"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://www.kaggle.com/datasets/xiaoweixumedicalai/echocp"
+    - "https://doi.org/10.48550/arXiv.2105.08267"
 
-notes: "Public Kaggle release is licensed Apache 2.0."
+notes: >-
+  EchoCP contains 60 contrast transthoracic echocardiography videos from
+  30 patients, with two videos per patient. The released supervision supports
+  PFO diagnosis, PFO grading, and sparse cardiac-chamber segmentation.
+  Contrast-bubble video analysis is treated as a use of these annotations
+  rather than as a separate native task.

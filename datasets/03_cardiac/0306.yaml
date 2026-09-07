@@ -1,30 +1,55 @@
-id: US036
+id: "0306"
 name: "CardiacUDA / CardiacUDC"
 full_name: "CardiacUDA / CardiacUDC"
+
 release_year: 2023
 
 anatomy:
   primary: "Heart"
-  target: "multi-view cardiac structures"
+  target:
+    - "Left ventricle"
+    - "Right ventricle"
+    - "Pulmonary artery"
+    - "Cardiac chambers"
 
 modality:
-  type: "echocardiography"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "video"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "paper dataset: 992 videos (516 site G, 476 site R) from about 100 patients; current Kaggle release exposes an A4C subset"
+  - unit: "video"
+    count: 992
+    note: "Paper-reported full dataset: 516 videos from site G and 476 from site R."
+  - unit: "patient"
+    count: 100
+    approximate: true
+    note: "The paper describes approximately 100 patients."
 
 annotations:
-  summary: "pixel-wise masks for view-specific structures: LV/RV, pulmonary artery, and four chambers; sparse training-frame labels and dense validation/test labels"
+  segmentation:
+    unit: "frame"
+    type: "multiclass"
+    targets:
+      - "Left ventricle"
+      - "Right ventricle"
+      - "Pulmonary artery"
+      - "Cardiac chambers"
+    format: "mask"
+    note: >-
+      Pixel-wise masks are view-specific. Training labels are sparse, whereas
+      validation and test labels are more densely annotated.
 
 tasks:
-  - "multi-view cardiac-structure segmentation"
-  - "unsupervised domain adaptation and cross-center generalization"
+  - "segmentation"
 
 access:
-  level: open
-  license: "Apache 2.0 (Kaggle listing)"
+  level: "open"
+  license: "Apache 2.0"
+  requirements: []
 
 paper:
   title: "GraphEcho: Graph-Driven Unsupervised Domain Adaptation for Echocardiogram Video Segmentation"
@@ -34,13 +59,23 @@ paper:
 data:
   repository: "Kaggle"
   url: "https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "partial"
+  date: "2026-09-02"
+  sources:
+    - "https://www.kaggle.com/datasets/xiaoweixumedicalai/cardiacudc-dataset"
+    - "https://doi.org/10.48550/arXiv.2309.11145"
 
-notes: "The paper describes 992 videos; the publicly visible Kaggle package currently contains only the A4C subset."
+notes: >-
+  The associated paper describes 992 videos across two sites, while the publicly
+  visible Kaggle package currently exposes only the A4C subset. Unsupervised domain
+  adaptation and cross-center generalization are experimental paradigms rather than
+  native dataset tasks; the released supervision itself is cardiac-structure segmentation.

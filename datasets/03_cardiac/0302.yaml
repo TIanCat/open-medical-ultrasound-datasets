@@ -1,32 +1,58 @@
-id: US032
+id: "0302"
 name: "EchoNet-Dynamic"
 full_name: "EchoNet-Dynamic"
+
 release_year: 2020
 
 anatomy:
   primary: "Heart"
-  target: "left ventricle, apical four-chamber"
+  target:
+    - "Left ventricle"
+    - "Apical four-chamber view"
 
 modality:
-  type: "echocardiography"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "video"
+  temporal: "cine"
+  representation:
+    - "video"
 
 scale:
-  summary: "10,030 videos from 10,030 individuals"
+  - unit: "subject"
+    count: 10030
+  - unit: "video"
+    count: 10030
 
 annotations:
-  summary: "video-level ejection fraction, EDV, and ESV; expert left-ventricular endocardial tracings at end diastole and end systole with frame indices"
+  segmentation:
+    unit: "frame"
+    type: "binary"
+    targets:
+      - "Left-ventricular endocardium"
+    format: "tracing"
+    note: >-
+      Expert left-ventricular endocardial tracings are provided at
+      end diastole and end systole together with the corresponding frame indices.
+
+  measurements:
+    unit: "video"
+    targets:
+      - "Ejection fraction"
+      - "End-diastolic volume"
+      - "End-systolic volume"
+    format: "tabular_metadata"
 
 tasks:
-  - "left-ventricular segmentation"
-  - "ejection-fraction regression"
-  - "ventricular-volume estimation"
-  - "cardiac-cycle analysis"
+  - "segmentation"
+  - "measurement"
 
 access:
-  level: application
+  level: "application"
   license: "Stanford Research Use Agreement"
+  requirements:
+    - "Registration"
+    - "Acceptance of the Stanford Research Use Agreement"
 
 paper:
   title: "Video-based AI for beat-to-beat assessment of cardiac function"
@@ -36,13 +62,24 @@ paper:
 data:
   repository: "Stanford AIMI"
   url: "https://echonet.github.io/dynamic/"
-  data_doi: "10.71718/qd7p-4h31"
+  doi: "10.71718/qd7p-4h31"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://echonet.github.io/dynamic/"
+    - "https://doi.org/10.1038/s41586-020-2145-8"
+    - "https://doi.org/10.71718/qd7p-4h31"
 
-notes: "Registration and acceptance of the Stanford Research Use Agreement are required."
+notes: >-
+  EchoNet-Dynamic contains 10,030 apical four-chamber echocardiography videos
+  from 10,030 individuals. Cardiac-cycle analysis is a downstream use of the
+  cine data, whereas the native released supervision is represented here by
+  left-ventricular tracings and cardiac-function measurements.

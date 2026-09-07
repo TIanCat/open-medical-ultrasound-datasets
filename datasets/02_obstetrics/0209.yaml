@@ -1,7 +1,6 @@
 id: "0209"
 name: "FOCUS"
 full_name: "FOCUS: Four-chamber Ultrasound Image Dataset for Fetal Cardiac Biometric Measurement"
-aliases: []
 
 release_year: 2025
 
@@ -44,7 +43,7 @@ annotations:
       - "Fetal heart"
       - "Fetal thorax"
     format: "rotated_bounding_box"
-    annotation_format: "DOTA"
+    note: "Rotated bounding boxes are stored in DOTA format."
 
   measurements:
     unit: "image"

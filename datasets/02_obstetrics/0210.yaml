@@ -1,7 +1,6 @@
 id: "0210"
 name: "Maternal-Fetal Ultrasound Video Dataset"
 full_name: "Maternal-Fetal Ultrasound Video Dataset for End-to-end Intrapartum Biometry and Multi-task Learning"
-aliases: []
 
 release_year: 2025
 
@@ -30,8 +29,10 @@ scale:
 annotations:
   classification:
     unit: "video"
-    label_type: "multi_task_binary"
-    note: "CSV files provide independent binary clinical judgment labels used for standard-plane selection and downstream processing."
+    label_type: "multilabel"
+    note: >-
+      CSV files provide multiple independent binary clinical judgment labels
+      used for standard-plane selection and downstream processing.
 
   segmentation:
     unit: "frame"

@@ -1,7 +1,6 @@
 id: "0204"
 name: "African Fetal Standard Plane Dataset"
 full_name: "Maternal Fetal Ultrasound Planes from Low-Resource Imaging Settings in Five African Countries"
-aliases: []
 
 release_year: 2023
 
@@ -24,14 +23,15 @@ modality:
 scale:
   - unit: "patient"
     count: 125
-    note: "The Methods section states 25 patients per country across five countries; the paper overview also refers to approximately 120 patients."
+    note: >-
+      The Methods section states 25 patients per country across five countries;
+      the paper overview also refers to approximately 120 patients.
   - unit: "image"
     count: 450
 
 annotations:
   classification:
     unit: "image"
-    num_classes: 4
     classes:
       - "Fetal abdomen"
       - "Fetal brain"
@@ -87,7 +87,7 @@ family:
   type: "primary"
   parent: null
   related:
-    - "FETAL_PLANES_DB"
+    - "0202"
 
 verification:
   status: "verified"
@@ -100,7 +100,7 @@ notes: >-
   This resource contains independently acquired fetal standard-plane images from five
   African clinical centres and is therefore treated as a primary multi-centre acquisition.
   The associated study evaluates cross-country generalisation and transfer learning using
-  FETAL_PLANES_DB as a high-resource source domain, but domain adaptation is not encoded
-  as a native dataset task because the direct supervision consists of fetal-plane labels.
-  The public Zenodo metadata currently does not expose a clear dataset-specific license,
-  so license is left null rather than inferred from the article license.
+  FETAL_PLANES_DB (atlas ID 0202) as a high-resource source domain, but domain adaptation
+  is not encoded as a native dataset task because the direct supervision consists of
+  fetal-plane labels. The public Zenodo metadata currently does not expose a clear
+  dataset-specific license, so license is left null rather than inferred from the article.

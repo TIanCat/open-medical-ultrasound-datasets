@@ -1,30 +1,66 @@
-id: US031
+id: "0301"
 name: "CAMUS"
 full_name: "CAMUS"
+
 release_year: 2019
 
 anatomy:
   primary: "Heart"
-  target: "apical two- and four-chamber"
+  target:
+    - "Apical two-chamber view"
+    - "Apical four-chamber view"
+    - "Left ventricle"
+    - "Left atrium"
 
 modality:
-  type: "B-mode echocardiography"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "sequence"
+  representation:
+    - "sequence"
 
 scale:
-  summary: "500 patients"
+  - unit: "patient"
+    count: 500
 
 annotations:
-  summary: "expert contours at end diastole and end systole for the left-ventricular endocardium, left-ventricular myocardium/epicardium, and left atrium; image-quality labels; EDV, ESV, and EF"
+  segmentation:
+    unit: "frame"
+    type: "multiclass"
+    targets:
+      - "Left-ventricular endocardium"
+      - "Left-ventricular myocardium"
+      - "Left atrium"
+    format: "contour"
+    note: >-
+      Expert contours are provided at end diastole and end systole
+      for apical two- and four-chamber sequences.
+
+  measurements:
+    unit: "patient"
+    targets:
+      - "End-diastolic volume"
+      - "End-systolic volume"
+      - "Ejection fraction"
+    format: "tabular_metadata"
+
+  quality:
+    unit: "sequence"
+    targets:
+      - "Image quality"
+    format: "categorical_label"
+    note: "The dataset includes image-quality labels."
 
 tasks:
-  - "multi-structure segmentation"
-  - "left-ventricular volume and ejection-fraction estimation"
+  - "segmentation"
+  - "measurement"
+  - "quality_assessment"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY-NC-SA 4.0"
+  requirements: []
 
 paper:
   title: "Deep Learning for Segmentation using an Open Large-Scale Dataset in 2D Echocardiography"
@@ -34,13 +70,24 @@ paper:
 data:
   repository: "CREATIS / Human Heart Project"
   url: "https://www.creatis.insa-lyon.fr/Challenge/camus/"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://www.creatis.insa-lyon.fr/Challenge/camus/"
+    - "https://doi.org/10.1109/TMI.2019.2900516"
 
-notes: "Verified from the official CAMUS project page and original paper."
+notes: >-
+  CAMUS contains 2D echocardiographic sequences from 500 patients in apical
+  two- and four-chamber views. Expert annotations are provided at end diastole
+  and end systole. The structured tasks encode the native segmentation,
+  cardiac-function measurement, and image-quality annotations rather than
+  the broader downstream analyses that can be derived from them.

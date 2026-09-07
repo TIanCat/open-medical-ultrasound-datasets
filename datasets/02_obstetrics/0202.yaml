@@ -1,7 +1,6 @@
 id: "0202"
 name: "FETAL_PLANES_DB"
 full_name: "FETAL_PLANES_DB: Common Maternal-Fetal Ultrasound Images"
-aliases: []
 
 release_year: 2020
 
@@ -33,7 +32,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 6
     classes:
       - "Fetal abdomen"
       - "Fetal brain"
@@ -50,7 +48,6 @@ annotations:
       Other: 4213
     subgroups:
       Fetal brain:
-        num_classes: 3
         classes:
           - "Trans-thalamic"
           - "Trans-cerebellar"
