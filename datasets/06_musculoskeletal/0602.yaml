@@ -1,30 +1,45 @@
-id: US054
+id: "0602"
 name: "deepMTJ test set"
-full_name: "deepMTJ test set"
+full_name: "deepMTJ Test Set"
+
 release_year: 2021
 
 anatomy:
-  primary: "Muscle-tendon junction"
-  target: "lateral and medial gastrocnemius MTJ"
+  primary: "Musculoskeletal"
+  target:
+    - "Lateral gastrocnemius muscle-tendon junction"
+    - "Medial gastrocnemius muscle-tendon junction"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "1,344 test images acquired with 3 ultrasound systems"
+  - unit: "image"
+    count: 1344
+    note: "Test images were acquired using three ultrasound systems."
 
 annotations:
-  summary: "MTJ locations from four specialists; mean specialist location used as ground truth"
+  localization:
+    unit: "image"
+    targets:
+      - "Muscle-tendon junction"
+    format: "point"
+    annotators:
+      - "Four specialists"
+    annotation_method: "The mean specialist location is used as the ground truth."
 
 tasks:
-  - "muscle-tendon-junction localization and tracking"
-  - "cross-device benchmark evaluation"
+  - "localization"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "A Human-Centered Machine-Learning Approach for Muscle-Tendon Junction Tracking in Ultrasound Images"
@@ -34,13 +49,25 @@ paper:
 data:
   repository: "Figshare"
   url: "https://doi.org/10.6084/m9.figshare.16822978.v2"
-  data_doi: "10.6084/m9.figshare.16822978.v2"
+  doi: "10.6084/m9.figshare.16822978.v2"
+  version: "2"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://doi.org/10.6084/m9.figshare.16822978.v2"
+    - "https://doi.org/10.1109/TBME.2021.313054"
 
-notes: "Test set is downloadable and licensed CC BY 4.0."
+notes: >-
+  The public deepMTJ test set contains 1,344 B-mode ultrasound images acquired
+  with three ultrasound systems. Ground truth is defined from four specialist
+  annotations. The associated study evaluates MTJ tracking and cross-device
+  generalization, but the released annotation itself is per-image MTJ localization;
+  tracking and benchmark generalization are therefore not encoded as separate
+  native tasks.

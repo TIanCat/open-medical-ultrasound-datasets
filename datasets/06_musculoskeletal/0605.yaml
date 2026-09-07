@@ -1,31 +1,62 @@
-id: US058
+id: "0605"
 name: "Machine Learning-Driven Heckmatt Grading in FSHD"
 full_name: "Machine Learning-Driven Heckmatt Grading in FSHD"
+
 release_year: 2025
 
 anatomy:
-  primary: "Muscle"
-  target: "FSHD and healthy muscle"
+  primary: "Musculoskeletal"
+  target:
+    - "Skeletal muscle"
+    - "Facioscapulohumeral muscular dystrophy"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "25,005 images from 290 participants (180 healthy; 110 with FSHD)"
+  - unit: "participant"
+    count: 290
+  - unit: "image"
+    count: 25005
 
 annotations:
-  summary: "subject metadata; Heckmatt grades; muscle segmentation masks supporting binary and multi-label strategies"
+  classification:
+    unit: "participant"
+    classes:
+      - "Healthy"
+      - "FSHD"
+    distribution:
+      Healthy: 180
+      FSHD: 110
+
+  grading:
+    unit: "image"
+    system: "Heckmatt grading"
+    categories: null
+    note: "Heckmatt grades are included with the released subject and image metadata."
+
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Muscle"
+    format: "mask"
+    note: "Muscle segmentation masks support binary and multi-label modeling strategies."
 
 tasks:
-  - "Heckmatt-grade classification"
-  - "muscle segmentation"
-  - "healthy-versus-FSHD analysis"
+  - "classification"
+  - "grading"
+  - "segmentation"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "Machine Learning-Driven Heckmatt Grading in Facioscapulohumeral Muscular Dystrophy: A Novel Pathway for Musculoskeletal Ultrasound Analysis"
@@ -35,13 +66,24 @@ paper:
 data:
   repository: "Mendeley Data"
   url: "https://data.mendeley.com/datasets/yzg86vb895/1"
-  data_doi: "10.17632/yzg86vb895.1"
+  doi: "10.17632/yzg86vb895.1"
+  version: "1"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://data.mendeley.com/datasets/yzg86vb895/1"
+    - "https://doi.org/10.17632/yzg86vb895.1"
 
-notes: "Published 11 February 2025; CC BY 4.0."
+notes: >-
+  The dataset contains 25,005 B-mode ultrasound images from 290 participants,
+  including 180 healthy participants and 110 participants with FSHD. Healthy-versus-FSHD
+  analysis is represented by the participant-level classification labels, while
+  Heckmatt grading and muscle segmentation are encoded separately according to
+  their native annotations.

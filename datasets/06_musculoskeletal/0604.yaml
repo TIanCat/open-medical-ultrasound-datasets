@@ -1,31 +1,60 @@
-id: US057
+id: "0604"
 name: "TUS-REC2024"
-full_name: "TUS-REC2024"
+full_name: "TUS-REC2024: Trackerless Ultrasound Reconstruction Challenge 2024"
+
 release_year: 2024
 
 anatomy:
-  primary: "Forearm"
-  target: "freehand scan geometry"
+  primary: "Musculoskeletal"
+  target:
+    - "Forearm"
+    - "Freehand ultrasound scan geometry"
 
 modality:
-  type: "tracked B-mode ultrasound"
-  dimension: "2D to 3D"
+  type:
+    - "B-mode"
+  dimension: "mixed"
   temporal: "sequence"
+  representation:
+    - "sequence"
 
 scale:
-  summary: "85 healthy volunteers; 2,040 scans (1,200 training, 72 validation, 768 held-out test)"
+  - unit: "participant"
+    count: 85
+  - unit: "scan"
+    count: 2040
 
 annotations:
-  summary: "synchronized per-frame 4x4 spatial transformations/poses"
+  registration:
+    unit: "frame"
+    modalities:
+      - "B-mode"
+    format: "4x4_transformation_matrix"
+    note: "Synchronized per-frame spatial transformations provide the reference scan poses."
 
 tasks:
-  - "trackerless 3D freehand-ultrasound reconstruction"
-  - "relative-pose estimation"
-  - "spatial registration"
+  - "pose_estimation"
+  - "registration"
+  - "reconstruction"
+
+splits:
+  unit: "scan"
+  training:
+    count: 1200
+    labels: "public"
+  validation:
+    count: 72
+    labels: "public"
+  test:
+    count: 768
+    labels: "withheld"
 
 access:
-  level: application
+  level: "application"
   license: "Research use only; non-commercial"
+  requirements:
+    - "Training and validation data are available for research use."
+    - "The held-out test set is evaluated through the challenge."
 
 paper:
   title: "TUS-REC2024: A Challenge to Reconstruct 3D Freehand Ultrasound Without External Tracker"
@@ -33,15 +62,26 @@ paper:
   doi: "10.48550/arXiv.2506.21765"
 
 data:
-  repository: "TUS-REC / Zenodo"
+  repository: "TUS-REC"
   url: "https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://github-pages.ucl.ac.uk/tus-rec-challenge/TUS-REC2024/"
+    - "https://doi.org/10.48550/arXiv.2506.21765"
 
-notes: "Training and validation data are public for research; the held-out test set is evaluated through the challenge."
+notes: >-
+  TUS-REC2024 contains 2,040 freehand forearm ultrasound scans from 85 healthy
+  volunteers. The native supervision consists of synchronized per-frame 4x4
+  spatial transformations. These support relative-pose estimation, spatial
+  registration, and trackerless 3D reconstruction, which are retained as the
+  three native technical tasks.

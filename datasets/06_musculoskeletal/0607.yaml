@@ -1,55 +1,89 @@
-id: US062
-name: Robotic and Handheld Lumbar Spine Ultrasound
-full_name: A large, paired dataset of robotic and handheld lumbar spine ultrasound with ground-truth CT benchmarking
+id: "0607"
+name: "Robotic and Handheld Lumbar Spine Ultrasound"
+full_name: "A Large, Paired Dataset of Robotic and Handheld Lumbar Spine Ultrasound with Ground-truth CT Benchmarking"
+
 release_year: 2024
 
 anatomy:
-  primary: Spine
-  target: Lumbar vertebral bone surface
+  primary: "Spine"
+  target:
+    - "Lumbar vertebral bone surface"
 
 modality:
-  type: B-mode ultrasound + CT
-  dimension: 2D ultrasound + 3D CT
-  temporal: tracked ultrasound sweeps
+  type:
+    - "B-mode"
+    - "CT"
+  dimension: "mixed"
+  temporal: "sweep"
+  representation:
+    - "mixed"
 
 scale:
-  images: 6091
-  patients: 63
+  - unit: "patient"
+    count: 63
+  - unit: "scan"
+    count: 598
+    note: "223 handheld and 375 robot-assisted ultrasound scans."
+  - unit: "image"
+    count: 6091
+    note: "Expert-annotated ultrasound frames selected from nine volunteers."
 
 annotations:
-  classification:
-    num_classes: 0
-    classes: []
-
   segmentation:
-    available: true
+    unit: "image"
+    type: "binary"
     targets:
-      - Vertebral bone surface
+      - "Vertebral bone surface"
+    format: "mask"
+    count: 6091
+
+  registration:
+    unit: "frame"
+    modalities:
+      - "B-mode"
+      - "CT"
+    format: "tracked_spatial_transform"
+    note: >-
+      Raw ultrasound frames include synchronized tracking data and are paired
+      with CT scans and CT-derived 3D vertebral surface models.
 
 tasks:
-  - Segmentation
-  - Registration
-  - 3D Reconstruction
+  - "segmentation"
+  - "registration"
+  - "reconstruction"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
 paper:
-  title: A large, paired dataset of robotic and handheld lumbar spine ultrasound with ground-truth CT benchmarking
-  venue: Scientific Data
-  doi: 10.1038/s41597-025-06047-9
+  title: "A large, paired dataset of robotic and handheld lumbar spine ultrasound with ground-truth CT benchmarking"
+  venue: "Scientific Data"
+  doi: "10.1038/s41597-025-06047-9"
 
 data:
-  repository: KU Leuven RDR
-  url: https://doi.org/10.48804/3XPCAE
-  data_doi: 10.48804/3XPCAE
+  repository: "KU Leuven RDR"
+  url: "https://doi.org/10.48804/3XPCAE"
+  doi: "10.48804/3XPCAE"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://doi.org/10.48804/3XPCAE"
+    - "https://doi.org/10.1038/s41597-025-06047-9"
 
-notes: "Includes 223 handheld and 375 robot-assisted ultrasound scans. The 6,091 expert-annotated frames comprise 2,353 HUS and 3,738 RUS frames selected from nine volunteers. Raw ultrasound frames include synchronized spatial tracking data; paired CT scans and CT-derived 3D vertebral surface models are also provided."
+notes: >-
+  The resource includes 223 handheld and 375 robot-assisted lumbar-spine
+  ultrasound scans. The 6,091 expert-annotated frames comprise 2,353 handheld
+  and 3,738 robot-assisted frames selected from nine volunteers. Paired CT scans,
+  synchronized ultrasound tracking data, and CT-derived 3D vertebral surface
+  models support registration and reconstruction. The former empty classification
+  block has been removed because no native classification labels are described.

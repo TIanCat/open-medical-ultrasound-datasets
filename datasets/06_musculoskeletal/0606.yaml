@@ -1,31 +1,63 @@
-id: US059
+id: "0606"
 name: "Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment"
-full_name: "Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment"
+full_name: "Transverse Musculoskeletal Ultrasound Dataset for Neuromuscular Disease Assessment"
+
 release_year: 2021
 
 anatomy:
-  primary: "Muscle"
-  target: "biceps brachii, tibialis anterior, and medial gastrocnemius"
+  primary: "Musculoskeletal"
+  target:
+    - "Biceps brachii"
+    - "Tibialis anterior"
+    - "Medial gastrocnemius"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "3,917 images from 1,283 subjects"
+  - unit: "subject"
+    count: 1283
+  - unit: "image"
+    count: 3917
 
 annotations:
-  summary: "expert cross-sectional-area muscle segmentations; healthy/abnormal status and grayscale-derived quantitative information"
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Muscle cross-sectional area"
+    format: "mask"
+    note: "Expert muscle cross-sectional-area segmentations are provided."
+
+  classification:
+    unit: "image"
+    classes:
+      - "Healthy"
+      - "Abnormal"
+    note: "Healthy/abnormal muscle status is included with the released data."
+
+  measurements:
+    unit: "image"
+    targets:
+      - "Grayscale intensity"
+      - "Muscle echogenicity"
+    format: "derived_quantitative_metadata"
+    note: "Grayscale-derived quantitative information is included for muscle assessment."
 
 tasks:
-  - "muscle cross-sectional-area segmentation"
-  - "grayscale/echogenicity quantification"
-  - "healthy-versus-abnormal muscle assessment"
+  - "segmentation"
+  - "classification"
+  - "measurement"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "Deep Learning Segmentation of Transverse Musculoskeletal Ultrasound Images for Neuromuscular Disease Assessment"
@@ -35,13 +67,25 @@ paper:
 data:
   repository: "Mendeley Data"
   url: "https://data.mendeley.com/datasets/3jykz7wz8d/1"
-  data_doi: "10.17632/3jykz7wz8d.1"
+  doi: "10.17632/3jykz7wz8d.1"
+  version: "1"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://data.mendeley.com/datasets/3jykz7wz8d/1"
+    - "https://doi.org/10.1016/j.compbiomed.2021.104623"
+    - "https://doi.org/10.17632/3jykz7wz8d.1"
 
-notes: "Published 6 July 2021; CC BY 4.0."
+notes: >-
+  The dataset contains 3,917 transverse musculoskeletal ultrasound images from
+  1,283 subjects. Expert cross-sectional-area masks are the principal spatial
+  annotations. Healthy/abnormal status and grayscale-derived quantitative
+  information are retained as classification and measurement annotations rather
+  than as free-text downstream assessment tasks.

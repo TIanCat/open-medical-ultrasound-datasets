@@ -1,31 +1,45 @@
-id: US055
+id: "0603"
 name: "FALLMUD"
 full_name: "FALLMUD"
+
 release_year: 2021
 
 anatomy:
-  primary: "Lower-leg muscle"
-  target: "fascicles and aponeuroses"
+  primary: "Musculoskeletal"
+  target:
+    - "Lower-leg muscle"
+    - "Muscle fascicle"
+    - "Aponeurosis"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "812 images"
+  - unit: "image"
+    count: 812
 
 annotations:
-  summary: "one fascicle segmentation mask and one aponeurosis segmentation mask per image"
+  segmentation:
+    unit: "image"
+    type: "multiclass"
+    targets:
+      - "Muscle fascicle"
+      - "Aponeurosis"
+    format: "mask"
+    note: "Each image is paired with one fascicle mask and one aponeurosis mask."
 
 tasks:
-  - "muscle-fascicle segmentation"
-  - "aponeurosis segmentation"
-  - "muscle-architecture quantification"
+  - "segmentation"
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
   title: "AW-Net: Automatic Muscle Structure Analysis on B-Mode Ultrasound Images for Injury Prevention"
@@ -35,13 +49,23 @@ paper:
 data:
   repository: "CEA Kalisteo"
   url: "https://kalisteo.cea.fr/index.php/fallmud/"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "aggregate"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://kalisteo.cea.fr/index.php/fallmud/"
 
-notes: "The release combines two earlier image sets with complementary masks."
+notes: >-
+  FALLMUD contains 812 B-mode ultrasound images and combines two earlier image
+  sets with complementary fascicle and aponeurosis masks. It is therefore
+  recorded as an aggregate resource rather than a new independent acquisition.
+  Muscle-architecture quantification is a downstream use derived from these
+  segmentation masks and is not encoded as a separate native task.
