@@ -16,7 +16,7 @@ modality:
   type:
     - "B-mode"
     - "Color Doppler"
-    - "Contrast-enhanced ultrasound"
+    - "CEUS"
   dimension: "2D"
   temporal: "static"
   representation:
@@ -40,7 +40,6 @@ annotations:
   classification:
     unit: "image"
     label_type: "multiclass"
-    num_classes: 8
     classes:
       - "Chocolate cyst"
       - "Serous cystadenoma"
@@ -142,27 +141,26 @@ verification:
     - "https://doi.org/10.1016/j.patcog.2025.112311"
 
 notes: >-
-  MMOTU is a single-center multi-modality ovarian tumor ultrasound
-  dataset collected at Beijing Shijitan Hospital, Capital Medical
-  University. It contains 1,639 images from 294 patients and consists
-  of the OTU_2D and OTU_CEUS subsets. The GitHub repository was created
-  in July 2022 and the original arXiv description was released in 2022,
-  so 2022 is used as the dataset release year. The work was subsequently
-  published in Pattern Recognition in 2026 under the revised title
-  "Unsupervised cross-domain semantic segmentation on multi-modality
-  ovarian tumor ultrasound data."
+  MMOTU is a single-center multi-modality ovarian tumor ultrasound dataset
+  collected at Beijing Shijitan Hospital, Capital Medical University. It
+  contains 1,639 images from 294 patients and consists of the OTU_2D and
+  OTU_CEUS subsets. The GitHub repository was created in July 2022 and the
+  original arXiv description was released in 2022, so 2022 is used as the
+  dataset release year. The work was subsequently published in Pattern
+  Recognition under the revised title "Unsupervised cross-domain semantic
+  segmentation on multi-modality ovarian tumor ultrasound data."
 
-  Pixel-wise semantic annotations and global tumor-category annotations
-  were produced by 27 Obstetrics and Gynecology experts. Each image was
-  annotated by one expert and checked by another, with pathological
-  reports used as reference. The official MMOTU segmentation code uses
-  two classes, "background" and "OvarianTumor", and binary mask files
-  with the suffix "_binary.PNG".
+  Pixel-wise semantic annotations and global tumor-category annotations were
+  produced by 27 Obstetrics and Gynecology experts. Each image was annotated
+  by one expert and checked by another, with pathological reports used as
+  reference. The official MMOTU segmentation code uses two classes,
+  "background" and "OvarianTumor", and binary mask files with the suffix
+  "_binary.PNG".
 
   Although unsupervised domain adaptation is the principal methodological
-  task investigated in the associated paper, it is not listed as a native
-  dataset task because it is an experimental learning setting rather than
-  an additional annotation type.
+  setting investigated in the associated paper, it is not listed as a native
+  dataset task because it is an experimental learning setting rather than an
+  additional annotation type.
 
   The GitHub repository contains an Apache-2.0 LICENSE inherited from
   MMSegmentation and explicitly copyrighted to the MMSegmentation authors.

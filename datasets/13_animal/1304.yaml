@@ -1,32 +1,40 @@
-id: US099
+id: "1304"
 name: "Open-3DULM / Transcranial mice brain"
 full_name: "3D Transcranial Ultrasound Localization Microscopy in Awake Mice"
+
 release_year: 2025
 
 anatomy:
   primary: "Mouse brain"
-  target: "transcranial cerebral microvasculature"
+  target:
+    - "Transcranial cerebral microvasculature"
 
 modality:
-  type: "ultrafast ultrasound localization microscopy"
-  dimension: "3D/4D cine"
-  temporal: "spatiotemporal sequence"
+  type:
+    - "Ultrafast ultrasound"
+  dimension: "mixed"
+  temporal: "sequence"
+  representation:
+    - "sequence"
 
 scale:
-  summary: "5 mice; 370 ultrafast cine videos"
+  - unit: "subject"
+    count: 5
+    note: "Five awake mice were included."
+  - unit: "video"
+    count: 370
+    note: "The public resource contains 370 ultrafast cine acquisitions."
 
-annotations:
-  summary: "spatiotemporal ULM acquisitions with metadata and processing pipeline; no consistent semantic classification labels"
+annotations: {}
 
 tasks:
-  - "3D ultrasound localization microscopy reconstruction"
-  - "microvascular analysis"
-  - "cerebral blood-flow quantification"
-  - "4D spatiotemporal analysis"
+  - "reconstruction"
+  - "signal_analysis"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "3D Transcranial Ultrasound Localization Microscopy in Awake Mice: Protocol and Open-Source Pipeline"
@@ -34,15 +42,28 @@ paper:
   doi: "10.1038/s44172-025-00415-4"
 
 data:
-  repository: "Open-3DULM / Transcranial mice brain"
+  repository: "Zenodo"
   url: "https://zenodo.org/records/14289690"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://zenodo.org/records/14289690"
+    - "https://doi.org/10.1038/s44172-025-00415-4"
 
-notes: "Verified from the Communications Engineering article, Zenodo record, and Open-3DULM repository reference."
+notes: >-
+  Open-3DULM contains spatiotemporal transcranial ultrasound-localization-
+  microscopy acquisitions from five awake mice and an open processing pipeline.
+  The resource is intended for 3D/4D ULM reconstruction, microvascular analysis,
+  and cerebral blood-flow research. Because no unified semantic or quantitative
+  ground-truth annotation set is documented in the atlas source, microvascular
+  analysis and blood-flow quantification are treated as downstream analyses;
+  the native technical tasks are represented as reconstruction and signal analysis.

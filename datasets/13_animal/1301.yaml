@@ -1,32 +1,57 @@
-id: US100
+id: "1301"
 name: "OPULM PALA"
 full_name: "Open Platform for Ultrasound Localization Microscopy - Performance Assessment of Localization Algorithms"
+
 release_year: 2020
 
 anatomy:
   primary: "Microvasculature"
-  target: "microbubbles / vascular structures"
+  target:
+    - "Microbubbles"
+    - "Vascular structures"
 
 modality:
-  type: "ultrafast contrast-enhanced ultrasound / ULM"
-  dimension: "2D sequences"
-  temporal: "high-frame-rate sequence"
+  type:
+    - "Ultrafast ultrasound"
+    - "CEUS"
+  dimension: "2D"
+  temporal: "sequence"
+  representation:
+    - "sequence"
 
 scale:
-  summary: "6 benchmark datasets including simulated and in vivo acquisitions"
+  - unit: "acquisition"
+    count: 6
+    note: "Six benchmark datasets comprising simulated and in vivo acquisitions."
 
 annotations:
-  summary: "ultrafast sequences with microbubble localization, trajectory or reconstruction reference information and processing scripts"
+  localization:
+    unit: "frame"
+    targets:
+      - "Microbubble"
+    format: "localization_reference"
+    note: >-
+      The benchmark resource includes reference information for evaluating
+      microbubble-localization algorithms across simulated and in vivo data.
+
+  tracking:
+    unit: "sequence"
+    targets:
+      - "Microbubble trajectory"
+    format: "trajectory"
+    note: >-
+      Trajectory and reconstruction reference information is provided for
+      ultrasound-localization-microscopy benchmarking.
 
 tasks:
-  - "microbubble localization"
-  - "microbubble trajectory tracking"
-  - "vascular reconstruction"
-  - "ULM algorithm benchmarking"
+  - "localization"
+  - "tracking"
+  - "reconstruction"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "Performance benchmarking of microbubble-localization algorithms for ultrasound localization microscopy"
@@ -34,15 +59,30 @@ paper:
   doi: "10.1038/s41551-021-00824-8"
 
 data:
-  repository: "OPULM PALA"
+  repository: "Zenodo"
   url: "https://zenodo.org/records/4343435"
-  data_doi: "10.5281/zenodo.4343435"
+  doi: "10.5281/zenodo.4343435"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related:
+    - "1302"
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://zenodo.org/records/4343435"
+    - "https://doi.org/10.5281/zenodo.4343435"
+    - "https://doi.org/10.1038/s41551-021-00824-8"
 
-notes: "Verified from the Zenodo OPULM PALA record and linked Nature Biomedical Engineering paper."
+notes: >-
+  OPULM PALA contains six benchmark datasets for ultrasound localization
+  microscopy, including simulated and in vivo acquisitions. The resource is
+  designed to assess microbubble localization, trajectory recovery, and vascular
+  reconstruction. Algorithm benchmarking is the evaluation purpose rather than
+  an additional native dataset task. Atlas entry 1302 is related through the
+  same ULM benchmarking work but represents a distinct rat-brain acquisition
+  and public data release, so neither resource is treated as the parent of the other.

@@ -26,7 +26,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 5
     classes:
       - "Healthy ovary"
       - "Dominant follicle"
@@ -89,18 +88,18 @@ verification:
 
 notes: >-
   This Kaggle release contains 6,879 grayscale ovarian ultrasound images for
-  five-class ovarian-condition classification: healthy ovary, dominant
-  follicle, polycystic ovary, simple cyst, and complex cyst. The class counts
-  reported on the data card sum exactly to 6,879 images. No segmentation,
-  detection, landmark, or measurement annotations are documented, so
-  classification is treated as the only native task.
+  five-class ovarian-condition classification: healthy ovary, dominant follicle,
+  polycystic ovary, simple cyst, and complex cyst. The class counts reported on
+  the data card sum exactly to 6,879 images. No segmentation, detection, landmark,
+  or measurement annotations are documented, so classification is treated as
+  the only native task.
 
-  Dataset provenance is incompletely documented. The Kaggle page does not
-  report the number of patients, acquisition institution or country, scanner,
-  transducer, acquisition period, official train/validation/test split, or a
-  dedicated dataset publication. The uploader account is named "UCI Machine
-  Learning", but its Kaggle profile identifies it as Universal Computing
-  Innovations; therefore, this dataset should not be described as an official
-  UCI Machine Learning Repository resource. The Kaggle data card lists the
-  dataset license as CC0: Public Domain. Verification is consequently marked
-  partial despite the dataset being publicly downloadable.
+  Dataset provenance is incompletely documented. The Kaggle page does not report
+  the number of patients, acquisition institution or country, scanner, transducer,
+  acquisition period, official train/validation/test split, or a dedicated dataset
+  publication. The uploader account is named "UCI Machine Learning", but its
+  Kaggle profile identifies it as Universal Computing Innovations; therefore,
+  this dataset should not be described as an official UCI Machine Learning
+  Repository resource. The Kaggle data card lists the dataset license as
+  CC0: Public Domain. Verification is consequently marked partial despite the
+  dataset being publicly downloadable.

@@ -1,32 +1,64 @@
-id: US098
+id: "1305"
 name: "Spinal Cord Injury Ultrasound Dataset"
-full_name: "Open-source ultrasound dataset for spinal cord injury localization and anatomical segmentation"
+full_name: "Open-source Ultrasound Dataset for Spinal Cord Injury Localization and Anatomical Segmentation"
+
 release_year: 2025
 
 anatomy:
-  primary: "Spinal cord"
-  target: "porcine spinal cord injury"
+  primary: "Porcine spinal cord"
+  target:
+    - "Spinal cord"
+    - "Spinal cord injury"
 
 modality:
-  type: "B-mode ultrasound"
-  dimension: "2D sagittal images"
-  temporal: "pre-injury and post-injury"
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "mixed"
+  representation:
+    - "image"
 
 scale:
-  summary: "10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations"
+  - unit: "image"
+    count: 10223
+    note: "4,467 pre-injury images and 5,756 post-injury images."
 
 annotations:
-  summary: "pre-/post-injury labels, anatomical segmentation masks, and injury-location bounding boxes"
+  classification:
+    unit: "image"
+    label_type: "binary"
+    classes:
+      - "Pre-injury"
+      - "Post-injury"
+    distribution:
+      Pre-injury: 4467
+      Post-injury: 5756
+
+  segmentation:
+    unit: "image"
+    type: "multiclass"
+    targets:
+      - "Spinal cord anatomical structures"
+    format: "mask"
+    note: "Anatomical segmentation masks are included in the public resource."
+
+  detection:
+    unit: "image"
+    targets:
+      - "Spinal cord injury"
+    format: "bounding_box"
+    count: 2245
+    note: "Injury-location bounding boxes are provided for 2,245 images."
 
 tasks:
-  - "injury-status binary classification"
-  - "anatomical structure segmentation"
-  - "injury localization"
-  - "object detection"
+  - "classification"
+  - "segmentation"
+  - "detection"
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
   title: "A novel open-source ultrasound dataset with deep learning benchmarks for spinal cord injury localization and anatomical segmentation"
@@ -34,15 +66,28 @@ paper:
   doi: "10.1038/s41598-025-16275-z"
 
 data:
-  repository: "Spinal Cord Injury Ultrasound Dataset"
+  repository: "GitHub"
   url: "https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset"
+    - "https://doi.org/10.1038/s41598-025-16275-z"
 
-notes: "Verified from the Scientific Reports paper and GitHub data repository; a specific reusable data license was not confirmed."
+notes: >-
+  The dataset contains 10,223 sagittal B-mode porcine spinal-cord ultrasound
+  images, comprising 4,467 pre-injury and 5,756 post-injury images. It provides
+  injury-status labels, anatomical segmentation masks, and injury-localization
+  bounding boxes for 2,245 images. Because the spatial injury annotations are
+  bounding boxes, the native spatial task is encoded as detection rather than
+  duplicated as both localization and detection. A specific reusable dataset
+  license was not confirmed.

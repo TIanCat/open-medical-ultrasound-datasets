@@ -1,48 +1,78 @@
-id: US103
+id: "1306"
 name: "ULMShare"
-full_name: "ULMShare ultrasound localization microscopy data resource"
+full_name: "ULMShare Ultrasound Localization Microscopy Data Resource"
+
 release_year: 2026
 
 anatomy:
   primary: "Mouse microvasculature"
-  target: "ULM vessel imaging"
+  target:
+    - "Microvascular network"
 
 modality:
-  type: "raw RF channel data + ULM data"
-  dimension: "2D/3D acquisitions"
-  temporal: "high-frame-rate sequence"
+  type:
+    - "Raw channel data"
+    - "Ultrafast ultrasound"
+  dimension: "mixed"
+  temporal: "sequence"
+  representation:
+    - "raw_channel"
+    - "sequence"
 
 scale:
-  summary: "99 acquisitions from 61 mice; approximately 30 TB"
+  - unit: "subject"
+    count: 61
+    note: "The resource contains data from 61 mice."
+  - unit: "acquisition"
+    count: 99
+  - unit: "file"
+    count: null
+    note: "The complete resource is approximately 30 TB; a stable file count is not used as the catalog scale."
 
 annotations:
-  summary: "raw channel data with metadata plus selected ULM reconstructions and microbubble trajectories"
+  tracking:
+    unit: "sequence"
+    targets:
+      - "Microbubble trajectory"
+    format: "trajectory"
+    note: >-
+      Selected ULM reconstructions and microbubble trajectories are distributed
+      together with raw channel data and acquisition metadata.
 
 tasks:
-  - "ULM reconstruction"
-  - "microbubble localization and tracking"
-  - "vascular imaging"
-  - "algorithm benchmarking"
+  - "tracking"
+  - "reconstruction"
+  - "signal_analysis"
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
-paper:
-  title: "No dedicated peer-reviewed dataset paper verified; FRDR data resource"
-  venue: "Federated Research Data Repository (FRDR)"
-  doi: null
+paper: null
 
 data:
   repository: "Federated Research Data Repository (FRDR)"
   url: "https://www.frdr-dfdr.ca/repo/dataset/bc2125d8-65be-494b-95d2-b25fbb7adec1"
-  data_doi: "10.20383/103.01550"
+  doi: "10.20383/103.01550"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://www.frdr-dfdr.ca/repo/dataset/bc2125d8-65be-494b-95d2-b25fbb7adec1"
+    - "https://doi.org/10.20383/103.01550"
 
-notes: "Verified from the FRDR record; no dedicated peer-reviewed data paper or explicit reusable license was confirmed."
+notes: >-
+  ULMShare contains 99 ultrasound-localization-microscopy acquisitions from
+  61 mice and is approximately 30 TB in size. It provides raw channel data,
+  acquisition metadata, and selected ULM reconstructions and microbubble
+  trajectories. Vascular imaging and algorithm benchmarking are downstream
+  research uses rather than separate native tasks. No dedicated peer-reviewed
+  dataset paper or explicit reusable dataset license was verified.

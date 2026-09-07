@@ -2,8 +2,6 @@ id: "1204"
 name: "PCOSGen"
 full_name: "PCOSGen Dataset for Automatic Polycystic Ovary Syndrome Classification"
 aliases:
-  - "PCOSGen-train"
-  - "PCOSGen-test"
   - "Auto-PCOS Dataset"
 
 release_year: 2023

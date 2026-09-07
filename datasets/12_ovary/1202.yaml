@@ -33,7 +33,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 2
     classes:
       - "PCOS"
       - "Non-PCOS"
