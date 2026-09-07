@@ -1,31 +1,64 @@
-id: US093
+id: "2004"
 name: "OpticNerveSheaths"
-full_name: "Optic nerve sheath transorbital ultrasound images"
+full_name: "Optic Nerve Sheath Transorbital Ultrasound Images"
+
 release_year: 2023
 
 anatomy:
   primary: "Optic nerve sheath"
-  target: "optic nerve / optic nerve sheath"
+  target:
+    - "Optic nerve"
+    - "Optic nerve sheath"
 
 modality:
-  type: "transorbital B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "static image"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "464 ultrasound images"
+  - unit: "image"
+    count: 464
 
 annotations:
-  summary: "multi-annotator optic-nerve / optic-nerve-sheath region and diameter-related annotations"
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Optic nerve"
+      - "Optic nerve sheath"
+    format: "region_mask"
+    annotators:
+      - "Multiple annotators"
+    note: "The resource includes multi-annotator optic-nerve/optic-nerve-sheath region annotations."
+
+  localization:
+    unit: "image"
+    targets:
+      - "Optic nerve sheath"
+    format: "region_annotation"
+    annotators:
+      - "Multiple annotators"
+
+  measurements:
+    unit: "image"
+    targets:
+      - "Optic nerve sheath diameter"
+    format: "measurement_annotation"
+    annotators:
+      - "Multiple annotators"
 
 tasks:
-  - "optic nerve sheath segmentation"
-  - "optic nerve sheath localization"
-  - "optic nerve sheath diameter measurement"
+  - "segmentation"
+  - "localization"
+  - "measurement"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "Development of a Deep Learning-Based System for Optic Nerve Characterization in Transorbital Ultrasound Images on a Multicenter Data Set"
@@ -33,15 +66,26 @@ paper:
   doi: "10.1016/j.ultrasmedbio.2023.05.011"
 
 data:
-  repository: "OpticNerveSheaths"
+  repository: "Mendeley Data"
   url: "https://data.mendeley.com/datasets/kw8gvp8m8x/2"
-  data_doi: "10.17632/kw8gvp8m8x.2"
+  doi: "10.17632/kw8gvp8m8x.2"
+  version: "2"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://data.mendeley.com/datasets/kw8gvp8m8x/2"
+    - "https://doi.org/10.17632/kw8gvp8m8x.2"
+    - "https://doi.org/10.1016/j.ultrasmedbio.2023.05.011"
 
-notes: "Corrected release year from 2024 to 2023 and updated to the current Mendeley Data version."
+notes: >-
+  The current Mendeley release contains 464 transorbital B-mode ultrasound
+  images with multi-annotator optic-nerve/optic-nerve-sheath region and
+  diameter-related annotations. The release year is 2023, and the atlas points
+  to the current Mendeley Data version 2.

@@ -1,30 +1,46 @@
-id: US043
+id: "2003"
 name: "C-TRUS"
 full_name: "C-TRUS"
+
 release_year: 2024
 
 anatomy:
   primary: "Colon"
-  target: "colon wall in ulcerative colitis"
+  target:
+    - "Colon wall"
+    - "Ulcerative colitis"
 
 modality:
-  type: "B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "827 images extracted from sequences of 13 patients"
+  - unit: "patient"
+    count: 13
+  - unit: "image"
+    count: 827
+    note: "Images were extracted from ultrasound sequences of 13 patients."
 
 annotations:
-  summary: "pixel-wise colon-wall masks"
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Colon wall"
+    format: "mask"
+    count: 827
 
 tasks:
-  - "binary colon-wall segmentation"
-  - "bowel-wall localization and thickness/inflammation quantification"
+  - "segmentation"
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
   title: "C-TRUS: A Novel Dataset and Initial Benchmark for Colon Wall Segmentation in Transabdominal Ultrasound"
@@ -34,13 +50,25 @@ paper:
 data:
   repository: "GitHub"
   url: "https://github.com/wwu-mmll/c-trus"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://github.com/wwu-mmll/c-trus"
+    - "https://doi.org/10.1007/978-3-031-73647-6_10"
 
-notes: "Official repository includes original images and labels."
+notes: >-
+  C-TRUS contains 827 transabdominal B-mode ultrasound images extracted from
+  sequences of 13 patients and provides pixel-wise colon-wall masks. Bowel-wall
+  localization and thickness/inflammation quantification can be derived from the
+  masks or used as downstream analyses, but no independent localization or
+  measurement ground-truth annotation is encoded here; segmentation is therefore
+  the only native task.

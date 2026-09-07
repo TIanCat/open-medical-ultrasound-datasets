@@ -1,46 +1,94 @@
-id: US042
+id: "2002"
 name: "LEPset"
 full_name: "LEPset"
+
 release_year: 2023
 
 anatomy:
   primary: "Pancreas"
-  target: "pancreatic cancer"
+  target:
+    - "Pancreatic cancer"
 
 modality:
-  type: "endoscopic ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "11,500 images from 420 patients: 3,500 labeled (1,680 pancreatic cancer/280 patients; 1,820 non-pancreatic cancer/140 patients) plus 8,000 unlabeled"
+  - unit: "patient"
+    count: 420
+  - unit: "image"
+    count: 11500
+    note: "3,500 labeled images plus 8,000 unlabeled images."
+  - unit: "image"
+    count: 3500
+    note: "Labeled subset used for pancreatic-cancer classification."
+  - unit: "image"
+    count: 8000
+    note: "Unlabeled subset intended for representation learning/pretraining."
 
 annotations:
-  summary: "image-level PC/NPC labels for 3,500 images; 8,000 images are unlabeled"
+  classification:
+    unit: "image"
+    label_type: "binary"
+    classes:
+      - "Pancreatic cancer"
+      - "Non-pancreatic cancer"
+    distribution:
+      Pancreatic cancer: 1680
+      Non-pancreatic cancer: 1820
+    note: >-
+      The 3,500 labeled images comprise 1,680 pancreatic-cancer images from
+      280 patients and 1,820 non-pancreatic-cancer images from 140 patients.
 
 tasks:
-  - "pancreatic-cancer binary classification"
-  - "self-supervised learning and pretraining"
+  - "classification"
+  - "pretraining"
 
 access:
-  level: open
+  level: "open"
   license: "Scientific research only; non-commercial"
+  requirements:
+    - "Scientific research use only"
+    - "Commercial use is prohibited by the dataset notice"
 
-paper:
-  title: "LEPset"
-  venue: "Zenodo"
-  doi: "10.5281/zenodo.8041285"
+paper: null
 
 data:
   repository: "Zenodo"
   url: "https://zenodo.org/records/8041285"
-  data_doi: "10.5281/zenodo.8041285"
+  doi: "10.5281/zenodo.8041285"
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: "The images are endoscopic-ultrasound images; detailed acquisition hardware is not encoded in the current atlas source."
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://zenodo.org/records/8041285"
+    - "https://doi.org/10.5281/zenodo.8041285"
 
-notes: "Direct download for scientific research only; commercial use is prohibited by the dataset notice."
+notes: >-
+  LEPset contains 11,500 endoscopic-ultrasound images from 420 patients.
+  The labeled subset contains 3,500 images for pancreatic-cancer versus
+  non-pancreatic-cancer classification, while another 8,000 images are unlabeled.
+  The unlabeled portion is retained as a native pretraining resource rather than
+  encoding self-supervised learning as a separate learning-paradigm task. The
+  Zenodo record is a data resource rather than a dedicated peer-reviewed paper,
+  so paper is set to null.

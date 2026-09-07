@@ -1,32 +1,75 @@
-id: US041
+id: "2001"
 name: "GIST514-DB"
 full_name: "GIST514-DB"
+
 release_year: 2022
 
 anatomy:
   primary: "Gastrointestinal tract"
-  target: "gastrointestinal stromal tumor and leiomyoma"
+  target:
+    - "Gastrointestinal stromal tumor"
+    - "Leiomyoma"
 
 modality:
-  type: "endoscopic ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
   temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "514 cases/images: 263 gastrointestinal stromal tumors and 251 leiomyomas"
+  - unit: "case"
+    count: 514
+  - unit: "image"
+    count: 514
+    note: "263 gastrointestinal stromal tumor images and 251 leiomyoma images."
 
 annotations:
-  summary: "class labels, lesion bounding boxes, contour/instance-segmentation annotations, and anatomical locations"
+  classification:
+    unit: "image"
+    label_type: "binary"
+    classes:
+      - "Gastrointestinal stromal tumor"
+      - "Leiomyoma"
+    distribution:
+      Gastrointestinal stromal tumor: 263
+      Leiomyoma: 251
+
+  detection:
+    unit: "image"
+    targets:
+      - "Gastrointestinal stromal tumor"
+      - "Leiomyoma"
+    format: "bounding_box"
+    note: "Lesion bounding boxes are provided for localization/detection."
+
+  segmentation:
+    unit: "image"
+    type: "instance"
+    targets:
+      - "Gastrointestinal stromal tumor"
+      - "Leiomyoma"
+    format: "contour"
+    note: "Lesion contour annotations support instance-level segmentation."
+
+  localization:
+    unit: "image"
+    targets:
+      - "Anatomical lesion location"
+    format: "categorical_location"
+    note: "Anatomical-location information is supplied with the lesion annotations."
 
 tasks:
-  - "GIST-versus-leiomyoma classification"
-  - "lesion detection"
-  - "instance segmentation"
-  - "anatomical-location-aware analysis"
+  - "classification"
+  - "detection"
+  - "segmentation"
+  - "localization"
 
 access:
-  level: open
+  level: "open"
   license: null
+  requirements: []
 
 paper:
   title: "Query2: Query over Queries for Improving Gastrointestinal Stromal Tumour Detection in an Endoscopic Ultrasound"
@@ -36,13 +79,33 @@ paper:
 data:
   repository: "GitHub"
   url: "https://github.com/WuJunde/Query2"
-  data_doi: null
+  doi: null
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: "Images were acquired with endoscopic ultrasound; detailed acquisition hardware is not encoded in the current atlas source."
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://github.com/WuJunde/Query2"
+    - "https://doi.org/10.1016/j.compbiomed.2022.106424"
 
-notes: "Counts and annotation types verified from the original paper."
+notes: >-
+  GIST514-DB contains 514 endoscopic-ultrasound images/cases: 263
+  gastrointestinal stromal tumors and 251 leiomyomas. Native annotations include
+  class labels, lesion bounding boxes, lesion contours/instance annotations, and
+  anatomical-location information. Endoscopic acquisition is recorded in
+  acquisition.note while the underlying imaging mode is normalized to B-mode.
