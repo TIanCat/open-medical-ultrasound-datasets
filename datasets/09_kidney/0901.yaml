@@ -1,60 +1,125 @@
-id: US078
-name: The Open Kidney Ultrasound Data Set
-full_name: The Open Kidney Ultrasound Data Set
+id: "0901"
+name: "The Open Kidney Ultrasound Data Set"
+full_name: "The Open Kidney Ultrasound Data Set"
+aliases:
+  - "kidneyUS"
+  - "Open Kidney US"
+
 release_year: 2023
 
 anatomy:
-  primary: Kidney
-  target: Native and transplanted kidney structures
+  primary: "Kidney"
+  target:
+    - "Native kidney"
+    - "Transplanted kidney"
+    - "Renal capsule"
+    - "Renal cortex"
+    - "Renal medulla"
+    - "Central echogenic complex"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 534
-  patients: 514
+  - unit: "patient"
+    count: 514
+  - unit: "image"
+    count: 514
+    note: "Unique anonymized ultrasound images, one per distinct patient."
+  - unit: "file"
+    count: 534
+    note: >-
+      Delivered image files include the 514 unique images plus 20 duplicate
+      copies used to assess annotation consistency.
 
 annotations:
   classification:
-    num_classes: 2
-    classes:
-      - Native kidney
-      - Transplanted kidney
+    unit: "image"
+    label_sets:
+      kidney_type:
+        label_type: "binary"
+        classes:
+          - "Native kidney"
+          - "Transplanted kidney"
+      view_type:
+        label_type: "multiclass"
+        classes:
+          - "Transverse"
+          - "Longitudinal"
+          - "Other"
+    note: "Kidney-type and acquisition-view labels are provided at image level."
 
   segmentation:
-    available: true
+    unit: "image"
+    type: "multiclass"
     targets:
-      - Renal capsule
-      - Renal cortex
-      - Renal medulla
-      - Central echogenic complex
+      - "Renal capsule"
+      - "Renal cortex"
+      - "Renal medulla"
+      - "Central echogenic complex"
+    format: "polygon"
+    annotators:
+      - "Two expert sonographers"
+    annotation_method: >-
+      Two expert sonographers independently supplied fine-grained polygon
+      annotations for the renal capsule, cortex, medulla, and central
+      echogenic complex.
+
+  quality:
+    unit: "image"
+    targets:
+      - "Image quality"
+    format: "categorical_label"
+    note: "Image-quality labels are included with the released annotations."
 
 tasks:
-  - Semantic segmentation
-  - View classification
-  - Kidney-type classification
+  - "classification"
+  - "segmentation"
+  - "quality_assessment"
 
 access:
-  level: application
-  license: CC BY-NC-SA
+  level: "application"
+  license: "CC BY-NC-SA"
+  requirements:
+    - "Registration"
+    - "Manual approval before source ultrasound images are released through UBC OneDrive"
+    - "Non-commercial use"
 
 paper:
-  title: The Open Kidney Ultrasound Data Set
-  venue: International Workshop on Advances in Simplifying Medical Ultrasound
-  doi: 10.1007/978-3-031-44521-7_15
+  title: "The Open Kidney Ultrasound Data Set"
+  venue: "International Workshop on Advances in Simplifying Medical Ultrasound"
+  doi: "10.1007/978-3-031-44521-7_15"
 
 data:
-  repository: GitHub and UBC OneDrive
-  url: https://github.com/rsingla92/kidneyUS#data-access
-  data_doi: null
+  repository: "GitHub and UBC OneDrive"
+  url: "https://github.com/rsingla92/kidneyUS#data-access"
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://github.com/rsingla92/kidneyUS"
+    - "https://doi.org/10.1007/978-3-031-44521-7_15"
 
-notes: "Contains 514 unique anonymized B-mode PNG images from 514 distinct patients and 20 additional duplicate copies used to assess annotation consistency, giving 534 delivered image files. The images include native and transplanted kidneys. Two expert sonographers independently supplied fine-grained polygon annotations for the renal capsule, cortex, medulla, and central echogenic complex. Image-quality, view-type (transverse, longitudinal, or other), and kidney-type labels are also included. The public GitHub repository contains code and annotation resources, but the source ultrasound images require registration and manual approval before they are released through UBC OneDrive. The registration form returned HTTP 200 during verification. Data and code are licensed under CC BY-NC-SA and may not be used commercially."
+notes: >-
+  The dataset contains 514 unique anonymized B-mode kidney ultrasound images
+  from 514 distinct patients, including native and transplanted kidneys.
+  Twenty additional duplicate copies are included for annotation-consistency
+  assessment, producing 534 delivered image files in total. In addition to
+  kidney-type and view-type labels, the resource includes image-quality labels
+  and fine-grained expert polygon annotations for the renal capsule, cortex,
+  medulla, and central echogenic complex. The GitHub repository provides code
+  and annotation resources, while source ultrasound images require registration
+  and manual approval before release through UBC OneDrive.
