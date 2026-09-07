@@ -1,0 +1,93 @@
+id: "0109"
+name: "3DThyroid"
+full_name: "Thyroid Segmentation in Ultrasonography Dataset"
+aliases:
+  - "TSUD"
+
+release_year: 2017
+
+anatomy:
+  primary: "Thyroid"
+  target:
+    - "Thyroid gland"
+
+modality:
+  type:
+    - "B-mode"
+  dimension: "3D"
+  temporal: "sweep"
+  representation:
+    - "volume"
+
+scale:
+  - unit: "volume"
+    count: 16
+    note: >-
+      The associated 2017 paper reports sixteen tracked 3D ultrasound
+      records with ground-truth thyroid segmentations.
+
+annotations:
+  segmentation:
+    unit: "volume"
+    type: "binary"
+    targets:
+      - "Thyroid gland"
+    format: "volume_mask"
+    count: 16
+    annotators:
+      - "Medical expert"
+    annotation_method: "Manual segmentation with liveWire"
+
+tasks:
+  - "segmentation"
+
+access:
+  level: "open"
+  license: null
+  requirements:
+    - "Verify the current OpenCAS terms before reuse."
+
+paper:
+  title: "Comparison of thyroid segmentation techniques for 3D ultrasound"
+  venue: "SPIE Medical Imaging"
+  doi: "10.1117/12.2254234"
+
+data:
+  repository: "OpenCAS"
+  url: "https://archive.iar.kit.edu/opencas/index.html?q=node%2F29"
+  doi: null
+  version: null
+
+acquisition:
+  countries:
+    - "Germany"
+  institutions: null
+  period: null
+  scanners:
+    - "GE Logiq E9 XDclear 2.0"
+  transducers: null
+  frequencies: null
+  note: >-
+    Freehand tracked ultrasound sweeps were reconstructed into 3D volumes.
+    All scans contain healthy thyroids.
+
+family:
+  type: "primary"
+  parent: null
+  related:
+    - "0104"
+
+verification:
+  status: "verified"
+  date: "2026-09-07"
+  sources:
+    - "https://archive.iar.kit.edu/opencas/index.html?q=node%2F29"
+    - "https://doi.org/10.1117/12.2254234"
+
+notes: >-
+  This is the original public 3D thyroid ultrasound resource introduced
+  by Wunderling et al. in 2017. It contains tracked 3D ultrasound records
+  with expert thyroid-gland ground-truth segmentations. TG3K (0104) was
+  subsequently derived from these recordings by extracting 2D frames and
+  retaining frames in which the thyroid gland occupies more than 6% of
+  the image area.

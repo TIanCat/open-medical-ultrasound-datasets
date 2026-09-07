@@ -61,7 +61,7 @@ acquisition:
 
 family:
   type: "derived"
-  parent: null
+  parent: "0109"
   related: []
 
 verification:
@@ -74,11 +74,11 @@ verification:
     - "https://doi.org/10.1117/12.2254234"
 
 notes: >-
-  TG3K is not an independent clinical acquisition. Gong et al. constructed it by extracting
-  2D frames from the 16 tracked 3D thyroid ultrasound records introduced by Wunderling et al.
-  (2017), retaining frames in which the thyroid gland occupies more than 6% of the image.
-  The 2022 paper reports 3,585 retained images. Some secondary resources report 3,583 frames;
-  the atlas uses the count stated in the primary 2022 paper. The external parent resource is
-  the Thyroid Segmentation in Ultrasonography Dataset / 3DThyroid introduced by Wunderling
-  et al. (2017). It is not currently represented by a four-digit atlas ID, so family.parent
-  remains null rather than incorrectly pointing to another atlas entry.
+  TG3K is not an independent clinical acquisition. Gong et al. constructed it
+  by extracting 2D frames from the 16 tracked 3D thyroid ultrasound records
+  introduced by Wunderling et al. (2017), retaining frames in which the thyroid
+  gland occupies more than 6% of the image. The 2022 paper reports 3,585
+  retained images. Some secondary resources report 3,583 frames; the atlas uses
+  the count stated in the primary 2022 paper. TG3K is derived from the Thyroid
+  Segmentation in Ultrasonography Dataset / 3DThyroid, which is cataloged as
+  atlas entry 0109.

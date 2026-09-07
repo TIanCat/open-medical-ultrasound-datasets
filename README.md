@@ -5,13 +5,13 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **102 medical ultrasound dataset resources** across **16 anatomical categories**.
+This repository currently catalogs **103 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
 |---|---|---:|---|
 | 00 | Breast | 15 | 0001–0015 |
-| 01 | Thyroid | 8 | 0101–0108 |
+| 01 | Thyroid | 9 | 0101–0109 |
 | 02 | Obstetrics | 10 | 0201–0210 |
 | 03 | Cardiac | 9 | 0301–0309 |
 | 04 | Lung | 6 | 0401–0406 |
@@ -26,7 +26,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 13 | Animal | 6 | 1301–1306 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 7 | 2001–2007 |
-| **Total** | **16 categories** | **102** | — |
+| **Total** | **16 categories** | **103** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 

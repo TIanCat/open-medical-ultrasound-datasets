@@ -1,11 +1,10 @@
 Dataset validation report
-Generated: 2026-09-07T11:57:59+08:00
+Generated: 2026-09-07T12:24:17+08:00
 Repository: /data3/wj/torch/open-medical-ultrasound-datasets
-Checked YAML files: 102
+Checked YAML files: 103
 ================================================================================
 
 datasets/01_thyroid/0104.yaml
-  ERROR [family.parent]: derived datasets must specify parent.
   WARNING [data.url]: data URL is shared by atlas IDs: 0104, 0105.
     Hint: Verify family relationships and possible duplication.
   WARNING [paper.doi]: paper DOI is shared by atlas IDs: 0104, 0105.
@@ -34,7 +33,7 @@ datasets/13_animal/1302.yaml
   WARNING [paper.doi]: paper DOI is shared by atlas IDs: 1301, 1302.
     Hint: Verify family relationships and possible duplication.
 
-Summary: 1 error(s), 9 warning(s).
+Summary: 0 error(s), 9 warning(s).
 ================================================================================
-Errors: 1
+Errors: 0
 Warnings: 9
