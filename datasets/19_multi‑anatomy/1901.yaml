@@ -1,46 +1,67 @@
-id: US040
+id: "1901"
 name: "Clinical Ultrasound Image Repository"
 full_name: "Clinical Ultrasound Image Repository"
+
 release_year: null
 
 anatomy:
   primary: "Multiple"
-  target: "abdominal, cardiac, and obstetric/gynecologic"
+  target:
+    - "Abdomen"
+    - "Heart"
+    - "Obstetric and gynecologic anatomy"
 
 modality:
-  type: "clinical ultrasound DICOM"
+  type:
+    - "Ultrasound"
   dimension: "2D"
   temporal: "mixed"
+  representation:
+    - "mixed"
 
 scale:
-  summary: "2,000 studies from 2,000 subjects, approximately one third per anatomy group"
+  - unit: "subject"
+    count: 2000
+  - unit: "study"
+    count: 2000
+    note: "Approximately one third of studies belong to each major anatomy group."
 
-annotations:
-  summary: "DICOM images and metadata; no unified manual semantic labels"
+annotations: {}
 
 tasks:
-  - "general ultrasound representation learning and pretraining"
-  - "metadata-based anatomy or view studies"
+  - "pretraining"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY-NC 4.0"
+  requirements: []
 
-paper:
-  title: "Clinical Ultrasound Image Repository"
-  venue: "AWS Registry of Open Data"
-  doi: null
+paper: null
 
 data:
   repository: "AWS Registry of Open Data"
   url: "https://registry.opendata.aws/clinical-ultrasound-image-data/"
-  data_doi: null
+  doi: null
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://registry.opendata.aws/clinical-ultrasound-image-data/"
 
-notes: "Anonymous S3 access; CC BY-NC 4.0; managed by the MONAI Development Team."
+notes: >-
+  The repository contains 2,000 clinical ultrasound studies from 2,000 subjects,
+  with approximately one third of the resource assigned to abdominal, cardiac,
+  and obstetric/gynecologic imaging. The data are distributed as clinical DICOM
+  resources with metadata but without a unified manual semantic-label set.
+  Metadata-based anatomy or view studies are possible downstream uses, but no
+  consistent atlas-wide anatomy/view ground truth is encoded as a native task.
+  Because the resource is primarily useful as a broad unlabeled multi-anatomy
+  imaging collection, it is categorized under pretraining. Anonymous S3 access
+  is available, and the resource is managed by the MONAI Development Team.

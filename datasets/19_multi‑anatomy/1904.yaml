@@ -1,56 +1,85 @@
-id: '1904'
-name: Ultrasound Normal Kidney Image
-full_name: Ultrasound Normal Kidney Image Computer Vision Dataset
+id: "1904"
+name: "Ultrasound Normal Kidney Image"
+full_name: "Ultrasound Normal Kidney Image Computer Vision Dataset"
+
 release_year: 2025
 
 anatomy:
-  primary: Kidney
-  target: Kidney, liver, and spleen
+  primary: "Abdomen"
+  target:
+    - "Kidney"
+    - "Liver"
+    - "Spleen"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 1080
-  patients: null
+  - unit: "image"
+    count: 1080
 
 annotations:
-  classification:
-    num_classes: 0
-    classes: []
-
   segmentation:
-    available: true
+    unit: "image"
+    type: "instance"
     targets:
-      - Kidney
-      - Liver
-      - Normal-Kidney
-      - Spleen
+      - "Kidney"
+      - "Liver"
+      - "Normal-Kidney"
+      - "Spleen"
+    format: "mask"
+    note: >-
+      The Roboflow project is configured as an instance-segmentation dataset
+      with four released class labels: Kidney, Liver, Normal-Kidney, and Spleen.
 
 tasks:
-  - Instance segmentation
+  - "segmentation"
+
+splits:
+  unit: "image"
+  training:
+    count: 1080
+    labels: "public"
+    note: "Roboflow v1 assigns all 1,080 images to the training split."
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
-paper:
-  title: null
-  venue: null
-  doi: null
+paper: null
 
 data:
-  repository: Roboflow Universe
-  url: https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image
-  data_doi: null
+  repository: "Roboflow Universe"
+  url: "https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image"
+  doi: null
+  version: "1"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "partial"
+  date: "2026-09-02"
+  sources:
+    - "https://universe.roboflow.com/jeevaws/ultrasound-normal-kidney-image"
 
-notes: "Roboflow v1 contains 1,080 images, all assigned to the training set, with no preprocessing or augmentation. The project is configured for instance segmentation with four classes: Kidney, Liver, Normal-Kidney, and Spleen. It provides no description of the patient count, acquisition institution, equipment, selection criteria, or source provenance. Roboflow marks the dataset as downloadable under CC BY 4.0, and an independent 2025 review records it as open access. During verification, the page metadata was available through search indexing, but direct command-line archive access was blocked by Cloudflare; the image archive was therefore not downloaded."
+notes: >-
+  Roboflow v1 contains 1,080 images, all assigned to the training set, with no
+  preprocessing or augmentation reported. Although the project name emphasizes
+  normal kidney imaging, the released segmentation classes also include liver
+  and spleen; the atlas therefore records this entry under multi-anatomy with
+  Abdomen as the primary anatomy and Kidney, Liver, and Spleen as targets.
+  The label "Normal-Kidney" is preserved as a released segmentation class rather
+  than interpreted as a separate anatomical organ. Patient count, acquisition
+  institution, equipment, selection criteria, and source provenance are not
+  documented. During verification, page metadata were available through search
+  indexing, but direct archive access was blocked by Cloudflare; verification
+  is therefore marked partial.
