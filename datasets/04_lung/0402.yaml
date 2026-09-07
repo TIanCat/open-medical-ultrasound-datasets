@@ -1,68 +1,94 @@
-id: US073
-name: COVIDx-US
-full_name: COVIDx-US Open-Access Lung Ultrasound Benchmark Dataset
+id: "0402"
+name: "COVIDx-US"
+full_name: "COVIDx-US Open-Access Lung Ultrasound Benchmark Dataset"
+
 release_year: 2021
 
 anatomy:
-  primary: Lung
-  target: Pulmonary infections and other lung conditions
+  primary: "Lung"
+  target:
+    - "Pulmonary infections"
+    - "Other lung conditions"
 
 modality:
-  type: Point-of-care lung ultrasound
-  dimension: 2D
-  temporal: video and extracted static frames
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "mixed"
+  representation:
+    - "video"
+    - "image"
 
 scale:
-  images: 29651
-  videos: 242
-  patients: null
+  - unit: "video"
+    count: 242
+    note: "Repository-reported benchmark video count."
+  - unit: "frame"
+    count: 29651
+    note: "Processed frames reported by the repository."
 
 annotations:
   classification:
-    num_classes: 4
+    unit: "video"
     classes:
-      - COVID-19
-      - Non-COVID-19 infection
-      - Other lung diseases or conditions
-      - Normal
+      - "COVID-19"
+      - "Non-COVID-19 infection"
+      - "Other lung diseases or conditions"
+      - "Normal"
+    note: >-
+      The current metadata contain a small record-count inconsistency relative
+      to the repository-reported 242-video benchmark, so class counts are not
+      encoded as a formal distribution here.
 
-  severity_scoring:
-    available: true
-    videos: 173
-    scale:
-      - 0
-      - 1
-      - 2
-      - 3
-
-  segmentation:
-    available: false
-    targets: []
+  grading:
+    unit: "video"
+    system: "Lung ultrasound severity score"
+    categories:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+    note: "Numeric lung-ultrasound severity scores are available for 173 metadata records."
 
 tasks:
-  - Binary classification
-  - Multi-class classification
-  - Ordinal severity assessment
+  - "classification"
+  - "grading"
 
 access:
-  level: open
-  license: GNU AGPL 3.0 for repository materials; source media retain source-specific terms
+  level: "open"
+  license: "GNU AGPL 3.0 for repository materials; source media retain source-specific terms"
+  requirements:
+    - "Original source media are retrieved from external public sources and retain their source-specific terms."
 
 paper:
   title: "COVIDx-US: An Open-Access Benchmark Dataset of Ultrasound Imaging Data for AI-Driven COVID-19 Analytics"
-  venue: Frontiers in Bioscience (Landmark Edition)
-  doi: 10.31083/j.fbl2707198
+  venue: "Frontiers in Bioscience (Landmark Edition)"
+  doi: "10.31083/j.fbl2707198"
 
 data:
-  repository: GitHub
-  url: https://github.com/nrc-cnrc/COVID-US
-  data_doi: null
+  repository: "GitHub"
+  url: "https://github.com/nrc-cnrc/COVID-US"
+  doi: null
+  version: null
 
 family:
-  type: aggregation
+  type: "aggregate"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://github.com/nrc-cnrc/COVID-US"
+    - "https://doi.org/10.31083/j.fbl2707198"
 
-notes: "The repository README reports 242 videos and 29,651 processed frames. Its current four-class and LUSS files contain 243 records: 72 COVID-19, 49 non-COVID pneumonia, 28 normal, and 94 other-condition records. The published paper describes v1.5 as 173 videos and 21,570 frames from 147 patients, whereas the repository history associates 242 videos and 29,651 frames with v1.4 and describes v1.5 as adding LUSS. Numeric LUSS values are available for 173 current metadata records; 69 are marked NA and one is blank. Repository masks remove embedded text and symbols and are not anatomical segmentation labels. The repository does not host the original videos; its scripts retrieve media from nine external public sources."
+notes: >-
+  The repository reports 242 videos and 29,651 processed frames. The published
+  paper describes a different version snapshot with 173 videos and 21,570 frames
+  from 147 patients, while repository history associates the larger 242-video
+  collection with an earlier benchmark version and later adds LUSS metadata.
+  Repository masks remove embedded text and symbols and are not anatomical
+  segmentation labels, so segmentation is not encoded as a native task. The
+  repository does not host the original videos; scripts retrieve media from
+  multiple external public sources.

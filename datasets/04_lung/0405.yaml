@@ -1,55 +1,74 @@
-id: US076
-name: POCUS LUS Datasets
-full_name: POCUS Lung Ultrasound Datasets
+id: "0405"
+name: "POCUS LUS Datasets"
+full_name: "POCUS Lung Ultrasound Datasets"
+
 release_year: 2025
 
 anatomy:
-  primary: Lung
-  target: Pulmonary conditions
+  primary: "Lung"
+  target:
+    - "Pulmonary conditions"
 
 modality:
-  type: Point-of-care lung ultrasound
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 10
-  patients: 8
+  - unit: "patient"
+    count: 8
+  - unit: "image"
+    count: 10
 
 annotations:
   classification:
-    num_classes: 3
+    unit: "image"
     classes:
-      - COVID-19
-      - Bacterial pneumonia
-      - Normal
-
-  segmentation:
-    available: false
-    targets: []
+      - "COVID-19"
+      - "Bacterial pneumonia"
+      - "Normal"
+    distribution:
+      COVID-19: 6
+      Bacterial pneumonia: 3
+      Normal: 1
 
 tasks:
-  - Classification
+  - "classification"
 
 access:
-  level: open
-  license: CC BY 4.0 on Figshare; upstream source-specific rights vary
+  level: "open"
+  license: "CC BY 4.0 on Figshare; upstream source-specific rights vary"
+  requirements:
+    - "Upstream records retain their original source-specific licensing terms."
 
-paper:
-  title: null
-  venue: null
-  doi: null
+paper: null
 
 data:
-  repository: Figshare
-  url: https://doi.org/10.6084/m9.figshare.29364743.v1
-  data_doi: 10.6084/m9.figshare.29364743.v1
+  repository: "Figshare"
+  url: "https://doi.org/10.6084/m9.figshare.29364743.v1"
+  doi: "10.6084/m9.figshare.29364743.v1"
+  version: "1"
 
 family:
-  type: derivative
-  parent: US072
+  type: "subset"
+  parent: "0401"
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://doi.org/10.6084/m9.figshare.29364743.v1"
+    - "https://github.com/jannisborn/covid19_ultrasound"
 
-notes: "Contains only 10 static images: six COVID-19, three bacterial-pneumonia, and one normal image. Upstream POCUS metadata associates them with eight distinct patient/source IDs. All 10 files were downloaded in memory during verification; their computed MD5 values matched the Figshare API checksums and the same-named files in US072 exactly. The Figshare record contains no provenance statement, label table, patient metadata, selection criteria, bounding boxes, or segmentation masks. Categories are recovered from the filenames and US072 metadata. Figshare applies CC BY 4.0, while the upstream records have differing source-specific licenses and one lacks a stated license."
+notes: >-
+  This resource contains only 10 static images: six COVID-19, three
+  bacterial-pneumonia, and one normal image, associated with eight distinct
+  patient/source IDs. File-level verification showed that all 10 images are
+  byte-identical to same-named files in atlas dataset 0401. It is therefore
+  recorded as an exact subset of 0401 rather than as an independent derivative.
+  The Figshare record itself contains no provenance statement, label table,
+  patient metadata, selection criteria, bounding boxes, or segmentation masks.

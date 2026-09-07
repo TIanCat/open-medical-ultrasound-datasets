@@ -1,67 +1,113 @@
-id: US072
-name: POCUS Dataset for COVID-19 Detection
-full_name: A Lung Ultrasound Dataset for COVID-19 Detection
+id: "0401"
+name: "POCUS Dataset for COVID-19 Detection"
+full_name: "A Lung Ultrasound Dataset for COVID-19 Detection"
+
 release_year: 2020
 
 anatomy:
-  primary: Lung
-  target: Pulmonary pathologies
+  primary: "Lung"
+  target:
+    - "Pulmonary pathologies"
 
 modality:
-  type: Lung point-of-care ultrasound
-  dimension: 2D
-  temporal: mixed
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "mixed"
+  representation:
+    - "image"
+    - "video"
 
 scale:
-  images: 59
-  videos: 202
-  patients: 216
+  - unit: "patient"
+    count: 216
+  - unit: "video"
+    count: 202
+  - unit: "image"
+    count: 59
+  - unit: "record"
+    count: 261
+    note: "Stable paper release: 202 videos plus 59 static images."
 
 annotations:
   classification:
-    num_classes: 4
+    unit: "record"
     classes:
-      - COVID-19
-      - Bacterial pneumonia
-      - Non-COVID-19 viral pneumonia
-      - Healthy
+      - "COVID-19"
+      - "Bacterial pneumonia"
+      - "Non-COVID-19 viral pneumonia"
+      - "Healthy"
+    distribution:
+      COVID-19: 92
+      Bacterial pneumonia: 73
+      Non-COVID-19 viral pneumonia: 6
+      Healthy: 90
 
-  severity_scoring:
-    available: true
-    videos: 136
-    num_classes: 4
+  grading:
+    unit: "video"
+    system: "Lung ultrasound severity score"
+    categories:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+    note: "Four-level lung severity scores are available for 136 videos."
 
   segmentation:
-    available: true
+    unit: "record"
+    type: "multiclass"
     targets:
-      - A-lines
-      - B-lines
-      - Consolidation
+      - "A-lines"
+      - "B-lines"
+      - "Consolidation"
+    format: "mask"
+    count: 50
+    note: >-
+      Segmentation annotations for 50 selected records are provided through
+      the external PULSE Lab annotation resource rather than for the complete
+      aggregated dataset.
 
 tasks:
-  - Classification
-  - Severity scoring
-  - Segmentation
+  - "classification"
+  - "grading"
+  - "segmentation"
 
 access:
-  level: mixed
-  license: Mixed per-source licenses, including CC BY 4.0, CC BY-NC 4.0, and source-specific terms
+  level: "open"
+  license: "Mixed per-source licenses, including CC BY 4.0, CC BY-NC 4.0, and source-specific terms"
+  requirements:
+    - "Some upstream media are not directly hosted because redistribution rights vary by source."
 
 paper:
-  title: Accelerating Detection of Lung Pathologies with Explainable Ultrasound Image Analysis
-  venue: Applied Sciences
-  doi: 10.3390/app11020672
+  title: "Accelerating Detection of Lung Pathologies with Explainable Ultrasound Image Analysis"
+  venue: "Applied Sciences"
+  doi: "10.3390/app11020672"
 
 data:
-  repository: GitHub
-  url: https://github.com/jannisborn/covid19_ultrasound
-  data_doi: null
+  repository: "GitHub"
+  url: "https://github.com/jannisborn/covid19_ultrasound"
+  doi: null
+  version: null
 
 family:
-  type: aggregation
+  type: "aggregate"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://github.com/jannisborn/covid19_ultrasound"
+    - "https://doi.org/10.3390/app11020672"
 
-notes: "The stable paper release contains 261 recordings from 216 patients: 202 videos and 59 static images. It contains 92 COVID-19, 73 bacterial-pneumonia, 90 healthy, and 6 non-COVID viral-pneumonia recordings assembled from 41 sources. The continuously updated metadata currently lists 374 source records: 271 videos and 103 images. Not every listed record is directly hosted because access and redistribution rights differ by source. Disease labels and visible LUS patterns were reviewed by medical experts. Four-level lung severity scores were later added for 136 videos. A-line, B-line, and consolidation segmentation annotations for 50 selected records are provided through the external PULSE Lab dataset. The optional uninformative class is an auxiliary out-of-distribution resource, not a core diagnostic class. Patient- or video-level splitting is required to prevent frame-level data leakage."
+notes: >-
+  The stable paper release contains 261 recordings from 216 patients: 202 videos
+  and 59 static images. It contains 92 COVID-19, 73 bacterial-pneumonia, 90 healthy,
+  and 6 non-COVID viral-pneumonia recordings assembled from 41 sources. The continuously
+  updated metadata currently lists more source records than the stable paper release,
+  so the structured scale above follows the stable 261-record release. Disease labels
+  and visible lung-ultrasound patterns were reviewed by medical experts. Four-level
+  severity scores were later added for 136 videos. The optional uninformative class is
+  an auxiliary out-of-distribution resource rather than a core diagnostic class.
+  Patient- or video-level splitting is required to prevent frame-level data leakage.
