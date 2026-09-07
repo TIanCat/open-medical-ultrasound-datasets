@@ -4,7 +4,6 @@ full_name: "Thyroid Ultrasound Cine-clip"
 aliases:
   - "TUSC"
   - "Stanford Thyroid Ultrasound Cine-clip"
-
 release_year: 2022
 
 anatomy:
@@ -33,7 +32,6 @@ scale:
 annotations:
   classification:
     unit: "lesion"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
@@ -104,9 +102,8 @@ verification:
     - "https://doi.org/10.71718/7m5n-rh16"
 
 notes: >-
-  The dataset contains 192 biopsy-confirmed thyroid nodules from 167 patients and
-  17,412 cine frames. In addition to radiologist-annotated nodule segmentations,
-  it provides demographics, lesion size and location, ACR TI-RADS descriptors,
-  and histopathological diagnoses. The associated paper was published in
-  Radiology: Artificial Intelligence with DOI 10.1148/ryai.210174; the separate
-  DOI 10.71718/7m5n-rh16 identifies the dataset resource.
+  The dataset contains 192 biopsy-confirmed thyroid nodules from 167 patients and 17,412
+  cine frames. In addition to radiologist-annotated nodule segmentations, it provides
+  demographics, lesion size and location, ACR TI-RADS descriptors, and histopathological
+  diagnoses. The associated paper was published in Radiology: Artificial Intelligence with
+  DOI 10.1148/ryai.210174; the separate DOI 10.71718/7m5n-rh16 identifies the dataset resource.

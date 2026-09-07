@@ -3,7 +3,6 @@ name: "TN3K"
 full_name: "Thyroid Nodule 3K"
 aliases:
   - "Thyroid Nodule Region Segmentation Dataset"
-
 release_year: 2022
 
 anatomy:
@@ -92,9 +91,8 @@ verification:
     - "https://github.com/haifangong/TRFE-Net-for-thyroid-nodule-segmentation"
 
 notes: >-
-  TN3K contains 3,493 grayscale thyroid ultrasound images from 2,421 patients.
-  Samples were selected from more than 30,000 candidate images and may contain
-  one or multiple nodules. The public release is intended for thyroid-nodule
-  segmentation; a benign/malignant classification label should not be assumed
-  for TN3K merely because some project code or related repositories contain
-  classification utilities.
+  TN3K contains 3,493 grayscale thyroid ultrasound images from 2,421 patients. Samples
+  were selected from more than 30,000 candidate images and may contain one or multiple
+  nodules. The public release is intended for thyroid-nodule segmentation; a benign/malignant
+  classification label should not be assumed for TN3K merely because some project code or
+  related repositories contain classification utilities.

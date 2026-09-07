@@ -1,9 +1,6 @@
 id: "0103"
 name: "KFGNet dataset"
-full_name: null
-aliases:
-  - "KFGNet thyroid ultrasound video dataset"
-
+full_name: "KFGNet Thyroid Ultrasound Video Dataset"
 release_year: 2022
 
 anatomy:
@@ -36,7 +33,6 @@ annotations:
 
   classification:
     unit: "video"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
@@ -47,7 +43,6 @@ annotations:
 
 tasks:
   - "detection"
-  - "localization"
   - "classification"
 
 access:
@@ -94,11 +89,11 @@ verification:
     - "https://github.com/NeuronXJTU/KFGNet"
 
 notes: >-
-  The full dataset contains 3,668 B-mode ultrasound videos. For key-frame
-  localization, 23,219 frames were extracted to train a Faster R-CNN-based
-  nodule detector, and the 3,668 videos were split into 2,648 training,
-  504 validation, and 516 test videos. The paper reports a separate
-  244-video benign/malignant classification subset from the localization
-  test cohort because the full label distribution was highly imbalanced.
-  The repository provides the ultrasound data through Baidu Netdisk and
-  does not state a formal dataset license.
+  The full dataset contains 3,668 B-mode ultrasound videos. For key-frame localization,
+  23,219 frames were extracted to train a Faster R-CNN-based nodule detector, and the
+  3,668 videos were split into 2,648 training, 504 validation, and 516 test videos. The
+  paper reports a separate 244-video benign/malignant classification subset from the
+  localization test cohort because the full label distribution was highly imbalanced.
+  The repository provides the ultrasound data through Baidu Netdisk and does not state
+  a formal dataset license. Localization is represented by the frame-level bounding-box
+  detection annotations rather than as a separate native task.

@@ -1,8 +1,6 @@
 id: "0108"
 name: "TN5000"
 full_name: "TN5000: An Ultrasound Image Dataset for Thyroid Nodule Detection and Classification"
-aliases: []
-
 release_year: 2025
 
 anatomy:
@@ -25,7 +23,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
@@ -40,10 +37,10 @@ annotations:
       - "Thyroid nodule"
     format: "bounding_box"
     count: 5000
-    annotation_format: "PASCAL VOC XML"
     annotators:
       - "Junior radiologists"
       - "Senior radiologist with over 30 years of experience"
+    note: "Bounding-box annotations are stored in PASCAL VOC XML format."
 
 tasks:
   - "detection"
@@ -102,8 +99,8 @@ verification:
     - "https://doi.org/10.6084/m9.figshare.28455641"
 
 notes: >-
-  TN5000 contains 5,000 B-mode thyroid nodule images selected from more than
-  30,000 candidate images. Each image contains at least one discernible nodule
-  and is distributed with PASCAL VOC-compatible bounding-box annotations and
-  benign/malignant labels confirmed by FNA biopsy and pathological results.
-  The official split is 3,500 training, 500 validation, and 1,000 test images.
+  TN5000 contains 5,000 B-mode thyroid nodule images selected from more than 30,000
+  candidate images. Each image contains at least one discernible nodule and is distributed
+  with PASCAL VOC-compatible bounding-box annotations and benign/malignant labels confirmed
+  by FNA biopsy and pathological results. The official split is 3,500 training, 500
+  validation, and 1,000 test images.

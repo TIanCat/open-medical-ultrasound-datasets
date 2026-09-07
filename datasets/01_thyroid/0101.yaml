@@ -1,83 +1,104 @@
-id: '0101'
-name: DDTI
-full_name: Digital Database of Thyroid Images
-aliases: []
+id: "0101"
+name: "DDTI"
+full_name: "Digital Database of Thyroid Images"
 release_year: 2015
+
 anatomy:
-  primary: Thyroid
+  primary: "Thyroid"
   target:
-  - Thyroid nodule
+    - "Thyroid nodule"
+
 modality:
   type:
-  - B-mode
-  dimension: 2D
-  temporal: static
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
   representation:
-  - image
+    - "image"
+
 scale:
-- unit: case
-  count: 389
-  note: The original paper describes a database of 389 study cases.
-- unit: image
-  count: 637
-  note: Widely used processed release with pixel-wise nodule labels.
+  - unit: "case"
+    count: 389
+    note: "The original paper describes a database of 389 study cases."
+  - unit: "image"
+    count: 637
+    note: "Widely used processed release with pixel-wise nodule labels."
+
 annotations:
   segmentation:
-    unit: image
-    type: binary
+    unit: "image"
+    type: "binary"
     targets:
-    - Thyroid nodule
-    format: contour
-    note: The original database provides expert freehand contours in XML; commonly used processed releases convert these contours to pixel masks.
+      - "Thyroid nodule"
+    format: "contour"
+    note: >-
+      The original database provides expert freehand contours in XML; commonly used
+      processed releases convert these contours to pixel masks.
+
   grading:
-    unit: case
-    system: TI-RADS
+    unit: "case"
+    system: "TI-RADS"
     categories:
-    - '2'
-    - '3'
-    - 4A
-    - 4B
-    - 4C
-    - '5'
+      - "2"
+      - "3"
+      - "4A"
+      - "4B"
+      - "4C"
+      - "5"
     annotators:
-    - At least two expert radiologists
+      - "At least two expert radiologists"
+
 tasks:
-- segmentation
-- grading
+  - "segmentation"
+  - "grading"
+
 access:
-  level: open
+  level: "open"
   license: null
   requirements: []
+
 paper:
-  title: An open access thyroid ultrasound image database
-  venue: 10th International Symposium on Medical Information Processing and Analysis
-  doi: 10.1117/12.2073532
+  title: "An open access thyroid ultrasound image database"
+  venue: "10th International Symposium on Medical Information Processing and Analysis"
+  doi: "10.1117/12.2073532"
+
 data:
-  repository: CIM@LAB
-  url: https://cimalab.unal.edu.co/projects/detail/20/
+  repository: "CIM@LAB"
+  url: "https://cimalab.unal.edu.co/projects/detail/20/"
   doi: null
   version: null
+
 acquisition:
   countries:
-  - Colombia
+    - "Colombia"
   institutions:
-  - Universidad Nacional de Colombia
-  - IDIME - Instituto de Diagnóstico Médico
+    - "Universidad Nacional de Colombia"
+    - "IDIME - Instituto de Diagnóstico Médico"
   period: null
   scanners:
-  - TOSHIBA Nemio 30
-  - TOSHIBA Nemio MX
+    - "TOSHIBA Nemio 30"
+    - "TOSHIBA Nemio MX"
   transducers: null
   frequencies: null
+
 family:
-  type: primary
+  type: "primary"
   parent: null
   related: []
+
 verification:
-  status: verified
-  date: '2026-09-04'
+  status: "verified"
+  date: "2026-09-04"
   sources:
-  - https://doi.org/10.1117/12.2073532
-  - https://cimalab.unal.edu.co/projects/detail/20/
-  - https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/DDTI.md
-notes: 'The original paper uses several different counting conventions: it introduces 389 study cases, while the Results section reports 347 ultrasound images from 299 patients. A widely used processed segmentation release contains 637 images. The atlas therefore records the original case count and the processed image count separately rather than treating them as equivalent. The database also contains diagnostic metadata including Bethesda/pathology information, but these are not encoded here as a standardized classification task because the exact label mapping differs across public processed releases.'
+    - "https://doi.org/10.1117/12.2073532"
+    - "https://cimalab.unal.edu.co/projects/detail/20/"
+    - "https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/DDTI.md"
+
+notes: >-
+  The original paper uses several different counting conventions: it introduces 389
+  study cases, while the Results section reports 347 ultrasound images from 299 patients.
+  A widely used processed segmentation release contains 637 images. The atlas therefore
+  records the original case count and the processed image count separately rather than
+  treating them as equivalent. The database also contains diagnostic metadata including
+  Bethesda/pathology information, but these are not encoded here as a standardized
+  classification task because the exact label mapping differs across public processed releases.

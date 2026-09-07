@@ -1,10 +1,6 @@
 id: "0102"
 name: "TN-SCUI2020"
 full_name: "Thyroid Nodule Segmentation and Classification in Ultrasound Images 2020"
-aliases:
-  - "TNSCUI2020"
-  - "TN-SCUI 2020"
-
 release_year: 2020
 
 anatomy:
@@ -27,7 +23,6 @@ scale:
 annotations:
   classification:
     unit: "image"
-    num_classes: 2
     classes:
       - "Benign"
       - "Malignant"
@@ -95,8 +90,8 @@ verification:
     - "https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/TN-SCUI2020.md"
 
 notes: >-
-  The dataset was released for the MICCAI 2020 TN-SCUI challenge. Each image is
-  associated with a benign/malignant label and a detailed nodule delineation.
-  The Zenodo DOI 10.5281/zenodo.3715942 identifies the accepted challenge design
-  document rather than a peer-reviewed dataset paper or the image archive itself,
-  so it is not entered under paper.doi or data.doi.
+  The dataset was released for the MICCAI 2020 TN-SCUI challenge. Each image is associated
+  with a benign/malignant label and a detailed nodule delineation. The Zenodo DOI
+  10.5281/zenodo.3715942 identifies the accepted challenge design document rather than a
+  peer-reviewed dataset paper or the image archive itself, so it is not entered under
+  paper.doi or data.doi.
