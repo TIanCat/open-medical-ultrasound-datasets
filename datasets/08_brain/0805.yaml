@@ -1,46 +1,71 @@
-id: US095
+id: "0805"
 name: "BraTioUS"
 full_name: "BraTioUS - Brain Tumor Intraoperative Ultrasound Dataset"
+
 release_year: 2026
 
 anatomy:
   primary: "Brain"
-  target: "glioma / tumor tissue"
+  target:
+    - "Glioma"
+    - "Brain tumor tissue"
 
 modality:
-  type: "intraoperative B-mode ultrasound"
+  type:
+    - "B-mode"
   dimension: "2D"
-  temporal: "intraoperative static images"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  summary: "1,669 B-mode iUS images from 142 glioma patients"
+  - unit: "patient"
+    count: 142
+  - unit: "image"
+    count: 1669
 
 annotations:
-  summary: "NIfTI-format ultrasound images and corresponding tumor segmentation masks; metadata spreadsheet"
+  segmentation:
+    unit: "image"
+    type: "binary"
+    targets:
+      - "Brain tumor"
+    format: "mask"
+    count: 1669
+    note: "NIfTI-format ultrasound images are paired with corresponding tumor segmentation masks."
 
 tasks:
-  - "brain tumor segmentation"
-  - "derived tumor/no-tumor image classification"
+  - "segmentation"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
-paper:
-  title: "No dedicated peer-reviewed dataset paper verified; Zenodo data resource"
-  venue: "Zenodo"
-  doi: null
+paper: null
 
 data:
   repository: "Zenodo"
   url: "https://zenodo.org/records/20800464"
-  data_doi: "10.5281/zenodo.20800464"
+  doi: "10.5281/zenodo.20800464"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://zenodo.org/records/20800464"
+    - "https://doi.org/10.5281/zenodo.20800464"
 
-notes: "Updated from older Zenodo record 16887363 to the latest verified record dated 2026-06-22; concept DOI is 10.5281/zenodo.16887362."
+notes: >-
+  BraTioUS contains 1,669 intraoperative B-mode ultrasound images from 142
+  glioma patients, together with tumor segmentation masks and a metadata spreadsheet.
+  Tumor/no-tumor image classification can be derived from the segmentation masks,
+  but no independent native classification annotation is required, so classification
+  is not encoded as a separate task. This entry uses the latest verified Zenodo
+  record dated 2026-06-22; the concept DOI is 10.5281/zenodo.16887362.

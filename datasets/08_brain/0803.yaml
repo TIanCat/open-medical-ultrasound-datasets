@@ -1,48 +1,64 @@
-id: US096
+id: "0803"
 name: "Dataset of 3D ultrasound neuroimages"
-full_name: "Dataset of 3D ultrasound neuroimages and Supporting Info"
+full_name: "Dataset of 3D Ultrasound Neuroimages and Supporting Info"
+
 release_year: 2026
 
 anatomy:
   primary: "Neonatal brain"
-  target: "transfontanellar neuroimages"
+  target:
+    - "Transfontanellar brain"
 
 modality:
-  type: "3D transfontanellar ultrasound"
-  dimension: "3D volumes and 2D slices"
-  temporal: "static volume"
+  type:
+    - "B-mode"
+  dimension: "3D"
+  temporal: "static"
+  representation:
+    - "volume"
 
 scale:
-  summary: "small 3D neuroimage resource; current record has 9 files and supporting information"
+  - unit: "file"
+    count: 9
+    note: "Current Zenodo record contains nine files including imaging and supporting information."
 
-annotations:
-  summary: "original 3D ultrasound neuroimages / derived 2D slices and supporting files; no consistent manual semantic segmentation labels"
+annotations: {}
 
 tasks:
-  - "data augmentation"
-  - "2D ultrasound slice synthesis"
-  - "GAN training"
-  - "ultrasound image representation research"
+  - "pretraining"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
-paper:
-  title: "No dedicated peer-reviewed dataset paper verified; Zenodo data resource"
-  venue: "Zenodo"
-  doi: null
+paper: null
 
 data:
   repository: "Zenodo"
   url: "https://zenodo.org/records/19593033"
-  data_doi: "10.5281/zenodo.19593033"
+  doi: "10.5281/zenodo.19593033"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://zenodo.org/records/19593033"
+    - "https://doi.org/10.5281/zenodo.19593033"
 
-notes: "Updated from the earlier 2025 Zenodo record 14917169 to the 2026 record with supporting information."
+notes: >-
+  This is a small unlabeled 3D transfontanellar ultrasound neuroimage resource
+  with supporting files. The earlier atlas entry listed data augmentation,
+  2D slice synthesis, GAN training, and representation research as tasks, but
+  these are modeling uses rather than native annotations. Because the current
+  schema requires at least one task for an unlabeled reusable image resource,
+  it is categorized under the generic pretraining task. No consistent manual
+  semantic-segmentation labels or dedicated peer-reviewed dataset paper were verified.
+  The entry was updated from the earlier 2025 Zenodo record 14917169 to the
+  2026 record with supporting information.

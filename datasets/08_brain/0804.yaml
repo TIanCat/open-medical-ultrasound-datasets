@@ -1,32 +1,63 @@
-id: US094
+id: "0804"
 name: "ReMIND"
-full_name: "The Brain Resection Multimodal Imaging Database (ReMIND)"
+full_name: "The Brain Resection Multimodal Imaging Database"
+
 release_year: 2023
 
 anatomy:
   primary: "Brain"
-  target: "brain tumor / resection cavity"
+  target:
+    - "Brain tumor"
+    - "Brain parenchyma"
+    - "Resection cavity"
+    - "Residual tumor tissue"
+    - "Resected tissue"
 
 modality:
-  type: "preoperative MRI + intraoperative MRI + intraoperative ultrasound"
-  dimension: "3D/2D multimodal"
-  temporal: "preoperative and intraoperative"
+  type:
+    - "B-mode"
+    - "MRI"
+  dimension: "mixed"
+  temporal: "mixed"
+  representation:
+    - "sequence"
+    - "volume"
 
 scale:
-  summary: "114 neurosurgical cases"
+  - unit: "case"
+    count: 114
 
 annotations:
-  summary: "multimodal images with expert segmentations for tumor, brain parenchyma, resection cavity and residual/resected tissue; registration/navigation metadata"
+  segmentation:
+    unit: "case"
+    type: "multiclass"
+    targets:
+      - "Brain tumor"
+      - "Brain parenchyma"
+      - "Resection cavity"
+      - "Residual tumor tissue"
+      - "Resected tissue"
+    format: "mask"
+    note: "Expert segmentations are provided across the multimodal imaging resource."
+
+  registration:
+    unit: "case"
+    modalities:
+      - "B-mode"
+      - "MRI"
+    format: "multimodal_registration_metadata"
+    note: >-
+      The collection includes multimodal imaging together with registration and
+      navigation metadata for image-guided neurosurgery research.
 
 tasks:
-  - "multimodal image registration"
-  - "tumor segmentation"
-  - "resection-cavity segmentation"
-  - "image-guided neurosurgery research"
+  - "segmentation"
+  - "registration"
 
 access:
-  level: open
+  level: "open"
   license: "CC BY 4.0"
+  requirements: []
 
 paper:
   title: "ReMIND: The Brain Resection Multimodal Imaging Database"
@@ -34,15 +65,27 @@ paper:
   doi: "10.1038/s41597-024-03295-z"
 
 data:
-  repository: "ReMIND"
+  repository: "The Cancer Imaging Archive"
   url: "https://www.cancerimagingarchive.net/collection/remind/"
-  data_doi: "10.7937/3RAG-D070"
+  doi: "10.7937/3RAG-D070"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-03
+verification:
+  status: "verified"
+  date: "2026-09-03"
+  sources:
+    - "https://www.cancerimagingarchive.net/collection/remind/"
+    - "https://doi.org/10.7937/3RAG-D070"
+    - "https://doi.org/10.1038/s41597-024-03295-z"
 
-notes: "Verified from the Scientific Data paper and TCIA collection page."
+notes: >-
+  ReMIND contains 114 neurosurgical cases with preoperative MRI, intraoperative
+  MRI, and intraoperative ultrasound. Expert segmentations include tumor,
+  brain parenchyma, resection cavity, and residual/resected tissue labels.
+  Image-guided neurosurgery is the broader clinical application of the resource;
+  the native structured tasks are represented here as segmentation and registration.
