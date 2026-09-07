@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **101 medical ultrasound dataset resources** across **16 anatomical categories**.
+This repository currently catalogs **102 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -16,7 +16,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 03 | Cardiac | 9 | 0301–0309 |
 | 04 | Lung | 6 | 0401–0406 |
 | 05 | Liver & Gallbladder | 9 | 0501–0509 |
-| 06 | Musculoskeletal | 7 | 0601–0607 |
+| 06 | Musculoskeletal | 8 | 0601–0608 |
 | 07 | Vessel | 4 | 0701–0704 |
 | 08 | Brain | 5 | 0801–0805 |
 | 09 | Kidney | 1 | 0901–0901 |
@@ -26,7 +26,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 13 | Animal | 6 | 1301–1306 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 7 | 2001–2007 |
-| **Total** | **16 categories** | **101** | — |
+| **Total** | **16 categories** | **102** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
@@ -131,6 +131,7 @@ See [Scope](docs/scope.md).
 | [0605](datasets/06_musculoskeletal/0605.yaml) | Machine Learning-Driven Heckmatt Grading in FSHD | Muscle / FSHD | 2D B-mode images | 25,005 images / 290 participants | grading; segmentation | 🟢 Open | [Paper](https://doi.org/10.17632/yzg86vb895.1) | [Mendeley Data](https://data.mendeley.com/datasets/yzg86vb895/1) |
 | [0606](datasets/06_musculoskeletal/0606.yaml) | Transverse Musculoskeletal Ultrasound Dataset for NMD Assessment | Muscle / NMD | 2D B-mode images | 3,917 images / 1,283 subjects | segmentation; quantitative assessment | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2021.104623) | [Mendeley Data](https://data.mendeley.com/datasets/3jykz7wz8d/1) |
 | [0607](datasets/06_musculoskeletal/0607.yaml) | Paired robotic and handheld lumbar spine ultrasound | Lumbar spine / vertebral bone surface | Paired CT + tracked 2D B-mode sweeps | 598 US scans / 63 volunteers; 6,091 annotated frames | segmentation; US-CT registration; 3D reconstruction | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-025-06047-9) | [Data](https://doi.org/10.48804/3XPCAE) |
+| [0608](datasets/06_musculoskeletal/0608.yaml) | AI/ML-ready Knee Ultrasound Dataset | Knee | 2D B-mode + Power Doppler | 7,571 images | pretraining | 🟢 Open | [Yates et al., 2025](https://doi.org/10.1002/art.43139) | [Harvard Dataverse](https://doi.org/10.7910/DVN/SKP9IB) |
 
 ### Vessel
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

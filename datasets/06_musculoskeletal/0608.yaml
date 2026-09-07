@@ -1,0 +1,116 @@
+id: "0608"
+name: "AI/ML-ready Knee Ultrasound Dataset"
+full_name: "Development of an AI/ML-ready Knee Ultrasound Dataset in a Population-based Cohort"
+aliases:
+  - "Knee Ultrasound Dataset in a Population-based Cohort"
+  - "JoCoHS Knee Ultrasound Dataset"
+
+release_year: 2023
+
+anatomy:
+  primary: "Knee"
+  target:
+    - "Knee joint"
+
+modality:
+  type:
+    - "B-mode"
+    - "Power Doppler"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: 7571
+    note: >-
+      A 2025 systematic review of publicly disseminated ultrasound resources
+      reports 7,571 images for this Harvard Dataverse resource. The dataset is
+      versioned and was originally described as being updated as additional
+      Johnston County Health Study data became available.
+
+annotations: {}
+
+tasks:
+  - "pretraining"
+
+access:
+  level: "open"
+  license: null
+  requirements:
+    - "Harvard Dataverse terms apply."
+
+paper:
+  title: "Associations and Diagnostic Accuracy of Ultrasound Features in Knee Osteoarthritis: Cross-Sectional Results From a Large Community-Based Cohort"
+  venue: "Arthritis & Rheumatology"
+  doi: "10.1002/art.43139"
+
+data:
+  repository: "Harvard Dataverse"
+  url: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/SKP9IB"
+  doi: "10.7910/DVN/SKP9IB"
+  version: "5.1"
+
+acquisition:
+  countries:
+    - "United States"
+  institutions:
+    - "Johnston County Health Study / University of North Carolina at Chapel Hill"
+  period: "2019 to 2024"
+  scanners:
+    - "Sonosite Edge II-MSK"
+  transducers:
+    - "HFL50x 15-6 MHz linear transducer"
+  frequencies:
+    - "6-15 MHz"
+  note: >-
+    Standardized knee ultrasound was acquired by a trained sonographer using
+    a landmark-based protocol. Associated cohort publications describe seven
+    images per knee and include grayscale B-mode and Power Doppler imaging.
+    The study population was recruited from Johnston County, North Carolina.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-07"
+  sources:
+    - "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/SKP9IB"
+    - "https://doi.org/10.7910/DVN/SKP9IB"
+    - "https://doi.org/10.1002/art.43139"
+    - "https://doi.org/10.1002/acr2.11159"
+    - "https://doi.org/10.1038/s41746-025-02162-4"
+
+notes: >-
+  This dataset is not currently represented elsewhere in the atlas and is
+  suitable for inclusion as a primary musculoskeletal ultrasound resource.
+  It originates from the population-based Johnston County Health Study
+  (JoCoHS) and was created as an AI/ML-ready FAIR resource for research on
+  knee osteoarthritis and related ultrasound phenotypes.
+
+  Associated publications describe a standardized protocol with seven images
+  per knee. Expert readers scored osteoarthritis-related ultrasound features
+  including effusion/synovitis, Power Doppler signal, osteophytes, cartilage
+  damage, meniscal extrusion, popliteal cysts, and calcium crystal deposition,
+  with disagreements adjudicated by a third reader. However, the publications
+  specifically state that the Harvard Dataverse currently provides all
+  ultrasound images and limited metadata. Because public availability of the
+  final expert feature scores could not be independently confirmed from the
+  currently accessible Dataverse metadata, those scores are not encoded as
+  native public annotations in this atlas entry.
+
+  The associated 2025 cohort analysis included 861 participants and 1,711 knees
+  with complete imaging data from a 902-participant Johnston County Health Study
+  cohort. These study-cohort counts are not used as the public dataset scale
+  because the Harvard Dataverse is a versioned resource and the publicly
+  summarized resource size is 7,571 ultrasound images.
+
+  The currently accessible indexed Harvard Dataverse information identifies
+  version 5.1. A dataset-specific reusable license could not be independently
+  confirmed, so access.license is left null. Verification is marked partial
+  because the Dataverse landing page could not be fully inspected from the
+  verification environment.
