@@ -59,9 +59,9 @@ access:
   requirements: []
 
 paper:
-  title: "Machine Learning-Driven Heckmatt Grading in Facioscapulohumeral Muscular Dystrophy: A Novel Pathway for Musculoskeletal Ultrasound Analysis"
-  venue: "Mendeley Data"
-  doi: "10.17632/yzg86vb895.1"
+  title: "Machine learning-driven Heckmatt grading in facioscapulohumeral muscular dystrophy: A novel pathway for musculoskeletal ultrasound analysis"
+  venue: "Clinical Neurophysiology"
+  doi: "10.1016/j.clinph.2025.01.016"
 
 data:
   repository: "Mendeley Data"
