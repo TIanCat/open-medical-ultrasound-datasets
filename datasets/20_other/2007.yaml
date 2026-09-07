@@ -1,0 +1,131 @@
+id: "2007"
+name: "Dermatologic Ultrasound Images for classification"
+full_name: "Dermatologic Ultrasound Images for Classification"
+aliases:
+  - "Dermatologic Ultrasound Images"
+
+release_year: 2022
+
+anatomy:
+  primary: "Skin"
+  target:
+    - "Skin lesion"
+    - "Skin tumor"
+
+modality:
+  type:
+    - "B-mode"
+    - "Color Doppler"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "case"
+    count: 202
+    note: >-
+      The current public Kaggle resource contains 202 dermatologic-ultrasound
+      lesion instances.
+  - unit: "pair"
+    count: 202
+    note: >-
+      Each record is intended to pair one B-mode image with one Color Doppler
+      image of the same skin lesion.
+  - unit: "image"
+    count: 404
+    note: >-
+      Two ultrasound image files are associated with each of the 202 records.
+      A later audit reported modality-pairing issues in four records, where both
+      files were Doppler images, but the files remain part of the public resource.
+
+annotations:
+  classification:
+    unit: "case"
+    label_type: "binary"
+    classes:
+      - "Benign"
+      - "Malignant"
+    reference_standard: "Histopathology"
+    note: >-
+      The public CSV contains a binary benign-versus-malignant label and a Dx
+      field with the specific lesion diagnosis. A 2026 re-analysis reports
+      approximately 65.7% benign and 34.3% malignant cases. The exact public
+      per-diagnosis class distribution is not encoded here because it was not
+      independently verified from the current Kaggle archive.
+
+tasks:
+  - "classification"
+
+access:
+  level: "open"
+  license: null
+  requirements:
+    - "Kaggle platform terms apply."
+
+paper:
+  title: "Discriminative deep learning based benignity/malignancy diagnosis of dermatologic ultrasound skin lesions with pretrained artificial intelligence architecture"
+  venue: "Skin Research and Technology"
+  doi: "10.1111/srt.13086"
+
+data:
+  repository: "Kaggle"
+  url: "https://www.kaggle.com/datasets/alfageme/dermatologic-ultrasound-images"
+  doi: null
+  version: null
+
+acquisition:
+  countries: null
+  institutions: null
+  period: null
+  scanners:
+    - "Esaote MyLab Class C"
+  transducers:
+    - "10-22 MHz linear probe"
+    - "18 MHz linear probe"
+  frequencies:
+    - "10-22 MHz"
+    - "18 MHz"
+  note: >-
+    The associated study describes single-scan dermatologic ultrasound acquired
+    according to DERMUS guidelines. The public resource provides paired
+    high-frequency B-mode and Color Doppler images together with lesion labels
+    and transducer-frequency metadata.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-07"
+  sources:
+    - "https://www.kaggle.com/datasets/alfageme/dermatologic-ultrasound-images"
+    - "https://doi.org/10.1111/srt.13086"
+    - "https://doi.org/10.1002/jum.70125"
+    - "https://doi.org/10.1038/s41746-025-02162-4"
+
+notes: >-
+  This resource is not currently represented elsewhere in the atlas and is
+  suitable for inclusion as a primary medical-ultrasound dataset. The public
+  Kaggle version contains 202 skin-lesion instances, each intended to include
+  paired B-mode and Color Doppler images plus a binary benign/malignant label,
+  a specific diagnosis field (Dx), and transducer-frequency metadata.
+
+  The associated 2022 paper describes a larger institutional study cohort:
+  235 histologically confirmed skin-lesion images were used for model
+  development and an additional 35 images for external testing. These paper
+  counts should not be substituted for the 202-instance public Kaggle release.
+
+  A 2026 study that re-used the Kaggle resource reported several data-quality
+  issues: B-mode/Doppler filenames were inverted for records 57, 59, and 90;
+  filename-format corrections were needed for several other records; and
+  records 6, 62, 74, and 121 contained two Doppler images instead of a proper
+  B-mode/Doppler pair. These issues do not invalidate the dataset but should be
+  considered during preprocessing.
+
+  A 2025 review of publicly disseminated ultrasound resources independently
+  lists this dataset as an open-access skin-ultrasound dataset with 202 cases.
+  No dataset-specific reusable license could be independently confirmed from
+  the currently retrievable Kaggle metadata, so access.license is left null.
