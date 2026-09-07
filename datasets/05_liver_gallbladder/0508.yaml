@@ -1,57 +1,82 @@
-id: US070
-name: Saudi NAFLD Liver Ultrasound Dataset
-full_name: Large annotated ultrasound dataset of non-alcoholic fatty liver from Saudi hospitals for analysis and applications
+id: "0508"
+name: "Saudi NAFLD Liver Ultrasound Dataset"
+full_name: "Large Annotated Ultrasound Dataset of Non-alcoholic Fatty Liver from Saudi Hospitals for Analysis and Applications"
+
 release_year: 2024
 
 anatomy:
-  primary: Liver
-  target: Non-alcoholic fatty liver disease
+  primary: "Liver"
+  target:
+    - "Non-alcoholic fatty liver disease"
 
 modality:
-  type: Grayscale and color ultrasound
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+    - "Color Doppler"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 10352
-  patients: 384
+  - unit: "patient"
+    count: 384
+  - unit: "image"
+    count: 10352
+    note: "8,772 grayscale images and 1,580 color ultrasound images."
 
 annotations:
-  classification:
-    num_classes: 4
-    classes:
-      - Steatosis grade 0
-      - Steatosis grade 1
-      - Steatosis grade 2
-      - Steatosis grade 3
-
-  segmentation:
-    available: false
-    targets: []
+  grading:
+    unit: "image"
+    system: "Biopsy-based liver disease grading"
+    categories:
+      - "Steatosis grade 0"
+      - "Steatosis grade 1"
+      - "Steatosis grade 2"
+      - "Steatosis grade 3"
+    note: >-
+      Steatosis is graded 0-3 using corresponding liver-biopsy results as the
+      reference standard. The release also includes fibrosis grading from
+      no fibrosis through cirrhosis, but exact fibrosis category names are not
+      enumerated here because they are not specified in the current atlas source.
 
 tasks:
-  - Classification
-  - Grading
+  - "grading"
 
 access:
-  level: application
-  license: Custom confidentiality and data-use agreement
+  level: "application"
+  license: "Custom confidentiality and data-use agreement"
+  requirements:
+    - "Formal approval is required."
+    - "A signed confidentiality agreement is required."
+    - "Use is restricted to non-commercial research."
 
 paper:
-  title: Large annotated ultrasound dataset of non-alcoholic fatty liver from Saudi hospitals for analysis and applications
-  venue: Data in Brief
-  doi: 10.1016/j.dib.2024.111266
+  title: "Large annotated ultrasound dataset of non-alcoholic fatty liver from Saudi hospitals for analysis and applications"
+  venue: "Data in Brief"
+  doi: "10.1016/j.dib.2024.111266"
 
 data:
-  repository: Open Science Framework
-  url: https://doi.org/10.17605/OSF.IO/C2YG8
-  data_doi: 10.17605/OSF.IO/C2YG8
+  repository: "Open Science Framework"
+  url: "https://doi.org/10.17605/OSF.IO/C2YG8"
+  doi: "10.17605/OSF.IO/C2YG8"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "partial"
+  date: "2026-09-02"
+  sources:
+    - "https://doi.org/10.17605/OSF.IO/C2YG8"
+    - "https://doi.org/10.1016/j.dib.2024.111266"
 
-notes: "Contains 10,352 standardized 768 × 1024 PNG images from 384 patients: 8,772 grayscale and 1,580 color images. Full-image labels are based on corresponding liver biopsy results. Steatosis uses grades 0–3; fibrosis uses five categories from no fibrosis through cirrhosis. No bounding boxes, segmentation masks, patient IDs, examination dates, raw NAS scores, or biopsy reports are released. The OSF project and files were not accessible during verification; access requires formal approval and a signed confidentiality agreement and is restricted to non-commercial research."
+notes: >-
+  The dataset contains 10,352 standardized 768 x 1024 PNG images from 384 patients:
+  8,772 grayscale and 1,580 color images. Full-image labels are based on corresponding
+  liver-biopsy results. No bounding boxes, segmentation masks, patient IDs, examination
+  dates, raw NAS scores, or biopsy reports are released. The OSF files were not directly
+  accessible during verification, so verification remains partial.

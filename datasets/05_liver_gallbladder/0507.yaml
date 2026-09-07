@@ -1,59 +1,101 @@
-id: US069
-name: BEHSOF
-full_name: BEHSOF - Advanced Non-alcoholic fatty liver dataset with clinical metadata and ultrasound images for Deep learning Models
+id: "0507"
+name: "BEHSOF"
+full_name: "BEHSOF - Advanced Non-alcoholic Fatty Liver Dataset with Clinical Metadata and Ultrasound Images for Deep Learning Models"
+
 release_year: 2024
 
 anatomy:
-  primary: Liver
-  target: Non-alcoholic fatty liver disease
+  primary: "Liver"
+  target:
+    - "Non-alcoholic fatty liver disease"
 
 modality:
-  type: Ultrasound + clinical + laboratory + FibroScan
-  dimension: 2D
-  temporal: static
+  type:
+    - "Ultrasound"
+    - "Elastography"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 1669
-  patients: 113
+  - unit: "participant"
+    count: 113
+  - unit: "image"
+    count: 1669
+    note: >-
+      This image count comes from a derived public curation and is not stated
+      as the original Figshare image count.
 
 annotations:
-  classification:
-    num_classes: 4
-    classes:
-      - Steatosis stage 0
-      - Steatosis stage 1
-      - Steatosis stage 2
-      - Steatosis stage 3
+  grading:
+    unit: "participant"
+    system: "Steatosis and FibroScan staging"
+    label_sets:
+      steatosis:
+        categories:
+          - "Stage 0"
+          - "Stage 1"
+          - "Stage 2"
+          - "Stage 3"
+        distribution:
+          Stage 0: 12
+          Stage 1: 57
+          Stage 2: 36
+          Stage 3: 8
+      fibrosis:
+        categories:
+          - "F0"
+          - "F1"
+          - "F2"
+        distribution:
+          F0: 24
+          F1: 78
+          F2: 11
+    note: "Steatosis and FibroScan fibrosis stages are provided at participant level."
 
-  segmentation:
-    available: false
-    targets: []
+  measurements:
+    unit: "participant"
+    targets:
+      - "CAP score"
+      - "Elasticity score"
+      - "Anthropometric measurements"
+      - "Blood-test measurements"
+    format: "clinical_metadata"
 
 tasks:
-  - Classification
-  - Grading
-  - Regression
-  - Multimodal Prediction
+  - "grading"
+  - "measurement"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
-paper:
-  title: null
-  venue: null
-  doi: null
+paper: null
 
 data:
-  repository: Figshare
-  url: https://figshare.com/articles/dataset/BEHSOF/26389069
-  data_doi: 10.6084/m9.figshare.26389069.v4
+  repository: "Figshare"
+  url: "https://figshare.com/articles/dataset/BEHSOF/26389069"
+  doi: "10.6084/m9.figshare.26389069.v4"
+  version: "4"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://figshare.com/articles/dataset/BEHSOF/26389069"
+    - "https://doi.org/10.6084/m9.figshare.26389069.v4"
 
-notes: "Contains 113 participants: 18 from Taleghani Hospital and 95 from Behbood Clinic. The derived image curation contains 1,669 images. Steatosis stages 0/1/2/3 contain 12/57/36/8 participants; FibroScan fibrosis stages F0/F1/F2 contain 24/78/11. Clinical data include demographics, anthropometric measurements, blood tests, CAP score, elasticity/E score, and FibroScan results. The 1,669-image count comes from a derived Kaggle curation and is not stated for the original Figshare release."
+notes: >-
+  BEHSOF contains 113 participants: 18 from Taleghani Hospital and 95 from
+  Behbood Clinic. Clinical data include demographics, anthropometric measurements,
+  blood tests, CAP score, elasticity/E score, and FibroScan results. The original
+  free-text tasks "Regression" and "Multimodal Prediction" are downstream modeling
+  formulations; the native structured supervision is represented here as grading
+  and measurement metadata.

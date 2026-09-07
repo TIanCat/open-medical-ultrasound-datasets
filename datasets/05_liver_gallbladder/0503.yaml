@@ -1,60 +1,88 @@
-id: US065
-name: Annotated Ultrasound Liver Images
-full_name: Annotated Ultrasound Liver images
+id: "0503"
+name: "Annotated Ultrasound Liver Images"
+full_name: "Annotated Ultrasound Liver Images"
+
 release_year: 2022
 
 anatomy:
-  primary: Liver
-  target: Liver mass
+  primary: "Liver"
+  target:
+    - "Liver"
+    - "Liver mass"
+    - "Ultrasound scan region"
 
 modality:
-  type: B-mode
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 735
-  patients: null
+  - unit: "image"
+    count: 735
 
 annotations:
   classification:
-    num_classes: 3
+    unit: "image"
     classes:
-      - Normal
-      - Benign
-      - Malignant
+      - "Normal"
+      - "Benign"
+      - "Malignant"
+    distribution:
+      Normal: 100
+      Benign: 200
+      Malignant: 435
 
   segmentation:
-    available: true
+    unit: "image"
+    type: "multiclass"
     targets:
-      - Ultrasound scan region
-      - Liver
-      - Liver mass
+      - "Ultrasound scan region"
+      - "Liver"
+      - "Liver mass"
+    format: "polygon"
+    count: 735
+    note: "JSON annotations describe scan outlines, liver regions, and liver-mass regions."
 
 tasks:
-  - Classification
-  - Segmentation
-  - Detection
+  - "classification"
+  - "segmentation"
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements:
+    - "The Zenodo record requests appropriate author contact and credit."
 
 paper:
-  title: Improving artificial intelligence pipeline for liver malignancy diagnosis using ultrasound images and video frames
-  venue: Briefings in Bioinformatics
-  doi: 10.1093/bib/bbac569
+  title: "Improving artificial intelligence pipeline for liver malignancy diagnosis using ultrasound images and video frames"
+  venue: "Briefings in Bioinformatics"
+  doi: "10.1093/bib/bbac569"
 
 data:
-  repository: Zenodo
-  url: https://zenodo.org/records/7272660
-  data_doi: 10.5281/zenodo.7272660
+  repository: "Zenodo"
+  url: "https://zenodo.org/records/7272660"
+  doi: "10.5281/zenodo.7272660"
+  version: null
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "verified"
+  date: "2026-09-02"
+  sources:
+    - "https://zenodo.org/records/7272660"
+    - "https://doi.org/10.1093/bib/bbac569"
 
-notes: "The public release contains exactly 735 JPG images: 435 malignant, 200 benign, and 100 normal. JSON annotations describe ultrasound scan outlines, liver regions, and liver-mass regions. It is an annotated subset associated with a larger study of 50,063 images and video frames from 11,468 patients; the full study cohorts are not included. The Zenodo record requests that users contact and appropriately credit the authors."
+notes: >-
+  The public release contains exactly 735 JPG images: 435 malignant, 200 benign,
+  and 100 normal. It is an annotated public subset associated with a larger study
+  of 50,063 images and video frames from 11,468 patients; the full study cohorts
+  are not publicly included here. Detection is a possible downstream use of the
+  polygon annotations, but no independent bounding-box annotation is released,
+  so detection is not encoded as a native task.

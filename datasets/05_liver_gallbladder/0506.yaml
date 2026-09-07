@@ -1,52 +1,89 @@
-id: US068
-name: liver_ultrasound
-full_name: liver_ultrasound Computer Vision Project
+id: "0506"
+name: "liver_ultrasound"
+full_name: "liver_ultrasound Computer Vision Project"
+
 release_year: 2023
 
 anatomy:
-  primary: Liver
-  target: Hepatic and adjacent abdominal structures
+  primary: "Liver"
+  target:
+    - "Hepatic structures"
+    - "Adjacent abdominal structures"
 
 modality:
-  type: Grayscale ultrasound
-  dimension: 2D
-  temporal: static
+  type:
+    - "B-mode"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
 
 scale:
-  images: 400
-  patients: null
+  - unit: "image"
+    count: 400
 
 annotations:
-  classification:
-    num_classes: 0
-    classes: []
-
-  segmentation:
-    available: false
-    targets: []
+  detection:
+    unit: "image"
+    targets:
+      - "0"
+      - "HCC"
+      - "HV"
+      - "IVC"
+      - "K"
+      - "K-C"
+      - "K-M"
+      - "LT SAG"
+      - "LVR"
+      - "PV"
+      - "RT TRANS"
+      - "SAG"
+      - "SAG K"
+      - "TRANS"
+    format: "bounding_box"
+    note: >-
+      The meaning of class 0 and several abbreviations is not documented by
+      the public project page, so the released label names are preserved verbatim.
 
 tasks:
-  - Detection
+  - "detection"
+
+splits:
+  unit: "image"
+  training:
+    count: 220
+  validation:
+    count: 120
+  test:
+    count: 60
 
 access:
-  level: open
-  license: CC BY 4.0
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
 
-paper:
-  title: null
-  venue: null
-  doi: null
+paper: null
 
 data:
-  repository: Roboflow Universe
-  url: https://universe.roboflow.com/joe-klepich/liver_ultrasound
-  data_doi: null
+  repository: "Roboflow Universe"
+  url: "https://universe.roboflow.com/joe-klepich/liver_ultrasound"
+  doi: null
+  version: "v11"
 
 family:
-  type: primary
+  type: "primary"
   parent: null
+  related: []
 
-verified:
-  date: 2026-09-02
+verification:
+  status: "partial"
+  date: "2026-09-02"
+  sources:
+    - "https://universe.roboflow.com/joe-klepich/liver_ultrasound"
 
-notes: "Contains 400 images with a 220/120/60 train/validation/test split in dataset version v11. Bounding-box labels are: 0, HCC, HV, IVC, K, K-C, K-M, LT SAG, LVR, PV, RT TRANS, SAG, SAG K, and TRANS. The meaning of class 0 and several abbreviations is not documented. Patient count, acquisition source, annotator details, and diagnostic reference standards are not provided."
+notes: >-
+  Version v11 contains 400 images with a 220/120/60 train/validation/test split.
+  Patient count, acquisition source, annotator details, diagnostic reference
+  standards, and the semantics of several abbreviated detection classes are not
+  documented. Verification is therefore marked partial even though the public
+  project structure and counts are available.
