@@ -1,5 +1,5 @@
 Dataset validation report
-Generated: 2026-09-07T11:18:00+08:00
+Generated: 2026-09-07T11:26:47+08:00
 Repository: /data3/wj/torch/open-medical-ultrasound-datasets
 Checked YAML files: 100
 ================================================================================
@@ -25,19 +25,6 @@ datasets/02_obstetrics/0204.yaml
 
 datasets/02_obstetrics/0210.yaml
   WARNING [tasks]: annotations.classification exists but task "classification" is absent.
-
-datasets/10_prostate/1001.yaml
-  ERROR [family.related[0]]: "Prostate-MRI-US-Biopsy-DICOM-Annotations" is not a four-digit atlas ID.
-
-datasets/10_prostate/1002.yaml
-  WARNING [aliases[1]]: duplicates name or full_name.
-    Hint: Keep aliases only for genuine alternative names.
-  ERROR [data.additional_resources]: field is not part of Dataset Schema v1.
-    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
-
-datasets/10_prostate/1003.yaml
-  WARNING [annotations.segmentation.annotation_sets]: field is not part of Dataset Schema v1.
-    Hint: Remove it, move the information to a note field, or explicitly extend the schema if it is reusable.
 
 datasets/12_ovary/1201.yaml
   ERROR [annotations.classification.num_classes]: num_classes is redundant and is not allowed.
@@ -750,7 +737,7 @@ datasets/20_other/2006.yaml
   ERROR [data.url]: must be a valid http(s) URL.
   ERROR [verification]: must be a mapping/object.
 
-Summary: 406 error(s), 14 warning(s).
+Summary: 404 error(s), 12 warning(s).
 ================================================================================
-Errors: 406
-Warnings: 14
+Errors: 404
+Warnings: 12
