@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **103 medical ultrasound dataset resources** across **16 anatomical categories**.
+This repository currently catalogs **104 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -15,7 +15,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 02 | Obstetrics | 10 | 0201–0210 |
 | 03 | Cardiac | 9 | 0301–0309 |
 | 04 | Lung | 6 | 0401–0406 |
-| 05 | Liver & Gallbladder | 9 | 0501–0509 |
+| 05 | Liver & Gallbladder | 10 | 0501–0510 |
 | 06 | Musculoskeletal | 8 | 0601–0608 |
 | 07 | Vessel | 4 | 0701–0704 |
 | 08 | Brain | 5 | 0801–0805 |
@@ -26,11 +26,11 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 13 | Animal | 6 | 1301–1306 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 7 | 2001–2007 |
-| **Total** | **16 categories** | **103** | — |
+| **Total** | **16 categories** | **104** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
-**Last updated:** 2026-09-04
+**Last updated:** 2026-09-24
 
 ## Scope
 
@@ -119,7 +119,7 @@ See [Scope](docs/scope.md).
 | [0507](datasets/05_liver_gallbladder/0507.yaml) | BEHSOF | Liver / NAFLD | 2D ultrasound + clinical data | 1,669 images / 113 individuals | classification; grading; regression | 🟢 Open | Figshare data resource | [Figshare](https://figshare.com/articles/dataset/BEHSOF/26389069) |
 | [0508](datasets/05_liver_gallbladder/0508.yaml) | Saudi NAFLD Liver Ultrasound Dataset | Liver / NAFLD | 2D grayscale and color images | 10,352 images / 384 patients | steatosis grading; fibrosis staging; classification | 🟡 Application | [Paper](https://doi.org/10.1016/j.dib.2024.111266) | [OSF](https://doi.org/10.17605/OSF.IO/C2YG8) |
 | [0509](datasets/05_liver_gallbladder/0509.yaml) | SMC-LUD | Liver / focal liver lesions | 2D B-mode images | 5,385 images / 1,021 patients | HCC vs hemangioma classification | 🟢 Open | [Paper](https://doi.org/10.1038/s41597-026-07023-7) | [Figshare](https://doi.org/10.6084/m9.figshare.31112716) |
-
+| [0510](datasets/05_liver_gallbladder/0510.yaml) | AD-MAGNet Liver Ultrasound Dataset | Liver / liver lesions | 2D ultrasound images | 18,000-image held-out test set; total release count not yet reconciled | Normal / Benign / Malignant classification | 🟢 Open | -- | [Mendeley Data](https://data.mendeley.com/datasets/74pp4d9jfg/1) |
 
 ### Musculoskeletal
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

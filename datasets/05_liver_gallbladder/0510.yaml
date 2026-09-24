@@ -1,0 +1,97 @@
+id: "0510"
+name: "AD-MAGNet Liver Ultrasound Dataset"
+full_name: "AD-MAGNet Liver Ultrasound Dataset"
+
+release_year: 2026
+
+anatomy:
+  primary: "Liver"
+  target:
+    - "Liver parenchyma"
+    - "Benign liver lesion"
+    - "Malignant liver lesion"
+
+modality:
+  type:
+    - "Ultrasound"
+  dimension: "2D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: null
+    note: >-
+      The public Mendeley release contains liver ultrasound image files.
+      The dataset description explicitly reports an 18,000-image held-out
+      test set, but the total number of image files in the complete public
+      release has not been independently verified.
+
+annotations:
+  classification:
+    unit: "image"
+    label_type: "multiclass"
+    classes:
+      - "Normal"
+      - "Benign"
+      - "Malignant"
+    note: >-
+      The Mendeley description defines three clinically meaningful diagnostic
+      classes. Benign examples include haemangioma, cysts, and focal nodular
+      hyperplasia; malignant examples include hepatocellular carcinoma,
+      cholangiocarcinoma, and metastases.
+
+tasks:
+  - "classification"
+
+splits:
+  unit: "image"
+  test:
+    count: 18000
+    labels: "public"
+    note: "The Mendeley description explicitly identifies this as a held-out test set."
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper: null
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/74pp4d9jfg/1"
+  doi: "10.17632/74pp4d9jfg.1"
+  version: "1"
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "partial"
+  date: "2026-09-24"
+  sources:
+    - "https://data.mendeley.com/datasets/74pp4d9jfg/1"
+    - "https://doi.org/10.17632/74pp4d9jfg.1"
+
+notes: >-
+  This dataset accompanies AD-MAGNet (Agent-Driven Multimodal Graph Attention
+  Network), a system for automated liver ultrasound diagnosis. The public
+  release contains ultrasound image data and supports three-class
+  Normal/Benign/Malignant classification. The Mendeley description explicitly
+  reports an 18,000-image held-out test set and also refers to metadata
+  features and labelled image paths for multimodal and transfer-learning use.
+
+  The atlas does not assume that 18,000 is the total size of the complete
+  public release, because the source describes it specifically as a held-out
+  test set. Accordingly, the overall image count is left null until the full
+  file inventory is independently reconciled.
+
+  The source page does not explicitly identify a specific ultrasound imaging
+  mode such as B-mode, so modality.type is conservatively recorded as
+  Ultrasound rather than inferring a more specific mode. No dedicated
+  peer-reviewed dataset paper was identified from the current Mendeley record,
+  so paper is set to null.
