@@ -221,3 +221,12 @@ See [Scope](docs/scope.md).
 New datasets and corrections are welcome through Issues or Pull Requests.
 
 ## Citation
+
+If you find this dataset atlas useful in your research, please cite this repository using the **Cite this repository** button on GitHub.
+
+@misc{wang_open_medical_ultrasound_datasets_2026,
+  author = {Wang Jian, Qingyue Yang, Wenjie Li, Zhixin Ruan, Jinglin Zhang},
+  title = {Open Medical Ultrasound Dataset Atlas},
+  year = {2026},
+  url = {https://github.com/TIanCat/open-medical-ultrasound-datasets}
+}
