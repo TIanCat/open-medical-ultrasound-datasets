@@ -1,9 +1,26 @@
 cff-version: 1.2.0
-message: "If you use this dataset atlas, please cite it as below."
+message: "If you use this dataset atlas in your research, please cite it as below."
+
 title: "Open Medical Ultrasound Dataset Atlas"
 type: dataset
+
 authors:
-  - family-names: Wang
-    given-names: Jian
-repository-code: https://github.com/TIanCat/open-medical-ultrasound-datasets
+  - family-names: "Wang"
+    given-names: "Jian"
+
+  - family-names: "Yang"
+    given-names: "Qingyue"
+
+  - family-names: "Li"
+    given-names: "Wenjie"
+
+  - family-names: "Ruan"
+    given-names: "Zhixin"
+
+  - family-names: "Zhang"
+    given-names: "Jinglin"
+
+repository-code: "https://github.com/TIanCat/open-medical-ultrasound-datasets"
+url: "https://github.com/TIanCat/open-medical-ultrasound-datasets"
+
 date-released: 2026-09-02
