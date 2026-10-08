@@ -1,0 +1,105 @@
+id: "2008"
+name: "3D-EUS-PAF"
+full_name: "3D-EUS-PAF: A 3D Endoanal Ultrasound Image Dataset for Assessment of Perianal Fistulas and Abscesses"
+
+release_year: 2024
+
+anatomy:
+  primary: "Anorectal region"
+  target:
+    - "Perianal fistula"
+    - "Perianal abscess"
+
+modality:
+  type:
+    - "Ultrasound"
+  dimension: "3D"
+  temporal: "static"
+  representation:
+    - "image"
+
+scale:
+  - unit: "patient"
+    count: 34
+  - unit: "image"
+    count: 160
+    note: >-
+      The Mendeley Data record reports 160 three-dimensional endoanal
+      ultrasound images from 34 patients.
+
+annotations:
+  classification:
+    unit: "image"
+    label_type: "multiclass"
+    classes:
+      - "Intersphincteric Fistula"
+      - "Intersphincteric Abscess"
+      - "Transsphincteric Fistula"
+      - "Suprasphincteric Fistula"
+      - "Perianal Fistula"
+      - "Ischiorectal Abscess"
+      - "Supralevator Abscess"
+    note: >-
+      The public dataset description explicitly lists seven diagnostic
+      categories. The source also states that the dataset may be used for
+      localization and segmentation research, but pixel-level masks or
+      bounding-box annotations are not confirmed by the public metadata;
+      therefore, only the explicit class labels are encoded here.
+
+tasks:
+  - "classification"
+
+access:
+  level: "open"
+  license: "CC BY-NC 4.0"
+  requirements: []
+
+paper: null
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/vy5wv4t3zt/3"
+  doi: "10.17632/vy5wv4t3zt.3"
+  version: "3"
+
+acquisition:
+  countries:
+    - "Iran"
+  institutions:
+    - "Shahid Beheshti University of Medical Sciences"
+    - "Islamic Azad University Science and Research Branch"
+  period: null
+  scanners: null
+  transducers: null
+  frequencies: null
+  note: >-
+    The public record identifies the data as three-dimensional endoanal
+    ultrasound and lists the contributing institutions in Tehran, Iran.
+    Scanner and transducer details are not specified in the retrievable
+    dataset metadata.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-10-08"
+  sources:
+    - "https://data.mendeley.com/datasets/vy5wv4t3zt/3"
+    - "https://doi.org/10.17632/vy5wv4t3zt.3"
+    - "https://databiox.com/"
+
+notes: >-
+  Version 3 of 3D-EUS-PAF was published on 15 September 2026. The dataset
+  was originally released as Version 1 on 13 March 2024, so release_year
+  records the first public release year rather than the latest version year.
+
+  The current Mendeley record contains 160 three-dimensional endoanal
+  ultrasound images from 34 patients and seven fistula/abscess categories.
+  The public files include an image archive and an accompanying spreadsheet.
+  Version 3 is distributed under CC BY-NC 4.0.
+
+  No dedicated peer-reviewed dataset paper was identified from the current
+  Mendeley record, so paper is set to null.

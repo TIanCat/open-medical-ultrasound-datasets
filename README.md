@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **104 medical ultrasound dataset resources** across **16 anatomical categories**.
+This repository currently catalogs **105 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -25,12 +25,12 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 12 | Ovary | 4 | 1201–1204 |
 | 13 | Animal | 6 | 1301–1306 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
-| 20 | Other | 7 | 2001–2007 |
-| **Total** | **16 categories** | **104** | — |
+| 20 | Other | 8 | 2001–2008 |
+| **Total** | **16 categories** | **105** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
-**Last updated:** 2026-09-24
+**Last updated:** 2026-10-08
 
 ## Scope
 
@@ -214,7 +214,7 @@ See [Scope](docs/scope.md).
 | [2005](datasets/20_other/2005.yaml) | Ultrasound Elastography Dataset for Unsupervised Training | CIRS Model 059 breast phantom | Paired ultrasound RF data | 2,200 unlabeled RF pairs | displacement/optical-flow estimation; unsupervised fine-tuning | 🟢 Public download; license not stated | [Paper](https://doi.org/10.1007/978-3-030-59716-0_48) | [IMPACT Lab](https://users.encs.concordia.ca/~impact/ultrasound-elastography-dataset-for-unsupervised-training/) |
 | [2006](datasets/20_other/2006.yaml) | Regensburg Pediatric Appendicitis Dataset | Appendix / pediatric abdomen | 2D B-mode images + tabular clinical data | release: 782 records / 2,097 images; paper: 579 patients / 1,709 images | diagnosis; management; severity; multimodal learning | 🟢 Open; CC BY-NC 4.0 | [Paper](https://doi.org/10.1016/j.media.2023.103042) | [Zenodo](https://doi.org/10.5281/zenodo.7711412) |
 | [2007](datasets/20_other/2007.yaml) | Dermatologic Ultrasound Images for classification | Skin | 2D B-mode + Color Doppler | 202 lesion pairs / 404 images | classification | 🟢 Open | [Laverde-Saad et al., 2022](https://doi.org/10.1111/srt.13086) | [Kaggle](https://www.kaggle.com/datasets/alfageme/dermatologic-ultrasound-images) |
-
+| [2008](datasets/20_other/2008.yaml) | 3D-EUS-PAF | Anorectal region / perianal fistula and abscess | 3D endoanal ultrasound images | 160 images / 34 patients | 7-class classification | 🟢 Open; CC BY-NC 4.0 | -- | [Mendeley Data](https://data.mendeley.com/datasets/vy5wv4t3zt/3) |
 
 ## Contributing
 
