@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **105 medical ultrasound dataset resources** across **16 anatomical categories**.
+This repository currently catalogs **106 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -23,10 +23,10 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 10 | Prostate | 3 | 1001–1003 |
 | 11 | Nerve | 3 | 1101–1103 |
 | 12 | Ovary | 4 | 1201–1204 |
-| 13 | Animal | 6 | 1301–1306 |
+| 13 | Animal | 7 | 1301–1307 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 8 | 2001–2008 |
-| **Total** | **16 categories** | **105** | — |
+| **Total** | **16 categories** | **106** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
@@ -194,7 +194,7 @@ See [Scope](docs/scope.md).
 | [1304](datasets/13_animal/1304.yaml) | Open-3DULM / Transcranial mice brain | Mouse brain / transcranial microvasculature | ultrafast ultrasound localization microscopy cine / 4D data | 5 mice; 370 ultrafast cine videos | 3D ULM reconstruction; cerebral blood-flow / vascular analysis; 4D spatiotemporal representation | 🟢 Open | [Paper](https://doi.org/10.1038/s44172-025-00415-4) | [Zenodo](https://zenodo.org/records/14289690) |
 | [1305](datasets/13_animal/1305.yaml) | Spinal Cord Injury Ultrasound Dataset | Porcine spinal cord / spinal cord injury | B-mode sagittal ultrasound images | 10,223 images: 4,467 pre-injury and 5,756 post-injury; 2,245 images include injury-localization annotations | injury-status classification; anatomical structure segmentation; injury localization / object detection | 🟢 Open | [Paper](https://doi.org/10.1038/s41598-025-16275-z) | [GitHub](https://github.com/HEPIUSLAB/ultrasound_spinal_cord_dataset) |
 | [1306](datasets/13_animal/1306.yaml) | ULMShare | Mouse microvasculature / ultrasound localization microscopy | raw RF channel data and ULM-related acquisitions | 99 acquisitions from 61 mice; approximately 30 TB | ULM reconstruction; microbubble localization/tracking; vessel imaging; algorithm benchmarking | 🟢 Open | FRDR data resource | [FRDR](https://www.frdr-dfdr.ca/repo/dataset/10.20383/103.01550) |
-
+| [1307](datasets/13_animal/1307.yaml) | GPC3-labeled microbubbles | Mouse HCC xenograft / tumor | 2D CEUS images | public image resource; total image count not stated | molecular CEUS signal analysis | 🟢 Open; CC BY 4.0 | [Hui et al., 2026](https://doi.org/10.1007/s11307-026-02131-7) | [Mendeley Data](https://data.mendeley.com/datasets/zhjzgr7ysn/1) |
 
 ### Multi‑anatomy
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |

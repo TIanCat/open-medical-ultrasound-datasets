@@ -1,0 +1,97 @@
+id: "1307"
+name: "GPC3-labeled microbubbles"
+full_name: "GPC3-labeled Microbubbles for Molecular Ultrasound Imaging of Hepatocellular Carcinoma"
+
+release_year: 2026
+
+anatomy:
+  primary: "Mouse liver tumor"
+  target:
+    - "HepG2 xenograft tumor"
+    - "Hepatocellular carcinoma"
+
+modality:
+  type:
+    - "CEUS"
+  dimension: "2D"
+  temporal: "sequence"
+  representation:
+    - "image"
+
+scale:
+  - unit: "image"
+    count: null
+    note: >-
+      The public Mendeley record provides downloadable contrast-ultrasound
+      images but does not state a stable total image count in the dataset
+      metadata.
+
+annotations: {}
+
+tasks:
+  - "signal_analysis"
+
+access:
+  level: "open"
+  license: "CC BY 4.0"
+  requirements: []
+
+paper:
+  title: "Site-Specific Native Antibody-Conjugated Microbubbles for Molecular Ultrasound Imaging of Hepatocellular Carcinoma"
+  venue: "Molecular Imaging and Biology"
+  doi: "10.1007/s11307-026-02131-7"
+
+data:
+  repository: "Mendeley Data"
+  url: "https://data.mendeley.com/datasets/zhjzgr7ysn/1"
+  doi: "10.17632/zhjzgr7ysn.1"
+  version: "1"
+
+acquisition:
+  countries:
+    - "United States"
+  institutions:
+    - "UCLA Health"
+  period: null
+  scanners:
+    - "Philips EPIQ Elite"
+  transducers:
+    - "E18-4 linear array transducer"
+  frequencies: null
+  note: >-
+    The Mendeley record describes GPC3-labeled microbubbles infused into a
+    nude mouse bearing a HepG2 tumor in the flank. The associated paper
+    reports contrast-mode imaging at a mechanical index of 0.06, a frame
+    rate of 23 Hz, and an imaging depth of 3.5 cm. CEUS images were used to
+    assess tumor signal enhancement and persistence after microbubble
+    administration.
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-10-08"
+  sources:
+    - "https://data.mendeley.com/datasets/zhjzgr7ysn/1"
+    - "https://doi.org/10.17632/zhjzgr7ysn.1"
+    - "https://doi.org/10.1007/s11307-026-02131-7"
+
+notes: >-
+  This resource contains contrast-ultrasound images demonstrating binding of
+  GPC3-targeted microbubbles to tumor in an in-vivo mouse model of
+  hepatocellular carcinoma. It accompanies a 2026 Molecular Imaging and
+  Biology study on site-specific antibody-conjugated microbubbles for
+  molecular CEUS imaging.
+
+  The public dataset metadata does not document classification labels,
+  segmentation masks, bounding boxes, or other machine-learning annotations.
+  Accordingly, no annotation type is inferred and the native research use is
+  conservatively represented as signal_analysis.
+
+  The Mendeley record describes a nude mouse harboring a HepG2 flank tumor,
+  whereas the associated paper discusses its broader in-vivo HCC imaging
+  experiments. The atlas preserves the dataset-specific Mendeley description
+  rather than harmonizing these model descriptions.
