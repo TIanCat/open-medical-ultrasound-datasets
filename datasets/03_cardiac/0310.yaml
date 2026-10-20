@@ -1,0 +1,100 @@
+id: "0310"
+name: "EchoXFlow"
+full_name: "EchoXFlow: A Beamspace Echocardiography Dataset for Cardiac Motion, Flow, and Function"
+release_year: 2026
+
+anatomy:
+  primary: "Heart"
+  target:
+    - "Cardiac chambers"
+    - "Myocardium"
+    - "Left-ventricular endocardium"
+    - "Blood flow"
+
+modality:
+  type:
+    - "B-mode"
+    - "M-mode"
+    - "Doppler"
+    - "Color Doppler"
+    - "Spectral Doppler"
+  dimension: "mixed"
+  temporal: "mixed"
+  representation:
+    - "mixed"
+
+scale:
+  - unit: "record"
+    count: 35377
+    note: "Recordings in the current Hugging Face release; not individual frames."
+  - unit: "exam"
+    count: 666
+    note: "Routine-care echocardiographic examinations; not individual images or patients."
+
+annotations:
+  segmentation:
+    unit: "frame"
+    type: "surface"
+    targets:
+      - "Left ventricle"
+      - "Myocardium"
+      - "Left atrium"
+      - "Right ventricle"
+    format: "2D contours and 3D surface meshes in Zarr v2 arrays"
+    note: >-
+      Dense annotations are available on subsets of recordings. The 2D
+      speckle-tracking contours and 3D left-ventricular endocardial meshes
+      are source annotations; rasterized segmentation masks can be derived.
+  measurements:
+    unit: "record"
+    targets:
+      - "Clinical measurement points and lines"
+      - "Doppler sample-volume locations"
+      - "Spectral traces"
+    format: "Zarr v2 arrays and structured metadata"
+    note: "Annotation types and coverage vary by recording."
+
+tasks:
+  - "segmentation"
+  - "measurement"
+  - "signal_analysis"
+
+access:
+  level: "open"
+  license: "CC BY-NC-SA 4.0"
+  requirements: []
+
+paper:
+  title: "EchoXFlow: A Beamspace Echocardiography Dataset for Cardiac Motion, Flow, and Function"
+  venue: "arXiv"
+  doi: "10.48550/arXiv.2605.05447"
+
+data:
+  repository: "Hugging Face / Ahus-AIM"
+  url: "https://huggingface.co/datasets/Ahus-AIM/EchoXFlow"
+  doi: null
+  version: null
+
+family:
+  type: "primary"
+  parent: null
+  related: []
+
+verification:
+  status: "verified"
+  date: "2026-10-20"
+  sources:
+    - "https://huggingface.co/datasets/Ahus-AIM/EchoXFlow"
+    - "https://arxiv.org/abs/2605.05447"
+    - "https://github.com/Ahus-AIM/EchoXFlow"
+
+notes: >-
+  Native beamspace data before scan conversion: time-resolved 1D, 2D,
+  multiplane and 3D B-mode; color, tissue, pulsed-wave and continuous-wave
+  Doppler; and synchronized ECG. Geometry, calibration and timestamps are
+  retained. Data are distributed as Zarr v2 recording stores inside one
+  tar archive per examination, with Croissant metadata and patient-level
+  five-fold assignments. The benchmarks include cross-modal Doppler
+  estimation, segmentation and ECG-conditioned video generation. This is
+  not scanner raw-channel or RF data. Counts follow the current Hugging Face release;
+  the arXiv preprint describes an earlier version.
