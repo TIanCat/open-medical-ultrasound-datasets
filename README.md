@@ -5,7 +5,7 @@ A curated and continuously updated atlas of publicly accessible medical ultrasou
 
 ## Overview
 
-This repository currently catalogs **106 medical ultrasound dataset resources** across **16 anatomical categories**.
+This repository currently catalogs **107 medical ultrasound dataset resources** across **16 anatomical categories**.
 Each dataset is assigned a four-digit ID, where the first two digits indicate the anatomical category and the last two digits indicate the dataset within that category.
 
 | Code | Category | Datasets | ID range |
@@ -13,7 +13,7 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 00 | Breast | 15 | 0001–0015 |
 | 01 | Thyroid | 9 | 0101–0109 |
 | 02 | Obstetrics | 10 | 0201–0210 |
-| 03 | Cardiac | 9 | 0301–0309 |
+| 03 | Cardiac | 10 | 0301–0310 |
 | 04 | Lung | 6 | 0401–0406 |
 | 05 | Liver & Gallbladder | 10 | 0501–0510 |
 | 06 | Musculoskeletal | 8 | 0601–0608 |
@@ -26,11 +26,11 @@ Each dataset is assigned a four-digit ID, where the first two digits indicate th
 | 13 | Animal | 7 | 1301–1307 |
 | 19 | Multi-anatomy | 4 | 1901–1904 |
 | 20 | Other | 8 | 2001–2008 |
-| **Total** | **16 categories** | **106** | — |
+| **Total** | **16 categories** | **107** | — |
 
 > Dataset counts above refer to catalog entries. Dataset-family relationships such as `primary`, `derived`, `subset`, `version`, and `aggregate` are recorded separately in the dataset metadata.
 
-**Last updated:** 2026-10-08
+**Last updated:** 2026-10-20
 
 ## Scope
 
@@ -96,6 +96,7 @@ See [Scope](docs/scope.md).
 | [0307](datasets/03_cardiac/0307.yaml) | EchoNet-Pediatric | Pediatric heart | 2D echo videos | 7,643 videos | segmentation; EF/volume regression | 🟡 Application | [Paper](https://doi.org/10.1016/j.echo.2023.01.015) | [GitHub](https://echonet.github.io/pediatric/) |
 | [0308](datasets/03_cardiac/0308.yaml) | CACTUS | Cardiac phantom | 2D B-mode images | 37,736 images | view classification; quality grading | 🟢 Open | [Paper](https://doi.org/10.1016/j.compbiomed.2025.110003) | [Data](https://doi.org/10.20383/103.01484) |
 | [0309](datasets/03_cardiac/0309.yaml) | MIMIC-IV-Echo | Heart | DICOM + measurements | 206,488 studies | measurement; multimodal learning | 🔴 Controlled | [Paper](https://doi.org/10.13026/307c-mr50) | [PhysioNet](https://physionet.org/content/mimic-iv-echo/1.0.1/) |
+| [0310](datasets/03_cardiac/0310.yaml) | EchoXFlow | Heart | Native beamspace 1D/2D/multiplane/3D B-mode + Doppler + ECG | 35,377 recordings / 666 examinations | segmentation; measurement; signal analysis | 🟢 Open; CC BY-NC-SA 4.0 | [Paper](https://arxiv.org/abs/2605.05447) | [Hugging Face](https://huggingface.co/datasets/Ahus-AIM/EchoXFlow) |
 
 ### Lung
 | ID | Dataset | Anatomy | Modality | Size | Task | Access | Paper | Data |
